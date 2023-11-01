@@ -1,0 +1,18 @@
+title: Process Execution via Program Compatibility Assistant
+id: 40a9eecb-c48d-49f2-86ba-0036e4381f6f
+description: Pcalua.exe executed another process.
+references:
+    - https://attack.mitre.org/techniques/T1218
+author: Trend Micro
+date: 2019/10/18
+tags:
+    - attack.t1218
+logsource:
+    category: DETECTION
+    definition: PROCESS_ACTIVITY
+detection:
+    ade_detection:
+        ruleName: '*Process Execution using Program Compatibility Assistant*'
+    condition: ade_detection
+level: low
+taxonomy: tm-v1

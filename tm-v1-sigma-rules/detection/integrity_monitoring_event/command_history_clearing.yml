@@ -1,0 +1,18 @@
+title: Command History Clearing
+id: 14f4f31b-b96f-479f-aea7-86a80925df04
+description: The command history was cleared.
+references:
+    - https://attack.mitre.org/techniques/T1070/003/
+author: Trend Micro
+date: 2020/09/24
+tags:
+    - attack.t1070.003
+logsource:
+    category: DETECTION
+    definition: INTEGRITY_MONITORING_EVENT
+detection:
+    selection:
+        ruleId: '1009643' # Clear Command History (ATT&CK T1146)
+    condition: selection
+level: low
+taxonomy: tm-v1

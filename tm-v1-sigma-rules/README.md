@@ -4,4 +4,4 @@ Trend Vision One™ Sigma Rules
 
 ## Documentation
 
-Documentation will be updated upon release.
+For the Sigma spec, you can refer to: https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/xdr-part/detection-model-mana/custom-filters/tmsigma-spec.aspx.

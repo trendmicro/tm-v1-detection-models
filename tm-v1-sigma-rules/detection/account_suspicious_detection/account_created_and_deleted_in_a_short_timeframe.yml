@@ -1,0 +1,18 @@
+title: Account Created and Deleted in a Short Timeframe
+id: 086b9654-88cb-443d-9df1-41071773a7fa
+description: An account that has been created and deleted in a short timeframe is an unusual behavior. It is noteworthy to check the purpose of these accounts.
+references:
+    - https://attack.mitre.org/techniques/T1136/003/
+author: Trend Micro
+date: 2022/05/18
+tags:
+    - attack.t1136.003
+logsource:
+    category: DETECTION
+    definition: ACCOUNT_SUSPICIOUS_DETECTION
+detection:
+    jaguar_dna:
+        ruleName: AC-02-009
+    condition: jaguar_dna
+level: medium
+taxonomy: tm-v1

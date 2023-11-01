@@ -1,0 +1,21 @@
+title: Ivanti Avalanche SmartDeviceServer DeviceLogResource Directory Traversal
+id: b684d371-22b4-4e36-8ef9-b63f5ba696ef
+description: Ivanti Avalanche was attempted to be exploited via a directory traversal vulnerability.
+references:
+    - https://attack.mitre.org/techniques/T1190/
+    - http://www.zerodayinitiative.com/advisories/ZDI-22-786
+    - https://www.zerodayinitiative.com/blog/2022/9/7/riding-the-inforail-to-exploit-ivanti-avalanche-part-2
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36981
+author: Trend Micro
+date: 2022/11/25
+tags:
+    - attack.t1190
+logsource:
+    category: DETECTION
+    definition: INTRUSION_DETECTION
+detection:
+    s1:
+        subRuleId: '41979' # HTTP: Ivanti Avalanche SmartDeviceServer DeviceLogResource Directory Traversal (ZDI-22-786)
+    condition: s1
+level: high
+taxonomy: tm-v1

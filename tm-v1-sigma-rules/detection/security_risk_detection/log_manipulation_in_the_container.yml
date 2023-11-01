@@ -1,0 +1,19 @@
+title: Log Manipulation in the Container
+id: ca651da4-fba9-5800-a094-3ad7ab5f19a3
+description: Logs have been modified or cleared.
+author: Trend Micro
+date: 2023/06/13
+tags:
+    - attack.t1070
+logsource:
+    category: DETECTION
+    definition: SECURITY_RISK_DETECTION
+detection:
+    rule:
+        ruleIdStr:
+            - 'TM-00000012' # Clear Log Activities
+            - 'TM-00000032' # Delete or rename shell history
+            - 'TM-00000047' # Suspicious log manipulation
+    condition: rule
+level: low
+taxonomy: tm-v1

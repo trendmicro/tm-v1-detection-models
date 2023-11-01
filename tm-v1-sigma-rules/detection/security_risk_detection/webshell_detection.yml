@@ -1,0 +1,19 @@
+title: Webshell Detection
+id: 71cdb665-cf86-4dd7-8c1b-994c1f3689c8
+description: A webshell was detected in the network.
+references:
+    - https://attack.mitre.org/techniques/T1100/
+author: Trend Micro
+date: 2020/04/29
+tags:   
+    - attack.t1505.003
+    - attack.t1505
+logsource:
+    category: DETECTION
+    definition: SECURITY_RISK_DETECTION
+detection:
+    selection:
+        ruleName: '*Webshell *'
+    condition: selection
+level: high
+taxonomy: tm-v1

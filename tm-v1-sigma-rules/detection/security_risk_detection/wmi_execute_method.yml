@@ -1,0 +1,20 @@
+title: WMI Execute Method
+id: 5ed77fbf-038d-4513-90b6-1ed08f6bb497
+description: WMI Execute Method was detected on the network.
+references:
+    - https://attack.mitre.org/techniques/T1047/
+author: Trend Micro
+date: 2020/02/11
+tags:  
+    - attack.t1047
+logsource:
+    category: DETECTION
+    definition: SECURITY_RISK_DETECTION
+detection:
+    ddi_rule:
+        ruleId:
+            - '1007'
+            - '2399'
+    condition: ddi_rule
+level: info
+taxonomy: tm-v1

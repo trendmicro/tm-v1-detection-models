@@ -1,0 +1,21 @@
+title: Noteworthy C&C Connection
+id: 83e1cc47-4cc2-4ddf-9d22-e6b7dbc12e6a
+description: A noteworthy C&C server connection was detected by WRS.
+references:
+    - https://attack.mitre.org/techniques/T1071/
+author: Trend Micro
+date: 2021/11/23
+tags:
+    - attack.s0154
+    - attack.t1071
+logsource:
+    category: DETECTION
+    definition: WEB_THREAT_DETECTION
+detection:
+    web_cat1:
+        urlCat: '*C&C Server*'
+    web_cat2:
+        urlCat: '*Noteworthy*'
+    condition: web_cat1 and web_cat2
+level: high
+taxonomy: tm-v1

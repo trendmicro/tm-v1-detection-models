@@ -1,0 +1,22 @@
+title: Android Application Detection for KeepSpy
+id: 6dd4b41b-4b1b-402b-93bf-ed7394be3237
+description: Mobile spy malware spread by SMS was detected on an endpoint and blocked by Trend Micro technology.
+references:
+    - https://www.trendmicro.com/en_za/research/22/a/tianyspy-malware-uses-smishing-disguised-as-message-from-telco.html
+author: Trend Micro
+date: 2022/11/02
+tags:
+    - attack.t1646
+logsource:
+    definition: TELEMETRY_INTERNET
+    category: MOBILE_ACTIVITY
+    product: android
+detection:
+    selection:
+        productCode: 'ams'
+        eventSubId: TELEMETRY_INTERNET_OPEN
+    url:
+        request: 'http://gx220802.online/'
+    condition: selection and url
+level: high
+taxonomy: tm-v1
