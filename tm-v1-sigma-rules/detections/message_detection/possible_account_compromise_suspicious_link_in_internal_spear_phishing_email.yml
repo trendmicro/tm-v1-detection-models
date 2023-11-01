@@ -1,0 +1,18 @@
+title: Possible Account Compromise - Suspicious Link in Internal Spear Phishing Email
+id: 94ba80fa-4548-44ea-b618-c1b30efa2048
+description: A suspicious URL associated with phishing attacks was detected in an internal email message, which may indicate a compromised account.
+references:
+    - https://attack.mitre.org/techniques/T1534/
+author: Trend Micro
+date: 2020/10/28
+tags:
+    - attack.t1534
+logsource:
+    category: DETECTION
+    definition: MESSAGE_DETECTION
+detection:
+    jaguar_dna:
+        ruleName: SC-004
+    condition: jaguar_dna
+level: high
+taxonomy: tm-v1

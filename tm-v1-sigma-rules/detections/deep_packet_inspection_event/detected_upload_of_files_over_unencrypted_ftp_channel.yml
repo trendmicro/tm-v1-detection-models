@@ -1,0 +1,18 @@
+title: Detected Upload Of Files Over Unencrypted FTP Channel
+id: f3c65b86-f477-4928-99f8-57166ad0ecf1
+description: Adversaries may steal data by exfiltrating it over an unencrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.
+references:
+    - https://attack.mitre.org/versions/v9/techniques/T1048/003
+author: Trend Micro
+date: 2021/09/09
+tags:
+    - attack.t1048.003
+logsource:
+    category: DETECTION
+    definition: DEEP_PACKET_INSPECTION_EVENT
+detection:
+    s1:
+        ruleId: '1011089'
+    condition: s1
+level: low
+taxonomy: tm-v1

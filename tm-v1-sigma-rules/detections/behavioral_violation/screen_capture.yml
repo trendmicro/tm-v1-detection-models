@@ -1,0 +1,18 @@
+title: Screen Capture via API Monitoring
+id: 4bcebccb-ee63-4e76-9371-1f01968f7d80
+description: The screen was captured using an API.
+references:
+    - https://attack.mitre.org/techniques/T1113/
+author: Trend Micro
+date: 2020/12/02
+tags:   
+    - attack.t1113
+logsource:
+    category: DETECTION
+    definition: BEHAVIORAL_VIOLATION
+detection:
+    aegis_policy:
+        ruleName: '*GD0109*'
+    condition: aegis_policy
+level: medium
+taxonomy: tm-v1 

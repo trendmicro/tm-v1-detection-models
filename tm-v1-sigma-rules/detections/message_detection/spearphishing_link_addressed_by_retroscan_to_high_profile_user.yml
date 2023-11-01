@@ -1,0 +1,20 @@
+title: Spearphishing Link Addressed by RetroScan - High Profile User
+id: c694f355-e819-41bf-b6b7-feaa6321d0e8
+description: A high profile user received an email with spear phishing link address which has history of callback attempts to C&C server upon rescan
+references:
+    - https://attack.mitre.org/techniques/T1566/002/
+author: Trend Micro
+date: 2020/07/08
+tags:  
+    - attack.t1566.002
+logsource:
+    category: DETECTION
+    definition: MESSAGE_DETECTION    
+detection:
+    jaguar_dna:
+        ruleName:
+            - SA-017
+            - MX-01-004   
+    condition: jaguar_dna
+level: low
+taxonomy: tm-v1

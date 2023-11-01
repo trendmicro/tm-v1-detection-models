@@ -1,0 +1,24 @@
+title: Powershell Download via CMD
+id: 1c5bf14a-bb83-41c5-8a20-2702a0f3fa93
+description: Powershell downloads and executes suspicious files via cmd.exe.
+references:
+    - https://attack.mitre.org/techniques/T1086/
+    - https://attack.mitre.org/techniques/T1140/
+    - https://attack.mitre.org/techniques/T1059/
+author: Trend Micro
+date: 2019/10/31
+tags:   
+    - attack.t1059.001
+    - attack.t1204.002
+    - attack.t1105
+    - attack.t1059
+    - attack.t1140
+logsource:
+    category: DETECTION
+    definition: BEHAVIORAL_VIOLATION
+detection:
+    aegis_policy:
+        policyId: '*FLS.ISB.4627T*'
+    condition: aegis_policy
+level: medium
+taxonomy: tm-v1

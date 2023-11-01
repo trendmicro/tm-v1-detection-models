@@ -1,0 +1,16 @@
+title: Terminal Shell in the Container
+id: c8c3a257-f85b-5481-b76e-24e67ba14cee
+description: A shell was used as the entrypoint into a container with an attached terminal.
+author: Trend Micro
+date: 2023/03/15
+tags:
+    - attack.t1059.004
+logsource:
+    category: DETECTION
+    definition: SECURITY_RISK_DETECTION
+detection:
+    rule:
+        ruleIdStr: 'TM-00000006' # Terminal shell in container
+    condition: rule
+level: low
+taxonomy: tm-v1

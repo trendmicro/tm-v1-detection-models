@@ -1,0 +1,21 @@
+title: Spearphishing Link Addressed By Phishing URL Pattern
+id: cb737419-9dd0-41a2-acd1-5896f366b96d
+description: An email with a spearphishing link addressed by phishing URL pattern was detected.
+references:
+    - https://attack.mitre.org/techniques/T1192/
+author: Trend Micro
+date: 2020/01/09
+tags:
+    - attack.t1566.002
+logsource:
+    category: DETECTION
+    definition: MESSAGE_SUSPICIOUS_DETECTION
+detection:
+    jaguar_dna:
+        ruleName:
+            - MA-01-010
+            - CM-01-01-01
+            - CM-01-01-02
+    condition: jaguar_dna
+level: medium
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Deobfuscation or Decoding of Data
+id: bdd1d1c4-50c3-47e0-8b9e-0ffa7719c2d4
+description: Payloads may be compressed, archived, or encrypted in order to avoid detection. These payloads may be used with Obfuscated Files or Information during Initial Access or later to mitigate detection.
+references:
+    - https://attack.mitre.org/techniques/T1140
+author: Trend Micro
+date: 2019/10/17
+tags: 
+    - attack.t1140
+logsource:
+    category: DETECTION
+    definition: PROCESS_ACTIVITY
+detection:
+    ade_detection:
+        ruleName: '*Deobfuscate or Decode Files or Information*'
+    condition: ade_detection
+level: low
+taxonomy: tm-v1

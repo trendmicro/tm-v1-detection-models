@@ -1,0 +1,18 @@
+title: Modify Domain Trust Setting
+id: c5cda61b-927b-4a06-9600-445cecabe545
+description: A user account modifies the federation settings on the domain or updates domain authentication from Managed to Federated.
+references:
+    - https://attack.mitre.org/techniques/T1484/002/
+author: Trend Micro
+date: 2022/06/07
+tags:
+    - attack.t1484.002
+logsource:
+    category: DETECTION
+    definition: ACCOUNT_SUSPICIOUS_DETECTION
+detection:
+    jaguar_dna:
+        ruleName: AC-02-010
+    condition: jaguar_dna
+level: medium
+taxonomy: tm-v1

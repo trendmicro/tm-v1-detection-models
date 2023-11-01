@@ -1,0 +1,18 @@
+title: Identified Remote Registry Access Over SMB
+id: 53422ca8-b185-4005-b9ca-af5a309a580f
+description: Adversaries may try to get information about registered #services.
+references:
+    - https://attack.mitre.org/versions/v9/techniques/T1007
+author: Trend Micro
+date: 2021/10/01
+tags:
+    - attack.t1007
+logsource:
+    category: DETECTION
+    definition: DEEP_PACKET_INSPECTION_EVENT
+detection:
+    selection1:
+        ruleId: '1007021'
+    condition: selection1
+level: low
+taxonomy: tm-v1

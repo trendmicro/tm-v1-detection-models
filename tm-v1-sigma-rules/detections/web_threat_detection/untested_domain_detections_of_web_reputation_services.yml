@@ -1,0 +1,24 @@
+title: Untested Domain Detections Of Web Reputation Services
+id: aa226811-34b0-4f70-871b-7105278e09d7
+description: A domain untested by Web Reputation Services (WRS) was accessed.
+references:
+    - https://attack.mitre.org/techniques/T1071/
+author: Trend Micro
+date: 2020/04/20
+tags:
+    - attack.t1071.003
+    - attack.t1071
+logsource:
+    category: DETECTION
+    definition: WEB_THREAT_DETECTION
+detection:
+    prot:
+        app:
+            - IMAP4
+            - POP3
+            - SMTP
+    web_cat:
+        urlCat: '*Untested*'
+    condition: web_cat and not prot
+level: info
+taxonomy: tm-v1

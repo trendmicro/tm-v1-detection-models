@@ -1,0 +1,37 @@
+title: IOS Application Detection for Operation Triangulation
+id: b4d6a587-2122-4d85-b5d2-90b5c13d939c
+description: An iOS device was targeted by Operation Triangulation with previously unknown malware.
+references:
+    - https://securelist.com/operation-triangulation/109842/
+author: Trend Micro
+date: 2023/06/02
+tags:
+    - attack.t1437.001
+    - attack.t1404
+logsource:
+    definition: TELEMETRY_INTERNET
+    category: MOBILE_ACTIVITY
+    product: ios
+detection:
+    t1:
+        eventSubId: TELEMETRY_INTERNET_OPEN
+    domain:
+        request:
+            - '*addatamarket.net*'
+            - '*backuprabbit.com*'
+            - '*businessvideonews.com*'
+            - '*cloudsponcer.com*'
+            - '*datamarketplace.net*'
+            - '*mobilegamerstats.com*'
+            - '*snoweeanalytics.com*'
+            - '*tagclick-cdn.com*'
+            - '*topographyupdates.com*'
+            - '*unlimitedteacup.com*'
+            - '*virtuallaughing.com*'
+            - '*web-trackers.com*'
+            - '*growthtransport.com*'
+            - '*anstv.net*'
+            - '*ans7tv.net*'
+    condition: t1 and domain
+level: high
+taxonomy: tm-v1

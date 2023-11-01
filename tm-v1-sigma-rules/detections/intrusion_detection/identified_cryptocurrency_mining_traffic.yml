@@ -1,0 +1,21 @@
+title: Identified Cryptocurrency Mining Traffic
+id: 6123f77f-195c-4b9f-ba5a-9ad6a5f25ad3
+description: Cryptocurrency mining traffic involves maintaining the blockchain by repeatedly collecting newly broadcasted transactions and verifying them. Such activities can be used maliciously to hijack resources from the host system.
+references:
+    - https://attack.mitre.org/techniques/T1496/
+author: Trend Micro
+date: 2022/06/29
+tags:
+    - attack.t1496
+logsource:
+    category: DETECTION
+    definition: INTRUSION_DETECTION
+detection:
+    selection:
+        subRuleId:
+            - '29881' # HTTP: CoinHive Cryptocurrency Miner Detection
+            - '28738' # HTTP: PUA_BitCoinMiner Checkin
+            - '37813' # TCP: XMRig Miner Login Request
+    condition: selection
+level: medium
+taxonomy: tm-v1

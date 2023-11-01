@@ -1,0 +1,16 @@
+title: Possible Brute Force Attack
+id: 716f68a9-f4a1-52f9-9781-34d06bf7f7f9
+description: The number and duration of failed login attempts indicate a possible brute force attack targeting the account.
+author: Trend Micro
+date: 2023/06/20
+tags:
+    - attack.t1110
+logsource:
+    category: DETECTION
+    definition: ACCOUNT_DETECTION
+detection:
+    rule:
+        ruleName: SC-018
+    condition: rule
+level: low
+taxonomy: tm-v1

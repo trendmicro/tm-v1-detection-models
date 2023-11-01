@@ -1,0 +1,18 @@
+title: AWS Object Sync
+id: e55661c0-e46c-4356-909e-b938acbb66a4
+description: This filter detects AWS object sync or downloading.
+author: Trend Micro
+date: 2022/09/26
+tags:
+    - attack.t1530
+logsource:
+    product: aws
+    category: CLOUD_ACTIVITY
+detection:
+    operation:
+        eventName:
+            - 'ListObjects'
+            - 'GetObject'
+    condition: operation
+level: medium
+taxonomy: tm-v1

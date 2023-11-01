@@ -1,0 +1,18 @@
+title: Identified Access of SSH Authorized Keys
+id: 4cad8af5-ff93-4a8b-af3b-edd5f10d2dd9
+description: Adversaries may modify SSH authorized_keys files directly with scripts or shell commands to add their own adversary-supplied public keys. This ensures that an adversary possessing the corresponding private key may log in as an existing user via SSH.
+references:
+    - https://attack.mitre.org/versions/v9/techniques/T1098/004
+author: Trend Micro
+date: 2021/09/06
+tags:
+    - attack.t1098.004
+logsource:
+    category: DETECTION
+    definition: INTEGRITY_MONITORING_EVENT
+detection:
+    selection:
+        ruleId: '1011070'
+    condition: selection
+level: medium
+taxonomy: tm-v1

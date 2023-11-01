@@ -1,0 +1,18 @@
+title: Attempt to Dump NT Directory Services File
+id: 1757c1c7-43c1-4160-860e-a2a50235e6ed
+description: There have been indications to dump NTDS.dit directory information tree.
+references:
+    - https://attack.mitre.org/versions/v8/techniques/T1003/003/
+author: Trend Micro
+date: 2021/08/17
+tags:
+    - attack.t1003.003
+logsource:
+    category: DETECTION
+    definition: LOG_INSPECTION_EVENT
+detection:
+    s1:
+        subRuleId: '19873'
+    condition: s1
+level: medium
+taxonomy: tm-v1
