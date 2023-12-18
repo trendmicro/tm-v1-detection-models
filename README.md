@@ -14,7 +14,7 @@ Trend Micro has adopted a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect p
 
 ### Contributing Guide
 
-Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Trend Vision One.
+Read our [contributing guide](https://github.com/trendmicro/tm-v1/blob/main/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Trend Vision One.
 
 ## Community
 
