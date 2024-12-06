@@ -1,0 +1,16 @@
+title: JPEG File Upload
+description: Palo Alto File detection - JPEG File Upload
+tags:
+- mitre.t1071.001
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: file
+  rule:
+    ruleName: JPEG File Upload*
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
