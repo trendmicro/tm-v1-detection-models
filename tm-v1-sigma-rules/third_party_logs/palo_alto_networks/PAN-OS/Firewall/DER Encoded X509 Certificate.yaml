@@ -5,7 +5,7 @@ tags:
 logsource:
   definition: EVENT_SOURCE_THIRD_PARTY_LOG
   category: THIRD_PARTY_LOG
-  product: ''
+  product: PALO ALTO NETWORKS
 detection:
   subname:
     eventSubName: file
