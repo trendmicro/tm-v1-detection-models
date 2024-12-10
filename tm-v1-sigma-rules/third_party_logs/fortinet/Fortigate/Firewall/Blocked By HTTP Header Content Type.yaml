@@ -1,0 +1,13 @@
+title: Blocked By HTTP Header Content Type
+description: Fortinet detection - Blocked by HTTP header content type
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*013616'
+  condition: logId
+level: info
+taxonomy: tm-v1

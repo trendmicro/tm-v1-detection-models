@@ -1,0 +1,13 @@
+title: Infected File Detected By The Fortigate Unit And Blocked
+description: Fortinet detection - Infected file detected by the FortiGate unit and blocked
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008192'
+  condition: logId
+level: info
+taxonomy: tm-v1

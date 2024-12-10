@@ -1,0 +1,13 @@
+title: A User With Admin Privileges Has Successfully Logged In
+description: Fortinet detection - A user with Admin privileges has successfully logged in
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*032053'
+  condition: logId
+level: info
+taxonomy: tm-v1

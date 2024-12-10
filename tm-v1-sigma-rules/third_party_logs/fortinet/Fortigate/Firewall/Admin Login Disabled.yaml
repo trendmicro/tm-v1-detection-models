@@ -1,0 +1,13 @@
+title: Admin Login Disabled
+description: Fortinet detection - Admin login disabled
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*032021'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,14 @@
+title: Data Leak Detected By Specified DLP Sensor Rule
+description: Fortinet detection - Data leak detected by specified DLP sensor rule
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*024576'
+  condition: logId
+level: info
+taxonomy: tm-v1

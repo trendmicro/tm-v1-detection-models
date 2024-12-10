@@ -1,0 +1,13 @@
+title: Web Application Firewall Erased Application By Signature
+description: Fortinet detection - Web application firewall erased application by signature
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030250'
+  condition: logId
+level: info
+taxonomy: tm-v1

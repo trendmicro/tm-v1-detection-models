@@ -1,0 +1,13 @@
+title: Application Control Port Enforcement
+description: Fortinet detection - Application control port enforcement
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*028736'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Application Control Protocol Enforcement
+description: Fortinet detection - Application control protocol enforcement
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*028737'
+  condition: logId
+level: info
+taxonomy: tm-v1

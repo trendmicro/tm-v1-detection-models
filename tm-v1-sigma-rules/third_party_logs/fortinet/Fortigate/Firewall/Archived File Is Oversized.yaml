@@ -1,0 +1,15 @@
+title: Archived File Is Oversized
+description: Fortinet detection - Archived file is oversized
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*008970'
+    - '*008971'
+  condition: logId
+level: info
+taxonomy: tm-v1

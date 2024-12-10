@@ -1,0 +1,13 @@
+title: URL Address Was Blocked Because It Was Found In The URL Filter List
+description: Fortinet detection - URL address was blocked because it was found in the URL filter list
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*012544'
+  condition: logId
+level: info
+taxonomy: tm-v1

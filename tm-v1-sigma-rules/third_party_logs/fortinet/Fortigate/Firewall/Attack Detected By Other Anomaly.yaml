@@ -1,0 +1,13 @@
+title: Attack Detected By Other Anomaly
+description: Fortinet detection - Attack detected by other anomaly
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*018434'
+  condition: logId
+level: info
+taxonomy: tm-v1

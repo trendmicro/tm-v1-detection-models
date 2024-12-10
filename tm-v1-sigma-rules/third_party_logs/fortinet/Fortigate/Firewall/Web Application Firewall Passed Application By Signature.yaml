@@ -1,0 +1,13 @@
+title: Web Application Firewall Passed Application By Signature
+description: Fortinet detection - Web application firewall passed application by signature
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030249'
+  condition: logId
+level: info
+taxonomy: tm-v1

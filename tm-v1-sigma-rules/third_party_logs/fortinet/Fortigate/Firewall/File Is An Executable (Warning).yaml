@@ -1,0 +1,13 @@
+title: File Is An Executable (Warning)
+description: Fortinet detection - File is an executable (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008200'
+  condition: logId
+level: info
+taxonomy: tm-v1

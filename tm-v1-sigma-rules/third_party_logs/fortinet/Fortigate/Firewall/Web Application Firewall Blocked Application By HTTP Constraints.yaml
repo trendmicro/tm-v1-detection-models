@@ -1,0 +1,13 @@
+title: Web Application Firewall Blocked Application By HTTP Constraints
+description: Fortinet detection - Web application firewall blocked application by HTTP constraints
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030257'
+  condition: logId
+level: info
+taxonomy: tm-v1

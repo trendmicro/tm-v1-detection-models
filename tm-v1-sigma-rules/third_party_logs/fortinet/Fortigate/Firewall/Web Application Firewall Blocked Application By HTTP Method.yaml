@@ -1,0 +1,13 @@
+title: Web Application Firewall Blocked Application By HTTP Method
+description: Fortinet detection - Web application firewall blocked application by HTTP method
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030253'
+  condition: logId
+level: info
+taxonomy: tm-v1

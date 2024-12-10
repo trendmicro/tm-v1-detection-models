@@ -1,0 +1,15 @@
+title: Fortinet Web-Filter Failed To Scan The Indicator
+description: Fortinet detection - Fortinet web-filter failed to scan the indicator
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*12800'
+    - '*12801'
+  condition: logId
+level: info
+taxonomy: tm-v1

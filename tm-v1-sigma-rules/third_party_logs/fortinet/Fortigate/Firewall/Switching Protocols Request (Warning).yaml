@@ -1,0 +1,13 @@
+title: Switching Protocols Request (Warning)
+description: Fortinet detection - Switching protocols request (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008720'
+  condition: logId
+level: info
+taxonomy: tm-v1

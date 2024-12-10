@@ -1,0 +1,13 @@
+title: SSL VPN Login Fail
+description: Fortinet detection - SSL VPN login fail
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*039426'
+  condition: logId
+level: info
+taxonomy: tm-v1

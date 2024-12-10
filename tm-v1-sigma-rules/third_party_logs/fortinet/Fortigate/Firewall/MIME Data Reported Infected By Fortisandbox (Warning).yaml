@@ -1,0 +1,13 @@
+title: MIME Data Reported Infected By Fortisandbox (Warning)
+description: Fortinet detection - MIME data reported infected by FortiSandbox (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008234'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: MIME Header Detected To Have A Virus And Passed
+description: Fortinet detection - MIME header detected to have a virus and passed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008195'
+  condition: logId
+level: info
+taxonomy: tm-v1

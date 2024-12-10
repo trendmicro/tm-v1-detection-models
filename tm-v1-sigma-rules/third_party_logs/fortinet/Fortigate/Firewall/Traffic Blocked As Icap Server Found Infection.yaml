@@ -1,0 +1,13 @@
+title: Traffic Blocked As Icap Server Found Infection
+description: Fortinet detection - Traffic blocked as ICAP server found infection
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*060001'
+  condition: logId
+level: info
+taxonomy: tm-v1

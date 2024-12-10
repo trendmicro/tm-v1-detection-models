@@ -1,0 +1,13 @@
+title: Domain Blocked Because It Is In The Domain-Filter List
+description: Fortinet detection - Domain blocked because it is in the domain-filter list
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*054400'
+  condition: logId
+level: info
+taxonomy: tm-v1
