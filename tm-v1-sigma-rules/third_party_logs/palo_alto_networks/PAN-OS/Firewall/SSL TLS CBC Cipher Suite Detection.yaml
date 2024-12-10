@@ -1,0 +1,16 @@
+title: SSL TLS CBC Cipher Suite Detection
+description: Palo Alto Vulnerability detection - SSL TLS CBC Cipher Suite Detection
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleName: SSL TLS CBC Cipher Suite Detection*
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

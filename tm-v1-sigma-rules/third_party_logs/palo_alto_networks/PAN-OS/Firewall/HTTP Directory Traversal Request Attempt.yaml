@@ -1,0 +1,17 @@
+title: HTTP Directory Traversal Request Attempt
+description: Palo Alto Vulnerability detection - HTTP Directory Traversal Request
+  Attempt
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleName: HTTP Directory Traversal Request Attempt*
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

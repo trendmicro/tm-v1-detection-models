@@ -1,0 +1,16 @@
+title: Active Server Page Extended ASPX File
+description: Palo Alto File detection - Active Server Page Extended ASPX File
+tags:
+- mitre.t1071.001
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: file
+  rule:
+    ruleName: Active Server Page Extended ASPX File*
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
