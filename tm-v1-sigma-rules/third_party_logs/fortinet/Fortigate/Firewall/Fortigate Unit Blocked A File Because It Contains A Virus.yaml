@@ -1,0 +1,13 @@
+title: Fortigate Unit Blocked A File Because It Contains A Virus
+description: Fortinet detection - FortiGate unit blocked a file because it contains a virus
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008448'
+  condition: logId
+level: info
+taxonomy: tm-v1

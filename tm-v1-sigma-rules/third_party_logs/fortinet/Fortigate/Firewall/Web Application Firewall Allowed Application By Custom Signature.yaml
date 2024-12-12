@@ -1,0 +1,13 @@
+title: Web Application Firewall Allowed Application By Custom Signature
+description: Fortinet detection - Web application firewall allowed application by custom signature
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030252'
+  condition: logId
+level: info
+taxonomy: tm-v1

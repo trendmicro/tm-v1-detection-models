@@ -1,0 +1,13 @@
+title: Web Application Firewall Blocked Application By URL Access
+description: Fortinet detection - Web application firewall blocked application by URL access
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030261'
+  condition: logId
+level: info
+taxonomy: tm-v1

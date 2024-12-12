@@ -1,0 +1,13 @@
+title: Web Application Firewall Blocked Application By Address List
+description: Fortinet detection - Web application firewall blocked application by address list
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030255'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: SPAM Notification
+description: Fortinet detection - SPAM notification
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*020480'
+  condition: logId
+level: info
+taxonomy: tm-v1

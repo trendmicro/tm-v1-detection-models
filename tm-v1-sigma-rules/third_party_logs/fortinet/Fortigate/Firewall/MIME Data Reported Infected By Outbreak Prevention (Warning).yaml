@@ -1,0 +1,13 @@
+title: MIME Data Reported Infected By Outbreak Prevention (Warning)
+description: Fortinet detection - MIME data reported infected by Outbreak Prevention (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008204'
+  condition: logId
+level: info
+taxonomy: tm-v1

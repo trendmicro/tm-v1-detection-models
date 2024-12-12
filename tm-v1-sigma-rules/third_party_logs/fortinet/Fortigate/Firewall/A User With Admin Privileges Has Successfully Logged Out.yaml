@@ -1,0 +1,13 @@
+title: A User With Admin Privileges Has Successfully Logged Out
+description: Fortinet detection - A user with Admin privileges has successfully logged out
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*032054'
+  condition: logId
+level: info
+taxonomy: tm-v1

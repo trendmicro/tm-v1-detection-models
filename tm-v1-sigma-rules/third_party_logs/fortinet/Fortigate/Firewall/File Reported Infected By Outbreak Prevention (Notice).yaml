@@ -1,0 +1,13 @@
+title: File Reported Infected By Outbreak Prevention (Notice)
+description: Fortinet detection - File reported infected by Outbreak Prevention (notice)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008203'
+  condition: logId
+level: info
+taxonomy: tm-v1

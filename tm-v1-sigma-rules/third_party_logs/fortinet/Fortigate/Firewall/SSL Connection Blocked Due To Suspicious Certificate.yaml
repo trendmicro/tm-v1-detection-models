@@ -1,0 +1,13 @@
+title: SSL Connection Blocked Due To Suspicious Certificate
+description: Fortinet detection - SSL connection blocked due to suspicious certificate
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*62303'
+  condition: logId
+level: info
+taxonomy: tm-v1

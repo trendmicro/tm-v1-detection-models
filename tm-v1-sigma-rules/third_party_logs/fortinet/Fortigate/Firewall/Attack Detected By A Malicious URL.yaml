@@ -1,0 +1,13 @@
+title: Attack Detected By A Malicious URL
+description: Fortinet detection - Attack detected by a malicious URL
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*016399'
+  condition: logId
+level: info
+taxonomy: tm-v1

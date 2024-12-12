@@ -1,0 +1,13 @@
+title: Antiphishing Reached Default Action And Blocked The Request
+description: Fortinet detection - Antiphishing reached default action and blocked the request
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*013653'
+  condition: logId
+level: info
+taxonomy: tm-v1

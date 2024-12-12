@@ -1,0 +1,13 @@
+title: File Reported Infected By EMS Threat Feed (Notice)
+description: Fortinet detection - File reported infected by EMS threat feed (notice)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008217'
+  condition: logId
+level: info
+taxonomy: tm-v1

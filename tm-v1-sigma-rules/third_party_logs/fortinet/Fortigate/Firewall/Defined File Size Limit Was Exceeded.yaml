@@ -1,0 +1,15 @@
+title: Defined File Size Limit Was Exceeded
+description: Fortinet detection - Defined file size limit was exceeded
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*008704'
+    - '*008705'
+  condition: logId
+level: info
+taxonomy: tm-v1

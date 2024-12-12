@@ -1,0 +1,13 @@
+title: Anti-Spam Couldnt Determine The Legitimacy Of The Email
+description: Fortinet detection - FortiGuard error message. Anti-Spam couldn't determine the legitimacy of the email
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*20509'
+  condition: logId
+level: info
+taxonomy: tm-v1

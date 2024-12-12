@@ -1,0 +1,13 @@
+title: Fortigate Unit Blocked A Virus Command
+description: Fortinet detection - FortiGate unit blocked a virus command
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008452'
+  condition: logId
+level: info
+taxonomy: tm-v1

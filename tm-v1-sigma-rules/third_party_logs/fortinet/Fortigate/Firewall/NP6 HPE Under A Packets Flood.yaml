@@ -1,0 +1,13 @@
+title: NP6 HPE Under A Packets Flood
+description: Fortinet detection - NP6 HPE under a packets flood
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*034419'
+  condition: logId
+level: info
+taxonomy: tm-v1

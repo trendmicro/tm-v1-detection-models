@@ -1,0 +1,16 @@
+title: File Reported Infected By Fortisandbox (Notice)
+description: Fortinet detection - File reported infected by FortiSandbox (notice)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*009237'
+    - '*009235'
+    - '*008233'
+  condition: logId
+level: info
+taxonomy: tm-v1

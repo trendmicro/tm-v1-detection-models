@@ -1,0 +1,13 @@
+title: URL Blocked With Redirect Message By Websense Service
+description: Fortinet detection - URL blocked with redirect message by Websense service
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*012561'
+  condition: logId
+level: info
+taxonomy: tm-v1

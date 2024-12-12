@@ -1,0 +1,13 @@
+title: URL Belongs To A Category With Warnings Enabled
+description: Fortinet detection - URL belongs to a category with warnings enabled
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*013057'
+  condition: logId
+level: info
+taxonomy: tm-v1

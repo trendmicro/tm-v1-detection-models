@@ -1,0 +1,13 @@
+title: File Reported Infected By FortiNDR (Warning)
+description: Fortinet detection - File reported infected by FortiNDR (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*008220'
+  condition: logId
+level: info
+taxonomy: tm-v1

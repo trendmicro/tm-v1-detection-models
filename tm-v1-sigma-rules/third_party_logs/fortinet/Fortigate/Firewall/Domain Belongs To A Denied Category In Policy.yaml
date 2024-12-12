@@ -1,0 +1,13 @@
+title: Domain Belongs To A Denied Category In Policy
+description: Fortinet detection - Domain belongs to a denied category in policy
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*54803'
+  condition: logId
+level: info
+taxonomy: tm-v1

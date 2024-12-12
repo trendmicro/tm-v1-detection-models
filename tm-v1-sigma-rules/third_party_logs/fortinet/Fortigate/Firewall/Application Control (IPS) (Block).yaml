@@ -1,0 +1,13 @@
+title: Application Control (IPS) (Block)
+description: Fortinet detection - Application control (IPS) (block)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*028705'
+  condition: logId
+level: info
+taxonomy: tm-v1

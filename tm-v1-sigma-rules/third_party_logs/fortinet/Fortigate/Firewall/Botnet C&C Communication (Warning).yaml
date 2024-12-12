@@ -1,0 +1,13 @@
+title: Botnet C&C Communication (Warning)
+description: Fortinet detection - Botnet C&C Communication (warning)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*016400'
+  condition: logId
+level: info
+taxonomy: tm-v1

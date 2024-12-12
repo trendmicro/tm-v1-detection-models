@@ -1,0 +1,13 @@
+title: Domain Blocked By Dns Botnet CC(Domain)
+description: Fortinet detection - Domain blocked by DNS botnet CC(Domain)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*054601'
+  condition: logId
+level: info
+taxonomy: tm-v1

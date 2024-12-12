@@ -1,0 +1,13 @@
+title: Attack Detected By Other Signature
+description: Fortinet detection - Attack detected by other signature
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*016386'
+  condition: logId
+level: info
+taxonomy: tm-v1

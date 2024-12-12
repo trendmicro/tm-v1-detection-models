@@ -1,0 +1,15 @@
+title: Fortigate Unit Blocked A File Because It Contains A Virus (MIME)
+description: Fortinet detection - FortiGate unit blocked a file because it contains a virus (MIME)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId:
+    - '*008451'
+    - '*008450'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Web Application Firewall Allowed Application By URL Access Permit
+description: Fortinet detection - Web application firewall allowed application by URL access permit
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030259'
+  condition: logId
+level: info
+taxonomy: tm-v1

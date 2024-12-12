@@ -1,0 +1,13 @@
+title: File Was Blocked By File Filter
+description: Fortinet detection - File was blocked by file filter
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*064000'
+  condition: logId
+level: info
+taxonomy: tm-v1

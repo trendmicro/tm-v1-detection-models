@@ -1,0 +1,13 @@
+title: Application Control (IPS) (Reset)
+description: Fortinet detection - Application control (IPS) (reset)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*028706'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Authentication Failed
+description: Fortinet detection - Authentication failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*043009'
+  condition: logId
+level: info
+taxonomy: tm-v1

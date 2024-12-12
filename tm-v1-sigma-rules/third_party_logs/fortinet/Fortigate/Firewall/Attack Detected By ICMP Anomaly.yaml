@@ -1,0 +1,13 @@
+title: Attack Detected By ICMP Anomaly
+description: Fortinet detection - Attack detected by ICMP anomaly
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*018433'
+  condition: logId
+level: info
+taxonomy: tm-v1
