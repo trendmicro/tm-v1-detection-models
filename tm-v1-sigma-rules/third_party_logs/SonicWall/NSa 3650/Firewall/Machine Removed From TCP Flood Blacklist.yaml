@@ -1,0 +1,13 @@
+title: Machine Removed From TCP Flood Blacklist
+description: SonicWall Detection - Machine %s removed from TCP flood blacklist
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1368'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Possible SYN Flood
+description: SonicWall Detection - Possible SYN Flood attack detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '25'
+  condition: logId
+level: info
+taxonomy: tm-v1

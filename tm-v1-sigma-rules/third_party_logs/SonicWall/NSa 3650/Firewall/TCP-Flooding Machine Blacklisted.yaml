@@ -1,0 +1,13 @@
+title: TCP-Flooding Machine Blacklisted
+description: SonicWall Detection - TCP-Flooding machine %s blacklisted
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1366'
+  condition: logId
+level: info
+taxonomy: tm-v1

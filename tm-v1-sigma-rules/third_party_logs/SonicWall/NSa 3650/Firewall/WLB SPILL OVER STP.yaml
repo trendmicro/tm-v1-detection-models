@@ -1,0 +1,13 @@
+title: WLB SPILL OVER STP
+description: SonicWall Detection - WLB Spill-over started, configured threshold exceeded
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '581'
+  condition: logId
+level: info
+taxonomy: tm-v1

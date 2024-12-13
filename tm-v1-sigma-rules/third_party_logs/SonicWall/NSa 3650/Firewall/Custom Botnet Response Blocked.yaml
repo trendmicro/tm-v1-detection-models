@@ -1,0 +1,13 @@
+title: Custom Botnet Response Blocked
+description: SonicWall Detection - Suspected Botnet responder blocked %s, Source Custom List
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1477'
+  condition: logId
+level: info
+taxonomy: tm-v1

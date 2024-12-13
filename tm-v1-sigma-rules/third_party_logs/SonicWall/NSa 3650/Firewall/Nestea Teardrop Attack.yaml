@@ -1,0 +1,13 @@
+title: Nestea Teardrop Attack
+description: SonicWall Detection - Nestea/Teardrop attack dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1376'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Land Attack
+description: SonicWall Detection - Land attack dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '27'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: WLAN Radio Frequency Threat Detected
+description: SonicWall Detection - WLAN radio frequency threat detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '879'
+  condition: logId
+level: info
+taxonomy: tm-v1

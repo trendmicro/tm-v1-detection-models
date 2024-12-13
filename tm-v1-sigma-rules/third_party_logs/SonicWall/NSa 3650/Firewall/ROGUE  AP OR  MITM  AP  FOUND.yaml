@@ -1,0 +1,13 @@
+title: ROGUE  AP OR  MITM  AP  FOUND
+description: SonicWall Detection - Found Rogue or MitM Access Point
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '546'
+  condition: logId
+level: info
+taxonomy: tm-v1

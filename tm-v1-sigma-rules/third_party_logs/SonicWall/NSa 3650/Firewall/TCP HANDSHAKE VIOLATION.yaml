@@ -1,0 +1,13 @@
+title: TCP HANDSHAKE VIOLATION
+description: SonicWall Detection - TCP handshake violation detected; TCP connection dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '760'
+  condition: logId
+level: info
+taxonomy: tm-v1

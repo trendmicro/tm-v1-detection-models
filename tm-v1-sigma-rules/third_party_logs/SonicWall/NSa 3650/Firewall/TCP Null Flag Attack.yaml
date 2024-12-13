@@ -1,0 +1,13 @@
+title: TCP Null Flag Attack
+description: SonicWall Detection - TCP Null Flag dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1387'
+  condition: logId
+level: info
+taxonomy: tm-v1

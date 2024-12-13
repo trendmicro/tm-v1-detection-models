@@ -1,0 +1,13 @@
+title: WLAN ASSOCI FLOOD
+description: SonicWall Detection - Association Flood from WLAN station
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '548'
+  condition: logId
+level: info
+taxonomy: tm-v1

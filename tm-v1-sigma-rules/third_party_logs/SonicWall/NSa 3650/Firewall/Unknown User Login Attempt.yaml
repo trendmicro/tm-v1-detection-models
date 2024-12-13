@@ -1,0 +1,13 @@
+title: Unknown User Login Attempt
+description: SonicWall Detection - User login denied due to bad credentials
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '33'
+  condition: logId
+level: info
+taxonomy: tm-v1

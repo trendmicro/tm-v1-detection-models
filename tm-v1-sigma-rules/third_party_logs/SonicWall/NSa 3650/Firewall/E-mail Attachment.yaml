@@ -1,0 +1,13 @@
+title: E-mail Attachment
+description: SonicWall Detection - Forbidden E-Mail attachment deleted
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '248'
+  condition: logId
+level: info
+taxonomy: tm-v1

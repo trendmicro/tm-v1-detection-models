@@ -1,0 +1,13 @@
+title: IPv6 MAC-IP Anti-Spoof Cache Not Found For Router
+description: SonicWall Detection - IPv6 Mac-IP Anti-spoof cache not found for this router
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1508'
+  condition: logId
+level: info
+taxonomy: tm-v1

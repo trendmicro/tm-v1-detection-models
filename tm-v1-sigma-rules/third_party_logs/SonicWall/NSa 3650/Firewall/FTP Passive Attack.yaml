@@ -1,0 +1,13 @@
+title: FTP Passive Attack
+description: SonicWall Detection - FTP PASV response spoof attack dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '446'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: ARP Failure
+description: SonicWall Detection - ARP Timeout
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '45'
+  condition: logId
+level: info
+taxonomy: tm-v1

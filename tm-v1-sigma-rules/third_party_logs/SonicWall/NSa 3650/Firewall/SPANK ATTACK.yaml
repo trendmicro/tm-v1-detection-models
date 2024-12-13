@@ -1,0 +1,13 @@
+title: SPANK ATTACK
+description: SonicWall Detection - Spank attack multicast packet dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '606'
+  condition: logId
+level: info
+taxonomy: tm-v1
