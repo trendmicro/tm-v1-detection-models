@@ -1,0 +1,13 @@
+title: SYN FLOOD DETECTED
+description: SonicWall Detection - SYN Flood Detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '860'
+  condition: logId
+level: info
+taxonomy: tm-v1

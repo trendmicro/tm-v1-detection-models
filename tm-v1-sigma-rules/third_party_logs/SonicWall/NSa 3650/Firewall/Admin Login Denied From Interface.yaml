@@ -1,0 +1,13 @@
+title: Admin Login Denied From Interface
+description: SonicWall Detection - Administrator login denied from %s; logins disabled from this interface
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '35'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: TCP Flood Blacklist Continues
+description: SonicWall Detection - TCP Flood Blacklist on IF %s continues
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1367'
+  condition: logId
+level: info
+taxonomy: tm-v1

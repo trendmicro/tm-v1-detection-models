@@ -1,0 +1,13 @@
+title: ICMPv6 Flood Detected
+description: SonicWall Detection - Possible ICMPv6 flood attack detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1451'
+  condition: logId
+level: info
+taxonomy: tm-v1

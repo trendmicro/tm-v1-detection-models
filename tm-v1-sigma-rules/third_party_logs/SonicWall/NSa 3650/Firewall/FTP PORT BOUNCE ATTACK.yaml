@@ -1,0 +1,13 @@
+title: FTP PORT BOUNCE ATTACK
+description: SonicWall Detection - FTP PASV response bounce attack dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '528'
+  condition: logId
+level: info
+taxonomy: tm-v1

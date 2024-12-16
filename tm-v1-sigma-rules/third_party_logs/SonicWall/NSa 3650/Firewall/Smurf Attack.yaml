@@ -1,0 +1,13 @@
+title: Smurf Attack
+description: SonicWall Detection - Smurf Amplification attack dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '81'
+  condition: logId
+level: info
+taxonomy: tm-v1

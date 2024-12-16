@@ -1,0 +1,13 @@
+title: UDPv6 Flood Detected
+description: SonicWall Detection - Possible UPDv6 flood attack detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1450'
+  condition: logId
+level: info
+taxonomy: tm-v1

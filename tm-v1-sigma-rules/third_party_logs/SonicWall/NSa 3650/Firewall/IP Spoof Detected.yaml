@@ -1,0 +1,13 @@
+title: IP Spoof Detected
+description: SonicWall Detection - here is IP spoof Dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '23'
+  condition: logId
+level: info
+taxonomy: tm-v1

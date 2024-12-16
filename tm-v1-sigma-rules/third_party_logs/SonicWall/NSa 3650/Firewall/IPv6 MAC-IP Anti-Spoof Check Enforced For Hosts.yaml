@@ -1,0 +1,13 @@
+title: IPv6 MAC-IP Anti-Spoof Check Enforced For Hosts
+description: SonicWall Detection - IPv6 Mac-IP Anti-spoof check enforced for hosts
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1507'
+  condition: logId
+level: info
+taxonomy: tm-v1

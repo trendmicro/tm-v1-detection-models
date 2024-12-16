@@ -1,0 +1,13 @@
+title: External IDS
+description: SonicWall Detection - External IDS %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1471'
+  condition: logId
+level: info
+taxonomy: tm-v1

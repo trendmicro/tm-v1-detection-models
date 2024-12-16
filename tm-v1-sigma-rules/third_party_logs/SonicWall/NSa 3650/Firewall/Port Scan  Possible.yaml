@@ -1,0 +1,13 @@
+title: Port Scan  Possible
+description: SonicWall Detection - Possible port scan detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '82'
+  condition: logId
+level: info
+taxonomy: tm-v1

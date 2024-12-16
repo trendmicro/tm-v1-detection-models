@@ -1,0 +1,13 @@
+title: Ping of Death Blocked
+description: SonicWall Detection - Here is Ping of death dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '22'
+  condition: logId
+level: info
+taxonomy: tm-v1

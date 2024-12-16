@@ -1,0 +1,13 @@
+title: Botnet Initiator Blocked
+description: SonicWall Detection - Suspected Botnet initiator blocked %s, Source Dynamic List
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1518'
+  condition: logId
+level: info
+taxonomy: tm-v1

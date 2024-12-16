@@ -1,0 +1,13 @@
+title: DHCPR IP Spoof
+description: SonicWall Detection - IP spoof detected on packet to Central Gateway, packet dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '229'
+  condition: logId
+level: info
+taxonomy: tm-v1

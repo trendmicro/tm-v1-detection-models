@@ -1,0 +1,13 @@
+title: TCP FIN Scan
+description: SonicWall Detection - Probable TCP FIN scan detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '177'
+  condition: logId
+level: info
+taxonomy: tm-v1

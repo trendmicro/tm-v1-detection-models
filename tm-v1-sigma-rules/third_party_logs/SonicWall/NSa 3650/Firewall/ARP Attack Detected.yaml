@@ -1,0 +1,13 @@
+title: ARP Attack Detected
+description: SonicWall Detection - Possible ARP attack from MAC address %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1316'
+  condition: logId
+level: info
+taxonomy: tm-v1

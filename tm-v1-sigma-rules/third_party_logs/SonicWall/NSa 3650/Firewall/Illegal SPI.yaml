@@ -1,0 +1,13 @@
+title: Illegal SPI
+description: SonicWall Detection - illegal IPsec SPI
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '65'
+  condition: logId
+level: info
+taxonomy: tm-v1

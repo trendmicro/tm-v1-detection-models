@@ -1,0 +1,13 @@
+title: Possible TCP Flood Ceased
+description: SonicWall Detection - Possible TCP Flood on IF %s has ceased
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1370'
+  condition: logId
+level: info
+taxonomy: tm-v1
