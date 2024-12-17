@@ -1,0 +1,13 @@
+title: ECDSA Test Failed
+description: SonicWall Detection - Crypto ECDSA test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1493'
+  condition: logId
+level: info
+taxonomy: tm-v1

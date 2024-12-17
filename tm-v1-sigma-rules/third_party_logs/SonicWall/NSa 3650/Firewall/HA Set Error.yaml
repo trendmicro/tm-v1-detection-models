@@ -1,0 +1,13 @@
+title: HA Set Error
+description: SonicWall Detection - Error setting the IP address of the Secondary, please manually set to Secondary LAN IP
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '191'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Group-port Link Down
+description: SonicWall Detection - Interface %s down
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1435'
+  condition: logId
+level: info
+taxonomy: tm-v1
