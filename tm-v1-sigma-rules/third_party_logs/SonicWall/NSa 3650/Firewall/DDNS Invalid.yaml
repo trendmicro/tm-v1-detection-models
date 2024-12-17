@@ -1,0 +1,13 @@
+title: DDNS Invalid
+description: SonicWall Detection - DDNS Failure:Provider %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '774'
+  condition: logId
+level: info
+taxonomy: tm-v1

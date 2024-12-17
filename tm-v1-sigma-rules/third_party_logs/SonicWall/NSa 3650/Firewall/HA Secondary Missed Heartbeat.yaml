@@ -1,0 +1,13 @@
+title: HA Secondary Missed Heartbeat
+description: SonicWall Detection - Secondary missed heartbeats from Primary
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '149'
+  condition: logId
+level: info
+taxonomy: tm-v1

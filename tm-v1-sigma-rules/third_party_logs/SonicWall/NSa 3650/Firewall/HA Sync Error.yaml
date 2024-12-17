@@ -1,0 +1,13 @@
+title: HA Sync Error
+description: SonicWall Detection - Error synchronizing HA peer firewall (%s)
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '158'
+  condition: logId
+level: info
+taxonomy: tm-v1

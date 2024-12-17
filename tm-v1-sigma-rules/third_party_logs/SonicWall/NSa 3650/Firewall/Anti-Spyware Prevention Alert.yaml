@@ -1,0 +1,13 @@
+title: Anti-Spyware Prevention Alert
+description: SonicWall Detection - Anti-Spyware Prevention Alert:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '794'
+  condition: logId
+level: info
+taxonomy: tm-v1

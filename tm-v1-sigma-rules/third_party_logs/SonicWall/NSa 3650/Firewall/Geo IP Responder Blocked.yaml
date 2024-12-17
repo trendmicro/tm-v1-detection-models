@@ -1,0 +1,13 @@
+title: Geo IP Responder Blocked
+description: SonicWall Detection - Responder from country blocked:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1199'
+  condition: logId
+level: info
+taxonomy: tm-v1

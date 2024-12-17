@@ -1,0 +1,13 @@
+title: Delete Failure
+description: SonicWall Detection - WXA Delete Failure - %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1402'
+  condition: logId
+level: info
+taxonomy: tm-v1

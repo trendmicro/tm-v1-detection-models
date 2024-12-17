@@ -1,0 +1,13 @@
+title: DHCP Server Sanity Check Failed
+description: SonicWall Detection - DHCP Server sanity check failed %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1072'
+  condition: logId
+level: info
+taxonomy: tm-v1

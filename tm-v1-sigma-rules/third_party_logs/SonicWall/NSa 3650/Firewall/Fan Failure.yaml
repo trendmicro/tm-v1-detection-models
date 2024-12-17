@@ -1,0 +1,13 @@
+title: Fan Failure
+description: SonicWall Detection - Fan Failure
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '576'
+  condition: logId
+level: info
+taxonomy: tm-v1

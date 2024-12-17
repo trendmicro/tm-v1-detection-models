@@ -1,0 +1,13 @@
+title: Connection Cache Full
+description: SonicWall Detection - The cache is full; %s open connections; some will be dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '53'
+  condition: logId
+level: info
+taxonomy: tm-v1

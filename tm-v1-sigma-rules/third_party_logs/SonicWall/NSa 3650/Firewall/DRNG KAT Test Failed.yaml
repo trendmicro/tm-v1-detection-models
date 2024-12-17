@@ -1,0 +1,13 @@
+title: DRNG KAT Test Failed
+description: SonicWall Detection - Crypto SHA1 based DRNG KAT test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1060'
+  condition: logId
+level: info
+taxonomy: tm-v1

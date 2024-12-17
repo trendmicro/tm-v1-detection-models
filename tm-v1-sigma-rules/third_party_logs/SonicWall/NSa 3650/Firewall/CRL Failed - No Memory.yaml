@@ -1,0 +1,13 @@
+title: CRL Failed - No Memory
+description: SonicWall Detection - Not enough memory to hold the CRL
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '272'
+  condition: logId
+level: info
+taxonomy: tm-v1

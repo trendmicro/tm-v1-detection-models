@@ -1,0 +1,13 @@
+title: DNS Rebind Attack Blocked
+description: SonicWall Detection - DNS rebind attack blocked
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1099'
+  condition: logId
+level: info
+taxonomy: tm-v1

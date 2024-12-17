@@ -1,0 +1,13 @@
+title: HA Primary Error Receive
+description: SonicWall Detection - Primary received error signal from Secondary
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '150'
+  condition: logId
+level: info
+taxonomy: tm-v1

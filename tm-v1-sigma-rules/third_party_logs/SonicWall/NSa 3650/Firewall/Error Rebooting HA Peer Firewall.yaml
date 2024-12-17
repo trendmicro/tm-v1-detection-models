@@ -1,0 +1,13 @@
+title: Error Rebooting HA Peer Firewall
+description: SonicWall Detection - Error Rebooting HA Peer Firewall
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '669'
+  condition: logId
+level: info
+taxonomy: tm-v1

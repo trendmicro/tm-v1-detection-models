@@ -1,0 +1,13 @@
+title: DDNS Abuse
+description: SonicWall Detection - DDNS Failure:Provider %s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '773'
+  condition: logId
+level: info
+taxonomy: tm-v1

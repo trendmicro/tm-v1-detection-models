@@ -1,0 +1,13 @@
+title: Bind to LDAP Server Failed
+description: SonicWall Detection - Bind to LDAP server failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1009'
+  condition: logId
+level: info
+taxonomy: tm-v1

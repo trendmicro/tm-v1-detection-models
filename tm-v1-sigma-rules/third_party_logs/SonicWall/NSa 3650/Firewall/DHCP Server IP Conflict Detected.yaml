@@ -1,0 +1,13 @@
+title: DHCP Server IP Conflict Detected
+description: SonicWall Detection - DHCP Server:IP conflict detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1040'
+  condition: logId
+level: info
+taxonomy: tm-v1

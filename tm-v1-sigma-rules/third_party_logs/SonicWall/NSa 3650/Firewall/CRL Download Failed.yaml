@@ -1,0 +1,13 @@
+title: CRL Download Failed
+description: SonicWall Detection - Failed to get CRL from
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '271'
+  condition: logId
+level: info
+taxonomy: tm-v1

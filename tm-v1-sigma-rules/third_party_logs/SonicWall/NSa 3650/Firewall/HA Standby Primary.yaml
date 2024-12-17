@@ -1,0 +1,13 @@
+title: HA Standby Primary
+description: SonicWall Detection - Primary firewall has transitioned to Standby
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '146'
+  condition: logId
+level: info
+taxonomy: tm-v1

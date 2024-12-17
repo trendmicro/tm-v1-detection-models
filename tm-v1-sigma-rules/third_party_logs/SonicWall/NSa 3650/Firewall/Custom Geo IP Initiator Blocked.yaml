@@ -1,0 +1,13 @@
+title: Custom Geo IP Initiator Blocked
+description: SonicWall Detection - Initiator from country blocked:%s, Source:Custom List
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1474'
+  condition: logId
+level: info
+taxonomy: tm-v1

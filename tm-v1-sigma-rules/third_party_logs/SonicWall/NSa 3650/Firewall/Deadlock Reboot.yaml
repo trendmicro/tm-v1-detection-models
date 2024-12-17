@@ -1,0 +1,13 @@
+title: Deadlock Reboot
+description: SonicWall Detection - Diagnostic Code B
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '94'
+  condition: logId
+level: info
+taxonomy: tm-v1
