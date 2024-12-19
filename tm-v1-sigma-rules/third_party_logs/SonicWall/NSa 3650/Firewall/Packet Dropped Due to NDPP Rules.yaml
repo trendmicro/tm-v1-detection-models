@@ -1,0 +1,13 @@
+title: Packet Dropped Due to NDPP Rules
+description: SonicWall Detection - Packet is dropped due to NDPP rules.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1304'
+  condition: logId
+level: info
+taxonomy: tm-v1

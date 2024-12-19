@@ -1,0 +1,13 @@
+title: IPv6 MAC-IP Anti-Spoof Cache Blacklisted Device
+description: SonicWall Detection - IPv6 MAC-IP Anti-spoof cache found, but it is blacklisted device
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1510'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Remote Backup Failed
+description: SonicWall Detection - Failed to send file to remote backup server, Error:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1066'
+  condition: logId
+level: info
+taxonomy: tm-v1

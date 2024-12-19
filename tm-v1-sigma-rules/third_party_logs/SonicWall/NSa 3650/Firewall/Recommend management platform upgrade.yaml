@@ -1,0 +1,13 @@
+title: Recommend management platform upgrade
+description: SonicWall Detection - Using an old SonicWall firewall management platform which compromises the security of some functionality on this firewall. An upgrade of the platform is recommended.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1652'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Power Supply Without Redundancy
+description: SonicWall Detection - Power supply without redundancy
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1043'
+  condition: logId
+level: info
+taxonomy: tm-v1

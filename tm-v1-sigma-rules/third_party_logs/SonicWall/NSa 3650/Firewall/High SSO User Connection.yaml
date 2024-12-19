@@ -1,0 +1,13 @@
+title: High SSO User Connection
+description: SonicWall Detection - A user has a very high number of connections waiting for SSO
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1179'
+  condition: logId
+level: info
+taxonomy: tm-v1

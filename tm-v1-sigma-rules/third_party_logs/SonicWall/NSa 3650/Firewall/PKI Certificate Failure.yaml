@@ -1,0 +1,13 @@
+title: PKI Certificate Failure
+description: SonicWall Detection - PKI Failure:Reached the limit for local certs, cant load any more
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '450'
+  condition: logId
+level: info
+taxonomy: tm-v1

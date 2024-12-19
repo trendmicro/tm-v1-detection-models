@@ -1,0 +1,13 @@
+title: IPv6 Packet Dropped With Unspecified Source IP
+description: SonicWall Detection - Source IPv6 address is unspecified but this packet is not Neighbor Solicitation message for DAD. Packet is dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1303'
+  condition: logId
+level: info
+taxonomy: tm-v1
