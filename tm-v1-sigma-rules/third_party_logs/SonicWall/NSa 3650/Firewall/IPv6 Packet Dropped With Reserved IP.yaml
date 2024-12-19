@@ -1,0 +1,13 @@
+title: IPv6 Packet Dropped With Reserved IP
+description: SonicWall Detection - Source or Destination IPv6 address is reserved by RFC 4291. Packet is dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1301'
+  condition: logId
+level: info
+taxonomy: tm-v1

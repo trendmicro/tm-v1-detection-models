@@ -1,0 +1,13 @@
+title: IPS Prevention Alert
+description: SonicWall Detection - IPS Prevention Alert:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '609'
+  condition: logId
+level: info
+taxonomy: tm-v1

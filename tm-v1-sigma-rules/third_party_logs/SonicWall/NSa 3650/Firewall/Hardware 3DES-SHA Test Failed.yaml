@@ -1,0 +1,13 @@
+title: Hardware 3DES-SHA Test Failed
+description: SonicWall Detection - Crypto Hardware 3DES with SHA test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '369'
+  condition: logId
+level: info
+taxonomy: tm-v1

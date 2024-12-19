@@ -1,0 +1,13 @@
+title: RST-Flooding Machine Blacklisted
+description: SonicWall Detection - RST-Flooding machine %s blacklisted
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '898'
+  condition: logId
+level: info
+taxonomy: tm-v1

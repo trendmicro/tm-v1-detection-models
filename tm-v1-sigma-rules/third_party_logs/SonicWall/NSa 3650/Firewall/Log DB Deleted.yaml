@@ -1,0 +1,13 @@
+title: Log DB Deleted
+description: SonicWall Detection - Log DB Deleted due to data corruption
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1558'
+  condition: logId
+level: info
+taxonomy: tm-v1

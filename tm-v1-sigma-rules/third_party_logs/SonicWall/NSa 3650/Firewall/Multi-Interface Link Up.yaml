@@ -1,0 +1,13 @@
+title: Multi-Interface Link Up
+description: SonicWall Detection - Interface %s Link Is Up
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '565'
+  condition: logId
+level: info
+taxonomy: tm-v1

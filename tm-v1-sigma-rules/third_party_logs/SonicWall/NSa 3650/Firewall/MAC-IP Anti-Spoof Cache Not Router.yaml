@@ -1,0 +1,13 @@
+title: MAC-IP Anti-Spoof Cache Not Router
+description: SonicWall Detection - MAC-IP Anti-spoof cache found, but it is not a router
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1211'
+  condition: logId
+level: info
+taxonomy: tm-v1

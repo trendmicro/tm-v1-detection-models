@@ -1,0 +1,13 @@
+title: Non SonicPoint Traffic Drop
+description: SonicWall Detection - Drop WLAN traffic from non-SonicPoint devices
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '662'
+  condition: logId
+level: info
+taxonomy: tm-v1

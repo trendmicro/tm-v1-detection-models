@@ -1,0 +1,13 @@
+title: Recommend NSM upgrade
+description: SonicWall Detection - Using an old NSM which compromises the security of some functionality on this firewall. An upgrade of NSM is recommended.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1650'
+  condition: logId
+level: info
+taxonomy: tm-v1

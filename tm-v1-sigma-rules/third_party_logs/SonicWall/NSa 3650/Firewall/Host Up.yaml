@@ -1,0 +1,13 @@
+title: Host Up
+description: SonicWall Detection - Network Monitor:Host %s is online
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '707'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: OCSP Failed to Send Request
+description: SonicWall Detection - OCSP send request message failed.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '849'
+  condition: logId
+level: info
+taxonomy: tm-v1
