@@ -1,0 +1,13 @@
+title: IDP Detection Alert
+description: SonicWall Detection - IDP Detection Alert:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '789'
+  condition: logId
+level: info
+taxonomy: tm-v1

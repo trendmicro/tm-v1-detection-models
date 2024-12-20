@@ -1,0 +1,13 @@
+title: Host Status is Unknown
+description: SonicWall Detection - Network Monitor:Host %s status is UNKNOWN
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1103'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Hardware 3DES Test Failed
+description: SonicWall Detection - Crypto hardware 3DES test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '367'
+  condition: logId
+level: info
+taxonomy: tm-v1

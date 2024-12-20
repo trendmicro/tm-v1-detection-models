@@ -1,0 +1,13 @@
+title: Secondary Active Preempt
+description: SonicWall Detection - Secondary going Active in preempt mode after reboot
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '170'
+  condition: logId
+level: info
+taxonomy: tm-v1

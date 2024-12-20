@@ -1,0 +1,13 @@
+title: No Valid DNS Server
+description: SonicWall Detection - No valid DNS server specified for GRID lookups
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1094'
+  condition: logId
+level: info
+taxonomy: tm-v1

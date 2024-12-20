@@ -1,0 +1,13 @@
+title: High SSO Packet Count
+description: SonicWall Detection - A high percentage of the system packet buffers are held waiting for SSO
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1178'
+  condition: logId
+level: info
+taxonomy: tm-v1

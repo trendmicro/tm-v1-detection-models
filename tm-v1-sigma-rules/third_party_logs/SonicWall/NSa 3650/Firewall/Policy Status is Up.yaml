@@ -1,0 +1,13 @@
+title: Policy Status is Up
+description: SonicWall Detection - Network Monitor:Policy %s status is UP
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1100'
+  condition: logId
+level: info
+taxonomy: tm-v1

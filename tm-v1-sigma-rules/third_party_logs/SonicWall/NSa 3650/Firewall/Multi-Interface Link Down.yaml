@@ -1,0 +1,13 @@
+title: Multi-Interface Link Down
+description: SonicWall Detection - Interface %s Link Is Down
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '566'
+  condition: logId
+level: info
+taxonomy: tm-v1

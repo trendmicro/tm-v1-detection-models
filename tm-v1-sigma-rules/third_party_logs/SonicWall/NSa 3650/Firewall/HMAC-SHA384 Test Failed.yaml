@@ -1,0 +1,13 @@
+title: HMAC-SHA384 Test Failed
+description: SonicWall Detection - Crypto Hmac-Sha384 test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1360'
+  condition: logId
+level: info
+taxonomy: tm-v1

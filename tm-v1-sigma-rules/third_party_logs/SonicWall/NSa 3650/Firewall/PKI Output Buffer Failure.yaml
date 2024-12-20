@@ -1,0 +1,13 @@
+title: PKI Output Buffer Failure
+description: SonicWall Detection - PKI Failure:Output buffer too small
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '448'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Possible SYN Flood Ceased
+description: SonicWall Detection - Possible SYN Flood on IF %s has ceased
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '867'
+  condition: logId
+level: info
+taxonomy: tm-v1

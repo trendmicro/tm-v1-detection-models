@@ -1,0 +1,13 @@
+title: HMAC-MD5 Test Failed
+description: SonicWall Detection - Crypto Hmac-MD5 test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '362'
+  condition: logId
+level: info
+taxonomy: tm-v1
