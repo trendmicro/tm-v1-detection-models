@@ -1,0 +1,13 @@
+title: CRL Failed - No Connect
+description: SonicWall Detection - Cannot connect to the CRL server
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '274'
+  condition: logId
+level: info
+taxonomy: tm-v1

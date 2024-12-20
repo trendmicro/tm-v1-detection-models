@@ -1,0 +1,13 @@
+title: HA License Error
+description: SonicWall Detection - License of HA pair doesn't match:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '670'
+  condition: logId
+level: info
+taxonomy: tm-v1

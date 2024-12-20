@@ -1,0 +1,13 @@
+title: CRL Failed - No Reason
+description: SonicWall Detection - Unknown reason
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '275'
+  condition: logId
+level: info
+taxonomy: tm-v1

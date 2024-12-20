@@ -1,0 +1,13 @@
+title: HA Active Primary
+description: SonicWall Detection - Primary firewall has transitioned to Active
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '144'
+  condition: logId
+level: info
+taxonomy: tm-v1

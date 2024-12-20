@@ -1,0 +1,13 @@
+title: HA Primary Preempt
+description: SonicWall Detection - Primary firewall preempting Secondary
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '153'
+  condition: logId
+level: info
+taxonomy: tm-v1

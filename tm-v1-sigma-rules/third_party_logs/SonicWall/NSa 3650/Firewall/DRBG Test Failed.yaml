@@ -1,0 +1,13 @@
+title: DRBG Test Failed
+description: SonicWall Detection - Crypto DRBG test failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1281'
+  condition: logId
+level: info
+taxonomy: tm-v1

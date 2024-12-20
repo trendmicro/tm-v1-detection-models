@@ -1,0 +1,13 @@
+title: Detail Error Log
+description: SonicWall Detection - Payload processing failed
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '616'
+  condition: logId
+level: info
+taxonomy: tm-v1

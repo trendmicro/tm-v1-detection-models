@@ -1,0 +1,13 @@
+title: Application Control Detection Alert
+description: SonicWall Detection - Application Control Detection Alert:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1154'
+  condition: logId
+level: info
+taxonomy: tm-v1

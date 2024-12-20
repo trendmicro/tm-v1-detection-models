@@ -1,0 +1,13 @@
+title: Bad Monitoring IP
+description: SonicWall Detection - The High Availability monitoring IP configuration of Interface %s is incorrect.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1126'
+  condition: logId
+level: info
+taxonomy: tm-v1
