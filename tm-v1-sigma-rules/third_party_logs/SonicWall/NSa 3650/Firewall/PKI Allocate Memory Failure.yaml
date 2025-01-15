@@ -1,0 +1,13 @@
+title: PKI Allocate Memory Failure
+description: SonicWall Detection - PKI Failure:Cannot alloc memory
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '449'
+  condition: logId
+level: info
+taxonomy: tm-v1

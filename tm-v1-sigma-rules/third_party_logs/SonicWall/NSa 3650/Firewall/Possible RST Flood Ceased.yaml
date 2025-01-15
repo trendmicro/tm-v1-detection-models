@@ -1,0 +1,13 @@
+title: Possible RST Flood Ceased
+description: SonicWall Detection - Possible RST Flood on IF %s has ceased
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '906'
+  condition: logId
+level: info
+taxonomy: tm-v1

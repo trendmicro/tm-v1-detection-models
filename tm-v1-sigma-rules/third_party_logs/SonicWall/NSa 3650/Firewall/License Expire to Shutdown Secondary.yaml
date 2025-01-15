@@ -1,0 +1,13 @@
+title: License Expire to Shutdown Secondary
+description: SonicWall Detection - Secondary shut down because license is expired
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '824'
+  condition: logId
+level: info
+taxonomy: tm-v1

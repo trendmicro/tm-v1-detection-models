@@ -1,0 +1,13 @@
+title: IPv6 Packet Dropped With Site Local IP
+description: SonicWall Detection - Source or Destination IPv6 address is site-local unicast address. Packet is dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1429'
+  condition: logId
+level: info
+taxonomy: tm-v1

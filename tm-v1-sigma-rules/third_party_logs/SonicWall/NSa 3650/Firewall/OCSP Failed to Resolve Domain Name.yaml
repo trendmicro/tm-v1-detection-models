@@ -1,0 +1,13 @@
+title: OCSP Failed to Resolve Domain Name
+description: SonicWall Detection - OCSP Failed to Resolve Domain Name.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '853'
+  condition: logId
+level: info
+taxonomy: tm-v1
