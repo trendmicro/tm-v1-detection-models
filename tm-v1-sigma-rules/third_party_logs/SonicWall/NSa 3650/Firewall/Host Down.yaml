@@ -1,0 +1,13 @@
+title: Host Down
+description: SonicWall Detection - Network Monitor:Host %s is offline
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '706'
+  condition: logId
+level: info
+taxonomy: tm-v1

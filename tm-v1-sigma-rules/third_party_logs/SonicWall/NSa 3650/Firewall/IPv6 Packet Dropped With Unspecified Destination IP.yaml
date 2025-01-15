@@ -1,0 +1,13 @@
+title: IPv6 Packet Dropped With Unspecified Destination IP
+description: SonicWall Detection - Destination IPv6 address is unspecified. Packet is dropped
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1302'
+  condition: logId
+level: info
+taxonomy: tm-v1

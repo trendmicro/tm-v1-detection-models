@@ -1,0 +1,13 @@
+title: IDP Prevention Alert
+description: SonicWall Detection - IDP Prevention Alert:%s
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '790'
+  condition: logId
+level: info
+taxonomy: tm-v1

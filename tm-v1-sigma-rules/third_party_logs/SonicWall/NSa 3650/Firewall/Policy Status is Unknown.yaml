@@ -1,0 +1,13 @@
+title: Policy Status is Unknown
+description: SonicWall Detection - Network Monitor:Policy %s status is UNKNOWN
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1102'
+  condition: logId
+level: info
+taxonomy: tm-v1
