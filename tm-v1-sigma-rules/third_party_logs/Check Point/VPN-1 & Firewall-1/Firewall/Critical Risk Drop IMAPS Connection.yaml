@@ -1,0 +1,18 @@
+title: Critical Risk Drop IMAPS Connection
+description: Check Point Detection - detecting Critical Risk Drop IMAPS connection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: CHECK POINT
+detection:
+  filter0:
+    vendorParsed.severity: '5'
+  filter1:
+    vendorParsed.act: 'Drop'
+  filter2:
+    vendorParsed.app: 'IMAPS'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1
+
