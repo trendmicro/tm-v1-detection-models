@@ -1,0 +1,17 @@
+title: Critical Severity Browse Alert
+description: Netskope Detection for detecting URL browse with critical alert severity 
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: Netskope
+detection:
+  filter0:
+    vendorParsed.severity: 'Critical'
+  filter1:
+    vendorParsed.action: 'alert'
+  filter2:
+    vendorParsed.act: 'Browse'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1

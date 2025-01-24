@@ -1,0 +1,17 @@
+title: Medium Severity Download Alert
+description: Netskope Detection for detecting URL download with medium alert severity 
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: Netskope
+detection:
+  filter0:
+    vendorParsed.severity: 'Medium'
+  filter1:
+    vendorParsed.action: 'alert'
+  filter2:
+    vendorParsed.act: 'Download'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1
