@@ -1,0 +1,13 @@
+title: Legacy Mode Incoming Files Detected and Quarantined
+description: TxOne warning for  Incoming Files Detected and Quarantined Successfully.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TxOne Networks
+detection:
+  eventId:
+    vendorParsed.eventId: '8012'
+  condition: eventId
+level: info
+taxonomy: tm-v1

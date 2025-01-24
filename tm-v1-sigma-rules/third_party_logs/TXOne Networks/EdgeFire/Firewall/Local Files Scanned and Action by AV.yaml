@@ -1,0 +1,13 @@
+title: Local Files Scanned and Action by AV
+description: TxOne Detection for local files that were scanned by antivirus. Action was taken according to settings.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TxOne Networks
+detection:
+  eventId:
+    vendorParsed.eventId: '4611'
+  condition: eventId
+level: info
+taxonomy: tm-v1

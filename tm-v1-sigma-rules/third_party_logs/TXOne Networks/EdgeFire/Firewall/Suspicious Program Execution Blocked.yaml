@@ -1,0 +1,13 @@
+title: Suspicious Program Execution Blocked
+description: TxOne Detection for blocked execution of a suspicious program.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TxOne Networks
+detection:
+  eventId:
+    vendorParsed.eventId: '4613'
+  condition: eventId
+level: info
+taxonomy: tm-v1

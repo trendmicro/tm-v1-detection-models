@@ -1,0 +1,13 @@
+title: Legacy Mode File Execution Detected and Quarantined
+description: TxOne warning for File Execution Detected and Quarantined Successfully.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TxOne Networks
+detection:
+  eventId:
+    vendorParsed.eventId: '8014'
+  condition: eventId
+level: info
+taxonomy: tm-v1

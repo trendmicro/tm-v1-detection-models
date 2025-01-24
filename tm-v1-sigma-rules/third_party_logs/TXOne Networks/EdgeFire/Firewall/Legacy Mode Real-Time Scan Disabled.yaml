@@ -1,0 +1,13 @@
+title: Legacy Mode Real-Time Scan Disabled
+description: TxOne warning for Disabling of Real Time Scan
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TxOne Networks
+detection:
+  eventId:
+    vendorParsed.eventId: '8001'
+  condition: eventId
+level: info
+taxonomy: tm-v1
