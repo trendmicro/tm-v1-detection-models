@@ -1,0 +1,17 @@
+title: High Risk Drop Inbound Connection
+description: Check Point Detection for detecting High risk inbound connection
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: CHECK POINT
+detection:
+  filter0:
+    vendorParsed.severity: '4'
+  filter1: 
+    vendorParsed.act: 'Drop'
+  filter2:
+    vendorParsed.deviceDirection: '0'
+  condition: filter0 and filter1 and filter2 
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,17 @@
+title: Critical Risk Reject HTTPS Connection
+description: Check Point Detection for detecting Critical Risk Reject HTTPS connection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: CHECK POINT
+detection:
+  filter0:
+    vendorParsed.severity: '5'
+  filter1:
+    vendorParsed.act: 'Reject'
+  filter2:
+    vendorParsed.app: 'HTTPS'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1
