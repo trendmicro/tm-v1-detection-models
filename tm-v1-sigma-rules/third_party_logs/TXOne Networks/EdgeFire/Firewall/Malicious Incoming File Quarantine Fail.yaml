@@ -1,0 +1,13 @@
+title: Malicious Incoming File Quarantine Fail
+description: TxOne Networks Detection for failed quarantine of malicious incoming file
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4618'
+  condition: eventId
+level: info
+taxonomy: tm-v1
