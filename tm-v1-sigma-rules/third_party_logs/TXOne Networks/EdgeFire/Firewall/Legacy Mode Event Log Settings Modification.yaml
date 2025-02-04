@@ -1,0 +1,13 @@
+title: Legacy Mode Event Log Settings Modification
+description: TxOne Networks Alert for Changes in the Settings of Event Log
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '1103'
+  condition: eventId
+level: info
+taxonomy: tm-v1

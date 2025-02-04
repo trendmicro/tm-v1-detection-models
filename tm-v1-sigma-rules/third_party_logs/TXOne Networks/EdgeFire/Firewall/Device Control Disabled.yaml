@@ -1,0 +1,13 @@
+title: Device Control Disabled 
+description: TxOne Networks Detection for Disabling of Device Control
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '5376'
+  condition: eventId
+level: info
+taxonomy: tm-v1

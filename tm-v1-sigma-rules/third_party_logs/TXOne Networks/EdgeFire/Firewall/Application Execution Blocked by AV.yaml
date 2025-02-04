@@ -1,0 +1,13 @@
+title: Application Execution Blocked by AV
+description: TxOne Networks Detection for AV blocked execution of a application.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4615'
+  condition: eventId
+level: info
+taxonomy: tm-v1

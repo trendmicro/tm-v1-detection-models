@@ -1,0 +1,13 @@
+title: Local Files Scanned and Action by Next-Gen AV
+description: TxOne Networks Detection for Incoming files that were scanned by next-generation antivirus. Action was taken according to settings.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4612'
+  condition: eventId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Legacy Mode Operations Behavior Anomaly Detection Disable 
+description: TxOne Networks warning for  Operations Behavior Anomaly Detection (Application Behavior) disabled
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '8604'
+  condition: eventId
+level: info
+taxonomy: tm-v1
