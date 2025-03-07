@@ -3,7 +3,7 @@ description: Palo Alto File detection - DER Encoded X509 Certificate
 tags:
 - mitre.t1071.001
 logsource:
-  definition: EVENT_SOURCE_THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
   category: THIRD_PARTY_LOG
   product: PALO ALTO NETWORKS
 detection:
