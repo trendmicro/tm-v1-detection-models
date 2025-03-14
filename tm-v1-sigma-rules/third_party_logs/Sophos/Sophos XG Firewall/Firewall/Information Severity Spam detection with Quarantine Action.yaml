@@ -1,0 +1,17 @@
+title: Information Severity Spam detection with Quarantine Action
+description: Sophos Detection for detecting Information Severity Spam emails with Quarantine Action
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: SOPHOS
+detection:
+  filter0:
+    vendorParsed.severity: 'Information'
+  filter1:
+    vendorParsed.spamaction: 'Quarantine'
+  filter2:
+    vendorParsed.log_subtype: 'SPAM'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1
