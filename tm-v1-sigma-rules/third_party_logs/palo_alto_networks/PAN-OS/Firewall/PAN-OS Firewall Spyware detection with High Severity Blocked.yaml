@@ -1,0 +1,17 @@
+title: PAN-OS Firewall Spyware detection with High Severity Blocked
+description: Palo Alto Networks Spyware detection with High Severity blocked by PAN-OS Firewall
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  action:
+    act: '*alert*'
+  filter:
+    eventSubName: spyware
+    ruleName: "*"
+    severity: 8
+  condition: filter and not action
+level: info
+taxonomy: tm-v1
