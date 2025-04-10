@@ -1,0 +1,15 @@
+title: Suspicious PowerShell Command Line
+description: MDE Detection for Suspicious PowerShell command line
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: Suspicious PowerShell command line*
+    condition: string_condition_0 and string_condition_1
+level: low
+taxonomy: tm-v1
