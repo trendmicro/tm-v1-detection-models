@@ -1,0 +1,15 @@
+title: File Backups Were Deleted
+description: MDE Detection for File backups were deleted
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: File backups were deleted*
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

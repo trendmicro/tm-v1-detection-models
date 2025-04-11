@@ -1,0 +1,15 @@
+title: Windows Defender AV Detected
+description: MDE Detection for Windows Defender AV Detected
+tags: []
+logsource:  
+    category: THIRD_PARTY_LOG  
+    product: Microsoft 
+    definition: THIRDPARTY_THIRDPARTY  
+detection:  
+    et:  
+        eventCategory: Alert*
+    title:  
+        alertTitle: *Defender AV detected*
+    condition: et and title
+level: info  
+taxonomy: tm-v1

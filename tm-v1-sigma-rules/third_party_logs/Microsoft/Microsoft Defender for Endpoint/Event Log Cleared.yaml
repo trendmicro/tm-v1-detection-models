@@ -1,0 +1,15 @@
+title: Event Log Cleared
+description: MDE Detection - Event log was cleared
+tags: []
+logsource:  
+    category: THIRD_PARTY_LOG  
+    product: Microsoft Defender for Endpoint  
+    definition: THIRDPARTY_THIRDPARTY  
+detection:  
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: "*Event log was cleared*"
+    condition: string_condition_0 and string_condition_1
+level: info  
+taxonomy: tm-v1
