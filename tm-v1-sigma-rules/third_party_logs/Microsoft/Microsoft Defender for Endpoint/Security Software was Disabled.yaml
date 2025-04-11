@@ -11,5 +11,5 @@ detection:
     title:  
         alertTitle: Security software was disabled*
     condition: et and title
-level: medium  
+level: info  
 taxonomy: tm-v1  
