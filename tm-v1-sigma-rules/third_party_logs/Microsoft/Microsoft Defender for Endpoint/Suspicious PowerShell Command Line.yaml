@@ -11,5 +11,5 @@ detection:
     string_condition_1:
         alertTitle: Suspicious PowerShell command line*
     condition: string_condition_0 and string_condition_1
-level: low
+level: info
 taxonomy: tm-v1
