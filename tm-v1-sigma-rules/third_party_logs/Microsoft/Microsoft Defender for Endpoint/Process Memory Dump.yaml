@@ -11,6 +11,6 @@ detection:
     title:  
         alertTitle: Process memory dump*
     condition: et and title
-level: medium  
+level: info  
 taxonomy: tm-v1  
 
