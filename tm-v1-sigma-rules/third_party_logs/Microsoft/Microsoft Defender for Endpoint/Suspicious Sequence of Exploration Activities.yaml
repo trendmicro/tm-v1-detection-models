@@ -11,5 +11,5 @@ detection:
     title:  
         alertTitle: Suspicious Sequence of Exploration Activities*
     condition: et and title
-level: low  
+level: info  
 taxonomy: tm-v1  
