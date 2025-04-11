@@ -11,5 +11,5 @@ detection:
     title:  
         alertTitle: *Microsoft Defender Antivirus tampering*
     condition: et and title
-level: high  
+level: info  
 taxonomy: tm-v1  
