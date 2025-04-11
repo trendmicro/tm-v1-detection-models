@@ -11,5 +11,5 @@ detection:
     title:  
         alertTitle: Suspicious Azure role assignment detected*
     condition: et and title
-level: low  
+level: info  
 taxonomy: tm-v1  
