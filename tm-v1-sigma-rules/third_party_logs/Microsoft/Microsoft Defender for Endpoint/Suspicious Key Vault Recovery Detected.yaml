@@ -1,5 +1,5 @@
 title: Suspicious Key Vault Recovery Detected
-description: MDE Detection - Suspicious Key Vault Recovery Detected
+description: Microsoft Detection - Suspicious Key Vault Recovery Detected
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
