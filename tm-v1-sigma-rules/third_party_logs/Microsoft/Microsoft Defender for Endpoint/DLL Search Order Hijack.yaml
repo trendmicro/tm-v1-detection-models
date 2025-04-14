@@ -1,0 +1,15 @@
+title: DLL Search Order Hijack
+description: Microsoft Detection for DLL search order hijack
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: DLL search order hijack*
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

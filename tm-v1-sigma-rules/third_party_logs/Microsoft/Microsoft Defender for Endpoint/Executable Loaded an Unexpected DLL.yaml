@@ -1,0 +1,14 @@
+title: Executable Loaded an Unexpected DLL
+description: Microsoft Detection for Executable Loaded an Unexpected DLL
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: An executable loaded an unexpected dll*
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

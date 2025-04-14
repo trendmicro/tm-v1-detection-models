@@ -1,0 +1,15 @@
+title: File Dropped and Launched from Remote Location
+description: Microsoft Detection for File dropped and launched from remote location
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: Alert*
+    string_condition_1:
+        alertTitle: File dropped and launched from remote location*
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

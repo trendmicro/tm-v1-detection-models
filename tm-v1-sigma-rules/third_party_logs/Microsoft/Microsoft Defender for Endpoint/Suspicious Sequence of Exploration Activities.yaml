@@ -1,0 +1,15 @@
+title: Suspicious Sequence of Exploration Activities
+description: Microsoft Detection for Suspicious sequence of exploration activities
+tags: []
+logsource:  
+    category: THIRD_PARTY_LOG  
+    product: Microsoft 
+    definition: THIRDPARTY_THIRDPARTY  
+detection:  
+    et:  
+        eventCategory: Alert* 
+    title:  
+        alertTitle: Suspicious Sequence of Exploration Activities*
+    condition: et and title
+level: info  
+taxonomy: tm-v1  

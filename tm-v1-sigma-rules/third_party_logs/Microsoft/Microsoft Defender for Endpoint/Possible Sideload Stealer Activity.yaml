@@ -1,0 +1,15 @@
+title: Possible Sideload Stealer Activity
+description: Microsoft Detection for Possible Sideload stealer activity
+tags: []
+logsource:  
+    category: THIRD_PARTY_LOG  
+    product: Microsoft 
+    definition: THIRDPARTY_THIRDPARTY  
+detection:  
+    et:  
+        eventCategory: Alert*
+    title:  
+        alertTitle: Possible Sideload stealer activity*
+    condition: et and title
+level: info  
+taxonomy: tm-v1  
