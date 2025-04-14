@@ -1,6 +1,5 @@
 title: Executable Loaded an Unexpected DLL
-description: MDE Detection for An executable loaded an unexpected dll
-tags: []
+description: Microsoft Detection for Executable Loaded an Unexpected DLL
 logsource:
     category: THIRD_PARTY_LOG
     product: Microsoft
