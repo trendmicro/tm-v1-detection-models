@@ -1,5 +1,5 @@
 title: Active Directory (AD) Reconnaissance Activities
-description: MDE Detection for AD reconnaissance activities
+description: Microsoft Detection for Active Directory (AD) Reconnaissance Activities
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
