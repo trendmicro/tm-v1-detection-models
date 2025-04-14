@@ -1,5 +1,5 @@
 title: Suspicious PowerShell Command Line
-description: MDE Detection for Suspicious PowerShell command line
+description: Microsoft Detection for Suspicious PowerShell command line
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
