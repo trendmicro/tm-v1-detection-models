@@ -1,5 +1,5 @@
 title: File Dropped and Launched from Remote Location
-description: MDE Detection for File dropped and launched from remote location
+description: Microsoft Detection for File dropped and launched from remote location
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
