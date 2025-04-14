@@ -1,5 +1,5 @@
 title: Windows Defender AV Detected
-description: MDE Detection for Windows Defender AV Detected
+description: Microsoft Detection for Windows Defender AV Detected
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
