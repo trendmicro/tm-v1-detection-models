@@ -1,5 +1,5 @@
 title: Sticky Keys Binary Hijack Detected
-description: MDE Detection for Sticky Keys binary hijack detected
+description: Microsoft Detection for Sticky Keys binary hijack detected
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
