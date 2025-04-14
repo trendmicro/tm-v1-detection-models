@@ -3,7 +3,7 @@ description: Microsoft Detection for Event Log Cleared
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
-    product: Microsoft Defender for Endpoint  
+    product: Microsoft  
     definition: THIRDPARTY_THIRDPARTY  
 detection:  
     string_condition_0:
