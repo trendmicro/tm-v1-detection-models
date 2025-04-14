@@ -1,5 +1,5 @@
 title: Hacktool in a PowerShell Script was Prevented from Executing via AMSI
-description: MDE Detection for hacktool in a PowerShell script was prevented from executing via AMSI
+description: Microsoft Detection for hacktool in a PowerShell script was prevented from executing via AMSI
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
