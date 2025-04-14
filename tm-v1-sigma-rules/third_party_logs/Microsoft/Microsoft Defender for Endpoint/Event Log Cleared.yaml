@@ -1,5 +1,5 @@
 title: Event Log Cleared
-description: MDE Detection - Event log was cleared
+description: Microsoft Detection for Event Log Cleared
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
