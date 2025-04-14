@@ -1,5 +1,5 @@
 title: Process Memory Dump
-description: MDE Detection for Process memory dump
+description: Microsoft Detection for Process memory dump
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
