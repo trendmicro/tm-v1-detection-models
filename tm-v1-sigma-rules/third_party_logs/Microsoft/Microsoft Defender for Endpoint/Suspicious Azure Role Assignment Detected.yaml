@@ -1,5 +1,5 @@
 title: Suspicious Azure Role Assignment Detected
-description: MDE Detection for Suspicious Azure role assignment detected
+description: Microsoft Detection for Suspicious Azure role assignment detected
 tags: []
 logsource:  
     category: THIRD_PARTY_LOG  
