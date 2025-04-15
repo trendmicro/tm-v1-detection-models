@@ -1,0 +1,13 @@
+title:  SSH Connection Is Blocked Because Host-key Is Not Trust
+description: Fortinet detection for  SSH connection is blocked, because host-key is not trust
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*061012'
+  condition: logId
+level: info
+taxonomy: tm-v1
