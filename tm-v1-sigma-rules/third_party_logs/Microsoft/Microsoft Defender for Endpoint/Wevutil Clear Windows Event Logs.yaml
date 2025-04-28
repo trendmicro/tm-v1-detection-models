@@ -1,0 +1,20 @@
+title: Wevutil Clear Windows Event Logs
+description: Microsoft Detection for Wevutil Clear Windows Event Logs
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        objectCmd|contains: 
+            - 'wevtutil.exe'
+    s2:
+        objectCmd|contains: 
+            - " cl "
+            - "clear-log"
+    condition: ec and s1 and s2s
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Ransomware Prevented
+description: Microsoft Detection for Ransomware Prevented
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: Alert*
+    s1:
+        alertTitle: *ransomware was prevented*
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

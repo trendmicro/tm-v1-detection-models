@@ -1,0 +1,15 @@
+title: AMSI Script Detection
+description: Microsoft Detection for AMSI Script Detection
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceEvents
+    string_condition_1:
+        actionName: AmsiScriptDetection
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

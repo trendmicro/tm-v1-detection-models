@@ -1,0 +1,15 @@
+title: Backdoor Detected
+description: Microsoft Detection for Backdoor was Detected
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: Alert*
+    s1:
+        alertTitle: *backdoor was detected*
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

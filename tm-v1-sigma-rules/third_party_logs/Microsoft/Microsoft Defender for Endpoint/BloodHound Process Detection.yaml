@@ -1,0 +1,18 @@
+title: BloodHound Process Detection
+description: Microsoft Detection for BloodHound Process Detection
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceEvents
+    string_condition_1:
+        objectCmd|contains: 
+            - '-collectionMethod'
+            - 'invoke-bloodhound'
+            - 'get-bloodHounddata'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
