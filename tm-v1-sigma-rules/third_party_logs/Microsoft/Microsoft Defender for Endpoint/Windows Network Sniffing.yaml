@@ -1,0 +1,15 @@
+title: Windows Network Sniffing
+description: Microsoft Detection for Windows Network Sniffing
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        objectFileName: "PktMon.exe"
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

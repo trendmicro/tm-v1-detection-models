@@ -1,0 +1,19 @@
+title: CertUtil Remote Download
+description: Custom Microsoft Filter Detection for CertUtil Remote Download
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        objectCmd: "*http*"
+    s2:
+        objectCmd: "*urlcache*"
+    s3:
+        objectCmd: "*-f*"
+    condition: ec and s1 and s2 and s3
+level: info
+taxonomy: tm-v1

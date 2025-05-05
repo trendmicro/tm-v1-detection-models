@@ -9,7 +9,7 @@ detection:
     et:  
         eventCategory: Alert*
     title:  
-        alertTitle: *Defender AV detected*
+        alertTitle: "*Defender AV detected*"
     condition: et and title
 level: info  
 taxonomy: tm-v1
