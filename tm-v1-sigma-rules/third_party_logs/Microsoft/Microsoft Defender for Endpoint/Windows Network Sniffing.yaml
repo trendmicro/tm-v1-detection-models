@@ -1,5 +1,5 @@
 title: Windows Network Sniffing
-description: Microsoft Detection for AMSI Script Detection
+description: Microsoft Detection for Windows Network Sniffing
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
