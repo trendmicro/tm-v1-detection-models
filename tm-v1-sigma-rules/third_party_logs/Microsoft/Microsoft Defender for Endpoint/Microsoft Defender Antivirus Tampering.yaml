@@ -9,7 +9,7 @@ detection:
     et:  
         eventCategory: Alert*
     title:  
-        alertTitle: *Microsoft Defender Antivirus tampering*
+        alertTitle: "*Microsoft Defender Antivirus tampering*"
     condition: et and title
 level: info  
 taxonomy: tm-v1  
