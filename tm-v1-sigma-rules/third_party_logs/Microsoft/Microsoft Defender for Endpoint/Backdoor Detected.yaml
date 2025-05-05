@@ -9,7 +9,7 @@ detection:
     ec:
         eventCategory: Alert*
     s1:
-        alertTitle: *backdoor was detected*
+        alertTitle: "*backdoor was detected*"
     condition: ec and s1
 level: info
 taxonomy: tm-v1

@@ -9,10 +9,11 @@ detection:
     ec:
         eventCategory: DeviceProcessEvents
     s1:
-        objectCmd|contains|all: 
-            - "http"
-            - "urlcache"
-            - "-f"
-    condition: ec and s1
+        objectCmd: "*http*"
+    s2:
+        objectCmd: "*urlcache*"
+    s3:
+        objectCmd: "*-f*"
+    condition: ec and s1 and s2 and s3
 level: info
 taxonomy: tm-v1

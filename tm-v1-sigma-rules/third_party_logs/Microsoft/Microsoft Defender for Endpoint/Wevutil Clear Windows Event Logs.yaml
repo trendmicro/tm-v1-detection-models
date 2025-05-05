@@ -6,14 +6,14 @@ logsource:
     product: Microsoft
     definition: THIRDPARTY_THIRDPARTY
 detection:
-    ec:
+    string_condition_0:
         eventCategory: DeviceProcessEvents
-    s1:
-        objectCmd: "*wevtutil.exe*"
-    s2:
-        objectCmd: 
-            - "* cl *"
-            - "*clear-log*"
-    condition: ec and s1 and s2s
+    string_condition_1:
+        objectCmd: '*wevtutil.exe*'
+    string_condition_2:
+        objectCmd: '* cl *'
+    string_condition_3:
+        objectCmd: '*clear-log*'
+    condition: string_condition_0 and (string_condition_1 or string_condition_2 or string_condition_3)
 level: info
 taxonomy: tm-v1
