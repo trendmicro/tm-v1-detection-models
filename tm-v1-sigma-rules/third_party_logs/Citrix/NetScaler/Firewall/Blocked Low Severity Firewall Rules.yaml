@@ -1,0 +1,14 @@
+title: Blocked Low Severity Firewall Rules
+description: Citrix Detection for Blocked Firewall rules with Low Severity
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: Citrix
+detection:
+  filters:
+    severity: '4'
+    act: 'blocked'
+  condition: filters
+level: info
+taxonomy: tm-v1

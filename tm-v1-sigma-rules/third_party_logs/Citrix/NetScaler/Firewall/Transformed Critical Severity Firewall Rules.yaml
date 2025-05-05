@@ -1,0 +1,14 @@
+title: Transformed Critical Severity Firewall Rules
+description: Citrix Detection for Transformed Firewall rules with Critical Severity
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: Citrix
+detection:
+  filters:
+    severity: '9'
+    act: 'transformed'
+  condition: filters
+level: info
+taxonomy: tm-v1
