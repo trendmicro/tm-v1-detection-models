@@ -9,7 +9,7 @@ detection:
     ec:
         eventCategory: Alert*
     s1:
-        alertTitle: *hacktool was detected*
+        alertTitle: "*hacktool was detected*"
     condition: ec and s1
 level: info
 taxonomy: tm-v1
