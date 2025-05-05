@@ -9,10 +9,11 @@ detection:
     string_condition_0:
         eventCategory: DeviceEvents
     string_condition_1:
-        objectCmd|contains: 
-            - '-collectionMethod'
-            - 'invoke-bloodhound'
-            - 'get-bloodHounddata'
-    condition: string_condition_0 and string_condition_1
+        objectCmd: '*-collectionMethod*'
+    string_condition_2:
+        objectCmd: '*invoke-bloodhound*'
+    string_condition_3:
+        objectCmd: '*get-bloodHounddata*'
+    condition: string_condition_0 and (string_condition_1 or string_condition_2 or string_condition_3)
 level: info
 taxonomy: tm-v1
