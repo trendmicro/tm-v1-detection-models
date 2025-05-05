@@ -1,0 +1,21 @@
+title: Suspicious Image Load related to IcedId
+description: Suspicious Image Load related to IcedId Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceImageLoadEvents
+    s1:
+        processName: "rundll32.exe"
+    s2:
+        processName: "regsvr32.exe"
+    s3:
+        objectFileName: "*.txt"
+    s4:
+        objectFileName: "*.pdf"  
+    condition: ec and (s1 or s2) and (s3 or s4)
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,19 @@
+title: Clearing of System Logs
+description: Clearing of System Logs Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        objectFileName: "fsutil.exe"
+    s2:
+        objectCmd: "*usn*"
+    s3:
+        objectCmd: "*deletejournal*"
+    condition: ec and s1 and (s2 and s3)
+level: info
+taxonomy: tm-v1

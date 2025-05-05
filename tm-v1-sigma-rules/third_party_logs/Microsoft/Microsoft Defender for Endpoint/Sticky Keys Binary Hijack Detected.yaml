@@ -1,15 +1,15 @@
 title: Sticky Keys Binary Hijack Detected
 description: Microsoft Detection for Sticky Keys binary hijack detected
 tags: []
-logsource:  
-    category: THIRD_PARTY_LOG  
+logsource:
+    category: THIRD_PARTY_LOG
     product: Microsoft
-    definition: THIRDPARTY_THIRDPARTY  
-detection:  
-    et:  
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
         eventCategory: Alert*
-    title:  
-        alertTitle: Sticky Keys binary hijack detected*
-    condition: et and title
-level: info  
+    s1:
+        alertTitle: "Sticky Keys binary hijack detected"
+    condition: ec and s1
+level: info
 taxonomy: tm-v1
