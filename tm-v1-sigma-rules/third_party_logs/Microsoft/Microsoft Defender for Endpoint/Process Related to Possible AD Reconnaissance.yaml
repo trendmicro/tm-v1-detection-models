@@ -9,7 +9,7 @@ detection:
     et:  
         eventCategory: Alert*
     title:  
-        alertTitle: *AD reconnaissance activities*
+        alertTitle: "*AD reconnaissance activities*"
     condition: et and title
 level: info  
 taxonomy: tm-v1

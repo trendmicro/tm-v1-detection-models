@@ -1,5 +1,5 @@
-title: Active Directory (AD) Reconnaissance Activities
-description: Microsoft Detection for Active Directory (AD) Reconnaissance Activities
+title: AMSI Script Detection
+description: Microsoft Detection for AMSI Script Detection
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
@@ -7,9 +7,9 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: Alert*
+        eventCategory: DeviceEvents
     string_condition_1:
-        alertTitle: AD reconnaissance activities*
+        actionName: AmsiScriptDetection
     condition: string_condition_0 and string_condition_1
 level: info
 taxonomy: tm-v1
