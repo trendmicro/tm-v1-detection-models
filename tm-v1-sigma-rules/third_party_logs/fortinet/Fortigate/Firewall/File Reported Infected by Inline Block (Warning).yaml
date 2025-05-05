@@ -1,5 +1,5 @@
-title: SSH Shell Command Is Detected
-description: Fortinet detection for SSH shell command is detected
+title: File Reported Infected by Inline Block (Warning)
+description: Fortinet detection for  File reported infected by Inline Block (warning)
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
@@ -7,7 +7,7 @@ logsource:
   product: FORTINET
 detection:
   logId:
-    vendorLogId: '*061003'
+    vendorLogId: '*008220'
   condition: logId
 level: info
 taxonomy: tm-v1

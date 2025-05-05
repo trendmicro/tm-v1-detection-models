@@ -1,5 +1,5 @@
-title: SSH Shell Command Is Detected
-description: Fortinet detection for SSH shell command is detected
+title:  DHCP Client Blocked Log
+description: Fortinet detection for DHCP client blocked log
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
@@ -7,7 +7,7 @@ logsource:
   product: FORTINET
 detection:
   logId:
-    vendorLogId: '*061003'
+    vendorLogId: '*026007'
   condition: logId
 level: info
 taxonomy: tm-v1

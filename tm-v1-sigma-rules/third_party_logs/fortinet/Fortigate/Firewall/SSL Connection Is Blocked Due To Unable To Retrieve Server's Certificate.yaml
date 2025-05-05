@@ -1,0 +1,13 @@
+title: SSL Connection Is Blocked Due To Unable To Retrieve Server's Certificate
+description: Fortinet detection for SSL connection is blocked due to server certificate and SNI mismatched
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*062305'
+  condition: logId
+level: info
+taxonomy: tm-v1

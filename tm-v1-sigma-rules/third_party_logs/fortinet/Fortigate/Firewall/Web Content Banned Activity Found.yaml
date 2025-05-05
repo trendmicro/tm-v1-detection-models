@@ -1,5 +1,5 @@
-title: SSH Shell Command Is Detected
-description: Fortinet detection for SSH shell command is detected
+title:  Web Content Banned Activity Found
+description: Fortinet detection for Web content banned activity found
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
@@ -7,7 +7,7 @@ logsource:
   product: FORTINET
 detection:
   logId:
-    vendorLogId: '*061003'
+    vendorLogId: '*010000'
   condition: logId
 level: info
 taxonomy: tm-v1
