@@ -1,0 +1,19 @@
+title: Possible Detect Torrent Usage
+description: Detect Torrent Usage Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceNetworkEvents
+    p1: 
+        processName: "*torrent*"   
+    p2:
+        processName: "*vuze*"
+    p3:
+        processName: "*azureus*"
+    condition: ec and (p1 or p2 or p3)
+level: info
+taxonomy: tm-v1

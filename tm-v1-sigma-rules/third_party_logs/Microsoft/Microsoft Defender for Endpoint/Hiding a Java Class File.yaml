@@ -1,0 +1,19 @@
+title: Hiding a Java Class File
+description: Hiding a Java Class File Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    ec2:
+        eventCategory: DeviceFileEvents
+    s1:
+        objectCmd: "*attrib +h +s +r *"
+    s2:
+        objectCmd: "*.class*"
+    condition: (ec and ec2) and (s1 and s2)
+level: info
+taxonomy: tm-v1

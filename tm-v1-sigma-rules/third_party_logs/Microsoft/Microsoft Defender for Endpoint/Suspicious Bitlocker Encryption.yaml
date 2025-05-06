@@ -1,0 +1,25 @@
+title: Suspicious Bitlocker Encryption
+description: Suspicious Bitlocker Encryption Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        objectFileName: "*reg.exe*"
+    s2:
+        objectCmd: "*EnableBDEWithNoTPM*"
+    s3:
+        objectCmd: "*true*"
+    s4:
+        objectCmd: "*1*"   
+    s5:
+        processCmd: "*C:\\Windows\\*"
+    s6:
+        processCmd: "*.bat*"
+    condition: ec and (s1 and s2) and (s3 or s4) and (s5 and s6)
+level: info
+taxonomy: tm-v1
