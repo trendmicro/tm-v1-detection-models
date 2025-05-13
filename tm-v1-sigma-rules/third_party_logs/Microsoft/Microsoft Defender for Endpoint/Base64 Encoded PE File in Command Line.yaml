@@ -7,9 +7,9 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     ec:
-        eventCategory: DeviceProcessEvents
+        eventCategory: 'DeviceProcessEvents'
     s1: 
-        objectCmd: "*TVqQAAMAAAAEAAA*"   
+        objectCmd: '*TVqQAAMAAAAEAAA*'   
     condition: ec and s1
 level: info
 taxonomy: tm-v1
