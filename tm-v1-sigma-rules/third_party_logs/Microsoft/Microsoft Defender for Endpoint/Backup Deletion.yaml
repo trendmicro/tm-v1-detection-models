@@ -1,0 +1,19 @@
+title: Backup Deletion
+description: Backup Deletion Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    s1:
+        objectFileName: '*wmic.exe*'
+    s2:
+        objectCmd: '*shadowcopy*'
+    s3:
+        objectCmd: '*delete*'
+    condition: ec and s1 and (s2 and s3)
+level: info
+taxonomy: tm-v1

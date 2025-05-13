@@ -1,0 +1,15 @@
+title: Base64 Encoded PE File in Command Line
+description: Base64 Encoded PE File in Command Line Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    s1: 
+        objectCmd: '*TVqQAAMAAAAEAAA*'   
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

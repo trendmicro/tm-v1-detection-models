@@ -1,0 +1,23 @@
+title: Turning off System Restore
+description: Turning off System Restore Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceProcessEvents
+    s1:
+        processName: "rundll32.exe"
+    s2:
+        objectFileName: "schtasks.exe"
+    s3:
+        objectCmd: "*Change*"
+    s4:
+        objectCmd: "*SystemRestore*"
+    s5:
+        objectCmd: "*disable*"
+    condition: ec and s1 and s2 and (s3 and s4 and s5)
+level: info
+taxonomy: tm-v1

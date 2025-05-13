@@ -1,0 +1,17 @@
+title: HTA Startup Persistence
+description: HTA Startup Persistence Detection via Microsoft
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceFileEvents
+    s1:
+        objectFilePath: "*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\*"
+    s2:
+        objectFileName: "*.hta"
+    condition: ec and s1 and s2
+level: info
+taxonomy: tm-v1
