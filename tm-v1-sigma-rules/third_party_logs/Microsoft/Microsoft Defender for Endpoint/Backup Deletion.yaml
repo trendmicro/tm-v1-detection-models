@@ -7,13 +7,13 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     ec:
-        eventCategory: DeviceProcessEvents
+        eventCategory: 'DeviceProcessEvents'
     s1:
-        objectFileName: "*wmic.exe*"
+        objectFileName: '*wmic.exe*'
     s2:
-        objectCmd: "*shadowcopy*"
+        objectCmd: '*shadowcopy*'
     s3:
-        objectCmd: "*delete*"
+        objectCmd: '*delete*'
     condition: ec and s1 and (s2 and s3)
 level: info
 taxonomy: tm-v1
