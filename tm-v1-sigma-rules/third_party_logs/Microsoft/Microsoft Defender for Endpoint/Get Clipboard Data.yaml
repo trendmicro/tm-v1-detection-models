@@ -1,0 +1,15 @@
+title: Get Clipboard Data
+description: Microsoft Detection for Get Clipboard Data
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'GetClipboardData'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,21 @@
+title: Registry Auto-Start Service
+description: Microsoft Detection for Registry Auto-Start Service
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceRegistryEvents'
+    s1:
+        actionName: 'RegistryValueSet'
+    s2:
+        objectRegistryKeyHandle|re: 'HKEY_LOCAL_MACHINE\\SYSTEM\\.*\\Services\\.*'
+    s3:
+        objectRegistryValue: 'Start'
+    s4:
+        objectRegistryData: '2'
+    condition: ec and s1 and s2 and s3 and s4
+level: info
+taxonomy: tm-v1

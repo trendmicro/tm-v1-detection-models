@@ -1,0 +1,15 @@
+title: Connection to Untrusted Wi-Fi Network
+description: Microsoft Detection for Connection to Untrusted Wi-Fi Network
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UntrustedWifiConnection'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

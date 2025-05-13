@@ -1,0 +1,15 @@
+title: High Severity Alert
+description: Microsoft Detection for High Severity Alert
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Alert*'
+    s1:
+        severity: 8
+    condition: ec and s1 
+level: info
+taxonomy: tm-v1

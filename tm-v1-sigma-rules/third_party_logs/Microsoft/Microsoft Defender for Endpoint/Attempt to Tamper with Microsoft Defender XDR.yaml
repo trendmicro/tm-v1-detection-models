@@ -1,0 +1,15 @@
+title: Attempt to Tamper with Microsoft Defender XDR
+description: Microsoft Detection for an Attempt to Tamper with Microsoft Defender XDR
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'TamperingAttempt*'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1
