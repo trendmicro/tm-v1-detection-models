@@ -1,0 +1,13 @@
+title: IKE SA Deleted
+description: Forcepoint Detection for IKE SA Deleted
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12116'
+  condition: logId
+level: info
+taxonomy: tm-v1

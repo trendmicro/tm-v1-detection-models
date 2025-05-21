@@ -1,0 +1,13 @@
+title: IKE Invalid Exchange Type
+description: Forcepoint Detection for IKE Invalid Exchange Type
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12143'
+  condition: logId
+level: info
+taxonomy: tm-v1

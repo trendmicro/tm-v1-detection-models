@@ -1,0 +1,13 @@
+title: System Policy Loaded
+description: Forcepoint Detection for System Policy Loaded
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '4117'
+  condition: logId
+level: info
+taxonomy: tm-v1

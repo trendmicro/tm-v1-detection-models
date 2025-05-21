@@ -1,0 +1,13 @@
+title: Firewall DHCP Request Received
+description: Forcepoint Detection for Firewall DHCP Request Received
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '16010'
+  condition: logId
+level: info
+taxonomy: tm-v1

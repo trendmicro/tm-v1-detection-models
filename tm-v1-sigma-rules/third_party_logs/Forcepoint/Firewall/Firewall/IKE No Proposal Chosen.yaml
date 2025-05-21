@@ -1,0 +1,13 @@
+title: IKE No Proposal Chosen
+description: Forcepoint Detection for IKE No Proposal Chosen
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12166'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Free Disk Space on Server Reached Alert Threshold
+description: Forcepoint Detection for Free disk space on server reached alert threshold
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '711'
+  condition: logId
+level: info
+taxonomy: tm-v1

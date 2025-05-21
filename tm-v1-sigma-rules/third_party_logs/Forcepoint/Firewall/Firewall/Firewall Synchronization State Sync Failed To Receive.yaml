@@ -1,0 +1,13 @@
+title: Firewall Synchronization State Sync Failed To Receive
+description: Forcepoint Detection for Firewall Synchronization State Sync Failed To Receive
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '10008'
+  condition: logId
+level: info
+taxonomy: tm-v1

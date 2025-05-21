@@ -1,0 +1,13 @@
+title: Firewall Sytem-Security Policy Reload
+description: Forcepoint Detection for Firewall Sytem-Security-Policy-Reload
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '1500'
+  condition: logId
+level: info
+taxonomy: tm-v1

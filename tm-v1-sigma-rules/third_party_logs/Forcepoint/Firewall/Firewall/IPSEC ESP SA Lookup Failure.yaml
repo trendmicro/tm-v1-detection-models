@@ -1,0 +1,13 @@
+title: IPSEC ESP SA Lookup Failure
+description: Forcepoint Detection for IPSEC ESP SA Lookup Failure
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12137'
+  condition: logId
+level: info
+taxonomy: tm-v1

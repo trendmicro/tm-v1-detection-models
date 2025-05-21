@@ -1,0 +1,13 @@
+title: Connection Closed
+description: Forcepoint Detection for Connection Closed
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '70021'
+  condition: logId
+level: info
+taxonomy: tm-v1

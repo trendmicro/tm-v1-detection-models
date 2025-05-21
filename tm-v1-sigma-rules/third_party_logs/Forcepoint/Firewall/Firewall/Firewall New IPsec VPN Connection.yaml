@@ -1,0 +1,13 @@
+title: Firewall New IPsec VPN Connection
+description: Forcepoint Detection for Firewall New IPsec VPN Connection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '71012'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Connection Discarded
+description: Forcepoint Detection for Connection Discarded
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '70019'
+  condition: logId
+level: info
+taxonomy: tm-v1

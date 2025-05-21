@@ -1,0 +1,13 @@
+title: Firewall Protocl Agent Transport Protocol Violation
+description: Forcepoint Detection for Firewall Protocl Agent Transport Protocol Violation
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '3001'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: IKE SA Responder Failed
+description: Forcepoint Detection for IKE SA Responder Failed
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12103'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: IPsec SA Deleted
+description: Forcepoint Detection for IPsec SA Deleted
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12117'
+  condition: logId
+level: info
+taxonomy: tm-v1

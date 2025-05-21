@@ -1,0 +1,13 @@
+title: Firewall Authentication New Configuration Successfully Installed
+description: Forcepoint Detection for Firewall Authentication New Configuration Successfully Installed
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '4501'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: IKE Retry Limit Reached
+description: Forcepoint Detection for IKE Retry Limit Reached
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12140'
+  condition: logId
+level: info
+taxonomy: tm-v1
