@@ -1,0 +1,13 @@
+title: Firewall Related-Connection
+description: Forcepoint Detection for Firewall Related-Connection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '1004'
+  condition: logId
+level: info
+taxonomy: tm-v1

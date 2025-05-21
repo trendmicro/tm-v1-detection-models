@@ -1,0 +1,13 @@
+title: Firewall Synchronization Receiving Sync Messages
+description: Forcepoint Detection for Firewall Synchronization Receiving Sync Messages
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '10053'
+  condition: logId
+level: info
+taxonomy: tm-v1

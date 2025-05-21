@@ -1,0 +1,13 @@
+title: Alert Server Active Alert Queue Full
+description: Forcepoint Detection for Alert Server Active Alert Queue Full
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '516'
+  condition: logId
+level: info
+taxonomy: tm-v1

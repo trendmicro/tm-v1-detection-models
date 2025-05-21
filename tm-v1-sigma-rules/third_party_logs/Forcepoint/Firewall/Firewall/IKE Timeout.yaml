@@ -1,0 +1,13 @@
+title: IKE Timeout
+description: Forcepoint Detection for IKE Timeout
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12171'
+  condition: logId
+level: info
+taxonomy: tm-v1

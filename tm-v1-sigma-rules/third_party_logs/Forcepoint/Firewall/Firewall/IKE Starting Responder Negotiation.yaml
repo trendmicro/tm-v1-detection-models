@@ -1,0 +1,13 @@
+title: IKE Starting Responder Negotiation
+description: Forcepoint Detection for IKE Starting Responder Negotiation
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12111'
+  condition: logId
+level: info
+taxonomy: tm-v1

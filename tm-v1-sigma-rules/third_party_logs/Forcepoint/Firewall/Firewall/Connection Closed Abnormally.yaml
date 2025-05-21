@@ -1,0 +1,13 @@
+title: Connection Closed Abnormally
+description: Forcepoint Detection for Connection Closed Abnormally
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '70022'
+  condition: logId
+level: info
+taxonomy: tm-v1

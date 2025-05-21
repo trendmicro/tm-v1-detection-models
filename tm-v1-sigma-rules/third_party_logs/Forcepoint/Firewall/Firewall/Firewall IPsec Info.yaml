@@ -1,0 +1,13 @@
+title: Firewall IPsec Info
+description: Forcepoint Detection for Firewall IPsec Info
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12001'
+  condition: logId
+level: info
+taxonomy: tm-v1

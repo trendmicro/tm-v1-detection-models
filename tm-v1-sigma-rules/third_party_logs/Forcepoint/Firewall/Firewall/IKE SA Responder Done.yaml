@@ -1,0 +1,13 @@
+title: IKE SA Responder Done
+description: Forcepoint Detection for IKE SA Responder Done
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12102'
+  condition: logId
+level: info
+taxonomy: tm-v1

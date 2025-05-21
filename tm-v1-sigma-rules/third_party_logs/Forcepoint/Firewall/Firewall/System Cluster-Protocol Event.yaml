@@ -1,0 +1,13 @@
+title: System Cluster-Protocol Event
+description: Forcepoint Detection for System Cluster-Protocol Event
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '2011'
+  condition: logId
+level: info
+taxonomy: tm-v1

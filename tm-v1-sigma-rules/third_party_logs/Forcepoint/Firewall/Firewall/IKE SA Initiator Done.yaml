@@ -1,0 +1,13 @@
+title: IKE SA Initiator Done
+description: Forcepoint Detection for IKE SA Initiator Done
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '12100'
+  condition: logId
+level: info
+taxonomy: tm-v1
