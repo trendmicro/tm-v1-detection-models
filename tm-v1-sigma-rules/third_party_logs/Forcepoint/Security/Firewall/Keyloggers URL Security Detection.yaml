@@ -1,0 +1,13 @@
+title: Keyloggers URL Security Detection
+description: Forcepoint Detection for Malicious URL connection 
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '166'
+  condition: logId
+level: info
+taxonomy: tm-v1
