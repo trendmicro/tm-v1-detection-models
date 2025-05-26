@@ -1,0 +1,15 @@
+title: User Account Deleted
+description: Microsoft Detection for A user was deleted.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UserAccountDeleted'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: User Account Modified
+description: Microsoft Detection for A user was modified.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UserAccountModified'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

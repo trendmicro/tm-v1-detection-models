@@ -1,0 +1,16 @@
+title: USB Drive Unmounted
+description: Microsoft Detection for A USB storage device was unmounted.
+
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UsbDriveUnmounted'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

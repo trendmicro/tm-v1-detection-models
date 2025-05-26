@@ -1,0 +1,16 @@
+title: USB Drive Mounted
+description: Microsoft Detection for A USB storage device was mounted as a drive.
+
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UsbDriveMounted'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

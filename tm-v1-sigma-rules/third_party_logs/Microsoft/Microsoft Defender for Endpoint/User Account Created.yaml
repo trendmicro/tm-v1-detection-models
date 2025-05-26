@@ -1,0 +1,16 @@
+title: User Account Created
+description: Microsoft Detection for A local SAM account or a domain account was created.
+
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UserAccountCreated'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

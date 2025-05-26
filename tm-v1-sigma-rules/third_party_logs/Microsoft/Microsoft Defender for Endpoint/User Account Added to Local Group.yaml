@@ -1,0 +1,16 @@
+title: User Account Added to Local Group
+description: Microsoft Detection for A user was added to a security-enabled local group.
+
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UserAccountAddedToLocalGroup'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: SmartScreen URL Warning
+description: Microsoft Detection for SmartScreen warned about opening a low-reputation URL that might be hosting malware or is a phishing site.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'SmartScreenUrlWarning'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1
