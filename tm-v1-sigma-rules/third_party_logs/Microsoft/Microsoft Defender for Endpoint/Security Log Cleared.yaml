@@ -1,0 +1,15 @@
+title: Security Log Cleared
+description: Microsoft Detection for Security Log Cleared
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'SecurityLogCleared'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

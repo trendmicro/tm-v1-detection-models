@@ -1,0 +1,15 @@
+title: Shell Link File Created
+description: Microsoft Detection for Shell Link File Created
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'ShellLinkCreateFileEvent'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1
