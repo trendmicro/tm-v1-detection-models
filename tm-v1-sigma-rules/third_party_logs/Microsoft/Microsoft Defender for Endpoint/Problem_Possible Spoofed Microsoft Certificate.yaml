@@ -1,0 +1,19 @@
+title: Possible Spoofed Microsoft Certificate
+description: Microsoft Detection for Possible Spoofed Microsoft Certificate
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceFileCertificateInfo
+    s1:
+        objectSignerValid: true
+    n1:
+        sslCertIssuerCommonName: 'Microsoft*'
+    n2: 
+        sslCertSubjectCommonName: 'Windows*'
+    condition: ec and s1 and not (n1 and n2)
+level: info
+taxonomy: tm-v1

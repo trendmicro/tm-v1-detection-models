@@ -1,0 +1,29 @@
+title: Disabling Windows Defender via Registry
+description: Microsoft Detection for Disabling Windows Defender via Registry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: DeviceRegistryEvents
+    s1:
+        actionName: "RegistryValueSet"
+    s2:
+        objectRegistryKeyHandle|re: '.*HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\.*'
+    s3:
+        objectRegistryValue: 
+            - 'DisableRealtimeProtection'
+            - 'DisableRealtimeMonitoring'
+            - 'DisableBehaviorMonitoring'
+            - 'DisableIOAVProtection'
+            - 'DisableScriptScanning'
+            - 'DisableBlockAtFirstSeen'
+    s4:
+        objectRegistryData: '1'
+    s5:
+        objectRegistryOriginalData: '*'
+    condition: ec and s1 and s2 and s3 and s4 and s5
+level: info
+taxonomy: tm-v1

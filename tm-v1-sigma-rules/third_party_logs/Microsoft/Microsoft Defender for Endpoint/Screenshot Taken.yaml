@@ -1,0 +1,15 @@
+title: Screenshot Taken
+description: Microsoft Detection for Screenshot Taken
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'ScreenshotTaken'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1
