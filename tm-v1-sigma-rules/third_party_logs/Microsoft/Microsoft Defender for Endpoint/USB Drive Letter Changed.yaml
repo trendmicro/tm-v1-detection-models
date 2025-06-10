@@ -1,0 +1,16 @@
+title: USB Drive Letter Changed
+description: Microsoft Detection for the drive letter assigned to a mounted USB storage device was modified
+
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UsbDriveDriveLetterChanged'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

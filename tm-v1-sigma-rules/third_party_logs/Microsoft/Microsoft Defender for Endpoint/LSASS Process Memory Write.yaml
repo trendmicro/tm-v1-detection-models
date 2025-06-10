@@ -1,0 +1,15 @@
+title: LSASS Process Memory Write
+description: Microsoft Detection for The WriteProcessMemory function was called indicating that a process has written data into memory for another process.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'WriteToLsassProcessMemory'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1

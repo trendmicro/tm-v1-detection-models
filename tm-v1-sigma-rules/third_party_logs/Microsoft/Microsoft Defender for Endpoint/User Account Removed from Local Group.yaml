@@ -1,0 +1,15 @@
+title: User Account Removed from Local Group
+description: Microsoft Detection for A user was removed from a security-enabled local group.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    s1:
+        actionName: 'UserAccountRemovedFromLocalGroup'
+    condition: ec and s1
+level: info
+taxonomy: tm-v1
