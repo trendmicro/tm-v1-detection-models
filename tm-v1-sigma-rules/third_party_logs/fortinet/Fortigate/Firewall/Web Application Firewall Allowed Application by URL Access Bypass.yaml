@@ -1,0 +1,13 @@
+title: Web Application Firewall Allowed Application by URL Access Bypass
+description: Fortinet detection for Web Application Firewall Allowed Application by URL Access Bypass
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: FORTINET
+detection:
+  logId:
+    vendorLogId: '*030260'
+  condition: logId
+level: info
+taxonomy: tm-v1
