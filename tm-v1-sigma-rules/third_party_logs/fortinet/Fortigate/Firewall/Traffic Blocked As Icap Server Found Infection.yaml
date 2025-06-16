@@ -1,5 +1,5 @@
-title: Traffic Blocked As Icap Server Found Infection
-description: Fortinet detection - Traffic blocked as ICAP server found infection
+title: Traffic Blocked As ICAP Server Found Infection
+description: Fortinet detection for Traffic blocked as ICAP server found infection
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
