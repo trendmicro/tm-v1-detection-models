@@ -1,0 +1,13 @@
+title: Legacy Mode DLL Injection Blocked 
+description: TxOne Networks detection for Blocking of DLL Injection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4005'
+  condition: eventId
+level: info
+taxonomy: tm-v1

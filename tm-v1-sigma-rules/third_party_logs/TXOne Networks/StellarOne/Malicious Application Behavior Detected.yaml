@@ -1,0 +1,13 @@
+title: Malicious Application Behavior Detected 
+description: TxOne Networks Detection for Malicious application behavior detected by Operations Behavior Anomaly Detection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4873'
+  condition: eventId
+level: info
+taxonomy: tm-v1
