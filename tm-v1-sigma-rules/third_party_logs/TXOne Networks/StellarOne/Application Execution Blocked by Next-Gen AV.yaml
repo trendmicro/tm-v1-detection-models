@@ -1,0 +1,13 @@
+title: Application Execution Blocked by Next-Gen AV
+description: TxOne Networks Detection for Next-Gen AV blocked execution of an application.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '4617'
+  condition: eventId
+level: info
+taxonomy: tm-v1

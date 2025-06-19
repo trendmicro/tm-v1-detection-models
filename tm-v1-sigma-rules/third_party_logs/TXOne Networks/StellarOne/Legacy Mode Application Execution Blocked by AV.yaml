@@ -1,0 +1,13 @@
+title: Legacy Mode Application Execution Blocked by AV
+description: TxOne Networks warning for Application Execution blocked by AV. 
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '8011'
+  condition: eventId
+level: info
+taxonomy: tm-v1

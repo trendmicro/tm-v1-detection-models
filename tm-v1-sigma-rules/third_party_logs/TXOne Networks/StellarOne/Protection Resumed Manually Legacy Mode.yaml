@@ -1,0 +1,13 @@
+title: Protection Resumed Manually Legacy Mode
+description: TxOne Networks Detection for Protection Resumed Manually via Protection Resume Button or CLI on Legacy Mode
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '1116'
+  condition: eventId
+level: info
+taxonomy: tm-v1
