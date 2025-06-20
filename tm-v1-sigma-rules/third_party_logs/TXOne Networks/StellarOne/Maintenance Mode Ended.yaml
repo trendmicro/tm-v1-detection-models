@@ -1,0 +1,13 @@
+title: Maintenance Mode Ended
+description: TxOne Networks Detection for Disabling Maintenance Mode. During the Maintenance Mode, the agents allows all file executions and adds all files that are created, executed, or modified to the Approved List
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '9217'
+  condition: eventId
+level: info
+taxonomy: tm-v1

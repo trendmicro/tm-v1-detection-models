@@ -1,0 +1,13 @@
+title: Legacy Mode Disable API Hooking Prevention
+description: TxOne Networks Alert for API Hooking Prevention Disabled
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXONE NETWORKS
+detection:
+  eventId:
+    vendorParsed.eventId: '1030'
+  condition: eventId
+level: info
+taxonomy: tm-v1
