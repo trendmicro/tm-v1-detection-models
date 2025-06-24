@@ -1,0 +1,17 @@
+title: Scheduled Task Creation Prevented by CrowdStrike
+description: CrowdStrike detection for preventing scheduled Task creation
+tags: [] 
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFilePath: '*schtasks.exe'
+    string_condition_1:
+        processCmd: '*schtasks.exe /create*'
+    string_condition_2:
+        act: 'Prevention * process was blocked from execution*'
+    condition: string_condition_0 and string_condition_1 and string_condition_2
+level: info
+taxonomy: tm-v1

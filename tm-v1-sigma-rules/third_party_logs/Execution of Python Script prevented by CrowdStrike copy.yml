@@ -1,0 +1,15 @@
+title: Execution of Python Script Prevented by CrowdStrike
+description: CrowdStrike detection for Preventing User Execution of Python Script
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*.py'
+    string_condition_1:
+        act: 'Prevention * process was blocked from execution*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Local Account Discovery
+description: CrowdStrike detection for Local Account Discovery
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFilePath: '*net.exe*'
+    string_condition_1:
+        processCmd|re: ^.*\s+(groups|user|localgroup)\s+.*
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
