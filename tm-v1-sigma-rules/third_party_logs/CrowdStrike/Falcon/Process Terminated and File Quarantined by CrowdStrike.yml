@@ -1,0 +1,13 @@
+title: Process Terminated and File Quarantined by CrowdStrike
+description: CrowdStrike detection for Process Terminated and File Quarantined by CrowdStrike
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: 'Kill Process * Quarantine File*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

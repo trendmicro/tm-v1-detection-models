@@ -1,0 +1,13 @@
+title: Registry Operation Blocked by CrowdStrike
+description: CrowdStrike detection for Registry Operation Blocked
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Registry Operation Blocked*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

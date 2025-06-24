@@ -1,0 +1,13 @@
+title: Process Prevented by CrowdStrike
+description: CrowdStrike detection for Process Prevented
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: 'Prevention * process killed*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

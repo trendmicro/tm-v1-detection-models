@@ -1,0 +1,15 @@
+title: Double Extension File
+description: CrowdStrike detection for files with double extensions
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventType: EppDetectionSummaryEvent_FilesWritten
+    string_condition_1:
+        processFilePath|re: ^.*\.(txt|pdf|doc|docm|ppt|html)\.zip
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

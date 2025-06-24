@@ -1,0 +1,17 @@
+title: BITS Admin File Transfer
+description: CrowdStrike detection for transferring file via BITS Admin
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFilePath: '*bitsadmin.exe*'
+    string_condition_1:
+        processCmd: '*/Transfer*'
+    string_condition_2:
+        processCmd: '*/Addfile*'
+    condition: string_condition_0 and (string_condition_1 or string_condition_2)
+level: info
+taxonomy: tm-v1
