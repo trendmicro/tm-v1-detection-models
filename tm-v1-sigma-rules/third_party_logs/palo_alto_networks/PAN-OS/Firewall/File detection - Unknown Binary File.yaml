@@ -1,0 +1,16 @@
+title: File detection - Unknown Binary File
+description: Palo Alto File detection - Unknown Binary File
+tags:
+- mitre.t1071.001
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: file
+  rule:
+    ruleName: Unknown Binary File*
+  condition: subname and rule and not action
+level: info
+taxonomy: tm-v1

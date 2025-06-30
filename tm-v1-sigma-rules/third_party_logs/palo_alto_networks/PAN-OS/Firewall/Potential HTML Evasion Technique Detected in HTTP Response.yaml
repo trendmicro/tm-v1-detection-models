@@ -1,0 +1,16 @@
+title: Potential HTML Evasion Technique Detected in HTTP Response
+description: Palo Alto Vulnerability detection - Potential HTML Evasion Technique Detected in HTTP Response
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleName: Potential HTML Evasion Technique Detected in HTTP Response*
+  condition: subname and rule and not action
+level: info
+taxonomy: tm-v1
