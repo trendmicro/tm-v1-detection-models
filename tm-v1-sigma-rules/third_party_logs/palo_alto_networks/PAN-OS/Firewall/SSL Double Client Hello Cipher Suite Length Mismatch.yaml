@@ -1,0 +1,16 @@
+title: SSL Double Client Hello Cipher Suite Length Mismatch
+description: Palo Alto Vulnerability detection - SSL Double Client Hello Cipher Suite Length Mismatch
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleName: SSL Double Client Hello Cipher Suite Length Mismatch*
+  condition: subname and rule and not action
+level: info
+taxonomy: tm-v1
