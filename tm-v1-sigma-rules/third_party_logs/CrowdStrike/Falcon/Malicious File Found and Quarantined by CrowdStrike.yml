@@ -1,5 +1,5 @@
-title: Malicious File Found and Quarantined by CrowdStrike
-description: CrowdStrike detection for Malicious File Found and Quarantined
+title: CrowdStrike Pattern Disposition - File Detection and Quarantined
+description: CrowdStrike detection for File Detection and Quarantined
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
