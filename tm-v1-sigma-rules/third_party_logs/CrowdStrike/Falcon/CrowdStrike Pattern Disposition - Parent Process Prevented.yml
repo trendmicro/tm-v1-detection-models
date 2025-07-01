@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Parent Process Prevented
+description: CrowdStrike detection for Parent Process Prevented
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Prevention * parent process killed.*'
+    condition: string_condition_0   
+level: info
+taxonomy: tm-v1
