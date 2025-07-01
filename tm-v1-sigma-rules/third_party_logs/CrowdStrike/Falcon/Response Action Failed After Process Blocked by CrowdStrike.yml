@@ -1,0 +1,13 @@
+title: Response Action Failed After Process Blocked by CrowdStrike
+description: CrowdStrike detection for Response Action Failed After Process Blocked by CrowdStrike
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Block Process * Response Action Failed*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

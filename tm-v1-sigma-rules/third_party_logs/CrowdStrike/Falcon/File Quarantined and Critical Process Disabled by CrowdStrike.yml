@@ -1,0 +1,13 @@
+title: File Quarantined and Critical Process Disabled by CrowdStrike
+description: CrowdStrike detection for File Quarantined and Critical Process Disabled by CrowdStrike
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Quarantine File * Critical Process Disabled*'
+    condition: string_condition_0   
+level: info
+taxonomy: tm-v1
