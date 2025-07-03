@@ -1,0 +1,13 @@
+title: Wireless Station DNS Process Failed Due To Server Failure
+description: Fortinet detection for Wireless Station DNS Process Failed Due To Server Failure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043672'
+  condition: logId
+level: info
+taxonomy: tm-v1

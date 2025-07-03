@@ -1,0 +1,13 @@
+title: Threat Feed Updated
+description: Fortinet detection for Threat Feed Updated.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0100022220'
+  condition: logId
+level: info
+taxonomy: tm-v1

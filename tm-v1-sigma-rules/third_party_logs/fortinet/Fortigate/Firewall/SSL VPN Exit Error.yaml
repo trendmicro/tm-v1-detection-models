@@ -1,0 +1,13 @@
+title: SSL VPN Exit Error
+description: Fortinet detection for SSL VPN Exit Error.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0101039946
+  condition: logId
+level: info
+taxonomy: tm-v1

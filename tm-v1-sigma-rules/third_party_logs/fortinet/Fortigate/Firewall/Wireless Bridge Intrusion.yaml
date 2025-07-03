@@ -1,0 +1,13 @@
+title: Wireless Bridge Intrusion
+description: Fortinet detection for Wireless Bridge Intrusion Detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043530'
+  condition: logId
+level: info
+taxonomy: tm-v1

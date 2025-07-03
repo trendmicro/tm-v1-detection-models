@@ -1,0 +1,13 @@
+title: Wireless Client 4 Way Handshake Failed With Invalid 2 of 4 Message
+description: Fortinet detection for Wireless Client 4 Way Handshake Failed With Invalid 2/4 Message.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0104043648
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Stream-based Uncompression Reached Size Limit Notice
+description: Fortinet detection for Stream-based uncompression reached size limit (Notice).
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0213008709
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: Wireless Long Duration Attack
+description: Fortinet detection for Wireless Long Duration Attack Detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043534'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: System Performance Statistics
+description: Fortinet detection for System Performance Statistics.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0100040704'
+  condition: logId
+level: info
+taxonomy: tm-v1

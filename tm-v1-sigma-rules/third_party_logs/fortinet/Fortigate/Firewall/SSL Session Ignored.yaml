@@ -1,0 +1,13 @@
+title: SSL Session Ignored
+description: Fortinet detection for SSL session ignored.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0315012556'
+  condition: logId
+level: info
+taxonomy: tm-v1

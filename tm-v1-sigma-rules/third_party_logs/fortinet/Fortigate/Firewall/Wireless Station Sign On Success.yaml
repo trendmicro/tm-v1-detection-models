@@ -1,0 +1,13 @@
+title: Wireless Station Sign On Success
+description: Fortinet detection for Wireless Station Sign On Success.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043602'
+  condition: logId
+level: info
+taxonomy: tm-v1

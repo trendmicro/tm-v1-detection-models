@@ -1,0 +1,13 @@
+title: Wireless Station DNS Process Failed Due To Non-Existing Domain
+description: Fortinet detection for Wireless Station DNS Process Failed Due To Non-Existing Domain.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043673'
+  condition: logId
+level: info
+taxonomy: tm-v1
