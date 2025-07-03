@@ -1,0 +1,13 @@
+title: Wireless Null SSID Probe Response
+description: Fortinet detection for Wireless Null SSID Probe Response Detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043532'
+  condition: logId
+level: info
+taxonomy: tm-v1

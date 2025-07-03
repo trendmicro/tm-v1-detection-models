@@ -1,0 +1,13 @@
+title: Wireless Station Sent DHCP Request
+description: Fortinet detection for Wireless Station Sent DHCP Request.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043666'
+  condition: logId
+level: info
+taxonomy: tm-v1

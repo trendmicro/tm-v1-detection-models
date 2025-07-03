@@ -1,0 +1,13 @@
+title: URL Address Allowed via URL Filter List
+description: Fortinet detection for URL address was allowed because it was found in the URL filter list.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0315012546'
+  condition: logId
+level: info
+taxonomy: tm-v1

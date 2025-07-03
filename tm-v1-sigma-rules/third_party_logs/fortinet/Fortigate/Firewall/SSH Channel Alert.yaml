@@ -1,0 +1,13 @@
+title: SSH Channel Alert
+description: Fortinet detection for SSH channel detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '1601061011'
+  condition: logId
+level: info
+taxonomy: tm-v1

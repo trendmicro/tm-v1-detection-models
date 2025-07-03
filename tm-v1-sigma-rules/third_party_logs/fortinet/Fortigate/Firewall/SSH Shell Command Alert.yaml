@@ -1,0 +1,13 @@
+title: SSH Shell Command Alert
+description: Fortinet detection for SSH shell command detected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '1600061002'
+  condition: logId
+level: info
+taxonomy: tm-v1

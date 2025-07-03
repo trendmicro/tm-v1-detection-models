@@ -1,0 +1,13 @@
+title: Wireless Weak Wep Iv Detected
+description: Fortinet detection for Wireless Weak Wep Iv Detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043535'
+  condition: logId
+level: info
+taxonomy: tm-v1

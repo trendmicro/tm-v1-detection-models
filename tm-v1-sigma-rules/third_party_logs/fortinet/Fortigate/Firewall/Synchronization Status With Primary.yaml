@@ -1,0 +1,13 @@
+title: Synchronization Status With Primary
+description: Fortinet detection for Synchronization Status With Primary.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0108037903
+  condition: logId
+level: info
+taxonomy: tm-v1

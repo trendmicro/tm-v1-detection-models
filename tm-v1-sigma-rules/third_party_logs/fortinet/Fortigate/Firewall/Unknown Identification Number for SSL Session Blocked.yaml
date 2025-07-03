@@ -1,0 +1,13 @@
+title: Unknown Identification Number for SSL Session Blocked
+description: Fortinet detection for SSL session blocked because its identification number was unknown.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0315012554'
+  condition: logId
+level: info
+taxonomy: tm-v1

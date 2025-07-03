@@ -1,0 +1,13 @@
+title: System Configuration Backed Up
+description: Fortinet detection for System Configuration Backed Up.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0100032142'
+  condition: logId
+level: info
+taxonomy: tm-v1

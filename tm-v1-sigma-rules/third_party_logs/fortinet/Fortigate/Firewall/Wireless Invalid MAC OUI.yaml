@@ -1,0 +1,13 @@
+title: Wireless Invalid MAC OUI
+description: Fortinet detection for Wireless Invalid MAC OUI Detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: '0104043533'
+  condition: logId
+level: info
+taxonomy: tm-v1

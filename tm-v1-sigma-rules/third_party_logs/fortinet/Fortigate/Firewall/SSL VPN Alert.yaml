@@ -1,0 +1,13 @@
+title: SSL VPN Alert
+description: Fortinet detection for SSL VPN Alert.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0101039944
+  condition: logId
+level: info
+taxonomy: tm-v1

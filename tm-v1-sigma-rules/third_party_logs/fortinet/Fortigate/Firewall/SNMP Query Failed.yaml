@@ -1,0 +1,13 @@
+title: SNMP Query Failed
+description: Fortinet detection for SNMP Query Failed.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0100029021
+  condition: logId
+level: info
+taxonomy: tm-v1

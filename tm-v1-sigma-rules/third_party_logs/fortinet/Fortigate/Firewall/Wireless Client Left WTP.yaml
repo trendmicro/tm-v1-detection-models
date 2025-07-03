@@ -1,0 +1,13 @@
+title: Wireless Client Left WTP
+description: Fortinet detection for Wireless Client Left WTP.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+detection:
+  logId:
+    vendorLogId: 0104043580
+  condition: logId
+level: info
+taxonomy: tm-v1
