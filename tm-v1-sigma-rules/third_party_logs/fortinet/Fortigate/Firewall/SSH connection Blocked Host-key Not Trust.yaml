@@ -1,5 +1,5 @@
 title: SSH connection Blocked Host-key Not Trust
-description: Fortinet detection for SSH connection is blocked, because host-key is not trust
+description: Fortinet detection for SSH connection is blocked because host-key is not trust
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
