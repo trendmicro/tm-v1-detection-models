@@ -1,5 +1,5 @@
-title: SSL Connection Is Blocked Due To Unable To Retrieve Server'S Certificate
-description: Fortinet detection for SSL Connection Is Blocked Due To Unable To Retrieve Server'S Certificate.
+title: SSL Connection Is Blocked Due To Unable To Retrieve Server Certificate
+description: Fortinet detection for SSL Connection Is Blocked Due To Unable To Retrieve Server Certificate.
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
