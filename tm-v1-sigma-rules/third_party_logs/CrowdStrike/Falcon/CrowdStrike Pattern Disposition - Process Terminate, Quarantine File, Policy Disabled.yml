@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Process Terminate, Quarantine File, Policy Disabled
+description: CrowdStrike alert for Process Terminate, Quarantine File, Policy Disabled. 
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Kill Process * Quarantine File * Policy Disabled*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
