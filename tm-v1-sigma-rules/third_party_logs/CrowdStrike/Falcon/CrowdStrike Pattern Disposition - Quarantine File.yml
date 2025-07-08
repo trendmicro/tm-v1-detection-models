@@ -1,0 +1,17 @@
+title: CrowdStrike Pattern Disposition - Quarantine File
+description: CrowdStrike detection for quarantined file. 
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Detection*'
+    string_condition_1:
+        act: '*Quarantine*'
+    string_condition_2:
+        act: '*standard detection and quarantine was attempted.*'
+    condition: (string_condition_0 or string_condition_1) and string_condition_2
+level: info
+taxonomy: tm-v1
