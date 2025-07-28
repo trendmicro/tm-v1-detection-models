@@ -1,0 +1,15 @@
+title: AEM Hacker Toolset Traffic Discovery
+description: Palo Alto Networks detection for AEM Hacker Toolset Traffic Detection. This signature detects the traffic of AEM hacker toolset.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90948'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
