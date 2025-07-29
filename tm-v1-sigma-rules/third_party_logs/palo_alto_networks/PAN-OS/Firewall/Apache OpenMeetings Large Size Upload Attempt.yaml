@@ -1,0 +1,15 @@
+title: Apache OpenMeetings Large Size Upload Attempt
+description: Palo Alto Networks detection for Apache OpenMeetings Large Size Upload Attempt. This signature detects Apache OpenMeetings large size upload attempt in HTTP requests. The signature is a child signature of the parent, Apache OpenMeetings Denial-of-Service Vulnerability(ID 40137). An individual trigger of this signature may not be malicious by itself. Normally, multiple triggers of this signature within a certain time period should be considered highly suspicious or malicious.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90906'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
