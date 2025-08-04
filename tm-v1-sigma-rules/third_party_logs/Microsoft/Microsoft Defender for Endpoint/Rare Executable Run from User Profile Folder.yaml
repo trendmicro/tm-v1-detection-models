@@ -1,0 +1,19 @@
+title: Rare Executable Run from User Profile Folder
+description: Microsoft Detection for Rare Executable Run from User Profile Folder
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceProcessEvents
+    string_condition_1:
+        objectFilePath: '*\Users\*'
+    string_condition_2:
+        objectFilePath: '*\AppData\Roaming\*'
+    string_condition_3:
+        objectFileName: '*.exe'
+    condition: string_condition_0 and (string_condition_1 or string_condition_2) and string_condition_3
+level: info
+taxonomy: tm-v1

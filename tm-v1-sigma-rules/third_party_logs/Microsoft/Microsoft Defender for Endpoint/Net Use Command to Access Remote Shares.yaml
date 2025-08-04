@@ -1,0 +1,16 @@
+title: Net Use Command to Access Remote Shares
+description: Microsoft Detection for Net Use Command to Access Remote Shares
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceProcessEvents
+    string_condition_1:
+        objectCmd: "*net use*"
+        objectCmd: "*\\\\\\\\*"
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

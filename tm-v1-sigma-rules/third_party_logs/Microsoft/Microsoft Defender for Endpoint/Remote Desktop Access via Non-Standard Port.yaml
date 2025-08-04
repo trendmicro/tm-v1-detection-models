@@ -1,0 +1,19 @@
+title: Remote Desktop Access via Non-Standard Port
+description: Microsoft Detection for Remote Desktop Access via Non-Standard Port
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceNetworkEvents
+    string_condition_1:
+        dpt: 3389
+    string_condition_2:
+        processFilePath: 
+        - "*mstsc.exe*"
+        - "*rdesktop.exe*"
+    condition: string_condition_0 and string_condition_2 and not string_condition_1
+level: info
+taxonomy: tm-v1

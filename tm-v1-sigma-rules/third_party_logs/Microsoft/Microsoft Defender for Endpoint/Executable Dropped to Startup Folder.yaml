@@ -1,0 +1,17 @@
+title: Executable Dropped to Startup Folder
+description: Microsoft Detection for Executable Dropped to Startup Folder
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: DeviceFileEvents
+    string_condition_1:
+        objectFilePath: \Microsoft\Windows\Start Menu\Programs\Startup
+    string_condition_2:
+        objectFileName: '*.exe'
+    condition: string_condition_0 and string_condition_1 and string_condition_2 
+level: info
+taxonomy: tm-v1
