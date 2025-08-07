@@ -1,0 +1,15 @@
+title: Gitscanner Traffic Identified
+description: Palo Alto Networks detection for Gitscanner Traffic Detected. This signature detects the Gitscanner traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95497'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
