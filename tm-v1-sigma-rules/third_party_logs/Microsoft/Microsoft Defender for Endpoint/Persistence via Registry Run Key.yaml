@@ -7,11 +7,12 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: DeviceRegistryEvents
+        eventCategory: 'DeviceRegistryEvents'
     string_condition_1:
-        actionName: RegistryValueSet
+        actionName: 'RegistryValueSet'
     string_condition_2:
-        objectRegistryKeyHandle: \Software\Microsoft\Windows\CurrentVersion\Run
+        objectRegistryKeyHandle: '*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run*'
     condition: string_condition_0 and string_condition_1 and string_condition_2
 level: info
 taxonomy: tm-v1
+
