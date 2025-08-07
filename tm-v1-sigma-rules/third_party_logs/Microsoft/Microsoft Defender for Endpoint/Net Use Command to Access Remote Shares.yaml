@@ -7,10 +7,11 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: DeviceProcessEvents
+        eventCategory: 'DeviceProcessEvents'
     string_condition_1:
-        objectCmd: "*net use*"
-        objectCmd: "*\\\\\\\\*"
+        objectCmd: '*net use*'
+        objectCmd: '*\\\\\\\\*'
     condition: string_condition_0 and string_condition_1
 level: info
 taxonomy: tm-v1
+
