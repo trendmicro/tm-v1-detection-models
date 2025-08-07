@@ -7,9 +7,10 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: DeviceProcessEvents
+        eventCategory: 'DeviceProcessEvents'
     string_condition_1:
-        objectFilePath: \AppData\Local\Temp
+        objectFilePath: '*\\AppData\\Local\\Temp*'
     condition: string_condition_0 and string_condition_1
 level: info
 taxonomy: tm-v1
+
