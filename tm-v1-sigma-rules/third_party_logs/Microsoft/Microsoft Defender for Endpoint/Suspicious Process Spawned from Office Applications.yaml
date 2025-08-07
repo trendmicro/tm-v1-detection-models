@@ -7,7 +7,7 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: DeviceProcessEvents
+        eventCategory: 'DeviceProcessEvents'
     string_condition_1:
         processName: 
         - 'winword.exe'
@@ -21,3 +21,4 @@ detection:
     condition: string_condition_0 and string_condition_1 and not string_condition_2
 level: info
 taxonomy: tm-v1
+
