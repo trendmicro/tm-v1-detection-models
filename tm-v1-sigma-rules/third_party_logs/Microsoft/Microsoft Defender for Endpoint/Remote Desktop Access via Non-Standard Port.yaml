@@ -12,8 +12,9 @@ detection:
         dpt: 3389
     string_condition_2:
         processFilePath: 
-        - "*mstsc.exe*"
-        - "*rdesktop.exe*"
+        - '*mstsc.exe*'
+        - '*rdesktop.exe*'
     condition: string_condition_0 and string_condition_2 and not string_condition_1
 level: info
 taxonomy: tm-v1
+
