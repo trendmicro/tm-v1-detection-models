@@ -1,0 +1,18 @@
+title: Persistence via Registry Run Key
+description: Microsoft Detection for Autostart of application via Registry upon Start up
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: 'DeviceRegistryEvents'
+    string_condition_1:
+        actionName: 'RegistryValueSet'
+    string_condition_2:
+        objectRegistryKeyHandle: '*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run*'
+    condition: string_condition_0 and string_condition_1 and string_condition_2
+level: info
+taxonomy: tm-v1
+

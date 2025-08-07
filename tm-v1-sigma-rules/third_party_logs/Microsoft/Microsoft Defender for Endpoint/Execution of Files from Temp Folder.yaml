@@ -1,0 +1,16 @@
+title: Execution of Files from Temp Folder
+description: Microsoft Detection for Execution of Files from Temp Folder
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: 'DeviceProcessEvents'
+    string_condition_1:
+        objectFilePath: '*\\AppData\\Local\\Temp*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
+

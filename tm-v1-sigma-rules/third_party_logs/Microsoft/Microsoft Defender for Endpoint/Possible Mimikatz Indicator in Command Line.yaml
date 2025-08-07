@@ -1,0 +1,18 @@
+title: Possible Mimikatz Indicator in Command Line
+description: Microsoft Detection for Possible Mimikatz Indicator in Command Line
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: 'DeviceProcessEvents'
+    string_condition_1:
+        objectCmd: '*sekurlsa*'
+    string_condition_2:
+        objectCmd: '*logonpasswords*'
+    condition: string_condition_0 and (string_condition_1 or string_condition_2)
+level: info
+taxonomy: tm-v1
+

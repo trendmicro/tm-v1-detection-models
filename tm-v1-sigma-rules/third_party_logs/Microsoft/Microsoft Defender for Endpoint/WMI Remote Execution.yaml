@@ -1,0 +1,19 @@
+title: WMI Remote Execution
+description: Microsoft Detection for WMI Remote Execution
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: 'DeviceProcessEvents'
+    string_condition_1:
+        objectFileName: 'wmic.exe'
+    string_condition_2:
+        objectCmd: '*/node*'
+    condition: string_condition_0 and string_condition_1 and string_condition_2
+level: info
+taxonomy: tm-v1
+
+

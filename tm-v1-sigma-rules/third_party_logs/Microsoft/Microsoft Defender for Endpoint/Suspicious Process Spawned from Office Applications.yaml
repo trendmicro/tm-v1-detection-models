@@ -1,0 +1,24 @@
+title: Suspicious Process Spawned from Office Applications
+description: Microsoft Detection for Suspicious Process Spawned from Office Applications
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventCategory: 'DeviceProcessEvents'
+    string_condition_1:
+        processName: 
+        - 'winword.exe'
+        - 'excel.exe'
+        - 'powerpnt.exe'
+    string_condition_2:
+        objectFileName:
+        - 'splwow64.exe'
+        - 'msiexec.exe'
+        - 'rundll32.exe'
+    condition: string_condition_0 and string_condition_1 and not string_condition_2
+level: info
+taxonomy: tm-v1
+
