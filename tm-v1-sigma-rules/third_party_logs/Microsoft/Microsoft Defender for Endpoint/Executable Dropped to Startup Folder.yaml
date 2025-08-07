@@ -7,11 +7,12 @@ logsource:
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
-        eventCategory: DeviceFileEvents
+        eventCategory: 'DeviceFileEvents'
     string_condition_1:
-        objectFilePath: \Microsoft\Windows\Start Menu\Programs\Startup
+        objectFilePath: '*\\Microsoft\\Windows\\Start Menu\\Programs\\Startup*'
     string_condition_2:
         objectFileName: '*.exe'
     condition: string_condition_0 and string_condition_1 and string_condition_2 
 level: info
 taxonomy: tm-v1
+
