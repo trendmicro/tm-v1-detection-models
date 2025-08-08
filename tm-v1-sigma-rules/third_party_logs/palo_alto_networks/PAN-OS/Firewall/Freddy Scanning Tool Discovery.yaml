@@ -1,0 +1,15 @@
+title: Freddy Scanning Tool Discovery
+description: 'Palo Alto Networks detection for Freddy Scanning Tool Detection. Freddy is a Burp extension used for detecting and exploiting serialization libraries and APIs for Java and .Net. It implements both passive and active scanning to identify and exploit vulnerable libraries. There are three kinds of methods for active scanning: exception-based, time-based, and collaborator-based.'
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '56266'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
