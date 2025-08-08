@@ -1,0 +1,15 @@
+title: High Entropy Cookie And Set-Cookie Identified
+description: Palo Alto Networks detection for High Entropy Cookie And Set-Cookie Detected. This signature is a child signature of the parent, X-VPN HTTP-2 Traffic Detected (ID 40159). An individual trigger of this make not be malicious itself. It is normally multiple triggers within a certain time period that should be considered highly suspicious or malicious.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95199'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
