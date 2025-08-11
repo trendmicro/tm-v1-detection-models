@@ -1,0 +1,21 @@
+title: File Dropping of Sqlservr in Uncommon Folder
+description: Detects file dropping of Sqlservr in an uncommon folder.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceFileEvents'
+    proc:
+        processFilePath: '*Sqlservr.exe*'      
+    files:
+        objectFilePath: 
+          - '*.exe'
+          - '*.bat'
+          - '*.ps1'
+          - '*.vbs'
+    condition: ec and proc and files
+level: info
+taxonomy: tm-v1

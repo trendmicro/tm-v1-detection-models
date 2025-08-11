@@ -1,0 +1,22 @@
+title: Downloading of File Masquerading as Image File via MSIExec
+description: Detects the downloading of a file that masquerades as an image file but is actually an executable, using MSIExec.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceFileEvents'
+    proc:
+        processFilePath: '*msiexec.exe*'    
+    cmd1:
+        objectCmd: '*http*' 
+    cmd2:
+        objectCmd: 
+            - '*.jpg*'
+            - '*.png*'
+            - '*.gif*'
+    condition: ec and proc and cmd1 and cmd2
+level: info
+taxonomy: tm-v1

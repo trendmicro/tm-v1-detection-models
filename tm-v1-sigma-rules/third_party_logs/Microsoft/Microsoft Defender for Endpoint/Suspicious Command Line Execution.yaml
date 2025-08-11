@@ -1,0 +1,23 @@
+title: Suspicious Command Line Execution
+description: Microsoft Detection for Suspicious Command Line Execution
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    proc:
+        processFilePath: '*cmd.exe*'    
+    obj:
+        objectFileName: 'powershell.exe'
+    cmd: 
+        objectCmd: '*-NoExit*'
+        objectCmd: '*ExecutionPolicy*' 
+        objectCmd: '*Bypass*'
+        objectCmd: '*-WindowStyle*' 
+        objectCmd: '*hidden*' 
+    condition: ec and proc and obj and cmd
+level: info
+taxonomy: tm-v1
