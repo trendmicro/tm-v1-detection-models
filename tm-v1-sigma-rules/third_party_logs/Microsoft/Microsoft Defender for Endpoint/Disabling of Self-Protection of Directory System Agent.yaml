@@ -1,0 +1,23 @@
+title: Disabling of Self-Protection of Directory System Agent
+description: Detects attempts to disable the self-protection feature of the Directory System Agent (DSA), which is a critical component for system integrity.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    procCmd:
+        processCmd:
+            - '*dsa_control* --selfprotect=0*'
+            - '*dsa_control* -s=0*'
+            - '*dsa_control --selfprotect 0*'    
+    cmd:
+        objectCmd:
+            - '*dsa_control* --selfprotect=0*'
+            - '*dsa_control* -s=0*'
+            - '*dsa_control --selfprotect 0*' 
+    condition: ec and (procCmd or cmd)
+level: info
+taxonomy: tm-v1

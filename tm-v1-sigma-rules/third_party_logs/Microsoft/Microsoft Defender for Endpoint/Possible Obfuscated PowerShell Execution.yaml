@@ -1,0 +1,19 @@
+title: Possible Obfuscated PowerShell Execution
+description: Detects potential obfuscated PowerShell execution, which is often used in attacks to evade detection.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    proc:
+        processFilePath: '*wscript.exe*'    
+    cmd:
+        objectCmd: '*Char*'
+        objectCmd: '*iex*'
+        objectCmd: '*int*'
+    condition: ec and proc and cmd
+level: info
+taxonomy: tm-v1

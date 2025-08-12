@@ -1,0 +1,17 @@
+title: Suspicious wscript Spawned via Telecommunication Application
+description: Detects suspicious execution of wscript, which is often used in PowerShell attacks, particularly when combined with telecommunication applications.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    proc:
+        processFilePath: '*skype.exe*'    
+    cmd:
+        objectFilePath: '*wscript.exe*'
+    condition: ec and proc and cmd
+level: info
+taxonomy: tm-v1

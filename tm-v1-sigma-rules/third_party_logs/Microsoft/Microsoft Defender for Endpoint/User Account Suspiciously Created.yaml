@@ -1,0 +1,19 @@
+title: User Account Suspiciously Created
+description: Microsoft Detection for User Account Suspiciously Created
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    proc:
+        processFilePath: '*powershell.exe*'    
+    cmd:
+        objectCmd: '*net*'
+        objectCmd: '*user*'
+        objectCmd: '*add*'
+    condition: ec and proc and cmd
+level: info
+taxonomy: tm-v1
