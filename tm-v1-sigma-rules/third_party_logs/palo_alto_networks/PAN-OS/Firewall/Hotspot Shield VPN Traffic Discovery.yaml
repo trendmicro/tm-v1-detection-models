@@ -1,0 +1,15 @@
+title: Hotspot Shield VPN Traffic Discovery
+description: Palo Alto Networks detection for Hotspot Shield VPN Traffic Detection. This signature detects the Hotspot Shield VPN traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95193'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

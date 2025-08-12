@@ -1,0 +1,16 @@
+title: HTTP Apache Tomcat JSP Example Web Applications Cross Site Scripting
+description: Palo Alto Networks detection for HTTP Apache Tomcat JSP Example Web Applications Cross Site Scripting. Apache Tomcat is prone to a cross site scripting attack vulnerability while parsing certain crafted HTTP request.The vulnerability is due to the lack of proper checks in URL request.An attacker could exploit the vulnerability by sending a crafted HTTP request. A successful attack could lead to script execution in the user's browser.
+tags:
+- cve.2007.2449
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '30828'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
