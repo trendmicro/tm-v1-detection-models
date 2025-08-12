@@ -1,0 +1,16 @@
+title: Oracle 9i Application Server Dynamic Monitoring Services Anonymous Access
+description: Palo Alto Networks detection for Oracle 9i Application Server Dynamic Monitoring Services Anonymous Access. Oracle 9i Application Server 1.0.2.x is prone to an information leak vulnerability. The vulnerability is because the default configuration allows remote anonymous users to access sensitive information on the Dynamic Monitoring Services. An attacker could exploit the vulnerability by sending a crafted HTTP URI request to retrieve the information. A successful exploit could lead to retrieval of sensitive information through execution of Java processes on the server.
+tags:
+- cve.2002.0563
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '33756'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
