@@ -1,0 +1,15 @@
+title: Impacket GetADUser Traffic Discovery
+description: Palo Alto Networks detection for Impacket GetADUser Traffic Detection. This signature detects the post-exploitation tool GetADUser by Impacket. The trigger of this signature should not be considered malicious all the time as it could be used by legitimate users to execute commands on a remote machine, but this tool is used widely by researchers and attackers for lateral movement.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90952'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
