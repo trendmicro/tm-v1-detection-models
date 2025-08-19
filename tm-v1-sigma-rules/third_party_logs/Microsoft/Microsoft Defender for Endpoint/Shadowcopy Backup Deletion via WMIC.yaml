@@ -1,0 +1,18 @@
+title: Shadowcopy Backup Deletion via WMIC
+description: Microsoft Process Telemetry Detection for Shadowcopy Backup Deletion via WMIC
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceProcessEvents'
+    s1:
+        objectFileName: '*wmic.exe*'
+    s2:
+        objectCmd: '*shadowcopy*'
+        objectCmd: '*delete*'
+    condition: ec and s1 and s2
+level: info
+taxonomy: tm-v1
