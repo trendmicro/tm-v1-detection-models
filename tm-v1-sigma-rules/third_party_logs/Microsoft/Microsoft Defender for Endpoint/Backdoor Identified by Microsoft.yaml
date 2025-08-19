@@ -1,0 +1,18 @@
+title: Backdoor Identified by Microsoft
+description: Microsoft Detection for Backdoor Identified by Microsoft.
+tags: 
+    - mitre.t1204
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'Antivirus*'
+    mal:
+        malName: 'Backdoor*'
+    condition: ec and ac and mal
+level: info
+taxonomy: tm-v1

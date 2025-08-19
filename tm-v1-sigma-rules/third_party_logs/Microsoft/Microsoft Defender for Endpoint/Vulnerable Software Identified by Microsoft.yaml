@@ -1,0 +1,18 @@
+title: Vulnerable Software Identified by Microsoft
+description: Microsoft Detection for Vulnerable Software Identified by Microsoft.
+tags: 
+    - mitre.t1595.002
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'Antivirus*'
+    mal:
+        malName: 'Vulnerable*'
+    condition: ec and ac and mal 
+level: info
+taxonomy: tm-v1

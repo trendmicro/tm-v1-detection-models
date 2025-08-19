@@ -1,0 +1,18 @@
+title: Hacktool File Identified by Microsoft
+description: Microsoft Detection for Hacktool File Identified by Microsoft.
+tags: 
+    - mitre.t1600
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'Antivirus*'
+    mal:
+        malName: 'Hacktool*'
+    condition: ec and ac and mal 
+level: info
+taxonomy: tm-v1
