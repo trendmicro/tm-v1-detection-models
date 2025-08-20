@@ -1,0 +1,15 @@
+title: Non-RFC Compliant MS-DS-SMB Traffic on Port 445
+description: Palo Alto Networks detection for Non-RFC Compliant MS-DS-SMB Traffic on Port 445. This signature detects suspicious and non-RFC compliant MS-DS-SMB traffic on port 445. This could be associated with applications sending non MS-DS-SMB traffic using port 445 or indicate possible malicious activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95608'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

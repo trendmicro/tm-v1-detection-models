@@ -1,0 +1,15 @@
+title: Nmap Service Discovery
+description: Palo Alto Networks detection for Nmap Service Detection. This signature is detecting nmap service scanning.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '94317'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
