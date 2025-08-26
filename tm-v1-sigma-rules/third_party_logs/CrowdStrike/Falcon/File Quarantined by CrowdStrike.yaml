@@ -7,7 +7,7 @@ logsource:
   definition: THIRDPARTY_THIRDPARTY
 detection:
   eventtype:
-    eventType: EppDetectionSummaryEvent_QuarantineFiles
+    eventType: 'EppDetectionSummaryEvent_QuarantineFiles'
   condition: eventtype
 level: low
 taxonomy: tm-v1
