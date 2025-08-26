@@ -8,9 +8,9 @@ logsource:
   definition: THIRDPARTY_THIRDPARTY
 detection:
   s1:
-    eventCategory: DeviceNetworkEvents
+    eventCategory: 'DeviceNetworkEvents'
   s2:
-    actionName: ConnectionSuccess
+    actionName: 'ConnectionSuccess'
   s3:
     processCmd: '*rclone*'
   s4:
