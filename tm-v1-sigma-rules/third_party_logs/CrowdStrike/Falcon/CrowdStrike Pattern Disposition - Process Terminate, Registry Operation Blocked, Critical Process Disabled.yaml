@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Process Terminate, Registry Operation Blocked, Critical Process Disabled
+description: CrowdStrike Response for Detection by Terminating Process, Disabling Critical Process and Blocking Registry Operation
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Kill Process * Registry Operation Blocked * Critical Process Disabled*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
