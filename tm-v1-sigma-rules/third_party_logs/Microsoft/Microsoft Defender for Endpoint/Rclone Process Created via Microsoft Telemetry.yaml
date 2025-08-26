@@ -1,0 +1,20 @@
+title: Rclone Process Created via Microsoft Telemetry
+description: Microsoft process detection for the creation of an Rclone process.
+tags:
+- mitre.t1105
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  s1:
+    eventCategory: DeviceProcessEvents
+  s2:
+    actionName: ProcessCreated
+  s3:
+    objectCmd: '*rclone*'
+  s4:
+    objectCmd: '*copy*'
+  condition: s1 and s2 and s3 and s4
+level: low
+taxonomy: tm-v1

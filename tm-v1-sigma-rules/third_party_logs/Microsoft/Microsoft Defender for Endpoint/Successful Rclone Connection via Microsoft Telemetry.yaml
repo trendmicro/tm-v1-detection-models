@@ -1,0 +1,20 @@
+title: Successful Rclone Connection via Microsoft Telemetry
+description: Microsoft network detection for a successful Rclone connection.
+tags:
+- mitre.t1105
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  s1:
+    eventCategory: DeviceNetworkEvents
+  s2:
+    actionName: ConnectionSuccess
+  s3:
+    processCmd: '*rclone*'
+  s4:
+    processCmd: '*copy*'
+  condition: s1 and s2 and s3 and s4
+level: low
+taxonomy: tm-v1
