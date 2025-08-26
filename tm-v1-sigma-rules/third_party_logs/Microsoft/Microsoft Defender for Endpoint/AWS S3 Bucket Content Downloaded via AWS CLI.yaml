@@ -9,7 +9,7 @@ logsource:
   definition: THIRDPARTY_THIRDPARTY
 detection:
   s1:
-    eventCategory: DeviceFileEvents
+    eventCategory: 'DeviceFileEvents'
   s2:
     processFilePath: '*aws.exe'
   s3:
