@@ -8,7 +8,7 @@ logsource:
   definition: THIRDPARTY_THIRDPARTY
 detection:
   eventtype:
-    eventType: EppDetectionSummaryEvent
+    eventType: 'EppDetectionSummaryEvent'
   s1:
     processFilePath: '*powershell.exe'
   s3:
