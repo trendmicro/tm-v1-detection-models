@@ -1,0 +1,23 @@
+title: AWS S3 Bucket Content Downloaded via AWS CLI
+description: Microsoft file detection for a file that was downloaded from an AWS S3
+  bucket using the AWS CLI.
+tags:
+- mitre.t1105
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  s1:
+    eventCategory: 'DeviceFileEvents'
+  s2:
+    processFilePath: '*aws.exe'
+  s3:
+    processCmd: '*aws*'
+  s4:
+    processCmd: '*s3*'
+  s5:
+    processCmd: '*cp*'
+  condition: s1 and s2 and s3 and s4 and s5
+level: low
+taxonomy: tm-v1

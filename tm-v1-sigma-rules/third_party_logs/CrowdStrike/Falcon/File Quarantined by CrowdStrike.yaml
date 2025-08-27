@@ -1,0 +1,13 @@
+title: File Quarantined by CrowdStrike
+description: This CrowdStrike alert indicates that a file was quarantined and isolated.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: CrowdStrike
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  eventtype:
+    eventType: 'EppDetectionSummaryEvent_QuarantineFiles'
+  condition: eventtype
+level: low
+taxonomy: tm-v1
