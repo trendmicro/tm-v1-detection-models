@@ -1,0 +1,15 @@
+title: Potential Evasion Technique Identified in HTTP Response
+description: Palo Alto Networks detection for Potential Evasion Technique Detected in HTTP Response. This signature detects evasion techniques used by attackers to present the attacking content in various formats in order to evade the detecting patterns in our signatures. A successful evasion technique could allow the attacking traffic to bypass our detecting signatures and launch different types of attacks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90321'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
