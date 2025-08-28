@@ -1,0 +1,15 @@
+title: PHP Reverse Shell Payload Discovery
+description: Palo Alto Networks detection for PHP Reverse Shell Payload Detection. This signature detects a HTTP request with malicious PHP reverse shell payload.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90872'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
