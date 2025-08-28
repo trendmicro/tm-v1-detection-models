@@ -1,0 +1,15 @@
+title: Palo Alto Networks GlobalProtect Authentication Failure Discovery
+description: Palo Alto Networks detection for Palo Alto Networks GlobalProtect Authentication Failure Detection. This signature detects failed authentication attempts to the GlobalProtect Portal and Gateway. This signature is child signature of the parent, ID 40169 (Palo Alto Networks GlobalProtect Authentication Brute Force Attempt). An individual trigger of this signature does not necessarily indicate malicious activity. However, multiple triggers in a short period of time should be considered suspicious.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '96010'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
