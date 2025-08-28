@@ -1,5 +1,5 @@
 title: CrowdStrike Pattern Disposition - File System Operation Blocked and Policy Disabled
-description: CrowdStrike Response for Detection by Terminating Parent Process
+description: CrowdStrike Response for Detection by Blocking File Sytem Operation and Disabling Policy
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
@@ -10,4 +10,5 @@ detection:
         act: 'File system Operation Blocked'
     condition: string_condition_0
 level: info
+
 taxonomy: tm-v1
