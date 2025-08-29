@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Operation Blocked, Critical Process Disabled
+description: CrowdStrike Response for Detection by Blocking Operation and Disabling Critical Process
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Operation Blocked * Critical Process Disabled*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Registry Operation Blocked, Operation Blocked
+description: CrowdStrike Response for Detection by Blocking Registry and Blocking Operation
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Operation Blocked * Registry Operation Blocked*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
