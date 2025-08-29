@@ -1,0 +1,15 @@
+title: RPC Portmapper DUMP Request Identified
+description: Palo Alto Networks detection for RPC Portmapper DUMP Request Detected. This alert indicates that an RPC Portmapper DUMP request has been detected. Responses to these requests provide a list of RPC services that are available on a Unix server and what ports they map to. These requests are often normal, but they may also be used by attackers to conduct reconnaissance on a server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '32796'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
