@@ -1,0 +1,15 @@
+title: SIPVicious Scanner Discovery
+description: Palo Alto Networks detection for SIPVicious Scanner Detection. SIPVicious is an auditing tool for SIP VoIP/PBX software with potential to be used by malicious threat actors. The software suite includes user/extension number enumeration and scanning, brute-force and dictionary password cracking, and logging data.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '54482'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: SIP INVITE Method Request Flood Attempt
+description: Palo Alto Networks detection for SIP INVITE Method Request Flood Attempt. This event indicates a flood dos attack through multiple SIP invite request messages.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '40016'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
