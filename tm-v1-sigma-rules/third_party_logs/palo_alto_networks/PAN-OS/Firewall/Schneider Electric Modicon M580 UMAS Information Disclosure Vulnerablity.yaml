@@ -1,0 +1,16 @@
+title: Schneider Electric Modicon M580 UMAS Information Disclosure Vulnerablity
+description: Palo Alto Networks detection for Schneider Electric Modicon M580 UMAS Information Disclosure Vulnerablity. Schneider Electric Modicon M580 UMAS is prone to an information disclosure vulnerability while parsing certain crafted Modbus requests. The vulnerability is due to the lack of proper checks on Modbus requests, leading to an exploitable information disclosure vulnerability. An attacker could exploit the vulnerability by sending crafted Modbus requests. A successful attack could lead to information disclosure with the privileges of the server.
+tags:
+- cve.2018.7845
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90243'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
