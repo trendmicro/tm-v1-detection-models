@@ -1,0 +1,15 @@
+title: SIP Register Message Brute Force Attack
+description: Palo Alto Networks detection for SIP Register Message Brute Force Attack. This event indicates a brute-force attack through multiple SIP REGISTER request messages. It may try to brute-force a valid user name or password on that server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '40023'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
