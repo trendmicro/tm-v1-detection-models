@@ -1,0 +1,16 @@
+title: SSH User Authentication Brute Force Attempt
+description: Palo Alto Networks detection for SSH User Authentication Brute Force Attempt. This signature triggers when the child signature, ID 31914, SSH2 Login Attempt is triggered 20 times in 60 seconds. Customers can adjust the timing of brute force signatures if the parent signatures trigger too often. Refer to Palo Alto Networks documentation to learn more about brute force signatures and customizing the action and trigger conditions for a brute force signature.
+tags:
+- cve.2024.6387
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '40015'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
