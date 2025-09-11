@@ -1,0 +1,15 @@
+title: Attack Surface Reduction - Vulnerable Signed Driver Blocked
+description: Microsoft Detection for Vulnerable Signed Driver Blocked.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'AsrVulnerableSignedDriverBlocked'
+    condition: ec and ac
+level: info
+taxonomy: tm-v1

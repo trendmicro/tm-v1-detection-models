@@ -1,0 +1,15 @@
+title: Firewall Outbound Connections Blocked
+description: Microsoft Detection for Firewall Outbound Connections Blocked.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'FirewallOutboundConnectionBlocked'
+    condition: ec and ac
+level: info
+taxonomy: tm-v1
