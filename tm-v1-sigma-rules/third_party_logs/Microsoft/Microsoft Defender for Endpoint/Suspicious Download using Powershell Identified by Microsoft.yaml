@@ -1,0 +1,39 @@
+title: Suspicious Download using Powershell Identified by Microsoft
+description: Microsoft detection for suspicious PowerShell activity where PowerShell
+  executables are used with commands commonly associated with downloading files or
+  executing remote code from web sources. It detects potential malware delivery, fileless
+  attacks, or unauthorized remote script execution attempts that leverage PowerShell's
+  web download capabilities.
+tags:
+- mitre.t1105
+- mitre.t1059.001
+- mitre.t1140
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceProcessEvents'
+  selection2:
+    objectFileName: '[''powershell.exe'', ''powershell_ise.exe'']'
+  selection3:
+    objectCmd: '*Net.WebClient*'
+  s1:
+    objectCmd: '*DownloadFile*'
+  s2:
+    objectCmd: '*Invoke-WebRequest*'
+  s3:
+    objectCmd: '*Invoke-Shellcode*'
+  s4:
+    objectCmd: '*http*'
+  s5:
+    objectCmd: '*IEX*'
+  s6:
+    objectCmd: '*Start-BitsTransfer*'
+  s7:
+    objectCmd: '*mpcmdrun.exe*'
+  condition: selection1 and selection2 and (selection3 or s1 or s2 or s3 or s4 or
+    s5 or s6 or s7)
+level: low
+taxonomy: tm-v1

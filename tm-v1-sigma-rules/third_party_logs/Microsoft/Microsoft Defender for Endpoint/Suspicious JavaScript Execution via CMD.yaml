@@ -1,0 +1,27 @@
+title: Suspicious JavaScript Execution via CMD
+description: Microsoft detection for CMD process that launch cscript.exe with minimized
+  windows to execute JavaScript code. The rule focuses on detecting this behavior
+  of using Windows Script Host to run malicious JavaScript payloads in a concealed
+  manner.
+tags:
+- mitre.t1059.003
+- mitre.t1059.007
+- mitre.t1055
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceProcessEvents'
+  selection2:
+    processName: 'cmd.exe'
+  selection3:
+    objectFileName: 'cscript.exe'
+  selection4:
+    processCmd: '*start /MIN*'
+  selection5:
+    objectCmd: '*E:javascript*'
+  condition: selection1 and selection2 and selection3 and selection4 and selection5
+level: low
+taxonomy: tm-v1
