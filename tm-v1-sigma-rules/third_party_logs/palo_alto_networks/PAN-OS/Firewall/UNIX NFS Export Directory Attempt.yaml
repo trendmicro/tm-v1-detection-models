@@ -1,0 +1,15 @@
+title: UNIX NFS Export Directory Attempt
+description: Palo Alto Networks detection for UNIX NFS Export Directory Attempt. The Network File System (NFS) in UNIX allows a host to export some or all of its filesystems, or parts of them, so that other hosts can access them over the network and mount them as if they were on local disks. NFS is built on top of the Sun Remote Procedure Call (RPC) framework.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '32788'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
