@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Registry Operation Blocked, Process Terminate, Policy Disabled
+description: CrowdStrike Response for Detection by Blocking Registry, Terminating Process and Disabling Policy
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Kill Process * Policy Disabled * Registry Operation Blocked*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

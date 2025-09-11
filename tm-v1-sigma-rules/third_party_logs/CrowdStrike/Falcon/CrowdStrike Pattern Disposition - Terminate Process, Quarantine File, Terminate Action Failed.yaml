@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Terminate Process, Quarantine File, Terminate Action Failed
+description: CrowdStrike Response for Detection by Terminate Process, Quarantine File, and Terminate Action Failed
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Kill Process * Quarantine File * Kill Action Failed*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Firewall Inbound Connection to Application Blocked
+description: Microsoft Detection for Firewall Inbound Connections to App Blocked.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'DeviceEvents'
+    ac:
+        actionName: 'FirewallInboundConnectionToAppBlocked'
+    condition: ec and ac
+level: info
+taxonomy: tm-v1

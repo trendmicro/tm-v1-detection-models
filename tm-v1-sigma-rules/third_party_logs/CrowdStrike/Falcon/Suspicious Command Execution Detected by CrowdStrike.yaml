@@ -1,0 +1,26 @@
+title: Suspicious Command Execution Detected by CrowdStrike
+description: This CrowdStrike alert indicates that a suspicious command was executed
+  on the endpoint.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: CrowdStrike
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  eventtype:
+    eventType: 'EppDetectionSummaryEvent'
+  s1:
+    processFilePath: '*powershell.exe'
+  s3:
+    processFilePath: '*cmd.exe'
+  s2:
+    act: '*Detection*'
+  s4:
+    act: '*detected*'
+  s5:
+    act: '*Prevention*'
+  s6:
+    act: '*prevented*'
+  condition: eventtype and (s1 or s3) and (s2 or s4 or s5 or s6)
+level: low
+taxonomy: tm-v1

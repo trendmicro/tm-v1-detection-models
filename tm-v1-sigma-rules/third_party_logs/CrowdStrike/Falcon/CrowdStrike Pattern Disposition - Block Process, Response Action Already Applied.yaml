@@ -1,0 +1,13 @@
+title: CrowdStrike Pattern Disposition - Block Process, Response Action Already Applied
+description: CrowdStrike Response for Detection by Block Process, Response Action Already Applied
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        act: '*Block Process * Response Action Already Applied*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
