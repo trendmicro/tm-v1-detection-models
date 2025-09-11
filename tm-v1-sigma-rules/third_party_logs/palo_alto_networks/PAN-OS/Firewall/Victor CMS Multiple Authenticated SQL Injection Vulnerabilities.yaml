@@ -1,0 +1,15 @@
+title: Victor CMS Multiple Authenticated SQL Injection Vulnerabilities
+description: Palo Alto Networks detection for Victor CMS Multiple Authenticated SQL Injection Vulnerabilities. Victor CMS is prone to multiple SQL injection vulnerabilities while parsing certain crafted HTTP requests. The vulnerability is due to the lack of proper checks on HTTP requests, leading to an exploitable SQL injection vulnerability. An attacker could exploit the vulnerability by sending crafted HTTP requests. A successful attack could lead to remote code execution with the privileges of the server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90266'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1

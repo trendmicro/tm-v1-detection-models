@@ -1,0 +1,15 @@
+title: Tinc VPN Traffic Discovery
+description: Palo Alto Networks detection for Tinc VPN Traffic Detection. This signature detects Tinc VPN authentication transaction
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95229'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
