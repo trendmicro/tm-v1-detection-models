@@ -1,0 +1,19 @@
+title: SmartScreen URL Warning Triggered by Microsoft Defender
+description: This detection rule identifies Microsoft SmartScreen URL warnings triggered
+  when users attempt to access potentially malicious or suspicious websites. It detects
+  web-based threats including phishing attempts, malware distribution sites, and other
+  harmful web content that SmartScreen has flagged as risky.
+tags:
+- mitre.t1204
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'SmartScreenUrlWarning'
+  condition: selection1 and selection2
+level: low
+taxonomy: tm-v1

@@ -1,0 +1,19 @@
+title: SmartScreen URL Warning Override by User
+description: Detects when users bypass Microsoft SmartScreen URL warnings by clicking
+  "Run anyway" or similar override options. This identifies potential exposure to
+  malicious websites or downloads that SmartScreen flagged as potentially unsafe,
+  indicating risky user behavior or possible malware delivery attempts.
+tags:
+- mitre.t1204.002
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'SmartScreenUserOverride'
+  condition: selection1 and selection2
+level: low
+taxonomy: tm-v1
