@@ -1,0 +1,25 @@
+title: Svchost Running in a Unusual User Context
+description: Microsoft Telemetry Detection for Svchost Running in a Unusual User Context.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processFilePath: '*Windows\\System32\\svchost.exe'
+    usr_1:
+        logonUser:
+            - '*NT AUTHORITY\\LOCAL SERVICE*'
+            - '*NT AUTHORITY\\NETWORK SERVICE*'
+            - '*NT AUTHORITY\\SYSTEM*'
+    usr_2:
+        processUser:
+            - '*NT AUTHORITY\\LOCAL SERVICE*'
+            - '*NT AUTHORITY\\NETWORK SERVICE*'
+            - '*NT AUTHORITY\\SYSTEM*'
+    condition: ec and cmd_1 and not (usr_1 or usr_2)
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,21 @@
+title: Powershell Running as System User
+description: Microsoft Telemetry Detection for Powershell Running as System User.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processFilePath: '*powershell.exe'
+    usr_1:
+        logonUser:
+            - '*SYSTEM*'
+    usr_2:
+        processUser:
+            - '*SYSTEM*'
+    condition: ec and cmd_1 and (usr_1 or usr_2)
+level: info
+taxonomy: tm-v1
