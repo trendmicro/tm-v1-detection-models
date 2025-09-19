@@ -1,0 +1,15 @@
+title: Net User Added
+description: Microsoft Telemetry Detection for Net User Added.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd:
+        processCmd|re: 'net\s+user(?:(?!\s+\/add)(?:.|\n))*\s+\/add'
+    condition: ec and cmd
+level: info
+taxonomy: tm-v1

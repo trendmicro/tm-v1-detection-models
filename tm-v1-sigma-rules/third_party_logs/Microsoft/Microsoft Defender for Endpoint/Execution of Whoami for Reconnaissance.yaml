@@ -1,0 +1,17 @@
+title: Execution of Whoami for Reconnaissance
+description: Microsoft Telemetry Detection for Execution of Whoami for Reconnaissance.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processCmd: '*whoami*'
+    cmd_2:
+        objectCmd: '*whoami*'
+    condition: ec and (cmd_1 or cmd_2)
+level: info
+taxonomy: tm-v1

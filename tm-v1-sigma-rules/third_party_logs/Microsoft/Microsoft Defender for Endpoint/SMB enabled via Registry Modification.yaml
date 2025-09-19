@@ -1,0 +1,15 @@
+title: SMB enabled via Registry Modification
+description: Microsoft Telemetry Detection for SMB enabled via Registry Modification.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd:
+        processCmd: 'REG ADD HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters /v SMB1 /tREG_DWORD /d 1 /f'
+    condition: ec and cmd
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Powershell Get Clipboard Entry
+description: Microsoft Telemetry Detection for Powershell Get Clipboard Entry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processCmd|re: 'powershell\.exe\s+echo\s+Get\-Process\s+\|\s+clip'
+    condition: ec and cmd_1
+level: info
+taxonomy: tm-v1

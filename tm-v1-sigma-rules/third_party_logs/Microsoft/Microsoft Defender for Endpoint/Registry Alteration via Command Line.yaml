@@ -1,0 +1,17 @@
+title: Registry Alteration via Command Line
+description: Microsoft Telemetry Detection for Registry Alteration via Command Line.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processCmd|re: 'reg\s+add'
+    cmd_2:
+        processCmd|re: 'reg\s+del'
+    condition: ec and (cmd_1 or cmd_2)
+level: info
+taxonomy: tm-v1

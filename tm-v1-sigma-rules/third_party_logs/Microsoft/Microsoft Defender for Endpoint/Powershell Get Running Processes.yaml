@@ -1,0 +1,15 @@
+title: Powershell Get Running Processes
+description: Microsoft Telemetry Detection for Powershell Get Running Processes.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processCmd: '*powershell.exe*Get-Process*'
+    condition: ec and cmd_1
+level: info
+taxonomy: tm-v1

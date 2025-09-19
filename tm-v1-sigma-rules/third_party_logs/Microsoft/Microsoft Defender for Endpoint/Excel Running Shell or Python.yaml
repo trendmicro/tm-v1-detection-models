@@ -1,0 +1,19 @@
+title: Excel Running Shell or Python
+description: Microsoft Telemetry Detection for Excel Running Shell or Python.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    cmd_1:
+        processFilePath: '*excel.exe'
+    objFP:
+        objectFilePath: 
+            - '*.sh*'
+            - '*.py*'
+    condition: ec and cmd_1 and objFP
+level: info
+taxonomy: tm-v1

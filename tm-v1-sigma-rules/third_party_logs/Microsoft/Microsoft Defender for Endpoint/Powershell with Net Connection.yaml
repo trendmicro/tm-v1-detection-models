@@ -1,0 +1,17 @@
+title: Powershell with Net Connection
+description: Microsoft Telemetry Detection for Powershell with Net Connection.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Microsoft
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    ec:
+        eventCategory: 'Device*'
+    pname:
+        processName: '*powershell*'
+    dst:
+        dst: '*'
+    condition: ec and pname and dst
+level: info
+taxonomy: tm-v1
