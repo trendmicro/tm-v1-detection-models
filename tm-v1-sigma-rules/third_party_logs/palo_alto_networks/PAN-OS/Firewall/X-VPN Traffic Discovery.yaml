@@ -1,0 +1,15 @@
+title: X-VPN Traffic Discovery
+description: Palo Alto Networks detection for X-VPN Traffic Detection. This signature detects the X-VPN traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95129'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
