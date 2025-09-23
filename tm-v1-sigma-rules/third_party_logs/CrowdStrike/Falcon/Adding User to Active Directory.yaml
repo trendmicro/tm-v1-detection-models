@@ -1,0 +1,13 @@
+title: Adding User to Active Directory
+description: CrowdStrike Falcon detecting the addition of a user to Active Directory using the dsadd command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*dsadd user*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

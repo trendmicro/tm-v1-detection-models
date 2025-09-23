@@ -1,0 +1,13 @@
+title: Gather Network Adaptor Details
+description: CrowdStrike Falcon detecting a possible gathering of network adapter details using the Windows wmic nic command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*wmic nic*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

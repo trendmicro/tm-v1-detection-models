@@ -1,0 +1,14 @@
+title: Execution of Suspicious File from AppData
+description: CrowdStrike Falcon detecting a possible execution of a suspicious file from the AppData directory using the Windows cmd command with the /FILE parameter.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*/FILE*'
+        processCmd: '*AppData*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

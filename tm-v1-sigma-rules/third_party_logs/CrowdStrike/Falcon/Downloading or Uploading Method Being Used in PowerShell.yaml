@@ -1,0 +1,13 @@
+title: Downloading or Uploading Method Being Used in PowerShell
+description: CrowdStrike Falcon detecting a possible download or upload method being used in PowerShell with the New-Object Net.WebClient method.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*(New-ObjectNet.Webclient)*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

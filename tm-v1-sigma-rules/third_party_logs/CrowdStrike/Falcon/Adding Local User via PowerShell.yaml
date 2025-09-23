@@ -1,0 +1,13 @@
+title: Adding Local User via PowerShell
+description: CrowdStrike Falcon detecting the addition of a local user using PowerShell's New-LocalUser cmdlet.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*powershell * New-LocalUser*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
