@@ -1,0 +1,13 @@
+title: Net User Domain
+description: CrowdStrike Falcon detecting a possible listing of user accounts in the domain using the Windows net user command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd|re: 'net.+user(?:(?!.+\/domain)(?:.|\\n))*.+\/domain'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

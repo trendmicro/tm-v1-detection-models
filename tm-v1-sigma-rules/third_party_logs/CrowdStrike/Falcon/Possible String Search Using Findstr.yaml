@@ -1,0 +1,13 @@
+title: Possible String Search Using Findstr
+description: CrowdStrike Falcon detecting a possible string search using the Windows findstr command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*findstr*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
