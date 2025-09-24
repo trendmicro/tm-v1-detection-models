@@ -1,0 +1,21 @@
+title: Inbound Internet Scan Against Public Facing Application via Microsoft Telemetry
+description: Microsoft network detection for inbound internet scanning activities
+  targeting public facing applications as identified by Microsoft Defender for Endpoint
+  telemetry. This rule identifies potential reconnaissance attempts where external
+  actors are probing network services and applications for vulnerabilities or exposed
+  attack surfaces.
+tags:
+- mitre.t1595
+- mitre.t1046
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'InboundInternetScanInspected'
+  selection2:
+    eventCategory: 'DeviceNetworkEvents'
+  condition: selection1 and selection2
+level: low
+taxonomy: tm-v1

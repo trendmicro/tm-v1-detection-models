@@ -1,0 +1,26 @@
+title: Conhost Process Establishing External Network Connection
+description: Microsoft network detection for a suspicious outbound network connections
+  initiated by the Windows Console Host process conhost.exe.
+tags:
+- mitre.t1055
+- mitre.t1105
+- mitre.t1071
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceNetworkEvents'
+  selection2:
+    processName: 'conhost.exe'
+  selection3:
+    dst: '*127.0.0.1*'
+  selection4:
+    requests:
+        - '*google.com*'
+        - '*microsoft.com*'
+        - '*digicert.com*'
+  condition: selection1 and selection2 and not (selection3 or selection4)
+level: low
+taxonomy: tm-v1
