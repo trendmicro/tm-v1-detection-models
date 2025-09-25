@@ -1,0 +1,24 @@
+title: Outbound SMB Connection to a Public IP Address
+description: Microsoft network detection for identifying successful outbound SMB connections
+  from internal systems to public IP addresses on port 445. It monitors for potentially
+  unauthorized file sharing or lateral movement attempts targeting external systems.
+tags:
+- mitre.t1021.002
+- mitre.t1105
+- mitre.t1041
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceNetworkEvents'
+  selection2:
+    actionName: 'ConnectionSuccess'
+  selection3:
+    dstIpType: 'Public'
+  selection4:
+    dpt: '445'
+  condition: selection1 and selection2 and selection3 and selection4
+level: medium
+taxonomy: tm-v1
