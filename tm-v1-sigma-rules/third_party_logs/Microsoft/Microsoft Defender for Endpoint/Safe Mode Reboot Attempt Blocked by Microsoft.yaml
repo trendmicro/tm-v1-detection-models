@@ -1,0 +1,17 @@
+title: Safe Mode Reboot Attempt Blocked by Microsoft
+description: Microsoft attack surface reduction rule that prevents processes from
+  triggering a reboot into Safe Mode where security defenses might be disabled.
+tags:
+- mitre.t1562
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrSafeModeRebootBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: low
+taxonomy: tm-v1

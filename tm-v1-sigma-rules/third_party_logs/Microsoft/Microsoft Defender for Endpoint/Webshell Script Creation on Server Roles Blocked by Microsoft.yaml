@@ -1,0 +1,19 @@
+title: Webshell Script Creation on Server Roles Blocked by Microsoft
+description: Microsoft attack surface reduction rule that prevents creation of webshell
+  scripts such as ASP and PHP shells on server roles including Exchange servers.
+tags:
+- mitre.t1505.003
+- mitre.t1190
+- mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrWebShellOnServerBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1

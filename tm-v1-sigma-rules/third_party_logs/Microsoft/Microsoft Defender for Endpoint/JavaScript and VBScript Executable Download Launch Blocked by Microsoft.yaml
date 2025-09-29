@@ -1,0 +1,21 @@
+title: JavaScript and VBScript Executable Download Launch Blocked by Microsoft
+description: Microsoft attack surface reduction rule that prevents JavaScript or VBScript
+  from launching downloaded executable content. This detection identifies when the
+  ASR rule blocks script-based execution of downloaded files which is a common attack
+  vector used by malware.
+tags:
+- mitre.t1059
+- mitre.t1105
+- mitre.t1204
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrScriptExecutableDownloadBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: high
+taxonomy: tm-v1

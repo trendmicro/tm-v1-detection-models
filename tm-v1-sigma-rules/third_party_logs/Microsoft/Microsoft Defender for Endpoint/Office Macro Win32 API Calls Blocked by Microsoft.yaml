@@ -1,0 +1,20 @@
+title: Office Macro Win32 API Calls Blocked by Microsoft
+description: Microsoft attack surface reduction rule that prevents Office macro code
+  from invoking Win32 API calls to block shellcode execution and direct in-memory
+  attacks.
+tags:
+- mitre.t1566
+- mitre.t1055
+- mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrOfficeMacroWin32ApiCallsBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1

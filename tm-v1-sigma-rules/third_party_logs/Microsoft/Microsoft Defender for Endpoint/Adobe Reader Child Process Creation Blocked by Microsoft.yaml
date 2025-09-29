@@ -1,0 +1,18 @@
+title: Adobe Reader Child Process Creation Blocked by Microsoft
+description: Microsoft attack surface reduction rule that prevents Adobe Reader from
+  creating child processes which could be exploited by malware to execute malicious
+  payloads.
+tags:
+- mitre.t1055
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrAdobeReaderChildProcessBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1

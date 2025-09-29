@@ -1,0 +1,20 @@
+title: Copied or Impersonated System Tools Execution Blocked by Microsoft
+description: Microsoft attack surface reduction rule that blocks execution of duplicated
+  or impersonated Windows system tools to prevent abuse of legitimate-looking binaries
+  by malicious actors.
+tags:
+- mitre.t1036
+- mitre.t1036.003
+- mitre.t1036.005
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrAbusedSystemToolBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1
