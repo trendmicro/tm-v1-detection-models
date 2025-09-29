@@ -1,0 +1,19 @@
+title: Obfuscated Script Execution Blocked by Microsoft
+description: Microsoft attack surface reduction rule that blocks execution of potentially
+  obfuscated scripts including PowerShell, JavaScript, and VBScript that may contain
+  hidden malicious code
+tags:
+- mitre.t1027
+- mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrObfuscatedScriptBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1

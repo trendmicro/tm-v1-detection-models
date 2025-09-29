@@ -1,0 +1,18 @@
+title: Office Applications Executable Content Creation Blocked by Microsoft
+description: Microsoft attack surface reduction rule that blocks Office applications
+  from creating executable content on disk to prevent malicious code execution through
+  macros or other embedded content.
+tags:
+- mitre.t1204.002
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrExecutableOfficeContentBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: medium
+taxonomy: tm-v1

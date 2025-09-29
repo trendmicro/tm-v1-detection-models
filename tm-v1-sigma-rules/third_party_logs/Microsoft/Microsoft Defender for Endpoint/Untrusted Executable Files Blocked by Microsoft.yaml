@@ -1,0 +1,18 @@
+title: Untrusted Executable Files Blocked by Microsoft
+description: Microsoft attack surface reduction rule that blocks execution of executable
+  files such as .exe, .dll, and .scr that do not meet established prevalence, age,
+  or trusted list criteria using cloud-delivered protection mechanisms.
+tags:
+- mitre.t1204
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AsrUntrustedExecutableBlocked'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: low
+taxonomy: tm-v1
