@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  run-on-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run a script or job after PR is merged
+        run: echo "Pull request #${{ github.event.pull_request.number }} was merged!"
