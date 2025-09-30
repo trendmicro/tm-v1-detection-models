@@ -1,0 +1,18 @@
+title: Listing of WMIC User Accounts
+description: Detects the use of the 'wmic useraccount list' command, which is often used by attackers to enumerate user accounts on a system and found in CrowdStrike telemetry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*wmic*'
+        processCmd: '*useraccount*'
+    string_condition_1:
+        processCmd: 
+            - '*list*'
+            - '*get*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
