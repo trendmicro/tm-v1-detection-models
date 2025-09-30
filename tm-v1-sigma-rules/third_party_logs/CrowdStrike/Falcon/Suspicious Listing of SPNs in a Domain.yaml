@@ -1,0 +1,15 @@
+title: Suspicious Listing of SPNs in a Domain
+description: CrowdStrike Falcon detecting a possible listing of Service Principal Names (SPNs) in the domain using the PowerShell Get-ADObject cmdlet.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*setspn*'
+        processCmd: '*-t*'
+        processCmd: '*-q*' 
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

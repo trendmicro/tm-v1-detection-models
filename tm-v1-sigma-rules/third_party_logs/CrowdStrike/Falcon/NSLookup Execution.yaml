@@ -1,0 +1,13 @@
+title: NSLookup Execution
+description: CrowdStrike Falcon detecting a possible execution of the Windows nslookup command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*nslookup*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
