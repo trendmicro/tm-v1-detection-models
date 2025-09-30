@@ -1,0 +1,14 @@
+title: Possible Change of Firewall Profile Settings via Netsh
+description: Detects the use of the 'netsh advfirewall' command, which is often used by attackers to disable the Windows Firewall and found in CrowdStrike telemetry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*netsh*'
+        processCmd: '*advfirewall*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

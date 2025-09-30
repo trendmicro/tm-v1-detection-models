@@ -1,0 +1,17 @@
+title: Clearing of Windows Event Logs via PowerShell or Wevtutil
+description: Detects the use of the  Log Clearing commands, which is often used by attackers to clear Windows Event Logs and found in CrowdStrike telemetry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*wevtutil*'
+        processCmd: '*cl*'
+        processCmd: '*system*'
+    string_condition_1:
+        processCmd: '*Clear-EventLog*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,19 @@
+title: Net.exe Informational Queries
+description: Detects the use of the 'net.exe' command, which is often used by attackers to gather information about the system and found in CrowdStrike telemetry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*net*'
+    string_condition_1:
+        processCmd: 
+            - '*user*'
+            - '*share*'
+            - '*accounts*'
+            - '*config workstation*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

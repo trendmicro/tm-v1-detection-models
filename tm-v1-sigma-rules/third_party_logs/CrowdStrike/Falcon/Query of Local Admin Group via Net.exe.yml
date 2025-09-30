@@ -1,0 +1,15 @@
+title: Query of Local Admin Group via Net.exe
+description: Detects the use of the 'net localgroup administrators' command, which is often used by attackers to enumerate local administrator accounts on a system and found in CrowdStrike telemetry.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*net*'
+        processCmd: '*localgroup*'
+        processCmd: '*administrators*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
