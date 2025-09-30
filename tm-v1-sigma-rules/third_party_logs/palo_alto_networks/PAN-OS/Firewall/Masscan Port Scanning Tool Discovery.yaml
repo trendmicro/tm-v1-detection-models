@@ -1,5 +1,5 @@
 title: Masscan Port Scanning Tool Discovery
-description: Palo Alto Networks detection for Masscan Port Scanning Tool Detection. This signature detects scans from Masscan Port Scanning Tool. Masscan is an internet-scale port scanning tool. While it's input/output is similar to nmap, Masscan uses asynchronous tranmissions, similar to port scanners like ZMap.
+description: Palo Alto Networks detection for Masscan Port Scanning Tool Detection. This signature detects scans from Masscan Port Scanning Tool. Masscan is an internet-scale port scanning tool. While its input/output is similar to nmap, Masscan uses asynchronous tranmissions, similar to port scanners like ZMap.
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
