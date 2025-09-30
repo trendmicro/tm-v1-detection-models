@@ -1,0 +1,15 @@
+title: LiteSpeed Unauthenticated Request Attempt
+description: Palo Alto Networks detection for LiteSpeed Unauthenticated Request Attempt. This signature is a child signature of the parent, LiteSpeed Brute Force Privilege Escalation Vulnerability (ID 40163). An individual trigger of this may not be malicious itself. It is normally multiple triggers within a certain time period that should be considered highly suspicious or malicious.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '95578'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
