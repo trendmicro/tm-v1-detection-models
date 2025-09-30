@@ -1,0 +1,15 @@
+title: Malformed HTTP Request Discovery
+description: Palo Alto Networks detection for Malformed HTTP Request Detection. This signature detects malformed HTTP request.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: PALO ALTO NETWORKS
+detection:
+  subname:
+    eventSubName: vulnerability
+  rule:
+    ruleId: '90175'
+  condition: subname and rule
+level: info
+taxonomy: tm-v1
