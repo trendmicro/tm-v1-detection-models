@@ -1,0 +1,22 @@
+title: HTTP etc-passwd Access Attempt
+description: Palo Alto Networks detection for HTTP /etc/passwd Access Attempt. This signature detects /etc/passwd access attempt used by attackers to access sensitive information.
+tags:
+- cve.2019.8903
+- cve.2020.5410
+- cve.2022.31793
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId: '35107'
+    severity: '8'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
