@@ -1,0 +1,19 @@
+title: Non-RFC Compliant HTTP Traffic on Port 80
+description: Palo Alto Networks detection for Non-RFC Compliant HTTP Traffic on Port 80. This signature detects suspicious and non-RFC compliant HTTP traffic on port 80. This could be associated with applications sending non HTTP traffic using port 80 or indicate possible malicious activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId:
+    - '95356'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

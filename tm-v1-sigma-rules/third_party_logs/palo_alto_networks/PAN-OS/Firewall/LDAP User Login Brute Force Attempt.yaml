@@ -1,0 +1,19 @@
+title: LDAP User Login Brute Force Attempt
+description: Palo Alto Networks detection for LDAP User Login Brute Force Attempt. This event indicates that someone is using a brute force attack to gain access to windows through ldap bind request.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId: '40005'
+    severity: '8'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

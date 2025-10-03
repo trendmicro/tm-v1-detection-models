@@ -1,0 +1,20 @@
+title: Non-RFC Compliant MS-RDP Traffic on Port 3389
+description: Palo Alto Networks detection for Non-RFC Compliant MS-RDP Traffic on Port 3389. This signature detects suspicious and non-RFC compliant MS-RDP traffic on port 3389. This could be associated with applications sending non MS-RDP traffic using port 3389 or indicates possible malicious activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId:
+    - '95511'
+    - '95524'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

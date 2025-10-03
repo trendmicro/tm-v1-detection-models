@@ -1,0 +1,19 @@
+title: Non-RFC Compliant MYSQL Traffic on Port 3306
+description: Palo Alto Networks detection for Non-RFC Compliant MYSQL Traffic on Port 3306. This signature detects suspicious and non-RFC compliant MYSQL traffic on port 3306. This could be associated with applications sending non MYSQL traffic using port 3306 or indicates possible malicious activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId:
+    - '95535'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

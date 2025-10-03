@@ -1,0 +1,19 @@
+title: Non-RFC Compliant MSSQL-DB Traffic on Port 1433
+description: Palo Alto Networks detection for Non-RFC Compliant MSSQL-DB Traffic on Port 1433. This signature detects suspicious and non-RFC compliant MSSQL-DB traffic on port 1433. This could be associated with applications sending non MSSQL-DB traffic using port 1433 or indicates possible malicious activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId:
+    - '95534'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,19 @@
+title: FTP login Brute Force attempt
+description: Palo Alto Networks detection for FTP login Brute Force attempt. This event indicates that someone is using a brute force attack to gain access to an FTP server. An FTP brute force attack is a method of defeating the cryptographic scheme by trying a large number of possible username and passwords. Refer to Palo Alto Networks documentation to learn more about brute force signatures and to customize the action and trigger conditions for a brute force signature.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId: '40001'
+    severity: '8'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

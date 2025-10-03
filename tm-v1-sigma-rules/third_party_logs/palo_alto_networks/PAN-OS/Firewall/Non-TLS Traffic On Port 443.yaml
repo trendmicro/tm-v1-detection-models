@@ -1,0 +1,19 @@
+title: Non-TLS Traffic On Port 443
+description: Palo Alto Networks detection for Non-TLS Traffic On Port 443. This signature detects non-TLS traffic on port 443 based on the RFC of TLS.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - reset-both
+    - reset-server
+    - drop
+    ruleId:
+    - '95479'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,17 @@
+title: Nmap Active Directory Enumeration Via NTLM
+description: Palo Alto Networks detection for Nmap Active Directory Enumeration Via NTLM. This signature indicates that an attacker is trying to collect information about the network by using the Nmap Active Directory Enumeration Via NTLM.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - alert
+    ruleId: '92805'
+    severity: '6'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

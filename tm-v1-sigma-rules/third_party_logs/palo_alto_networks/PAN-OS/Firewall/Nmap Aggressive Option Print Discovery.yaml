@@ -1,0 +1,17 @@
+title: Nmap Aggressive Option Print Discovery
+description: Palo Alto Networks detection for Nmap Aggressive Option Print Detection. This signature is detecting nmap aggressive option print.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    act:
+    - alert
+    ruleId: '94318'
+    severity: '6'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
