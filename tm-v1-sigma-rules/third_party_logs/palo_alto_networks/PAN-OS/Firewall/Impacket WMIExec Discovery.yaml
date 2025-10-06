@@ -1,0 +1,17 @@
+title: Impacket WMIExec Discovery
+description: Palo Alto Networks detection for Impacket WMIExec Detection. This signature detects the post-exploitation tool WMIExec by Impacket. The trigger of this signature should not be considered malicious all the time as it could be used by legitimate users to execute commands on a remote machine, but this tool is used widely by researchers and attackers for lateral movement.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91362'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
