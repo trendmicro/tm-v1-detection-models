@@ -1,0 +1,21 @@
+title: Suspicious PowerShell Commands 
+description: CrowdStrike Falcon detects execution of potentially suspicious PowerShell commands that may indicate malicious activity or reconnaissance on a system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*powershell*'
+        processCmd:
+            - '*Invoke-Expression*'
+            - '*-encodedcommand*'
+            - '*IEX*'
+            - '*-hidden*'
+            - '*write-host*'
+            - '*Get-NetIPConfiguration*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

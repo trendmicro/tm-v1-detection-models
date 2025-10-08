@@ -1,0 +1,16 @@
+title: Persistence using RegSvr32
+description: CrowdStrike Falcon detects the use of regsvr32.exe to create a persistent scheduled task using a remote script.
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*regsvr32*'
+        processCmd:
+            - '*machine\\software\\classes*'
+            - '*schtasks\\*\/create*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Copy Command Execution in Command Line
+description: CrowdStrike Falcon detects execution of copy commands (copy, xcopy) in the command line, which may indicate file transfer or duplication activities.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*copy*'
+            - '*xcopy*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

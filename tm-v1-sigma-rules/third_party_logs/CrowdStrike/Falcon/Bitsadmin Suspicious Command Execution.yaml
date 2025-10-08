@@ -1,0 +1,20 @@
+title: Bitsadmin Suspicious Command Execution
+description: CrowdStrike Falcon detects suspicious Bitsadmin command executions that may indicate file transfer activities, potentially used by threat actors for malicious purposes.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*Bitsadmin*'
+        processCmd:
+            - '*transfer*'
+            - '*download*'
+            - '*upload*'
+            - '*.ps1*'
+            - '*powershell*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
