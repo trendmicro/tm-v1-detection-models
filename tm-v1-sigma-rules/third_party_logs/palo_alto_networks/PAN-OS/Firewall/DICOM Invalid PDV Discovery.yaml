@@ -1,0 +1,18 @@
+title: DICOM Invalid PDV Discovery
+description: Palo Alto Networks detection for DICOM Invalid PDV Detection. This signature detects invalid PDV in DICOM.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91440'
+    - '91908'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
