@@ -1,0 +1,14 @@
+title: Possible Gathering of Process Data and Sub Commands
+description: CrowdStrike Falcon detects execution of Windows Management Instrumentation Command-line (WMIC) to gather information about running processes, which may indicate reconnaissance activities.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*wmic*process*get*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

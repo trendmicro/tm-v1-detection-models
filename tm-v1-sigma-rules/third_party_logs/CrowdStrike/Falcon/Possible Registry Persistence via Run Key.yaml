@@ -1,0 +1,17 @@
+title: Possible Registry Persistence via Run Key
+description: CrowdStrike Falcon detects modifications to the Windows registry Run keys, which may indicate attempts to establish persistence on a system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: 
+            - '*reg add*'
+        processCmd:
+            - '*Run*'
+            - '*Null*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
