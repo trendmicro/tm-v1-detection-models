@@ -1,0 +1,18 @@
+title: Elastic Cloud Enterprise Brute Force Information Disclosure Attempt
+description: Palo Alto Networks detection for Elastic Cloud Enterprise Brute Force Information Disclosure Attempt. This signature detects Elastic Cloud Enterprise information disclosure attempts in HTTP requests. The signature is a child signature of the parent, Elastic Cloud Enterprise Brute Force Authentication Bypass Vulnerability (ID 40140). An individual trigger of this signature may not be malicious by itself. Normally, multiple triggers of this signature within a certain time period should be considered highly suspicious or malicious.
+tags:
+- cve.2021.22146
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91445'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

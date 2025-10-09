@@ -1,0 +1,20 @@
+title: DICOM Invalid AE Title Discovery
+description: Palo Alto Networks detection for DICOM Invalid AE Title Detection. This signature detects invalid AE titles in DICOM.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91421'
+    - '91871'
+    - '91806'
+    - '91803'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
