@@ -1,0 +1,13 @@
+title: AMSI Bypass Through InitFailed
+description: CrowdStrike Falcon detection for AMSI Bypass through setting AmsiUtils.amsiInitFailed to true in PowerShell.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: "*[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
