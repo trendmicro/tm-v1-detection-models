@@ -1,0 +1,14 @@
+title: Possible Assoc Default File Change
+description: CrowdStrike Falcon detection for possible changes to file associations using the assoc command.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*assoc*'
+        processCmd|re: '.*=.*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

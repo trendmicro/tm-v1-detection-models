@@ -1,0 +1,19 @@
+title: Allowing of SMB and RDP on Defender Firewall
+description: CrowdStrike Falcon detection for allowing SMB and RDP on Windows Defender Firewall using netsh.exe.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFileName: 'netsh.exe'
+        processCmd: '*remote*'
+        processCmd: '*enable=Yes*'
+    string_condition_1:
+        processFileName: 'netsh.exe'
+        processCmd: '*sharing*'
+        processCmd: '*enable=Yes*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1

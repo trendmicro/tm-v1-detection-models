@@ -1,0 +1,19 @@
+title: Allowing of Executable Through Defender Firewall
+description: CrowdStrike Falcon detection for allowing an executable through Windows Defender Firewall using netsh.exe.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFileName: 'netsh.exe'
+        processCmd: '*add rule*'
+        processCmd: '*program=*'
+        processCmd: 
+            - '*C:\Users*'
+            - '*C:\Windows\Temp*'
+            - '*AppData\Local\Temp*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
