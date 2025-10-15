@@ -1,0 +1,17 @@
+title: NicheStack Telnet Banner Discovery
+description: Palo Alto Networks detection for NicheStack Telnet Banner Detection. This signature detects a NicheStack Telnet banner.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91568'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
