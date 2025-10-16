@@ -1,0 +1,22 @@
+title: Microsoft Attack Surface Reduction Rule - Not Blocked
+description: Microsoft Defender for Endpoint detected suspicious activity through
+  Attack Surface Reduction rules which monitor and block potentially malicious behaviors
+  on Windows systems
+tags:
+- mitre.t1562
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'Asr*'
+  selection3:
+    actionName: '*Audited'
+  selection4:
+    actionName: '*Bypassed'
+  condition: selection1 and selection2 and (selection3 or selection4)
+level: medium
+taxonomy: tm-v1
