@@ -1,0 +1,15 @@
+title: Potential Authentication Challenge
+description: The authentication of an IPsec connection has occurred with a SecurID server. The user will be prompted to provide further information before being authenticated.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

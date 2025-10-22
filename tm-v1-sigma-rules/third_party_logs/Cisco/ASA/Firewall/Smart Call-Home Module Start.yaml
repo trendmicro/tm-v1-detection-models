@@ -1,0 +1,15 @@
+title: Smart Call-Home Module Start
+description: The Smart Call-Home module started successfully after system boot-up and failover in a stable state, and is ready to process Smart Call-Home events.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '120001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

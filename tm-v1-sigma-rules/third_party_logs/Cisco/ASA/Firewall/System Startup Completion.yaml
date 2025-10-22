@@ -1,0 +1,15 @@
+title: System Startup Completion
+description: The Secure Firewall AS finished its initial boot and the flash memory reading sequence, and is ready to begin operating normally.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '199002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

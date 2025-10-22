@@ -1,0 +1,15 @@
+title: Stateful Failover Sequence Number Mismatch
+description: Stateful Failover assigns a sequence number for each record sent to the standby unit. When a received record sequence number is out of sequence with the last updated record, the information in between is assumed to be lost, and this error message is sent as a result.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210022'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

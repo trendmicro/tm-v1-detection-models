@@ -1,0 +1,15 @@
+title: AAA Authentication Rejection
+description: The AAA authentication on a connection has failed. The username is hidden when invalid or unknown, but appears when valid or the no logging hide username command has been configured.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
