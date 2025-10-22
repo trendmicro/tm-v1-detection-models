@@ -1,0 +1,17 @@
+title: HTTP Reverse Shell Attempt
+description: Palo Alto Networks detection for HTTP Reverse Shell Attempt. This signature detects reverse shell attempt.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91604'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
