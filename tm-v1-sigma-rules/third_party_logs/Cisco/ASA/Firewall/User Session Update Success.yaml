@@ -1,0 +1,15 @@
+title: User Session Update Success
+description: This message is generated when the device has successfully applied rules for user on interface.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109207'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

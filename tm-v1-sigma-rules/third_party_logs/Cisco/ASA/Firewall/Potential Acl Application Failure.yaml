@@ -1,0 +1,15 @@
+title: Potential Acl Application Failure
+description: This message is generated when the device failed to apply ACL rules for newly created user entry.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109204'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential User Authentication Error
+description: An internal user authentication error has occurred.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109021'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

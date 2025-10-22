@@ -1,0 +1,15 @@
+title: User Session Termination
+description: This message is generated when the device has successfully removed the rules for the user during tunnel teardown.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109210'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

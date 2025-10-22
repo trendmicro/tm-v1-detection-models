@@ -1,0 +1,15 @@
+title: Esmtp Tls Session Initiation
+description: On an ESMTP connection, the server has responded with a 220 reply code to the client STARTTLS command. The ESMTP inspection engine no longer inspects the traffic on this connection.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '108007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

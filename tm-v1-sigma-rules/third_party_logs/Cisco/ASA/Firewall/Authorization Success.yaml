@@ -1,0 +1,15 @@
+title: Authorization Success
+description: The specified authorization request succeeded.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

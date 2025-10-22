@@ -1,0 +1,15 @@
+title: Potential Network Denial Of Service via Azure Load Balancer
+description: The backup unit has stopped responding to Azure Load Balancer probes.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105521'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

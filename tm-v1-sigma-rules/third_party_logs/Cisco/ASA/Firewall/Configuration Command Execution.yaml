@@ -1,0 +1,15 @@
+title: Configuration Command Execution
+description: You have entered the config floppy/memory/network command or the write floppy/memory/network/standby command. The IP address value indicates whether the login was made at the console port or through a Telnet connection.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '111004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

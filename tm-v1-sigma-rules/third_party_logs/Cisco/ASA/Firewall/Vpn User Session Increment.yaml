@@ -1,0 +1,15 @@
+title: Vpn User Session Increment
+description: The VPN user account already exists and successfully incremented the reference count.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109202'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

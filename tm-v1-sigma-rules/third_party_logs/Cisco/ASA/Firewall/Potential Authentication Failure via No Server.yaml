@@ -1,0 +1,15 @@
+title: Potential Authentication Failure via No Server
+description: No authentication server can be found.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

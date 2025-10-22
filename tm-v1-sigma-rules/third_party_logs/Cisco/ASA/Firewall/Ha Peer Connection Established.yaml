@@ -1,0 +1,15 @@
+title: Ha Peer Connection Established
+description: This HA unit has established communication with its HA peer.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105504'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Acl Parsing Error via Radius
+description: A syntax error occurred while parsing an access list that was downloaded from a RADIUS server during user authentication.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109029'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

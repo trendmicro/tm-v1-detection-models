@@ -1,0 +1,15 @@
+title: Cloud Ha Stopping
+description: Cloud HA has been disabled on this ASA Virtual.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105501'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

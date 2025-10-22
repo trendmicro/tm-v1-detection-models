@@ -1,0 +1,15 @@
+title: Configuration Read via Console or Telnet
+description: You have entered the reload or configure command to read in a configuration. The device text can be floppy, memory, net, standby, or terminal. The IP address value indicates whether the login was made at the console port or through a Telnet connection.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '111007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

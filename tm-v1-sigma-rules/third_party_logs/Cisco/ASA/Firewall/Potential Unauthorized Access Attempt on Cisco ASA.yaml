@@ -1,0 +1,15 @@
+title: Potential Unauthorized Access Attempt on Cisco ASA
+description: The ASA is configured for AAA and a user attempted to make a TCP connection across the ASA without prior authentication.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109024'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Authentication Timeout
+description: The authentication cache has timed out. Users must reauthenticate on their next connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109012'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

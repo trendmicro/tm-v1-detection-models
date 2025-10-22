@@ -1,0 +1,15 @@
+title: Vpn User Session Addition
+description: When a VPN user is successfully added, this message is generated.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109201'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

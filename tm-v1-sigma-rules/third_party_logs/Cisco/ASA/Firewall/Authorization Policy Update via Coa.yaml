@@ -1,0 +1,15 @@
+title: Authorization Policy Update via Coa
+description: The Secure Firewall ASA has successfully processed the CoA policy update request from coa-source-ip for user username with session id audit-session-id.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109100'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
