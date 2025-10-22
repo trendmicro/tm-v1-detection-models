@@ -1,5 +1,5 @@
 title: Successful Aaa User Authentication
-description: Theuserassociated witha IPsecor Web VPN connection hasbeensuccessfully authenticated to the local user database.
+description: The user associated with an IPsecor Web VPN connection has been successfully authenticated to the local user database.
 tags:
 - mitre.t1078
 logsource:
