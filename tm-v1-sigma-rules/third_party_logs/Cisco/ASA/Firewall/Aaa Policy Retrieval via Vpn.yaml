@@ -1,0 +1,15 @@
+title: Aaa Policy Retrieval via Vpn
+description: The authentication or authorization of an IPsec or WebVPN connection has occurred. The attributes of the group policy that was specified with the tunnel-group or webvpn commands have been retrieved.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113011'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

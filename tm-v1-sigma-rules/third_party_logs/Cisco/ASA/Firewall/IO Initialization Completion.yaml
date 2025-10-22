@@ -1,0 +1,15 @@
+title: IO Initialization Completion
+description: The user has been notified that an 4GE SSM I/O initialization is finished.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Prefill Username Override via Client Certificate
+description: The prefill username feature overrides the username with one derived from the client certificate for use in AAA.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113024'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Successful Aaa User Authentication
+description: Theuserassociated witha IPsecor Web VPN connection hasbeensuccessfully authenticated to the local user database.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113012'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

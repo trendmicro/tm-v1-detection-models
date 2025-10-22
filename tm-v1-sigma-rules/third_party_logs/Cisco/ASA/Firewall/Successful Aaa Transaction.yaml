@@ -1,0 +1,15 @@
+title: Successful Aaa Transaction
+description: The AAA transaction for a user associated with an IPsec or WebVPN connection was completed successfully. The user is the username associated with the connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

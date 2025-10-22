@@ -1,0 +1,15 @@
+title: Anyconnect Session Start
+description: The AnyConnect session has started for the user in this group at the specified IP address.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113039'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

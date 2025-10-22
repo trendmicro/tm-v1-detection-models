@@ -1,0 +1,15 @@
+title: Command Execution via User
+description: The user entered any command, with the exception of a show command.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '111008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

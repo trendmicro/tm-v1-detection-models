@@ -1,0 +1,15 @@
+title: Potential Aaa Server Inaccessibility
+description: The device was unable to communicate with the configured AAA server during the AAA transaction associated with an IPsec or WebVPN connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
