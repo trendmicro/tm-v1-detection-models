@@ -1,0 +1,15 @@
+title: Mtu Negotiation via Icmp
+description: The Secure Firewall ASA received a packet from the outside network that uses a larger MTU than the inside network.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '199003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: User-Specific Policy Override
+description: The group policy that is associated with the tunnel group is being overridden with a user-specific policy, policy_name.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

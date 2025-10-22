@@ -1,0 +1,15 @@
+title: Smart Call Home Client Deactivation
+description: The Smart Call Home module is disabled, an event group is enabled, or an event group is no longer subscribed to by any active profile.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '120009'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

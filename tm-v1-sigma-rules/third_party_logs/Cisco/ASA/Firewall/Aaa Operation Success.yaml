@@ -1,0 +1,15 @@
+title: Aaa Operation Success
+description: The AAA operation on an IPsec or WebVPN connection has been completed successfully. The AAA types are authentication, authorization, or accounting. The server IP address is the IP address of the relevant AAA server. The user is the username associated with the connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

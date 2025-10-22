@@ -1,0 +1,15 @@
+title: Potential Sdi Server Status Change
+description: When servers are administratively added to or removed from the SDI cluster, a new state REMOVED is added to the status transition message.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113045'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Telemetry Support Status Change
+description: Whenever telemetry support is enabled or disabled on the chassis, this message is displayed.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '121001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

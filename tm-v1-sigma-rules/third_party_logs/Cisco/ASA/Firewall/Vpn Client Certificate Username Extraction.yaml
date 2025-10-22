@@ -1,0 +1,15 @@
+title: Vpn Client Certificate Username Extraction
+description: The processing request of a username from a certificate is running or has finished.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113028'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Firewall Startup Event
+description: The Secure Firewall ASA started.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '199005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

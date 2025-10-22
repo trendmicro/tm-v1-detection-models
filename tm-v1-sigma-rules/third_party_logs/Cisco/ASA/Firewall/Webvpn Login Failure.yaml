@@ -1,0 +1,15 @@
+title: Webvpn Login Failure
+description: A user was unable to log into WebVPN because the Secure Firewall ASA is in the process of rebooting.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113037'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

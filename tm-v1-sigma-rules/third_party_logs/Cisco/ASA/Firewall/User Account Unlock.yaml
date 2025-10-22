@@ -1,0 +1,15 @@
+title: User Account Unlock
+description: A locally configured user that was locked out after exceeding the maximum number of consecutive authentication failures set by using the aaa local authentication attempts max-fail command has been unlocked by the indicated administrator.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

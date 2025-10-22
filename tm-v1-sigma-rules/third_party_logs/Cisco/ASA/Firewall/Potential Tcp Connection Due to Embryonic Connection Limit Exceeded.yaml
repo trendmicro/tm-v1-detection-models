@@ -1,0 +1,15 @@
+title: Potential Tcp Connection Due to Embryonic Connection Limit Exceeded
+description: An attempt to establish a TCP connection failed because of an exceeded embryonic connection limit, which was configured with the set connection embryonic-conn-max MPC command for a traffic class.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

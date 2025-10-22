@@ -1,0 +1,15 @@
+title: Potential Tcp Connection Limit Exceeded
+description: An attempt to establish a TCP connection failed because the per-client embryonic connection limit was exceeded.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201012'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Account Lockout
+description: A locally configured user is being locked out. This happens when a configured number of consecutive authentication failures have occurred for this user and indicates that all future authentication attempts by this user will be rejected until an administrator unlocks the user using the clear aaa local user lockout command.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
