@@ -1,0 +1,15 @@
+title: Load Balancer Probe Response Failure
+description: The Active unit is no longer responding to probes from the Azure Load Balancer.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105543'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

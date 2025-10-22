@@ -1,0 +1,15 @@
+title: Potential Tcp Connection Anomaly
+description: The Secure Firewall ASA discarded a TCP packet that has no associated connection in the Secure Firewall ASA connection table.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106015'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

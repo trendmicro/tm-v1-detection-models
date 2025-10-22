@@ -1,0 +1,15 @@
+title: Azure Load Balancer Response
+description: The Active unit has begun responding to Azure Load Balancer probes.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105520'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

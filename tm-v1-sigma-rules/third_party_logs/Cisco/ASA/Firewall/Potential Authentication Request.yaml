@@ -1,0 +1,15 @@
+title: Potential Authentication Request
+description: The ASA is configured for AAA and detects an authentication request by the specified user.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

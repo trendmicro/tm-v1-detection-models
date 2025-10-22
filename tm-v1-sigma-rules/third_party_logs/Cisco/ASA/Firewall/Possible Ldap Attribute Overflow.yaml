@@ -1,0 +1,15 @@
+title: Possible Ldap Attribute Overflow
+description: The LDAP response message contains an attribute that has more than 1000 values.
+tags:
+- mitre.t1087
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109036'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

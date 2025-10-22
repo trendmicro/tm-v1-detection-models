@@ -1,0 +1,15 @@
+title: Authentication Success via Network
+description: The specified authentication request succeeded.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Telnet Connection Denial
+description: A request to authenticate did not have a corresponding request for authorization.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

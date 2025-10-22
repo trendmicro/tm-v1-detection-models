@@ -1,0 +1,15 @@
+title: Vpn Session Termination via Coa
+description: The Secure Firewall ASA has received a correctly formatted Disconnect-Request for an active VPN session and has successfully terminated the connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109101'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

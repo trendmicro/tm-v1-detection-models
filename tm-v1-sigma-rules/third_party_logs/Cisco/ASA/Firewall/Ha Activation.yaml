@@ -1,0 +1,15 @@
+title: Ha Activation
+description: Cloud HA has been enabled on this ASA Virtual.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105500'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

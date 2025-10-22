@@ -1,0 +1,15 @@
+title: Session Removal Success
+description: This message is generated when the reference count is decremented successfully after tunnel removal.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109211'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

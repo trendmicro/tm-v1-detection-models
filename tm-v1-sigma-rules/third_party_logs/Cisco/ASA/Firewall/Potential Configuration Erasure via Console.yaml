@@ -1,0 +1,15 @@
+title: Potential Configuration Erasure via Console
+description: You have erased the contents of flash memory by entering the write erase command at the console. The IP address value indicates whether the login was made at the console port or through a Telnet connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '111003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

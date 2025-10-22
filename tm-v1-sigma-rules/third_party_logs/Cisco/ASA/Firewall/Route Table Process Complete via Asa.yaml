@@ -1,0 +1,15 @@
+title: Route Table Process Complete via Asa
+description: The active unit has completed the process of updating an Azure route table.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105523'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

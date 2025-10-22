@@ -1,0 +1,15 @@
+title: Authorization Denial via Acl
+description: The check failed. The check either matched a deny or did not match anything, such as an implicit deny. The connection was denied by the user ACL_ID, which was defined according to the AAA authorization policy on the Cisco Secure Access Control Server (ACS).
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109025'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
