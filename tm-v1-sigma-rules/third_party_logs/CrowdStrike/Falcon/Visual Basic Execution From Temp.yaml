@@ -1,0 +1,15 @@
+title: Visual Basic Execution From Temp
+description: CrowdStrike Falcon detects the execution of Visual Basic scripts from temporary directories, which may indicate malicious activity.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processName: 
+            - 'cscript.exe'
+        processCmd|re: '.*\\Temp\\.*\.vbs'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

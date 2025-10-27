@@ -1,0 +1,21 @@
+title: Web Shell Creation
+description: CrowdStrike Falcon detects the creation of web shells in common web server directories, which may indicate compromise or unauthorized access.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFilePath: '*inetpub\wwwroot*'
+        objectFilePath:
+            - '*.jsp'
+            - '*.php'
+            - '*.aspx'
+    string_condition_1:
+        processName:
+            - 'explorer.exe'
+            - 'msdeploy.exe'
+    condition: string_condition_0 and not string_condition_1
+level: info
+taxonomy: tm-v1
