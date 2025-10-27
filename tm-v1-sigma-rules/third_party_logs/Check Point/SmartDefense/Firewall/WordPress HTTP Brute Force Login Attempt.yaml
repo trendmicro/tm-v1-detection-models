@@ -1,0 +1,16 @@
+title: WordPress HTTP Brute Force Login Attempt
+description: Check Point Security detection for WordPress HTTP Brute Force Login Attempt
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - WordPress HTTP Brute Force Login Attempt
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: Syslog Message Length Enforcement
+description: Check Point Security detection for Syslog Message Length Enforcement
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Syslog Message Length Enforcement
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
