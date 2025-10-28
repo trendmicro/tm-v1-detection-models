@@ -1,0 +1,15 @@
+title: Potential Authentication Failure
+description: A username cannot be successfully extracted from the certificate. Syslog Messages 101001 to 199027 55 Syslog Messages 101001 to 199027
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113025'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

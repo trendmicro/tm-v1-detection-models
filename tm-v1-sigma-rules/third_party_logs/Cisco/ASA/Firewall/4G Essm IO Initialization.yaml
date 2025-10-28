@@ -1,0 +1,15 @@
+title: 4G Essm IO Initialization
+description: The user has been notified that a 4G ESSM IO initialization is starting.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

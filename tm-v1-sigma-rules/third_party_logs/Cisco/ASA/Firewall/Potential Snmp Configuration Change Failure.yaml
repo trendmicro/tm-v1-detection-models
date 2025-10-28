@@ -1,0 +1,15 @@
+title: Potential Snmp Configuration Change Failure
+description: A user has tried to change the SNMP server group configuration.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212009'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

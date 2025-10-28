@@ -1,0 +1,15 @@
+title: Potential System Reboot via Reload Command
+description: The address of the host that is initiating a Secure Firewall ASA reboot with the reload command has been recorded.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '199001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
