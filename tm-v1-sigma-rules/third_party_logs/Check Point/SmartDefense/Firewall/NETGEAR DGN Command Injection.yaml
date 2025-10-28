@@ -1,0 +1,16 @@
+title: NETGEAR DGN Command Injection
+description: Check Point Security detection for NETGEAR DGN Command Injection
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - NETGEAR DGN Command Injection
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

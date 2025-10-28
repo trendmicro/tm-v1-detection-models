@@ -1,0 +1,16 @@
+title: Microsoft Internet Explorer Uninitialized Memory Corruption (MS09-002)
+description: Check Point Security detection for Microsoft Internet Explorer Uninitialized Memory Corruption (MS09-002)
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Microsoft Internet Explorer Uninitialized Memory Corruption (MS09-002)
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

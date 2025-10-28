@@ -1,0 +1,16 @@
+title: ZMap Security Scanner
+description: Check Point Security detection for ZMap Security Scanner
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - ZMap Security Scanner
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

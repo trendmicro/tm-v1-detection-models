@@ -1,0 +1,16 @@
+title: Linux System Files Information Disclosure
+description: Check Point Security detection for Linux System Files Information Disclosure
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Linux System Files Information Disclosure
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

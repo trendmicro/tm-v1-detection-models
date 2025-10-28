@@ -1,0 +1,16 @@
+title: Command Injection Over HTTP
+description: Check Point Security detection for Command Injection Over HTTP
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Command Injection Over HTTP
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
