@@ -1,0 +1,15 @@
+title: Fragment Queue Threshold Exceeded - Packet Processing 2
+description: The Secure Firewall ASA drops the fragmented packets when the fragment database threshold, that is 2/3 of the queue size per interface, has exceeded.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '209006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

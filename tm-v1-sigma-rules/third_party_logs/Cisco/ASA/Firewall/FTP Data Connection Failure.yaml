@@ -1,0 +1,15 @@
+title: FTP Data Connection Failure
+description: The Secure Firewall ASA cannot allocate a structure to track the data connection for FTP because of insufficient memory.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

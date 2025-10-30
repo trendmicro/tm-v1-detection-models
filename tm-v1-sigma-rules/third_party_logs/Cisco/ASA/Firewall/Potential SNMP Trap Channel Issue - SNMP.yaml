@@ -1,0 +1,15 @@
+title: Potential SNMP Trap Channel Issue - SNMP
+description: The Secure Firewall ASA is unable to send its SNMP traps from the Secure Firewall ASA to SNMP management stations located on this interface.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

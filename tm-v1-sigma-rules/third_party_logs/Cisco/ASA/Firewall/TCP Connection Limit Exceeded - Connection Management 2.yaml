@@ -1,0 +1,15 @@
+title: TCP Connection Limit Exceeded - Connection Management 2
+description: The maximum number of connections to the specified static address was exceeded.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201009'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

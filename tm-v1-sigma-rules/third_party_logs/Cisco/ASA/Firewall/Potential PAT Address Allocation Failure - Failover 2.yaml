@@ -1,0 +1,15 @@
+title: Potential PAT Address Allocation Failure - Failover 2
+description: Stateful Failover is unable to allocate a specific PAT address that is in use.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

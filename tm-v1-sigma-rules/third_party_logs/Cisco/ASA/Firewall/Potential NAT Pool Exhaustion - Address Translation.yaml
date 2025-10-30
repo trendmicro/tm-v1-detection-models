@@ -1,0 +1,15 @@
+title: Potential NAT Pool Exhaustion - Address Translation
+description: Cisco ASA Detection for Potential NAT Pool Exhaustion.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '202010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

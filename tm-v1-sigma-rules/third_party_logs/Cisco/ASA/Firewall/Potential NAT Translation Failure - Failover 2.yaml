@@ -1,0 +1,15 @@
+title: Potential NAT Translation Failure - Failover 2
+description: Stateful Failover failed to allocate a translation slot record.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

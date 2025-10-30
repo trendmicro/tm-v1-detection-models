@@ -1,0 +1,15 @@
+title: L2TP Connection Error - VPN/PPP 2
+description: An error occurred for an L2TP connection when the redirect URL was installed and the ACL was received from the ISE, but the redirect ACL does not exist on the ASA.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

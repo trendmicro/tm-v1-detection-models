@@ -1,0 +1,15 @@
+title: VPN Potential PPTP Tunnel Failure
+description: An internal software error occurred while creating a new PPTP tunnel.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

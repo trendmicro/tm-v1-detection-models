@@ -1,0 +1,15 @@
+title: Potential Translation Slot Record Failure - Failover
+description: The Secure Firewall ASA cannot find a translation slot record for a Stateful Failover connection; as a result, the Secure Firewall ASA cannot process the connection information.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

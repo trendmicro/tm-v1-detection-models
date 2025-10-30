@@ -1,0 +1,15 @@
+title: Memory Potential Memory Allocation Failure
+description: Stateful Failover cannot allocate a block of memory to transmit stateful information to the standby Secure Firewall ASA.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

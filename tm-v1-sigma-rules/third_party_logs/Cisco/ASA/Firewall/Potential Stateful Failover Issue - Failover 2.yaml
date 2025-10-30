@@ -1,0 +1,15 @@
+title: Potential Stateful Failover Issue - Failover 2
+description: Stateful Failover received an unsupported Logical Update object and was unable to process it.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

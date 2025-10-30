@@ -1,0 +1,15 @@
+title: Potential Internal Software Error - Internal 2
+description: An internal software error occurred.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '215001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

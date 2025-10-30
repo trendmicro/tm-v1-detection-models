@@ -1,0 +1,15 @@
+title: Potential SNMP Request Overflow - SNMP
+description: The length of the incoming SNMP request that is destined for the Secure Firewall ASA exceeds the size of the internal data buffer (512 bytes) used for storing the request during internal processing.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

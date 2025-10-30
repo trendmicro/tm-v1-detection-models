@@ -1,0 +1,15 @@
+title: Memory Potential Configuration Clear Error
+description: The Secure Firewall ASA received a non-zero value (an internal error) when attempting to clear the configuration in flash memory. The message includes the reporting subroutine filename and line number.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '208005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

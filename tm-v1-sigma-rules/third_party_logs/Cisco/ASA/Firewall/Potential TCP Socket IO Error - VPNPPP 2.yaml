@@ -1,0 +1,15 @@
+title: Potential TCP Socket IO Error - VPN/PPP 2
+description: An internal TCP socket I/O error occurred.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

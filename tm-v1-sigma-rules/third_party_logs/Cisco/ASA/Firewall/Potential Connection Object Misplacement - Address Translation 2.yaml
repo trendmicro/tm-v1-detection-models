@@ -1,0 +1,15 @@
+title: Potential Connection Object Misplacement - Address Translation 2
+description: A connection object (xlate) is in the wrong list.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '202005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Fragment Reassembly Attack
+description: Too many IP fragments are currently awaiting reassembly. By default, the maximum number of fragments is 200 (to raise the maximum, see the fragment size command in the command reference guide).
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '209003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: SNMP Engineboots Maximum Value Reached - SNMP
+description: The device has rebooted 214783647 times, which is the maximum allowed value of the engineBoots variable, or an error reading the persistent value from flash memory has occurred.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212011'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: SNMP Potential SNMP Channel Failure
+description: The Secure Firewall ASA is unable to receive SNMP requests destined for the Secure Firewall ASA from SNMP management stations located on this interface.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
