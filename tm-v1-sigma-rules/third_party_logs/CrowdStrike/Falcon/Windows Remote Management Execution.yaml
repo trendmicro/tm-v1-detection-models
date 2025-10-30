@@ -1,0 +1,19 @@
+title: Windows Remote Management Execution
+description: CrowdStrike Falcon detects execution of Windows Remote Management (WinRM) commands that may indicate remote code execution activities.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*GetTypeFromProgID*'
+        processCmd: '*MMC20.application*'
+        processCmd: '*Document.ActiveView.ExecuteShellCommand*'
+    string_condition_1:
+        processName: 'wmic.exe'
+        processCmd: '*\/node:*'
+        processCmd: '*process call create*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1

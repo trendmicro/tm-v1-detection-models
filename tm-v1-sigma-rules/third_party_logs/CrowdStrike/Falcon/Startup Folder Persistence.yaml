@@ -1,0 +1,15 @@
+title: Startup Folder Persistence
+description: CrowdStrike Falcon detectss when a file associated with known
+  persistence techniques is created or modified in the Startup folder.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFilePath: '*Programs\\Startup*'
+        objectFilePath|re: '.*\.(vbs|vbe|js|jse|wsf|wsh|bat|cmd|lnk)'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

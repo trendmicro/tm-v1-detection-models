@@ -1,0 +1,19 @@
+title: Windows Management Instrumentation
+description: CrowdStrike Falcon detects the execution of Windows Management Instrumentation (WMI) commands that may indicate reconnaissance or remote code execution activities.
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processName: 'WMIC.exe'
+        processCmd: 
+            - '*useraccount get*'
+            - '*process where*'
+            - '*qfe get*'
+            - '*service where*'
+            - '*process call*'
+            - '*call create*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

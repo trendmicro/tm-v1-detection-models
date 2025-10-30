@@ -1,0 +1,18 @@
+title: StartUp Shortcut Creation 
+description: CrowdStrike Falcon detects the creation of shortcuts in the Windows Startup folder, which may indicate persistence mechanisms used by malware.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFilePath: '*Microsoft\\Windows\\Start Menu\\Programs\\Startup*'
+        objectFilePath|re: '.*\.(lnk|url)'
+    string_condition_1:
+        processName: 
+            - 'ONENOTE.exe'
+            - 'msiexec.exe'
+    condition: string_condition_0 and not string_condition_1
+level: info
+taxonomy: tm-v1
