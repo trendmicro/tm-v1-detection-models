@@ -1,0 +1,15 @@
+title: SNMP Potential SNMP Response Failure
+description: An internal error occurred in sending an SNMP response from the Secure Firewall ASA to the specified host on the specified interface.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

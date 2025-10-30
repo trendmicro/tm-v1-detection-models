@@ -1,0 +1,15 @@
+title: Potential TCP Connection Disallowance
+description: You have enabled TCP system log messaging and the syslog server cannot be reached, or when using the ASA syslog server (PFSS) and the disk on the Windows NT system is full, or when the auto-update timeout is configured and the auto-update server is not reachable.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

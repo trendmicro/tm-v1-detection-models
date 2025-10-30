@@ -1,0 +1,15 @@
+title: Potential Memory Requirement Violation - System Resource 2
+description: The Secure Firewall ASA does not meet the minimum memory requirements for this version.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '211004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

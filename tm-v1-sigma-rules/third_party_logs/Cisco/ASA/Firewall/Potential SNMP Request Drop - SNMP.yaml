@@ -1,0 +1,15 @@
+title: Potential SNMP Request Drop - SNMP
+description: The Secure Firewall ASA cannot process the SNMP request being sent to it for the following reasons
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

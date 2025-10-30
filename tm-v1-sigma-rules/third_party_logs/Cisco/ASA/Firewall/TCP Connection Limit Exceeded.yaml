@@ -1,0 +1,15 @@
+title: TCP Connection Limit Exceeded
+description: The maximum number of TCP connections to the specified global address was exceeded.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential SNMP Data Write Failure
+description: The SNMP engine data is written to the file, flash/snmp/context-name.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212012'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

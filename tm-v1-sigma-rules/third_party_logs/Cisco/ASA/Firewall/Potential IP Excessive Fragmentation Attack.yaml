@@ -1,0 +1,15 @@
+title: Potential IP Excessive Fragmentation Attack
+description: The Secure Firewall ASA disallows any IP packet that is fragmented into more than 24 fragments.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '209005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

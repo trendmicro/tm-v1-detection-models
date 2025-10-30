@@ -1,0 +1,15 @@
+title: Potential Rcmd Connection Failure
+description: The Secure Firewall ASA cannot preallocate connections for inbound standard output for rsh commands because of insufficient memory.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

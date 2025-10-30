@@ -1,0 +1,15 @@
+title: Potential UDP Connection Failure
+description: Stateful Failover was unable to allocate a new record for a UDP connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

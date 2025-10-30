@@ -1,0 +1,15 @@
+title: Memory Potential Connection Allocation Failure
+description: Stateful Failover cannot allocate a new connection on the standby unit. This may be caused by little or no RAM memory available within the Secure Firewall ASA. This could additionally be caused by flow creation failure due to resource limitation or reaching configured resource usage limits.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '210005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

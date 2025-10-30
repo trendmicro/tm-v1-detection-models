@@ -1,0 +1,15 @@
+title: Unexpected Event Handling Failure - System Event
+description: A task registers for event notification, but the task cannot handle the specific event. Events that can be watched include those associated with queues, booleans, and timer services. If any of the registered events occur, the scheduler wakes up the task to process the event. This message is generated if an unexpected event woke up the task, but it does not know how to handle the event.
+tags:
+- mitre.t1057
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '216002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

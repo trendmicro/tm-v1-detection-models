@@ -1,0 +1,15 @@
+title: Potential SIP Channel Allocation Failure - Address Translation 2
+description: When the SIP application generates an SDP payload with Media port set to 0, you cannot allocate a PAT xlate for such an invalid port request and drop the packet with this syslog.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '202016'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

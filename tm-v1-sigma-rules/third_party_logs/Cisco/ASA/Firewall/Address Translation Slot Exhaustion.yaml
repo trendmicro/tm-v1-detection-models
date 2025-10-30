@@ -1,0 +1,15 @@
+title: Address Translation Slot Exhaustion
+description: The ASA has no more address translation slots available.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '202001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Connection Limit Exceeded via ASA
+description: A new connection through the Secure Firewall ASA resulted in exceeding at least one of the configured maximum connection limits. This message applies both to connection limits configured using a static command, or to those configured using Cisco Modular Policy Framework.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '201011'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

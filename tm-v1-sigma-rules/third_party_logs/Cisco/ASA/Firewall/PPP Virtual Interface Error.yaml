@@ -1,0 +1,15 @@
+title: PPP Virtual Interface Error
+description: An internal software error occurred while closing a PPP virtual interface.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

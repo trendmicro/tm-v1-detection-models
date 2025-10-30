@@ -1,0 +1,15 @@
+title: SNMP Configuration Failure
+description: A user has tried to change the SNMP server user configuration by removing one or more hosts that reference the user. One message is generated per host.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '212010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential CPU Usage Anomaly - System Resource 2
+description: The percentage of CPU usage is greater than 100 percent.
+tags:
+- mitre.t1057
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '211003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

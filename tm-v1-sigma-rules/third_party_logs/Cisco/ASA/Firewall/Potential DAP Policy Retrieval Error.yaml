@@ -1,0 +1,15 @@
+title: Potential DAP Policy Retrieval Error
+description: There was either an error in retrieving the DAP policy record data, or the action configuration was missing.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

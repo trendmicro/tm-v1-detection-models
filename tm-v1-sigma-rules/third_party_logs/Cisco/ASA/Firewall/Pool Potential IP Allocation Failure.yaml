@@ -1,0 +1,15 @@
+title: Pool Potential IP Allocation Failure
+description: An internal software error occurred while allocating an IP address to the PPTP client when the IP local address pool was depleted.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '213004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

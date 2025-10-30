@@ -1,0 +1,15 @@
+title: Potential Encrypted Data Overflow
+description: An incoming encrypted data packet destined for the Secure Firewall ASA management port indicates a packet length exceeding the specified upper limit. This may be a hostile event. The Secure Firewall ASA immediately terminates this management connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '214001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
