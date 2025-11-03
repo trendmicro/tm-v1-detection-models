@@ -1,0 +1,15 @@
+title: Potential Firewall Failure via Failover
+description: The primary unit received a message from the secondary unit indicating that the primary unit has failed. Primary can also be listed as Secondary for the secondary unit. The reason can be one of the following missed poll packets on failover command interface exceeded threshold, LAN failover interface failed, peer failed to enter Standby Ready state, failed to complete configuration replication.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '103004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Azure Auth Failure
+description: An Azure access token was not able to be obtained for an Azure route status query.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105536'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

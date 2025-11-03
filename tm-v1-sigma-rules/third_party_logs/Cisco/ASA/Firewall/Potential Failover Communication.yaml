@@ -1,0 +1,15 @@
+title: Potential Failover Communication
+description: The peer has just booted and sent the initial contact message.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105034'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Failover Interface Down
+description: The peer LAN failover interface link is down. The unit switches to active mode if it is in standby mode.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105035'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

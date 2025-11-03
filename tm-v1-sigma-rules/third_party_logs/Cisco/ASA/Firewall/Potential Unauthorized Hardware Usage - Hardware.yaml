@@ -1,0 +1,15 @@
+title: Potential Unauthorized Hardware Usage - Hardware
+description: The hardware in the specified location is a prototype module that came from a Cisco lab.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '218002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Config Replication Issue via Failover
+description: When a failover occurs, the active Secure Firewall ASA detects a partial configuration in memory.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

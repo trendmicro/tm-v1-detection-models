@@ -1,0 +1,15 @@
+title: Failover Cable Not Connected
+description: Failover mode is enabled, but the failover cable is not connected to one unit of the failover pair.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '101003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

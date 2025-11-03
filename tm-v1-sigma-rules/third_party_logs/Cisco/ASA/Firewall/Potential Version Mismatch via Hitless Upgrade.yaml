@@ -1,0 +1,15 @@
+title: Potential Version Mismatch via Hitless Upgrade
+description: The Secure Firewall ASA has detected that the peer unit is running a version that is not identical, but supports Hitless Upgrade and is compatible with the local unit.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '103007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

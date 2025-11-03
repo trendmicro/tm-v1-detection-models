@@ -1,0 +1,15 @@
+title: Unexpected Status via Access Token Request
+description: A response to an Azure access token request was received, but the HTTP status code in the response was not 200 (OK).
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105526'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

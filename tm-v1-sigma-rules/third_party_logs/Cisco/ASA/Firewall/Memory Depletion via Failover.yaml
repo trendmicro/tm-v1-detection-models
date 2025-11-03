@@ -1,0 +1,15 @@
+title: Memory Depletion via Failover
+description: Block memory was depleted. This is a transient message and the Secure Firewall ASA should recover. Primary can also be listed as Secondary for the secondary unit.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

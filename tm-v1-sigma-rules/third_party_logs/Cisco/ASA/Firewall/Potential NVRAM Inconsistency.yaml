@@ -1,0 +1,15 @@
+title: Potential NVRAM Inconsistency
+description: System information programmed in non-volatile memory is not consistent.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '218005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

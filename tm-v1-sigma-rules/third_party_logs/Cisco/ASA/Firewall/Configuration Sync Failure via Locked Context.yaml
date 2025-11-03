@@ -1,0 +1,15 @@
+title: Configuration Sync Failure via Locked Context
+description: During configuration synchronization, a standby unit will reload itself if some other process locks the configuration for more than five minutes, which prevents the failover process from applying the new configuration.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105021'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
