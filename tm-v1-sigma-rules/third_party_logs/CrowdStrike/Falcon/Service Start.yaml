@@ -1,7 +1,5 @@
 title: Service Start
-description: CrowdStrike Falcon detects when a service is created and started
-  using the 'sc.exe create' command followed by the 'Start-Service' PowerShell
-  command.
+description: CrowdStrike Falcon detects when a service is created and started using the 'sc.exe create' command followed by the 'Start-Service' PowerShell command.
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
@@ -18,4 +16,5 @@ detection:
             - '*Start-Service*'
     condition: string_condition_0 or string_condition_1
 level: info
+
 taxonomy: tm-v1
