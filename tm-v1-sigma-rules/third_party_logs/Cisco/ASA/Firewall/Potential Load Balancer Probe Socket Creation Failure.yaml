@@ -1,0 +1,15 @@
+title: Potential Load Balancer Probe Socket Creation Failure
+description: Cisco ASA Detection for Potential Load Balancer Probe Socket Creation Failure.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105544'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

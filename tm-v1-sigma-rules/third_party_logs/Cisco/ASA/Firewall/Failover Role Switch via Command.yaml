@@ -1,0 +1,15 @@
+title: Failover Role Switch via Command
+description: You have forced the failover pair to switch roles, either by entering the failover active command on the standby unit, or the no failover active command on the active unit.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '104001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

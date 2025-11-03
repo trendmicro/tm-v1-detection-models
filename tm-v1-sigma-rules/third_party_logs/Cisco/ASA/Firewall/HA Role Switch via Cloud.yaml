@@ -1,0 +1,15 @@
+title: HA Role Switch via Cloud
+description: This HA unit is assuming the Active role for the Cloud HA pair.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '104500'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

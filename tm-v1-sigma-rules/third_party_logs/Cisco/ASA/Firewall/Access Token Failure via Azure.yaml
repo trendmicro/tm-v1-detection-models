@@ -1,0 +1,15 @@
+title: Access Token Failure via Azure
+description: A response to an Azure route change request was received, but it did not contain an access_token value.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105528'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

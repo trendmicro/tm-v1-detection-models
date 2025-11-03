@@ -1,0 +1,15 @@
+title: I2C API Failure - IO 2
+description: The I2C serial bus API has failed because of a hardware or software problem.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '219002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

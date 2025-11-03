@@ -1,0 +1,15 @@
+title: Potential Encryption Error via Azure
+description: Cisco ASA Detection for Potential Encryption Error via Azure.
+tags:
+- mitre.t1003
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105550'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

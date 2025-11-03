@@ -1,0 +1,15 @@
+title: Interface Monitoring via Failover
+description: The Secure Firewall ASA is testing the specified network interface with the other unit of the failover pair. Primary can also be listed as Secondary for the secondary unit.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

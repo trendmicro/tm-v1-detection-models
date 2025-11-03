@@ -1,0 +1,15 @@
+title: Potential Network Configuration Issue via Ethernet Interface
+description: The number of Ethernet interfaces on the standby unit is less than that on the active unit.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105050'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

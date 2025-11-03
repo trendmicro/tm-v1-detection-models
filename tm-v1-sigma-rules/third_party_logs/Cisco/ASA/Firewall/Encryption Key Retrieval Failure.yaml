@@ -1,0 +1,15 @@
+title: Encryption Key Retrieval Failure
+description: Cisco ASA Detection for Encryption Key Retrieval Failure.
+tags:
+- mitre.t1003
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105549'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

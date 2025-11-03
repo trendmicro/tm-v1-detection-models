@@ -1,0 +1,15 @@
+title: HA Role Assumption Failure
+description: This HA unit failed to assume the Backup role for the Cloud HA pair. The reason being the same as that of 104500 and 104501.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '104502'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

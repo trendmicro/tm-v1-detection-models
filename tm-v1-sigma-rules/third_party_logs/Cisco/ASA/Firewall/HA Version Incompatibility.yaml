@@ -1,0 +1,15 @@
+title: HA Version Incompatibility
+description: The Secure Firewall ASA has detected a peer unit that is running a version that is different than the local unit and is not compatible with the HA Hitless Upgrade feature. Version number.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '103006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

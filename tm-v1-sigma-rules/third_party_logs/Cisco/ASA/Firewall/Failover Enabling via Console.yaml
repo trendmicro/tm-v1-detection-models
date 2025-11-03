@@ -1,0 +1,15 @@
+title: Failover Enabling via Console
+description: You have used the failover command with no arguments on the console, after having previously disabled failover. Primary can also be listed as Secondary for the secondary unit.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

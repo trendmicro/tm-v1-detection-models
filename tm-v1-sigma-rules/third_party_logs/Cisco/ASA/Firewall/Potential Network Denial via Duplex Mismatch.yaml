@@ -1,0 +1,15 @@
+title: Potential Network Denial via Duplex Mismatch
+description: A duplex mismatch on the port caused a problem in which the port can no longer transmit packets.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '216005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

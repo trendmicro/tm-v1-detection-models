@@ -1,0 +1,15 @@
+title: Potential Failover Configuration Mismatch
+description: The failover process detected that different applications are running on the service modules in the active and standby units.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105048'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

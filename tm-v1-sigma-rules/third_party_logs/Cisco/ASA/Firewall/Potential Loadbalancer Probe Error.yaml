@@ -1,0 +1,15 @@
+title: Potential Loadbalancer Probe Error
+description: Cisco ASA Detection for Potential Loadbalancer Probe Error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '105545'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
