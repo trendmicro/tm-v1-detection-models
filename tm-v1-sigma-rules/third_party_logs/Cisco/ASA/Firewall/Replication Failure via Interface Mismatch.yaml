@@ -1,5 +1,5 @@
 title: Replication Failure via Interface Mismatch
-description: Replication of the nameif command failed because the number of interfaces on the active and standby units is not the same.
+description: Replication of the name if command failed because the number of interfaces on the active and standby units is not the same.
 tags:
 - mitre.t1016
 logsource:
