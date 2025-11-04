@@ -1,0 +1,30 @@
+title: Account Manipulation
+description: Microsoft detects when an account is created or modified on a system or Active Directory, which may indicate attempts to establish or elevate access.
+tags:
+- mitre.t1098
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  ec:
+    eventCategory: 'DeviceProcessEvents'
+  selection1:
+    processCmd:
+      - '*New-ADUser*'
+      - '*Rename-LocalUser*'
+      - '*Set-LocalUser*'
+  selection2:
+    objectCmd: 
+      - '*New-ADUser*'
+      - '*Rename-LocalUser*'
+      - '*Set-LocalUser*'
+  selection3:
+    processName:
+      - 'WmiPrvSE.exe'
+      - 'AppVClient.exe'
+      - 'svchost.exe'
+      - 'CompatTelRunner.exe'
+  condition: ec and (selection1 or selection2) and not selection3
+level: info
+taxonomy: tm-v1

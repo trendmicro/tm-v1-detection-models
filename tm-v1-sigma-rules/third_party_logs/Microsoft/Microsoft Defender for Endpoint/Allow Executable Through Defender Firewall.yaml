@@ -1,0 +1,22 @@
+title: Allow Executable Through Defender Firewall
+description: Microsoft detection when an executable is added to the allowed list in Windows Defender Firewall, which may indicate attempts to bypass network security controls.
+tags:
+- mitre.t1562
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  ec:
+    eventCategory: 'DeviceProcessEvents'
+  selection1:
+    objectFileName: 'netsh.exe'
+    objectCmd: '*add rule*'
+    objectCmd: '*program=*'
+  selection2:
+    objectCmd:
+      - '*C:\Users*'
+      - '*C:\Windows\Temp*'
+  condition: ec and selection1 and selection2
+level: info
+taxonomy: tm-v1
