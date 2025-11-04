@@ -1,0 +1,15 @@
+title: Potential IP Spoofing via Invalid Source Address
+description: A packet arrived at the Secure Firewall ASA interface that has a destination IP address of 0.0.0.0 and a destination MAC address of the Secure Firewall ASA interface. In addition, this message is generated when the Secure Firewall ASA discarded a packet with an invalid source address, which may include one of the following or some other invalid address Loopback network (127.0.0.0), Broadcast (limited, net-directed, subnet-directed, and all-subnets-directed), The destination host (land.c). To further enhance spoof packet detection, use the icmp command to configure the Secure Firewall ASA to discard packets with source addresses belonging to the internal network, because the access-list command has been deprecated and is no longer guaranteed to work correctly.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106016'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

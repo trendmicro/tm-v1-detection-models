@@ -1,0 +1,15 @@
+title: Empty Downloaded ACL
+description: The downloaded authorization has no ACEs.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109018'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

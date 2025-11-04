@@ -1,0 +1,15 @@
+title: Potential Routing Issue via Bvi
+description: It is necessary for Secure Firewall ASA to log a syslog if no routes are present when the interface is BVI. Apparently, if a default route is present and it does not route the packet to the correct interface, then it becomes impossible to track it.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109105'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Module Configuration Clear Request Completion
+description: A request to clear the module configuration was completed.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '112001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

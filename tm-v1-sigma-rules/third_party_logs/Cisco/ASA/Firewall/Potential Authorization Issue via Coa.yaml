@@ -1,0 +1,15 @@
+title: Potential Authorization Issue via Coa
+description: The Secure Firewall ASA has received a valid change of authorization request, but the session ID specified in the request does not match any active sessions on the Secure Firewall ASA.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109102'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

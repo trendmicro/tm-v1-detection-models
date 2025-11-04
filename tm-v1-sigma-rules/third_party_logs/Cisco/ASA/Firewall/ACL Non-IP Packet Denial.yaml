@@ -1,0 +1,15 @@
+title: ACL Non-IP Packet Denial
+description: An non-IP packet was denied by the ACL. This message is displayed even if you do not have the log option enabled for an extended ACL.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106027'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

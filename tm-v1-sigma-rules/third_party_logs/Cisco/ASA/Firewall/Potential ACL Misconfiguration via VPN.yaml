@@ -1,0 +1,15 @@
+title: Potential ACL Misconfiguration via VPN
+description: The type of ACL to be applied is incorrect.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113031'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

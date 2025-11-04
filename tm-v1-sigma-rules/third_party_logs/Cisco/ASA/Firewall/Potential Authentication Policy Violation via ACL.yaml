@@ -1,0 +1,15 @@
+title: Potential Authentication Policy Violation via ACL
+description: The Secure Firewall ASA received an access control list from a RADIUS server to apply to a user connection, but an entry in the list contains a syntax error. The use of a list containing an error could result in the violation of a security policy, so the Secure Firewall ASA failed to authenticate the user.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109032'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

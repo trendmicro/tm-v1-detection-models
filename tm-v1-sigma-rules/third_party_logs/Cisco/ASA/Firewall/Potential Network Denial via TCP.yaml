@@ -1,0 +1,15 @@
+title: Potential Network Denial via TCP
+description: An attempt was made to connect to an inside address but was denied by the security policy that is defined for the specified traffic type.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

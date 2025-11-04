@@ -1,0 +1,15 @@
+title: Potential Auth Proxy Rate Limit Violation
+description: A connection attempt has been rejected because the ASA has detected a high frequency of HTTPS authentication requests from the same host.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109040'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

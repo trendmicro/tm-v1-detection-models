@@ -1,0 +1,15 @@
+title: ACL Conversion Failure via RADIUS
+description: A dynamic ACL that is configured on a RADIUS server is not converted by the mechanism for automatically detecting wildcard netmasks.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109030'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

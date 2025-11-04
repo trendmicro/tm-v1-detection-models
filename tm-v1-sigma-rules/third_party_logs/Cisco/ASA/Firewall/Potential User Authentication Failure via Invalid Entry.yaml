@@ -1,0 +1,15 @@
+title: Potential User Authentication Failure via Invalid Entry
+description: This message is generated when the device fails to delete due to invalid address, missing entry, or bad entry.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109212'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

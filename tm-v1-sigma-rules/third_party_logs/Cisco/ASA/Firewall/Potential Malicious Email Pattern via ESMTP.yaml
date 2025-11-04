@@ -1,0 +1,15 @@
+title: Potential Malicious Email Pattern via ESMTP
+description: Cisco ASA Detection for Potential Malicious Email Pattern via Esmtp.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '108003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

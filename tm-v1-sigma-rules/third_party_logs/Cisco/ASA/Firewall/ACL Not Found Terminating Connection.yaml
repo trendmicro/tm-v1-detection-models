@@ -1,0 +1,15 @@
+title: ACL Not Found Terminating Connection
+description: The specified ACL was not found on the Secure Firewall ASA.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113030'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

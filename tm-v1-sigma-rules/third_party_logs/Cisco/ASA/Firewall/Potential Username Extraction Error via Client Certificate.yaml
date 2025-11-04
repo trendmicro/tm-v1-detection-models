@@ -1,0 +1,15 @@
+title: Potential Username Extraction Error via Client Certificate
+description: Cisco ASA Detection for Potential Username Extraction Error via Client Certificate.
+tags:
+- mitre.t1087
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113026'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

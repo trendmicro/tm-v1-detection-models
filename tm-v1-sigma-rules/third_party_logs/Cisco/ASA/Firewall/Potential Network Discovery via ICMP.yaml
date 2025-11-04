@@ -1,0 +1,15 @@
+title: Potential Network Discovery via ICMP
+description: The Secure Firewall ASA discarded an inbound ICMP Echo Request packet with a destination address that corresponds to a PAT global address. The inbound packet is discarded because it cannot specify which PAT host should receive the packet.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106013'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

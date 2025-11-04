@@ -1,0 +1,15 @@
+title: Potential AAA Server Communication Failure
+description: The Secure Firewall ASA has tried an authentication, authorization, or accounting request to the AAA server and did not receive a response within the configured timeout window.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113022'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

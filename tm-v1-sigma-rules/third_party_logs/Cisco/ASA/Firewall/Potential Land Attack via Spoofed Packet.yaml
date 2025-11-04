@@ -1,0 +1,15 @@
+title: Potential Land Attack via Spoofed Packet
+description: The Secure Firewall ASA received a packet with the IP source address equal to the IP destination, and the destination port equal to the source port. This message indicates a spoofed packet that is designed to attack systems. This attack is referred to as a Land Attack.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106017'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

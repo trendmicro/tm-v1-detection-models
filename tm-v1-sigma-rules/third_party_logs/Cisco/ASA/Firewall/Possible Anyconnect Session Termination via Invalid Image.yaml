@@ -1,0 +1,15 @@
+title: Possible Anyconnect Session Termination via Invalid Image
+description: The user logged in via the AnyConnect client. The SVC service is not enabled globally, or the SVC image is invalid or corrupted.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113035'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

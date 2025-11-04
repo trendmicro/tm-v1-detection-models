@@ -1,0 +1,15 @@
+title: Potential Authentication Failure via AAA Challenge
+description: AAA challenge processing was triggered during authentication of a network connection, but the Secure Firewall ASA cannot initiate interactive challenge processing with the client application.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109034'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
