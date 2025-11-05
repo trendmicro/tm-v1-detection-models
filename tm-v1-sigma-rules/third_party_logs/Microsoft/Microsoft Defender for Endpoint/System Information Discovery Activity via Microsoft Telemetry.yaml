@@ -1,0 +1,25 @@
+title: System Information Discovery Activity via Microsoft Telemetry
+description: Microsoft telemetry detection that identifies processes executing commands to enumerate system information including hardware identifiers usernames and computer names. This rule detects reconnaissance activity where attackers or malicious scripts use Windows Management Instrumentation and environment variables to gather host details for profiling or further malicious actions.
+tags:
+- mitre.t1082
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  s1:
+    eventCategory: 'DeviceProcessEvents'
+  s2:
+    processCmd: 
+      - '*Win32_ComputerSystemProduct*'
+      - '*USERNAME*'
+      - '*COMPUTERNAME*'
+  s3:
+    objectCmd: 
+      - '*Win32_ComputerSystemProduct*'
+      - '*USERNAME*'
+      - '*COMPUTERNAME*'
+  condition: s1 and (s2 or s3)
+level: info
+taxonomy: tm-v1
+
