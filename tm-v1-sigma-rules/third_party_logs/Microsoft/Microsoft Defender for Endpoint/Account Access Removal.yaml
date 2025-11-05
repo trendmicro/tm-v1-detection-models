@@ -1,0 +1,22 @@
+title: Account Access Removal
+description: Microsoft detects when an account is removed from a system or Active Directory group, which may indicate an attempt to disable access for a user or administrator.
+tags:
+- mitre.t1531
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  ec:
+    eventCategory: 'DeviceProcessEvents'
+  selection1:
+    processCmd|re: 'net.+user(?:(?!.+\/delete)(?:.))*.+\/delete'
+  selection2:
+    objectCmd: 
+      - '*Remove-ADGroupMember*'
+  selection3:
+    processCmd:
+      - '*Remove-ADGroupMember*'
+  condition: ec and (selection1 or selection2 or selection3)
+level: info
+taxonomy: tm-v1

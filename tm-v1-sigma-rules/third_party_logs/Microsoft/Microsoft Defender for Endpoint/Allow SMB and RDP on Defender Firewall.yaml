@@ -1,0 +1,18 @@
+title: Allow SMB and RDP on Defender Firewall
+description: Microsoft detection for allowing SMB and RDP on Defender Firewall using netsh.exe.
+tags:
+- mitre.t1562
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  ec:
+    eventCategory: 'DeviceProcessEvents'
+  selection1:
+    objectFileName: 'netsh.exe'
+    objectCmd: '*remote desktop*'
+    objectCmd: '*enable=Yes*'
+  condition: ec and selection1
+level: info
+taxonomy: tm-v1
