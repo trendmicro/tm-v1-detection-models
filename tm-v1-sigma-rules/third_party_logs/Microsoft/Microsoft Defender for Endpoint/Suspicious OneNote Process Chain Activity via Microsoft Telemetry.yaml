@@ -1,8 +1,5 @@
 title: Suspicious OneNote Process Chain Activity via Microsoft Telemetry
-description: Microsoft telemetry detection that identifies OneNote spawning mshta.exe,
-  which in turn attempts to execute or download content using curl.exe. This behavior
-  is consistent with malicious document-based delivery techniques where threat actors
-  embed scripts or payload downloaders inside OneNote files.
+description: Microsoft telemetry detection that identifies OneNote spawning mshta.exe, which in turn attempts to execute or download content using curl.exe. This behavior is consistent with malicious document-based delivery techniques where threat actors embed scripts or payload downloaders inside OneNote files.
 tags:
 - mitre.t1218.005
 - mitre.t1105
@@ -20,5 +17,6 @@ detection:
   selection4:
     objectFileName: 'curl.exe'
   condition: selection1 and selection2 and selection3 and selection4
-level: high
+level: low
 taxonomy: tm-v1
+
