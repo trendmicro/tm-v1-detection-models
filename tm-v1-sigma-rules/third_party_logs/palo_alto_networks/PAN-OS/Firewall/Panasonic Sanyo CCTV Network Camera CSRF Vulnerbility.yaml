@@ -1,0 +1,17 @@
+title: Panasonic Sanyo CCTV Network Camera CSRF Vulnerbility
+description: Palo Alto Networks detection for Panasonic Sanyo CCTV Network Camera CSRF Vulnerbility. Panasonic Sanyo CCTV Network Camera is prone to a CSRF vulnerability while parsing certain crafted HTML files. The vulnerability is due to the lack of proper checks on HTML files, leading to an exploitable CSRF vulnerability. An attacker could exploit the vulnerability by sending a crafted HTML file. A successful attack could lead to remote code execution with the privileges of the currently logged-in user.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91770'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

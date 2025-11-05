@@ -1,0 +1,18 @@
+title: Invalid HTTP Request Message Discovery
+description: Palo Alto Networks detection for Invalid HTTP Request Message Detection. This generic signature detects invalid HTTP request message.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91820'
+    - '91855'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
