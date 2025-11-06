@@ -35,5 +35,6 @@ detection:
     objectCmd: '*mpcmdrun.exe*'
   condition: selection1 and selection2 and (selection3 or s1 or s2 or s3 or s4 or
     s5 or s6 or s7)
-level: low
+level: info
 taxonomy: tm-v1
+
