@@ -17,5 +17,6 @@ detection:
   selection2:
     actionName: 'PnpDeviceConnected'
   condition: selection1 and selection2
-level: low
+level: info
 taxonomy: tm-v1
+
