@@ -1,6 +1,5 @@
 title: Conhost Process Establishing External Network Connection
-description: Microsoft network detection for a suspicious outbound network connections
-  initiated by the Windows Console Host process conhost.exe.
+description: Microsoft network detection for a suspicious outbound network connections initiated by the Windows Console Host process conhost.exe.
 tags:
 - mitre.t1055
 - mitre.t1105
@@ -22,5 +21,6 @@ detection:
         - '*microsoft.com*'
         - '*digicert.com*'
   condition: selection1 and selection2 and not (selection3 or selection4)
-level: low
+level: info
 taxonomy: tm-v1
+
