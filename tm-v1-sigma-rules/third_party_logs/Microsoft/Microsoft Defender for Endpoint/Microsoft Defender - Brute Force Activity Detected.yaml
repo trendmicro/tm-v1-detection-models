@@ -13,5 +13,6 @@ detection:
   selection2:
     actionName: 'BruteForceActivityDetected'
   condition: selection1 and selection2
-level: medium
+level: info
 taxonomy: tm-v1
+
