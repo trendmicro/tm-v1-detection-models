@@ -1,8 +1,5 @@
 title: Office Application Code Injection into Other Processes Blocked
-description: Microsoft attack surface reduction rule that prevents Office applications
-  from injecting code into other processes. This detection identifies when Office
-  apps attempt to use process injection techniques commonly employed by attackers
-  to hide malicious payloads or migrate code execution to other processes.
+description: Microsoft attack surface reduction rule that prevents Office applications from injecting code into other processes. This detection identifies when Office apps attempt to use process injection techniques commonly employed by attackers to hide malicious payloads or migrate code execution to other processes.
 tags:
 - mitre.t1055
 - mitre.t1055.012
@@ -18,4 +15,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
