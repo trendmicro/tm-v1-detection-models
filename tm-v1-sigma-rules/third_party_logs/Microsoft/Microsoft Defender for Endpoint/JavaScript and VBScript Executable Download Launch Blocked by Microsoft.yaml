@@ -17,5 +17,6 @@ detection:
   selection2:
     eventCategory: 'DeviceEvents'
   condition: selection1 and selection2
-level: high
+level: info
 taxonomy: tm-v1
+
