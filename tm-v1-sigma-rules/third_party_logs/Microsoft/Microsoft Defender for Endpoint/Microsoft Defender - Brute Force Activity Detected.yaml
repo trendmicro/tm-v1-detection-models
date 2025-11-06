@@ -1,6 +1,5 @@
 title: Microsoft Defender - Brute Force Activity Detected
-description: Microsoft Defender detected repeated authentication attempts consistent
-  with brute-force activity targeting an account or service.
+description: Microsoft Defender detected repeated authentication attempts consistent with brute-force activity targeting an account or service.
 tags:
 - mitre.t1110
 logsource:
@@ -15,4 +14,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
