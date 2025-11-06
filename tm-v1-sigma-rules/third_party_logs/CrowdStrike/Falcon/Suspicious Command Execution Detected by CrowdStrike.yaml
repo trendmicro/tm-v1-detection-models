@@ -1,6 +1,5 @@
 title: Suspicious Command Execution Detected by CrowdStrike
-description: This CrowdStrike alert indicates that a suspicious command was executed
-  on the endpoint.
+description: This CrowdStrike alert indicates that a suspicious command was executed on the endpoint.
 tags: []
 logsource:
   category: THIRD_PARTY_LOG
@@ -24,4 +23,5 @@ detection:
   condition: eventtype and (s1 or s3) and (s2 or s4 or s5 or s6)
 level: info
 taxonomy: tm-v1
+
 
