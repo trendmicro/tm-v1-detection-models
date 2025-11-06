@@ -22,5 +22,6 @@ detection:
   s6:
     act: '*prevented*'
   condition: eventtype and (s1 or s3) and (s2 or s4 or s5 or s6)
-level: low
+level: info
 taxonomy: tm-v1
+
