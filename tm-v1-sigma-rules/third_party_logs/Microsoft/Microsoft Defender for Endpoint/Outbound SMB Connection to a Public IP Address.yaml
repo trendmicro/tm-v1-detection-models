@@ -20,5 +20,6 @@ detection:
   selection4:
     dpt: '445'
   condition: selection1 and selection2 and selection3 and selection4
-level: medium
+level: info
 taxonomy: tm-v1
+

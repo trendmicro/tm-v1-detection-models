@@ -9,5 +9,6 @@ detection:
   eventtype:
     eventType: 'EppDetectionSummaryEvent_QuarantineFiles'
   condition: eventtype
-level: low
+level: info
 taxonomy: tm-v1
+

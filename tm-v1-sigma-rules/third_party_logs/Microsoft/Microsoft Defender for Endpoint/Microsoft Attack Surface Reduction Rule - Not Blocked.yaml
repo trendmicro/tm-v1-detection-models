@@ -18,5 +18,6 @@ detection:
   selection4:
     actionName: '*Bypassed'
   condition: selection1 and selection2 and (selection3 or selection4)
-level: medium
+level: info
 taxonomy: tm-v1
+
