@@ -1,0 +1,15 @@
+title: Potential Authentication Failure via Kerberos
+description: Authentication for an IPsec or WebVPN user through a Kerberos server has failed because the clocks on the Secure Firewall ASA and the server are more than five minutes (300 seconds) apart.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

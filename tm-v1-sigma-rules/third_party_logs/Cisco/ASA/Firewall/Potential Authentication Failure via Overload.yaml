@@ -1,0 +1,15 @@
+title: Potential Authentication Failure via Overload
+description: An authentication request cannot be processed because the server has too many requests pending.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

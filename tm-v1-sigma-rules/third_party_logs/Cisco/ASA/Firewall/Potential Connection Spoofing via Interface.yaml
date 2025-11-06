@@ -1,0 +1,15 @@
+title: Potential Connection Spoofing via Interface
+description: A packet matching a connection arrived on a different interface from the interface on which the connection began. In addition, the ip verify reverse-path command is not configured.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106022'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

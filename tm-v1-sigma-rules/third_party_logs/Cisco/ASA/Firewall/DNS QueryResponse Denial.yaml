@@ -1,0 +1,15 @@
+title: DNS Query/Response Denial
+description: A UDP packet containing a DNS query or response was denied.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

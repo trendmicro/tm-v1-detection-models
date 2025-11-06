@@ -1,0 +1,15 @@
+title: Outbound Connection Denial via ACL
+description: The specified connection failed because of an outbound deny command.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

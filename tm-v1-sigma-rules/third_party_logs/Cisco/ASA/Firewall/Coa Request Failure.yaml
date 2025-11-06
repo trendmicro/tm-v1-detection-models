@@ -1,0 +1,15 @@
+title: Coa Request Failure
+description: The Secure Firewall ASA has received a correctly formatted change of authorization request, but was unable to process it successfully.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109103'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

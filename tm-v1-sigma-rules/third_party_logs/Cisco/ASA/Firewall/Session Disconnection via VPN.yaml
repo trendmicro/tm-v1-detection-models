@@ -1,0 +1,15 @@
+title: Session Disconnection via VPN
+description: An indication of when and why the longest idle user is disconnected. Group name, username, IP address, session type (for example, IPsec or UDP), duration (connection duration in hours, minutes, and seconds), bytes transmitted, bytes received, and reason for disconnection (User Requested).
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113019'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

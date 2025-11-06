@@ -1,0 +1,15 @@
+title: Potential Network Denial via ICMP
+description: The Secure Firewall ASA denied any inbound ICMP packet access. By default, all ICMP packets are denied access unless specifically allowed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

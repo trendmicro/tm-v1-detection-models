@@ -1,0 +1,15 @@
+title: Potential ACL Configuration Error via Download
+description: One of the components of the downloaded authorization has a configuration error. The entire text of the element is included in the message. This message is usually caused by an invalid access-list command statement.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

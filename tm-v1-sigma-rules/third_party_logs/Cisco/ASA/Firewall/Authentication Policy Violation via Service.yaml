@@ -1,0 +1,15 @@
+title: Authentication Policy Violation via Service
+description: Based on the configured policies, you need to be authenticated before you can use this service port.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109023'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

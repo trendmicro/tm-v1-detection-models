@@ -1,0 +1,15 @@
+title: Potential AAA Server Key Misconfiguration
+description: The response from the AAA server cannot be validated. The configured server key is probably incorrect. This message may be displayed during transactions with RADIUS or TACACS+ servers. The server IP address is the IP address of the relevant AAA server. The user is the username associated with the connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109027'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

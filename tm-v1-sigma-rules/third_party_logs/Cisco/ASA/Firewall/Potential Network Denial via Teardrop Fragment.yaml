@@ -1,0 +1,15 @@
+title: Potential Network Denial via Teardrop Fragment
+description: The Secure Firewall ASA discarded an IP packet with a teardrop signature containing either a small offset or fragment overlapping.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

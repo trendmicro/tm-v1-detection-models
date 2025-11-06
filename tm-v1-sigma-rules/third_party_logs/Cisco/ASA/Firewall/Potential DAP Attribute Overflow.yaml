@@ -1,0 +1,15 @@
+title: Potential DAP Attribute Overflow
+description: This log is generated when the number of DAP attributes received from the RADIUS server exceeds the maximum number allowed when authenticating a connection for the specified user.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109035'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

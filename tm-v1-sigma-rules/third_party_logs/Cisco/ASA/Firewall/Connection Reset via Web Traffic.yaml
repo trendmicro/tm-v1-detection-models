@@ -1,0 +1,15 @@
+title: Connection Reset via Web Traffic
+description: The message appears under normal traffic conditions if there are internal users that are accessing the Internet through a web browser. Anytime a connection is reset, when the host at the end of the connection sends a packet after the Secure Firewall ASA receives the connection reset, this message appears. It can typically be ignored.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '106011'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

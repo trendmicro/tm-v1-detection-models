@@ -1,0 +1,15 @@
+title: AAA Server Key Mismatch
+description: The response from the AAA server cannot be validated. The configured server key is probably incorrect. This message may be generated during transactions with RADIUS or TACACS+ servers.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109026'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

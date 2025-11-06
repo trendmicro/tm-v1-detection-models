@@ -1,0 +1,15 @@
+title: Tunnel Group Script Activation Failure
+description: The script file cannot be loaded successfully. No tunnel groups using the username-from-certificate use-script option work correctly.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113027'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

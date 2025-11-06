@@ -1,0 +1,15 @@
+title: Potential Ntdomainauthentication Failure
+description: A user has tried to authenticate to an NT domain that was configured for guest account access, and the username is not a valid username on the NT server. The connection is denied.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '109031'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
