@@ -1,0 +1,15 @@
+title: RSA Key Generation Error
+description: Cisco ASA Detection for RSA Key Generation Error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402140'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

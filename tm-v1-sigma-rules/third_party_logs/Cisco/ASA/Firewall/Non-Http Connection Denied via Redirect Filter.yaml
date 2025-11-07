@@ -1,0 +1,15 @@
+title: Non-Http Connection Denied via Redirect Filter
+description: For the CoA feature, the redirect ACL filter drops the matching non-HTTP traffic during the redirect processing and provides information about the terminated traffic flow.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113042'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

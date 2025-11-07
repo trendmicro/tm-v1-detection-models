@@ -1,0 +1,15 @@
+title: Key Zeroization Error
+description: Cisco ASA Detection for Key Zeroization Error.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402141'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

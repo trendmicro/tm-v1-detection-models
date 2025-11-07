@@ -1,0 +1,15 @@
+title: Crypto Hardware Error
+description: The crypto hardware chip has reported a fatal error, indicating that the chip is inoperable.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402124'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

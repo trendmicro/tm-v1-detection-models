@@ -1,0 +1,15 @@
+title: Asymmetric Key Operation Error
+description: Cisco ASA Detection for Asymmetric Key Operation Error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402143'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

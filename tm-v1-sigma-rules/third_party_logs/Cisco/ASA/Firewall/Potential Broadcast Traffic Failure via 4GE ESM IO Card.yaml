@@ -1,0 +1,15 @@
+title: Potential Broadcast Traffic Failure via 4GE ESM IO Card
+description: The Secure Firewall ASA failed to pass broadcast traffic in the 4G ESM I/O card because of a switch access error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114022'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

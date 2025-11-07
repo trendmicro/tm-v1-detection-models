@@ -1,0 +1,15 @@
+title: IPSec Packet Received - Missing ESP Header
+description: An IPsec packet was received that is missing the expected ESP header.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402115'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Anyconnect Session Failure
+description: The AnyConnect session was not created for the user in the specified group because of resource issues.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113038'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

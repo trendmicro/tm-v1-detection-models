@@ -1,0 +1,15 @@
+title: VPN Connection Failure via Group Lock
+description: The tunnel group over which the connection is attempted is not the same as the tunnel group set in the group lock.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113040'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

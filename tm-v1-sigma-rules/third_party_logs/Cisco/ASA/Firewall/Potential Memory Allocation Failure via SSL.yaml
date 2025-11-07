@@ -1,0 +1,15 @@
+title: Potential Memory Allocation Failure via SSL
+description: An SSL connection is attempting to use more memory than allowed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402128'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

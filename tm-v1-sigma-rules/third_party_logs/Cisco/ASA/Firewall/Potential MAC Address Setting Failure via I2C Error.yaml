@@ -1,0 +1,15 @@
+title: Potential MAC Address Setting Failure via I2C Error
+description: The Secure Firewall ASA failed to set the MAC address in a 4GE SSM I/O card because of an I2C error or a switch initialization error.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

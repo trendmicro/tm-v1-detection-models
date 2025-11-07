@@ -1,0 +1,15 @@
+title: Potential Network Denial via Shunned Host
+description: A packet was dropped because the host defined by IP SRC is a host in the shun database. A shunned host cannot pass traffic on the interface on which it is shunned. For example, an external host on the Internet can be shunned on the outside interface. A record of the activity of shunned hosts was provided. This message and message %ASA-4-401005 can be used to evaluate further risk concerning this host.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '401004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

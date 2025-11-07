@@ -1,0 +1,15 @@
+title: Crypto Hardware Accelerator Failure
+description: The crypto driver has detected that either the IPSEC descriptor ring or SSL/Admin descriptor ring is no longer progressing, meaning the crypto chip no longer appears to be functioning.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402125'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

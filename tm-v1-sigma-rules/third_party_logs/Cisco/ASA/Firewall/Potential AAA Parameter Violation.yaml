@@ -1,0 +1,15 @@
+title: Potential AAA Parameter Violation
+description: The given parameter has a bad value. The value is not shown because it might be very long.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113036'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

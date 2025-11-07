@@ -1,0 +1,15 @@
+title: Potential Network Denial via SHUN Command
+description: A shun command was entered, where the first IP address is the shunned host. The other addresses and ports are optional and are used to terminate the connection if available. An institution to keep a record of shunning activity was allowed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '401002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

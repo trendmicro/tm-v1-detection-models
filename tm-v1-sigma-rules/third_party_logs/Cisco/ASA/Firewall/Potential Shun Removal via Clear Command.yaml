@@ -1,0 +1,15 @@
+title: Potential Shun Removal via Clear Command
+description: The clear shun command was entered to remove existing shuns from memory. An institution to keep a record of shunning activity was allowed.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '401001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
