@@ -1,7 +1,5 @@
 title: Office Communication Application Child Process Creation Blocked
-description: Microsoft attack surface reduction rule that prevents Office communication
-  applications like Outlook from creating child processes to block potential exploit
-  chains initiated through email or messaging applications.
+description: Microsoft attack surface reduction rule that prevents Office communication applications like Outlook from creating child processes to block potential exploit chains initiated through email or messaging applications.
 tags:
 - mitre.t1566
 - mitre.t1055
@@ -16,5 +14,7 @@ detection:
   selection2:
     eventCategory: 'DeviceEvents'
   condition: selection1 and selection2
-level: medium
+level: info
 taxonomy: tm-v1
+
+

@@ -1,7 +1,5 @@
 title: Office Application Child Process Creation Blocked by Microsoft
-description: Microsoft attack surface reduction rule that prevents Office applications
-  such as Word, Excel, and PowerPoint from creating child processes to block macro-based
-  attacks and exploit propagation.
+description: Microsoft attack surface reduction rule that prevents Office applications such as Word, Excel, and PowerPoint from creating child processes to block macro-based attacks and exploit propagation.
 tags:
 - mitre.t1566.001
 - mitre.t1105
@@ -16,5 +14,7 @@ detection:
   selection2:
     eventCategory: 'DeviceEvents'
   condition: selection1 and selection2
-level: medium
+level: info
 taxonomy: tm-v1
+
+

@@ -23,5 +23,6 @@ detection:
   selection5:
     objectCmd: '*E:javascript*'
   condition: selection1 and selection2 and selection3 and selection4 and selection5
-level: low
+level: info
 taxonomy: tm-v1
+

@@ -1,6 +1,5 @@
 title: AWS S3 Bucket Content Downloaded via AWS CLI
-description: Microsoft file detection for a file that was downloaded from an AWS S3
-  bucket using the AWS CLI.
+description: Microsoft file detection for a file that was downloaded from an AWS S3 bucket using the AWS CLI.
 tags:
 - mitre.t1105
 logsource:
@@ -19,5 +18,6 @@ detection:
   s5:
     processCmd: '*cp*'
   condition: s1 and s2 and s3 and s4 and s5
-level: low
+level: info
 taxonomy: tm-v1
+

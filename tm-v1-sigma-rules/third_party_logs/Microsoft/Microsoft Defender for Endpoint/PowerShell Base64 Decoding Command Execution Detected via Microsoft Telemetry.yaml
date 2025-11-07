@@ -1,9 +1,5 @@
 title: PowerShell Base64 Decoding Command Execution Detected via Microsoft Telemetry
-description: Microsoft detection for PowerShell processes executing Base64 decoded
-  commands, which is a common obfuscation technique used by attackers to hide malicious
-  payloads and evade security controls. It detects suspicious process execution events
-  where Base64 decoding functions are invoked, indicating potential malware deployment
-  or unauthorized command execution.
+description: Microsoft detection for PowerShell processes executing Base64 decoded commands, which is a common obfuscation technique used by attackers to hide malicious payloads and evade security controls. It detects suspicious process execution events where Base64 decoding functions are invoked, indicating potential malware deployment or unauthorized command execution.
 tags:
 - mitre.t1059
 - mitre.t1027
@@ -24,5 +20,6 @@ detection:
   s3:
     objectCmd: '*.decode64(*'
   condition: selection1 and (selection2 or s1 or s2 or s3)
-level: low
+level: info
 taxonomy: tm-v1
+

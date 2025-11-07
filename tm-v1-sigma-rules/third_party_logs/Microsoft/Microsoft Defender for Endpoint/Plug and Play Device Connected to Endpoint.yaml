@@ -1,9 +1,5 @@
 title: Plug and Play Device Connected to Endpoint
-description: Microsoft detection for Plug and Play (PnP) device connection events
-  on endpoints, which can indicate potential data exfiltration attempts or unauthorized
-  hardware insertions such as USB drives, external storage devices, or malicious peripherals.
-  It helps monitor for insider threats and device-based attacks where adversaries
-  might use removable media to steal data or introduce malware into the environment.
+description: Microsoft detection for Plug and Play (PnP) device connection events on endpoints, which can indicate potential data exfiltration attempts or unauthorized hardware insertions such as USB drives, external storage devices, or malicious peripherals. It helps monitor for insider threats and device-based attacks where adversaries might use removable media to steal data or introduce malware into the environment.
 tags:
 - mitre.t1200
 - mitre.t1091
@@ -17,5 +13,7 @@ detection:
   selection2:
     actionName: 'PnpDeviceConnected'
   condition: selection1 and selection2
-level: low
+level: info
 taxonomy: tm-v1
+
+

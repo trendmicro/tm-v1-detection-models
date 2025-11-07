@@ -16,5 +16,6 @@ detection:
   s4:
     objectCmd: '*copy*'
   condition: s1 and s2 and s3 and s4
-level: low
+level: info
 taxonomy: tm-v1
+

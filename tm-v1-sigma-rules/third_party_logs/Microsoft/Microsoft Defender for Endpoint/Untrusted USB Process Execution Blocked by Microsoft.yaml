@@ -1,7 +1,5 @@
 title: Untrusted USB Process Execution Blocked by Microsoft
-description: Microsoft attack surface reduction rule that blocks execution of unsigned
-  or untrusted processes launched from USB removable drives to prevent malware propagation
-  and unauthorized code execution.
+description: Microsoft attack surface reduction rule that blocks execution of unsigned or untrusted processes launched from USB removable drives to prevent malware propagation and unauthorized code execution.
 tags:
 - mitre.t1091
 - mitre.t1204
@@ -15,5 +13,7 @@ detection:
   selection2:
     eventCategory: 'DeviceEvents'
   condition: selection1 and selection2
-level: medium
+level: info
 taxonomy: tm-v1
+
+
