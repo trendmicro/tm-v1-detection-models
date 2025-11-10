@@ -1,9 +1,5 @@
 title: Suspicious Download using Powershell Identified by Microsoft
-description: Microsoft detection for suspicious PowerShell activity where PowerShell
-  executables are used with commands commonly associated with downloading files or
-  executing remote code from web sources. It detects potential malware delivery, fileless
-  attacks, or unauthorized remote script execution attempts that leverage PowerShell's
-  web download capabilities.
+description: Microsoft detection for suspicious PowerShell activity where PowerShell executables are used with commands commonly associated with downloading files or executing remote code from web sources. It detects potential malware delivery, fileless attacks, or unauthorized remote script execution attempts that leverage PowerShell web download capabilities.
 tags:
 - mitre.t1105
 - mitre.t1059.001
@@ -13,28 +9,29 @@ logsource:
   product: Microsoft
   definition: THIRDPARTY_THIRDPARTY
 detection:
-  selection1:
-    eventCategory: 'DeviceProcessEvents'
-  selection2:
-    objectFileName: '[''powershell.exe'', ''powershell_ise.exe'']'
-  selection3:
-    objectCmd: '*Net.WebClient*'
   s1:
-    objectCmd: '*DownloadFile*'
+    eventCategory: 'DeviceProcessEvents'
   s2:
-    objectCmd: '*Invoke-WebRequest*'
+    objectFileName: 'powershell.exe'
   s3:
+    objectCmd: '*Net.WebClient*'
+  c1:
+    objectCmd: '*DownloadFile*'
+  c2:
+    objectCmd: '*Invoke-WebRequest*'
+  c3:
     objectCmd: '*Invoke-Shellcode*'
-  s4:
+  c4:
     objectCmd: '*http*'
-  s5:
+  c5:
     objectCmd: '*IEX*'
-  s6:
+  c6:
     objectCmd: '*Start-BitsTransfer*'
-  s7:
+  c7:
     objectCmd: '*mpcmdrun.exe*'
-  condition: selection1 and selection2 and (selection3 or s1 or s2 or s3 or s4 or
-    s5 or s6 or s7)
+  condition: s1 and s2 and (c1 or c2 or c3 or c4 or c5 or
+    c6 or c7)
 level: info
 taxonomy: tm-v1
+
 
