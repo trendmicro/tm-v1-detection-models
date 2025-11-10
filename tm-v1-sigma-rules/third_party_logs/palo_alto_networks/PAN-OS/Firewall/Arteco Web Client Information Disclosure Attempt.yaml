@@ -1,0 +1,17 @@
+title: Arteco Web Client Information Disclosure Attempt
+description: Palo Alto Networks detection for Arteco Web Client Information Disclosure Attempt. This signature detects Arteco Web Client information disclosure attempts in HTTP requests. The signature is a child signature of the parent, Arteco Web Client Brute Force Vulnerability (ID 40141). An individual trigger of this signature may not be malicious by itself. Normally, multiple triggers of this signature within a certain time period should be considered highly suspicious or malicious.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91758'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
