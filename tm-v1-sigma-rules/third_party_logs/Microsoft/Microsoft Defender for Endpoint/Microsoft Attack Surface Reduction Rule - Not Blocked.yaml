@@ -1,7 +1,5 @@
 title: Microsoft Attack Surface Reduction Rule - Not Blocked
-description: Microsoft Defender for Endpoint detected suspicious activity through
-  Attack Surface Reduction rules which monitor and block potentially malicious behaviors
-  on Windows systems
+description: Microsoft Defender for Endpoint detected suspicious activity through Attack Surface Reduction rules which monitor and block potentially malicious behaviors on Windows systems
 tags:
 - mitre.t1562
 logsource:
@@ -20,4 +18,5 @@ detection:
   condition: selection1 and selection2 and (selection3 or selection4)
 level: info
 taxonomy: tm-v1
+
 
