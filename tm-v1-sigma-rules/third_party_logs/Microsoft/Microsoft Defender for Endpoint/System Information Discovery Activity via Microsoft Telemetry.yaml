@@ -9,17 +9,24 @@ logsource:
 detection:
   s1:
     eventCategory: 'DeviceProcessEvents'
-  s2:
-    processCmd: 
-      - '*Win32_ComputerSystemProduct*'
-      - '*USERNAME*'
-      - '*COMPUTERNAME*'
-  s3:
-    objectCmd: 
-      - '*Win32_ComputerSystemProduct*'
-      - '*USERNAME*'
-      - '*COMPUTERNAME*'
-  condition: s1 and (s2 or s3)
+
+  # processCmd must match all three patterns
+  p1:
+    processCmd: '*Win32_ComputerSystemProduct*'
+  p2:
+    processCmd: '*USERNAME*'
+  p3:
+    processCmd: '*COMPUTERNAME*'
+
+  # objectCmd must match all three patterns
+  o1:
+    objectCmd: '*Win32_ComputerSystemProduct*'
+  o2:
+    objectCmd: '*USERNAME*'
+  o3:
+    objectCmd: '*COMPUTERNAME*'
+  condition: s1 and ((p1 and p2 and p3) or (o1 and o2 and o3))
 level: info
 taxonomy: tm-v1
+
 
