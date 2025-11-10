@@ -1,6 +1,5 @@
 title: Microsoft Defender - Browser Launched to Open URL
-description: Microsoft Defender observed a browser process launched to open a URL
-  which could indicate a potential malicious link execution.
+description: Microsoft Defender observed a browser process launched to open a URL which could indicate a potential malicious link execution.
 tags:
 - mitre.t1204.002
 - mitre.t1566.002
@@ -16,3 +15,4 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
