@@ -1,7 +1,5 @@
 title: Obfuscated Script Execution Blocked by Microsoft
-description: Microsoft attack surface reduction rule that blocks execution of potentially
-  obfuscated scripts including PowerShell, JavaScript, and VBScript that may contain
-  hidden malicious code
+description: Microsoft attack surface reduction rule that blocks execution of potentially obfuscated scripts including PowerShell, JavaScript, and VBScript that may contain hidden malicious code
 tags:
 - mitre.t1027
 - mitre.t1059
@@ -17,4 +15,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
