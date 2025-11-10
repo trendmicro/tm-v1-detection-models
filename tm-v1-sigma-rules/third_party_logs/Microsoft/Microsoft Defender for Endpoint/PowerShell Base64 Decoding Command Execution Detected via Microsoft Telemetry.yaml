@@ -9,17 +9,18 @@ logsource:
   product: Microsoft
   definition: THIRDPARTY_THIRDPARTY
 detection:
-  selection1:
-    eventCategory: 'DeviceProcessEvents'
-  selection2:
-    objectCmd: '*.decode(''base64'')*'
   s1:
-    objectCmd: '*.b64decode(*'
+    eventCategory: 'DeviceProcessEvents'
   s2:
-    objectCmd: '*base64 --decode*'
+    objectCmd: '*.decode(''base64'')*'
   s3:
+    objectCmd: '*.b64decode(*'
+  s4:
+    objectCmd: '*base64 --decode*'
+  s5:
     objectCmd: '*.decode64(*'
-  condition: selection1 and (selection2 or s1 or s2 or s3)
+  condition: s1 and (s2 or s3 or s4 or s5)
 level: info
 taxonomy: tm-v1
+
 
