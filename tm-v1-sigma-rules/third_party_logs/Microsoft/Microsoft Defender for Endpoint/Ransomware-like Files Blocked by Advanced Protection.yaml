@@ -1,7 +1,5 @@
 title: Ransomware-like Files Blocked by Advanced Protection
-description: Microsoft attack surface reduction rule that uses advanced protection
-  against ransomware by employing client and cloud heuristics to block files that
-  resemble ransomware behavior unless they are prevalent, signed, or known good.
+description: Microsoft attack surface reduction rule that uses advanced protection against ransomware by employing client and cloud heuristics to block files that resemble ransomware behavior unless they are prevalent, signed, or known good.
 tags:
 - mitre.t1486
 - mitre.t1490
@@ -17,4 +15,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
