@@ -1,8 +1,5 @@
 title: Executable Content from Email Client and Webmail Blocked by Microsoft
-description: Microsoft attack surface reduction rule that blocks email opened within
-  Microsoft Outlook or webmail providers from propagating executable files such as
-  .exe and .dll, script files such as PowerShell (.ps1) and JavaScript (.js), and
-  archive files such as .zip.
+description: Microsoft attack surface reduction rule that blocks email opened within Microsoft Outlook or webmail providers from propagating executable files such as .exe and .dll, script files such as PowerShell (.ps1) and JavaScript (.js), and archive files such as .zip.
 tags:
 - mitre.t1566
 - mitre.t1204
@@ -18,4 +15,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
