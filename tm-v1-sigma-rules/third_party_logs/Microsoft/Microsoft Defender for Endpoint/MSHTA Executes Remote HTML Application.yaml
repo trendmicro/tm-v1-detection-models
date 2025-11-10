@@ -1,0 +1,21 @@
+title: MSHTA Executes Remote HTML Application
+description: Microsoft telemetry detection identifying mshta.exe execution with command lines referencing remote URLs (HTTP/HTTPS). This behavior is commonly used to download and execute scripts or payloads directly from external servers.
+tags:
+- mitre.t1218.005
+- mitre.t1105
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceProcessEvents'
+  selection2:
+    objectFileName: 'mshta.exe'
+  selection3:
+    objectCmd: '*http:*'
+  s1:
+    objectCmd: '*https:*'
+  condition: selection1 and selection2 and (selection3 or s1)
+level: info
+taxonomy: tm-v1

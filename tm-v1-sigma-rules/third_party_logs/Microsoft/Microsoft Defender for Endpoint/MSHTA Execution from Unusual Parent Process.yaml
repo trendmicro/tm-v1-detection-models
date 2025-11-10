@@ -1,0 +1,29 @@
+title: MSHTA Execution from Unusual Parent Process
+description: Microsoft telemetry detection identifying when mshta.exe is launched by uncommon or high-risk parent processes such as system services or server processes. This may indicate living-off-the-land execution or malicious process chaining.
+tags:
+- mitre.t1218.005
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceProcessEvents'
+  selection2:
+    processName:
+        - 'w3wp.exe'
+        - 'wmiprvse.exe'
+        - 'spoolsv.exe'
+        - 'cmd.exe'
+        - 'powershell.exe'
+        - 'wscript.exe'
+        - 'cscript.exe'
+        - 'sh.exe'
+        - 'bash.exe'
+        - 'reg.exe'
+        - 'regsvr32.exe'
+  selection3:
+    objectFileName: 'mshta.exe'
+  condition: selection1 and selection2 and selection3
+level: info
+taxonomy: tm-v1
