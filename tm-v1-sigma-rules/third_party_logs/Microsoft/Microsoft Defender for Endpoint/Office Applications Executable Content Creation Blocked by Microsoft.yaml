@@ -1,7 +1,5 @@
 title: Office Applications Executable Content Creation Blocked by Microsoft
-description: Microsoft attack surface reduction rule that blocks Office applications
-  from creating executable content on disk to prevent malicious code execution through
-  macros or other embedded content.
+description: Microsoft attack surface reduction rule that blocks Office applications from creating executable content on disk to prevent malicious code execution through macros or other embedded content.
 tags:
 - mitre.t1204.002
 logsource:
@@ -16,4 +14,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
