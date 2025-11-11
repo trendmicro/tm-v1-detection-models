@@ -1,7 +1,7 @@
 title: MSHTA Execution from Unusual Parent Process
 description: Microsoft telemetry detection identifying when mshta.exe is launched by uncommon or high-risk parent processes such as system services or server processes. This may indicate living-off-the-land execution or malicious process chaining.
 tags:
-- mitre.t1218.005
+  - mitre.t1218.005
 logsource:
   category: THIRD_PARTY_LOG
   product: Microsoft
@@ -27,3 +27,4 @@ detection:
   condition: selection1 and selection2 and selection3
 level: info
 taxonomy: tm-v1
+
