@@ -1,8 +1,8 @@
 title: MSHTA Execution Initiated by Office Application
 description: Microsoft telemetry detection identifying when mshta.exe is launched by Microsoft Office applications (Word, Excel, PowerPoint, OneNote, Outlook). This may indicate document-based execution, macro abuse, or phishing-related activity.
 tags:
-- mitre.t1218.005
-- mitre.t1566.001
+  - mitre.t1218.005
+  - mitre.t1566.001
 logsource:
   category: THIRD_PARTY_LOG
   product: Microsoft
@@ -22,3 +22,4 @@ detection:
   condition: selection1 and selection2 and selection3
 level: info
 taxonomy: tm-v1
+
