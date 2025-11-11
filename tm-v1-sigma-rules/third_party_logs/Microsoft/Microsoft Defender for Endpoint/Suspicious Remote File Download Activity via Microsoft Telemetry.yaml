@@ -1,4 +1,4 @@
-title: Suspicious Remote File Download Activity Via Microsoft Telemetry
+title: Suspicious Remote File Download Activity via Microsoft Telemetry
 description: Microsoft telemetry detection identifying command-line utilities such as curl.exe, bitsadmin.exe, certreq.exe, desktopimgdownldr.exe, MpCmdRun.exe, nimgrab.exe, or Sqlcmd.exe performing remote file downloads over HTTP or HTTPS. This may indicate potential data exfiltration, payload retrieval, or script-based delivery of malicious content.
 tags:
     - mitre.t1105
@@ -26,3 +26,4 @@ detection:
   condition: selection1 and selection2 and selection3
 level: info
 taxonomy: tm-v1
+
