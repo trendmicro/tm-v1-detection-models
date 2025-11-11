@@ -16,8 +16,9 @@ detection:
     objectCmd: 
       - '*http:*'
       - '*https:*'
-  condition: s1 and s2 and s3
+  condition: selection1 and selection2 and selection3
 level: info
 taxonomy: tm-v1
+
 
 
