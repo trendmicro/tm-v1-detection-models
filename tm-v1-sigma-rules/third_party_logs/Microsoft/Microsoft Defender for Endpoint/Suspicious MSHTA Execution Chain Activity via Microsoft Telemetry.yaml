@@ -1,0 +1,28 @@
+title: Suspicious MSHTA Execution Chain Activity via Microsoft Telemetry
+description: Microsoft telemetry detection identifying unusual process chains where mshta.exe spawns system utilities or scripting interpreters. This may indicate script-based execution, post-exploitation, or reconnaissance attempts.
+tags:
+  - mitre.t1218.005
+  - mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceProcessEvents'
+  selection2:
+    processName: 'mshta.exe'
+  selection3:
+    objectFileName: 
+        - 'cmd.exe'
+        - 'powershell.exe'
+        - 'wscript.exe'
+        - 'cscript.exe'
+        - 'sh.exe'
+        - 'bash.exe'
+        - 'reg.exe'
+        - 'regsvr32.exe'
+  condition: selection1 and selection2 and selection3
+level: info
+taxonomy: tm-v1
+
