@@ -1,0 +1,15 @@
+title: Potential Crypto Operation Error
+description: Cisco ASA Detection for Potential Crypto Operation Error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402142'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

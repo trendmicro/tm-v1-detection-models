@@ -1,0 +1,15 @@
+title: Potential Resource Exhaustion via Shun
+description: The Secure Firewall ASA is out of memory; a shun cannot be applied.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '401005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

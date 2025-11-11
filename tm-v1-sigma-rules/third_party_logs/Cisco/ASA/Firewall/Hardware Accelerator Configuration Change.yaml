@@ -1,0 +1,15 @@
+title: Hardware Accelerator Configuration Change
+description: The hardware accelerator configuration has been changed on the Secure Firewall ASA. Some Secure Firewall ASA platforms have multiple hardware accelerators.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402131'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

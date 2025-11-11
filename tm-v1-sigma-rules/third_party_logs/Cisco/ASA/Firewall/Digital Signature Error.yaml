@@ -1,0 +1,15 @@
+title: Digital Signature Error
+description: Cisco ASA Detection for Digital Signature Error.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402144'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

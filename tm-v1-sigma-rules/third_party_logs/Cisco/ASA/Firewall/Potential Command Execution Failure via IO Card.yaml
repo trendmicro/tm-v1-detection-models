@@ -1,0 +1,15 @@
+title: Potential Command Execution Failure via IO Card
+description: The system failed to run cached commands in a 4GE SSM I/O card because of an I2C error or a switch initialization error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

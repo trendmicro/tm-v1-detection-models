@@ -1,0 +1,15 @@
+title: Potential Process Error via Assertion
+description: An error assertion has gone off and is used during development in checked builds only, but never in production builds.
+tags:
+- mitre.t1057
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '115001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

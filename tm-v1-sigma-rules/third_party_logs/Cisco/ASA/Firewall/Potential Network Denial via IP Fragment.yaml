@@ -1,0 +1,15 @@
+title: Potential Network Denial via IP Fragment
+description: A decapsulated IPsec packet included an IP fragment with an offset less than or equal to 128 bytes.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402118'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

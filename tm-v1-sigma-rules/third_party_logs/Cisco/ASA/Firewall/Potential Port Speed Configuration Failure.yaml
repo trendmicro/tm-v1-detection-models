@@ -1,0 +1,15 @@
+title: Potential Port Speed Configuration Failure
+description: The Secure Firewall ASA failed to set the port speed in a 4GE SSM I/O card because of an I2C error or a switch initialization error.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114018'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

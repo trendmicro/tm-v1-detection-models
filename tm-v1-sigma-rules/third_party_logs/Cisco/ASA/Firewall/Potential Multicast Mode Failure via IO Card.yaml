@@ -1,0 +1,15 @@
+title: Potential Multicast Mode Failure via IO Card
+description: The Secure Firewall ASA failed to set the multicast mode in a 4GE SSM I/O card because of an I2C error or a switch initialization error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114016'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

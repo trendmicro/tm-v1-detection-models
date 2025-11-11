@@ -1,0 +1,15 @@
+title: Potential ACL Misconfiguration via ISE
+description: Cisco ASA Detection for Potential Acl Misconfiguration via Ise.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '113041'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

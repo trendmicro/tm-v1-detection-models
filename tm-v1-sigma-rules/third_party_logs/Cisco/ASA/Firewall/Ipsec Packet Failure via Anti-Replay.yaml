@@ -1,0 +1,15 @@
+title: Ipsec Packet Failure via Anti-Replay
+description: An IPsec packet was received with an invalid sequence number.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402119'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

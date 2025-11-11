@@ -1,0 +1,15 @@
+title: Port Link Speed Issue via 4GE SSM
+description: The Secure Firewall ASA cannot detect the port link speed in a 4GE SSM I/O card.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114020'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Multicast Address Table Failure
+description: The Secure Firewall ASA failed to set the multicast address table in the 4GE SSM I/O card because of either an I2C serial bus access error or a switch access error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114021'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

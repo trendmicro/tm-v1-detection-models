@@ -1,0 +1,15 @@
+title: Ipsec Padding Error via ESP
+description: The Secure Firewall ASA crypto hardware accelerator detected an IPsec packet with invalid padding.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402130'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Port Enablement Failure via IO Card
+description: The Secure Firewall ASA failed to enable a port after the link transition to Up state is detected in a 4GE SSM I/O card because of either an I2C serial bus access error or a switch access error.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '114008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
