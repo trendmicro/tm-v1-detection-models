@@ -8,14 +8,15 @@ logsource:
   product: Microsoft
   definition: THIRDPARTY_THIRDPARTY
 detection:
-  selection1:
-    eventCategory: 'DeviceProcessEvents'
-  selection2:
-    objectFileName: 'mshta.exe'
-  selection3:
-    objectCmd: '*http:*'
   s1:
-    objectCmd: '*https:*'
-  condition: selection1 and selection2 and (selection3 or s1)
+    eventCategory: 'DeviceProcessEvents'
+  s2:
+    objectFileName: 'mshta.exe'
+  s3:
+    objectCmd: 
+      - '*http:*'
+      - '*https:*'
+  condition: s1 and s2 and s3
 level: info
 taxonomy: tm-v1
+
