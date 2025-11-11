@@ -1,6 +1,5 @@
 title: Webshell Script Creation on Server Roles Blocked by Microsoft
-description: Microsoft attack surface reduction rule that prevents creation of webshell
-  scripts such as ASP and PHP shells on server roles including Exchange servers.
+description: Microsoft attack surface reduction rule that prevents creation of webshell scripts such as ASP and PHP shells on server roles including Exchange servers.
 tags:
 - mitre.t1505.003
 - mitre.t1190
@@ -17,4 +16,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 

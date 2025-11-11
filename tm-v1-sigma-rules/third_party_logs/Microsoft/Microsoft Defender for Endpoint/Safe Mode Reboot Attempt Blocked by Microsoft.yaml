@@ -1,6 +1,5 @@
 title: Safe Mode Reboot Attempt Blocked by Microsoft
-description: Microsoft attack surface reduction rule that prevents processes from
-  triggering a reboot into Safe Mode where security defenses might be disabled.
+description: Microsoft attack surface reduction rule that prevents processes from triggering a reboot into Safe Mode where security defenses might be disabled.
 tags:
 - mitre.t1562
 logsource:
@@ -15,4 +14,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 

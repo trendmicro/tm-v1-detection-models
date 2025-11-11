@@ -1,8 +1,5 @@
 title: WMI Event Subscription Persistence Blocked by Microsoft
-description: Microsoft attack surface reduction rule that blocks malware from abusing
-  WMI event subscriptions to maintain persistence on the system. This rule prevents
-  attackers from using Windows Management Instrumentation events to execute malicious
-  code automatically and remain undetected on compromised systems.
+description: Microsoft attack surface reduction rule that blocks malware from abusing WMI event subscriptions to maintain persistence on the system. This rule prevents attackers from using Windows Management Instrumentation events to execute malicious code automatically and remain undetected on compromised systems.
 tags:
 - mitre.t1546
 - mitre.t1047
@@ -18,4 +15,5 @@ detection:
   condition: selection1 and selection2
 level: info
 taxonomy: tm-v1
+
 
