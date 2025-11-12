@@ -1,0 +1,16 @@
+title: Python Server-Side Template Injection
+description: Check Point Security detection for Python Server-Side Template Injection
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Python Server-Side Template Injection
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

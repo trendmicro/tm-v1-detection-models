@@ -1,0 +1,16 @@
+title: D-Link DNS Series Command Injection
+description: Check Point Security detection for D-Link DNS Series Command Injection
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - D-Link DNS Series Command Injection
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

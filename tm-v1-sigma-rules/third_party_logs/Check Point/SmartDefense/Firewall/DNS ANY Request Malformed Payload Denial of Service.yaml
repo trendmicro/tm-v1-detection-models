@@ -1,0 +1,16 @@
+title: DNS ANY Request Malformed Payload Denial of Service
+description: Check Point Security detection for DNS ANY Request Malformed Payload Denial of Service
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - DNS ANY Request Malformed Payload Denial of Service
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

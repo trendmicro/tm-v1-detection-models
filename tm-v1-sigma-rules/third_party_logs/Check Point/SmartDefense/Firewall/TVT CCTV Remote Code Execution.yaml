@@ -1,0 +1,16 @@
+title: TVT CCTV Remote Code Execution
+description: Check Point Security detection for TVT CCTV Remote Code Execution
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - TVT CCTV Remote Code Execution
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
