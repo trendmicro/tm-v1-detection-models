@@ -1,0 +1,14 @@
+title: Rundll32 Possible Cobalt Strike 
+description: Detects the use of rundll32.exe to load a suspicious DLL commonly used by Cobalt Strike for lateral movement in CrowdStrike Telemetry 
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processName: 'rundll32.exe'
+        processCmd|re: '.*((?!C:\\windows\\system32\\spool\\DRIVERS\\.*,MonitorPrintJobStatus)).\/gmi'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

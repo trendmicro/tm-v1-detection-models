@@ -1,0 +1,14 @@
+title: RDP Hijacking
+description: Detects the use of tscon.exe to hijack active RDP sessions in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processName: 'tscon.exe'
+        processCmd: '*\/detest*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
