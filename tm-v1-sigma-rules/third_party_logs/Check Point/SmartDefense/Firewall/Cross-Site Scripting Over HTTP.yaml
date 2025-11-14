@@ -1,0 +1,16 @@
+title: Cross-Site Scripting Over HTTP
+description: Check Point Security detection for Cross-Site Scripting Over HTTP
+tags:
+- mitre.t1190
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Check Point
+detection:
+  mappingtable:
+    ruleName:
+    - Cross-Site Scripting Over HTTP
+    category: IPS
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
