@@ -1,4 +1,4 @@
-title: Execution of Remote Payload via WebDAV
+title: Potential Execution of Remote Payload via WebDAV
 description: Microsoft telemetry detection for suspicious executions where iediagcmd.exe loads files from attacker-controlled WebDAV paths over non-standard ports. This behavior is commonly linked to exploitation chains and remote payload staging.
 tags:
   - mitre.t1105
@@ -18,3 +18,4 @@ detection:
   condition: s1 and s2 and s3
 level: info
 taxonomy: tm-v1
+
