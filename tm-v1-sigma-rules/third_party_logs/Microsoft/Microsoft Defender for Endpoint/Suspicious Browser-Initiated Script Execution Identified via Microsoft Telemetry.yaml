@@ -1,0 +1,26 @@
+title: Suspicious Browser-Initiated Script Execution Identified via Microsoft Telemetry
+description: Microsoft telemetry detection identifying instances where a web browser launches command-line or scripting interpreters including PowerShell, CMD, WScript, CScript, or MSHTA. Such behavior is uncommon for legitimate browsing activity and may indicate malicious drive-by downloads, script injection, or abuse of browser-based execution chains.
+tags:
+    - mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    processName: 
+        - 'chrome.exe'
+        - 'msedge.exe'
+        - 'iexplore.exe'
+        - 'firefox.exe'
+  selection2:
+    objectFileName: 
+        - 'powershell.exe'
+        - 'pwsh.exe'
+        - 'cmd.exe'
+        - 'wscript.exe'
+        - 'cscript.exe'
+        - 'mshta.exe'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
