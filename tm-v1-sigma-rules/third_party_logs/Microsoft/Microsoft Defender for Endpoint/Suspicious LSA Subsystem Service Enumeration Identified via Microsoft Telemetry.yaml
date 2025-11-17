@@ -1,0 +1,19 @@
+title: Suspicious LSA Subsystem Service Enumeration Identified via Microsoft Telemetry
+description: Microsoft telemetry detection identifying CMD executions that enumerate LSASS using tasklist with filtering arguments. This technique is commonly used during credential harvesting or reconnaissance to verify the presence of LSASS prior to targeted process access or memory dumping.
+tags:
+    - mitre.t1057
+    - mitre.t1003.001
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    processName: 'cmd.exe'
+    processCmd: '*tasklist*'
+    processCmd: '*Imagename*'
+    processCmd: '*eq*'
+    processCmd: '*lsass.exe*'
+  condition: selection1
+level: info
+taxonomy: tm-v1
