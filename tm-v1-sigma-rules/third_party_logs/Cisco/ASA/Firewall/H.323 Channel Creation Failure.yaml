@@ -1,0 +1,15 @@
+title: H.323 Channel Creation Failure
+description: The ASA tried to create a match condition on the H.323 media-type channel. See the match media-type command for more information.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405106'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

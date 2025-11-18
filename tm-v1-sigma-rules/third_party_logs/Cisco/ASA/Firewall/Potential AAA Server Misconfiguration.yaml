@@ -1,0 +1,15 @@
+title: Potential AAA Server Misconfiguration
+description: The AAA server configuration information cannot be found.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403107'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

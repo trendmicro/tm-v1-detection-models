@@ -1,0 +1,15 @@
+title: IP Address Collision via Mac
+description: A client IP address in the network is the same as the Secure Firewall ASA interface IP address.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential IP Route Counter Decrement Failure
+description: An attempt to decrement the IP route counter into a negative value failed.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '408001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

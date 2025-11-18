@@ -1,0 +1,15 @@
+title: RPC Service Limit Exceeded
+description: The Secure Firewall ASA tried to open a new hole for a pair of RPC servers or services that have already been configured after the maximum number of holes has been met.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '407003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

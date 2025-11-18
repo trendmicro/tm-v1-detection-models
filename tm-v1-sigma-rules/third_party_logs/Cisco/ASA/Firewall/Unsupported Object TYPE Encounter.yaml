@@ -1,0 +1,15 @@
+title: Unsupported Object TYPE Encounter
+description: A component of the tracking system has encountered an object type that is not supported by the component.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '408003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

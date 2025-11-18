@@ -1,0 +1,15 @@
+title: Potential Key String Misinterpretation via Unknown Format
+description: Cisco ASA Detection for Potential Key String Misinterpretation via Unknown Format.
+tags:
+- mitre.t1003
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '408101'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

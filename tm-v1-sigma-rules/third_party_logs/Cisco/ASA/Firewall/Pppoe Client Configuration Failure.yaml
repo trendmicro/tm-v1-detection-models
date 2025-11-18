@@ -1,0 +1,15 @@
+title: Pppoe Client Configuration Failure
+description: You can configure the PPPoE client on an interface to use a particular VPDN group by entering the `pppoe client vpdn group group_name` command.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403507'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

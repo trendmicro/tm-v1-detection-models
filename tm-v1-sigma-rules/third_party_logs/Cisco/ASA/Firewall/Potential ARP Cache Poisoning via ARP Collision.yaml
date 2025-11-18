@@ -1,0 +1,15 @@
+title: Potential ARP Cache Poisoning via ARP Collision
+description: The Secure Firewall ASA received an ARP packet, and the MAC address in the packet differs from the ARP cache entry.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

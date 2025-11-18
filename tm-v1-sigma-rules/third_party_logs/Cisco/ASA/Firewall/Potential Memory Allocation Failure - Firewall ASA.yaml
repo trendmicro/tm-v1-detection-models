@@ -1,0 +1,15 @@
+title: Potential Memory Allocation Failure - Firewall ASA
+description: The Secure Firewall ASA failed to allocate RAM system memory while starting a connection or has no more address translation slots available.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405102'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
