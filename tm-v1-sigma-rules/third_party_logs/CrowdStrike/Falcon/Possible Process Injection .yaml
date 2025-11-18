@@ -1,0 +1,16 @@
+title: Possible Process Injection 
+description: Detects the use of mavinject.exe to inject into running processes in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFileName: 'mavinject.exe'
+        objectCmd: '*\/injectrunning*'
+    ex:
+        processName: 'appvclient.exe'
+    condition: string_condition_0 and not ex
+level: info
+taxonomy: tm-v1
