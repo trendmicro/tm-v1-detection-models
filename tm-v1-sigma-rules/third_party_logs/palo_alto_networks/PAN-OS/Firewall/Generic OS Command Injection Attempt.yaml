@@ -1,0 +1,19 @@
+title: Generic OS Command Injection Attempt
+description: Palo Alto Networks detection for Generic OS Command Injection Attempt. In this type of an attack, an adversary injects operating system commands into existing application functions. An application that uses untrusted input to build command strings is vulnerable. An adversary can leverage OS command injection in an application to elevate privileges, execute arbitrary commands and compromise the underlying operating system.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91913'
+    - '58152'
+    act:
+    - alert
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

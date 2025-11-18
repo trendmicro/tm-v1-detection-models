@@ -1,0 +1,17 @@
+title: HTTP Request Header Folding Found
+description: Palo Alto Networks detection for HTTP Request Header Folding Found. This signature indicates folding in HTTP request header has been found.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '91869'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
