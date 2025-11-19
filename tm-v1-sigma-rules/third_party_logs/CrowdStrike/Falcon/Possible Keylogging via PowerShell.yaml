@@ -1,0 +1,13 @@
+title: Possible Keylogging via PowerShell
+description: Detects the use of PowerShell commands that may indicate keylogging activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectCmd: '*Get-Keystrokes*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

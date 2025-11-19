@@ -1,0 +1,17 @@
+title: Possible GUI (Graphic User Interface) Input Capture via PowerShell
+description: Detects the use of PowerShell commands that may indicate GUI input capture activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectCmd: '*UI.PromptForCredential(*'
+        objectCmd: '*GetNetworkCredential().Password*'
+    string_condition_1:
+        processCmd: '*UI.PromptForCredential(*'
+        processCmd: '*GetNetworkCredential().Password*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1
