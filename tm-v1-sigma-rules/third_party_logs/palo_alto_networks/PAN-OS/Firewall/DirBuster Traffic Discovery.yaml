@@ -1,0 +1,17 @@
+title: DirBuster Traffic Discovery
+description: Palo Alto Networks detection for DirBuster Traffic Detection. This signature indicates traffic identified from the DirBuster Tool.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '57979'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

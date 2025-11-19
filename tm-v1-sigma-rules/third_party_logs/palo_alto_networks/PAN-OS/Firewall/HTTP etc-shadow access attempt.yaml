@@ -1,0 +1,17 @@
+title: HTTP etc-shadow access attempt
+description: Palo Alto Networks detection for HTTP /etc/shadow access attempt. There is a /etc/shadow access attempt has been detected while parsing certain crafted HTTP request. A successful attack could allow an attacker to access sensitive information that could launch further attacks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '35090'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
