@@ -1,5 +1,5 @@
 title: Potential H.225 Message Out Of Order
-description: An H.225 message was received out of order, before the initial SETUP message, which is not allowed. The Secure Firewall ASA must receive an initial SETUP message for that H.225 call signalling channel before accepting any other H.225 messages.
+description: An H.225 message was received out of order, before the initial SETUP message, which is not allowed. The Secure Firewall ASA must receive an initial SETUP message for that H.225 call signaling channel before accepting any other H.225 messages.
 tags:
 - mitre.t1498
 logsource:
