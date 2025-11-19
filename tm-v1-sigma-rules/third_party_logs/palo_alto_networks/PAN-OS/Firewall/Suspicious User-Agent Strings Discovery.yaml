@@ -1,0 +1,17 @@
+title: Suspicious User-Agent Strings Discovery
+description: Palo Alto Networks detection for Suspicious User-Agent Strings Detection. This signature detects user-agent strings that are associated with known spyware phone-home HTTP traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '10004'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

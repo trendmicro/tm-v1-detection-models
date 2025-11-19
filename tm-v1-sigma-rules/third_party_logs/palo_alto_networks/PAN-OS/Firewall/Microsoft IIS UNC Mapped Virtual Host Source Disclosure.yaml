@@ -1,0 +1,17 @@
+title: Microsoft IIS UNC Mapped Virtual Host Source Disclosure
+description: Palo Alto Networks detection for Microsoft IIS UNC Mapped Virtual Host Source Disclosure. Microsoft IIS is prone to a UNC mapped virtual host source disclosure vulnerability while parsing certain crafted HTTP requests. The vulnerability is due to the lack of proper checks in the HTTP request. An attacker could exploit the vulnerability by sending a malformed HTTP request. A successful attack could lead to mapped virtual host source disclosure with the privileges of the server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '33051'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
