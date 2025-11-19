@@ -1,0 +1,15 @@
+title: Potential Unauthorized Radius Accounting Request
+description: The accounting request came from a host that was not configured in the policy map.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405300'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

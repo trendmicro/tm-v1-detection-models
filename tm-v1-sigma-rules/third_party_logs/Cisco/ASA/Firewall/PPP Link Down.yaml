@@ -1,0 +1,15 @@
+title: PPP Link Down
+description: The PPP link has gone down. There are many reasons why this can happen. The first format will display a reason if PPP provides one.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403503'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

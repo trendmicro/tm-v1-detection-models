@@ -1,0 +1,15 @@
+title: Potential Connection Limit Exceeded via Static NAT
+description: The number of connections from a specified foreign address over a specified global address to the specified local address exceeded the maximum embryonic limit for that static. The Secure Firewall ASA tries to accept the connection if it can allocate memory for that connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '407002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

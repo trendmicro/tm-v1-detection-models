@@ -1,0 +1,15 @@
+title: Potential FTP PORT Command Violation
+description: A client entered an FTP port command and supplied a port less than 1024 (in the well-known port range usually devoted to server ports). This is indicative of an attempt to avert the site security policy.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '406001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: H.323 Connection DROP via H.245 Tunnel
+description: An H.323 connection has been dropped because of an attempted H.245 tunnel control during call setup. See the h245-tunnel-block command for more information.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405107'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

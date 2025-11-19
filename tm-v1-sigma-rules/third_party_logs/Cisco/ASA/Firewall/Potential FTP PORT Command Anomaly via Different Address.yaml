@@ -1,0 +1,15 @@
+title: Potential FTP PORT Command Anomaly via Different Address
+description: A client entered an FTP port command and supplied an address other than the address used in the connection.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '406002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential IP Address Mismatch via ILS
+description: The embedded address in the ILS packet payload was not the same as the source IP address of the IP packet header.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405201'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

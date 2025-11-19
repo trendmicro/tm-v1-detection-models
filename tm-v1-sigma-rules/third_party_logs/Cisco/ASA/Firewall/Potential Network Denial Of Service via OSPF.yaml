@@ -1,0 +1,15 @@
+title: Potential Network Denial Of Service via OSPF
+description: The Secure Firewall ASA received an OSPF packet with a field length of less than the normal header size or that was inconsistent with the size of the IP packet in which it arrived. This indicates a configuration error in the sender of the packet.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential H323Ras Admissionconfirm Anomaly
+description: A gatekeeper has sent an ACF, but the Secure Firewall ASA did not send an ARQ to the gatekeeper.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '405105'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

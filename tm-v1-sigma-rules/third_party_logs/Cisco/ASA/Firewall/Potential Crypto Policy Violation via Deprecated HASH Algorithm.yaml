@@ -1,0 +1,15 @@
+title: Potential Crypto Policy Violation via Deprecated HASH Algorithm
+description: An unacceptable hashing algorithm has been used for digital certificate signing or verification for FIPS 140-2 certification.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '402150'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

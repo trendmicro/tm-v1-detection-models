@@ -1,0 +1,15 @@
+title: Potential Spoofed PPTP Packet
+description: The module received a spoofed PPTP packet, which may indicate a hostile event.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403109'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

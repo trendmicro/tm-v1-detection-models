@@ -1,0 +1,15 @@
+title: Potential Network Service Disruption via Database Scanner
+description: The software detected an unexpected condition.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

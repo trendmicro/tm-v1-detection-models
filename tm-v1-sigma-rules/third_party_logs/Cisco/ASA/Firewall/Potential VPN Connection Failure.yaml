@@ -1,0 +1,15 @@
+title: Potential VPN Connection Failure
+description: The module cannot accept additional PPTP connections. Connections are allocated as soon as they are available.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403103'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

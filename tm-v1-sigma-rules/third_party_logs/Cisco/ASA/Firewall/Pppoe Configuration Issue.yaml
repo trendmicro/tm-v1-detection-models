@@ -1,0 +1,15 @@
+title: Pppoe Configuration Issue
+description: Cisco ASA Detection for Pppoe Configuration Issue.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403504'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

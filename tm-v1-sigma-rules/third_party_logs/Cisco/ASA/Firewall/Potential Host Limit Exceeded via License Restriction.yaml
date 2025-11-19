@@ -1,0 +1,15 @@
+title: Potential Host Limit Exceeded via License Restriction
+description: The host limit was exceeded. An inside host is counted toward the limit when one of the following conditions is true. The inside host has forwarded traffic through the Secure Firewall ASA within the last five minutes. The inside host has reserved an xlate connection or user authentication at the Secure Firewall ASA.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '407001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: MPPE Key Missing via AAA Server
+description: The AAA server was not returning the MPPE key attributes required to set up the MPPE encryption policy.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403110'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

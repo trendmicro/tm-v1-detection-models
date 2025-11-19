@@ -1,0 +1,15 @@
+title: PPPoE Service Discrepancy
+description: The Secure Firewall ASA requested the PPPoE service "any" from the access controller at the Internet service provider. The response from the service provider includes other services but does not include the service "any." This is a discrepancy in the implementation of the protocol. The PADO packet is processed normally, and connection negotiations continue.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403500'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Key Decryption Failure
+description: The system could not successfully decrypt an encrypted key string. The key string may have been corrupted during system configuration.
+tags:
+- mitre.t1003
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '408102'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

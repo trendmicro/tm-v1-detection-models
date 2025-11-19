@@ -1,0 +1,15 @@
+title: Potential Authentication Policy Violation via RADIUS
+description: The MPPE was configured, but RADIUS authentication was not.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '403106'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
