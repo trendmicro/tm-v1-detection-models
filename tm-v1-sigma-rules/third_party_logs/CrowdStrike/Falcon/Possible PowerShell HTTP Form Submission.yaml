@@ -1,0 +1,17 @@
+title: Possible PowerShell HTTP Form Submission
+description: Detects the use of PowerShell commands that may indicate HTTP form submission activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd: '*Invoke-WebRequest*'
+    string_condition_1:
+        processCmd: 
+            - '*Method Post*'
+            - '*Method Put*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,31 @@
+title: Possible File Download via Powershell
+description: Detects the use of PowerShell commands that may indicate file download activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectCmd: 
+            - '*Net.WebClient*'
+            - '*(iwr*'
+            - '*DownloadString(*'
+            - '*WinHttp.WinHttpRequest*'
+            - '*IEX(*'
+            - '*InternetExplorer.Application*'
+            - '*Msxml2.XMLHTTP*'
+            - '*MSXML2.ServerXMLHTTP*'
+    string_condition_1:
+        processCmd: 
+            - '*Net.WebClient*'
+            - '*(iwr*'
+            - '*DownloadString(*'
+            - '*WinHttp.WinHttpRequest*'
+            - '*IEX(*'
+            - '*InternetExplorer.Application*'
+            - '*Msxml2.XMLHTTP*'
+            - '*MSXML2.ServerXMLHTTP*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1
