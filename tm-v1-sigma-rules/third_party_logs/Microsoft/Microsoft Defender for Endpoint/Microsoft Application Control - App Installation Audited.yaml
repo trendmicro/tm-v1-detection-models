@@ -1,0 +1,16 @@
+title: Microsoft Application Control - App Installation Audited
+description: Microsoft Application Control detected the installation of an untrusted app. This detection identifies attempts to install potentially malicious or unauthorized software that was allowed to proceed but logged for auditing purposes.
+tags:
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlAppInstallationAudited'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

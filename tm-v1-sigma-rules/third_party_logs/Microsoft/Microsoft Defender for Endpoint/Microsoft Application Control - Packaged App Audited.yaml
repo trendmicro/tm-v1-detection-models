@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Packaged App Audited
+description: Microsoft Application Control detected the execution of an untrusted packaged application that was audited but not blocked. This detection identifies potential attempts to run unauthorized or malicious packaged apps that bypass application control policies.
+tags:
+  - mitre.t1218
+  - mitre.t1553.006
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlPackagedAppAudited'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

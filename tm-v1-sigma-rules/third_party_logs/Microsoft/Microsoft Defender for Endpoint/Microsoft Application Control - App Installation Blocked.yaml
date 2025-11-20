@@ -1,0 +1,16 @@
+title: Microsoft Application Control - App Installation Blocked
+description: Microsoft Application Control blocked the installation of an untrusted application on a Windows device. This detection identifies attempts to install potentially malicious or unauthorized software that was prevented by application control policies.
+tags:
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlAppInstallationBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

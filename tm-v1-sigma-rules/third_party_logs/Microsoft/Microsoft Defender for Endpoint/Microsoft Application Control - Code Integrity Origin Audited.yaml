@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Code Integrity Origin Audited
+description: Microsoft Application Control Code Integrity Origin Audited events indicate files that would have been blocked due to bad reputation or untrusted installation sources if enforcement policies were active. This detection identifies potential malicious file execution attempts that bypass application control measures when running in audit mode.
+tags:
+  - mitre.t1553.006
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCodeIntegrityOriginAudited'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

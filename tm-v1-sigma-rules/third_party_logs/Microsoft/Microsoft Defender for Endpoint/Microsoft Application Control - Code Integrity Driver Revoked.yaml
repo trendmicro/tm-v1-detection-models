@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Code Integrity Driver Revoked
+description: Microsoft Application Control detected a driver with a revoked certificate attempting to load on the system. This detection identifies potential privilege escalation attempts using compromised or malicious drivers that have had their certificates revoked by the issuing authority.
+tags:
+  - mitre.t1068
+  - mitre.t1014
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCodeIntegrityDriverRevoked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

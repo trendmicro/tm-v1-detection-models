@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Packaged App Blocked
+description: Microsoft Application Control blocked the installation of an untrusted packaged app on a Windows device. This detection identifies attempts to install potentially malicious or unauthorized applications that could compromise system security.
+tags:
+  - mitre.t1218
+  - mitre.t1553.006
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlPackagedAppBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

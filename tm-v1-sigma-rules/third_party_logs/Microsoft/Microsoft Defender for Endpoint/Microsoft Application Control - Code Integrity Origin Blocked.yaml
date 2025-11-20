@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Code Integrity Origin Blocked
+description: Microsoft Application Control blocked a file execution due to bad reputation or untrusted installation source. This detection identifies potential malicious software being prevented from running on Windows devices through code integrity enforcement.
+tags:
+  - mitre.t1553
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCodeIntegrityOriginBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

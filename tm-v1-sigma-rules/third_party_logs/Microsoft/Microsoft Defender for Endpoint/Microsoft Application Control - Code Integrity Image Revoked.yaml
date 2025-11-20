@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Code Integrity Image Revoked
+description: Microsoft Application Control found an executable file that was signed with a revoked certificate. This detection identifies attempts to run code that does not comply with established code integrity policies due to certificate revocation, which may indicate malicious activity.
+tags:
+  - mitre.t1553.002
+  - mitre.t1211
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCodeIntegrityImageRevoked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
