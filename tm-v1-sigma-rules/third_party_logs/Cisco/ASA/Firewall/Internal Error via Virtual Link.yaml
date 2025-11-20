@@ -1,0 +1,15 @@
+title: Internal Error via Virtual Link
+description: Cisco ASA Detection for Internal Error via Virtual Link.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: DNS Classification via Query Response
+description: A DNS classification was performed on a DNS message and the specified criteria were satisfied.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '410003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

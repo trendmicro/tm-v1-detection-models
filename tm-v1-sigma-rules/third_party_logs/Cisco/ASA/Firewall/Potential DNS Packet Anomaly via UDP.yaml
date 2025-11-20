@@ -1,0 +1,15 @@
+title: Potential DNS Packet Anomaly via UDP
+description: The label length exceeds bytes in a UDP DNS packet. See RFC 1035, section 2.3.4 for more information.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '410001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

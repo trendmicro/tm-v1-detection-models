@@ -1,0 +1,15 @@
+title: Potential Interface Hardware Transmit HANG
+description: The interface experienced a hardware transmit freeze that required a reset of the Ethernet controller to restore the interface to full operation.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '411005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

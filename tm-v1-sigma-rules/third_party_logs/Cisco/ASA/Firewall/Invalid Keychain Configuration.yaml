@@ -1,0 +1,15 @@
+title: Invalid Keychain Configuration
+description: Cisco ASA Detection for Invalid Keychain Configuration.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409016'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential Ospfv3 Misconfiguration via Multiple Interfaces
+description: OSPFv3 enabled on multiple interfaces that are on the same link is not supported.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409111'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

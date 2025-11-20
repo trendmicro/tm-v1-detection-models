@@ -1,0 +1,15 @@
+title: Invalid OSPF Key Id Configuration
+description: The Key ID configured in the keychain is out of range for OSPF. This may happen because the keychain allows Key ID values of the range which is not acceptable for OSPF.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409017'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

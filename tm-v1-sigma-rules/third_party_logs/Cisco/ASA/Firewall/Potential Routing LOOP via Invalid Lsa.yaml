@@ -1,0 +1,15 @@
+title: Potential Routing LOOP via Invalid Lsa
+description: The router indicated in this message has originated an LSA with an invalid metric. If this is a router LSA and the link metric is zero, a risk of routing loops and traffic loss exists in the network.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409128'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

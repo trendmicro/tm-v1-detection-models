@@ -1,0 +1,15 @@
+title: Neighbor Command Misconfiguration
+description: The neighbor command is allowed only on NBMA networks.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409123'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

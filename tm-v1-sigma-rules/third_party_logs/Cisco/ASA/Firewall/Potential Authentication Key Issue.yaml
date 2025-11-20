@@ -1,0 +1,15 @@
+title: Potential Authentication Key Issue
+description: The authentication key configured on the interface is not valid.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
