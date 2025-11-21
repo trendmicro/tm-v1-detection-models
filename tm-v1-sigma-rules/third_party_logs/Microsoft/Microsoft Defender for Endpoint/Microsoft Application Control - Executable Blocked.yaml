@@ -1,0 +1,16 @@
+title: Microsoft Application Control - Executable Blocked
+description: Microsoft Application Control blocked the use of an untrusted executable. This detection identifies and prevents the execution of potentially malicious or unauthorized executables, helping to maintain system security by enforcing application control policies.
+tags:
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlExecutableBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

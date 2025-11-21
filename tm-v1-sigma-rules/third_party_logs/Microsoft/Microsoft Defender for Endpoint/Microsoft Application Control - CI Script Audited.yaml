@@ -1,0 +1,16 @@
+title: Microsoft Application Control - CI Script Audited
+description: Microsoft Application Control detected the execution of a script or MSI that violated code integrity policies, indicating potential execution of unauthorized or malicious code that bypasses security controls. This detection identifies attempts to run scripts that do not comply with established code integrity policies but were allowed to proceed and logged for auditing purposes.
+tags:
+  - mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    actionName: 'AppControlCIScriptAudited'
+  selection2:
+    eventCategory: 'DeviceEvents'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

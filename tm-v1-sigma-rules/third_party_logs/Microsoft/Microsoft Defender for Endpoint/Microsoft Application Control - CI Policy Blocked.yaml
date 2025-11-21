@@ -1,0 +1,16 @@
+title: Microsoft Application Control - CI Policy Blocked
+description: Microsoft Application Control blocked a code integrity policy violation indicating an attempt to execute unauthorized or potentially malicious code that violates established security policies. This detection identifies and prevents the execution of code that does not comply with code integrity policies.
+tags:
+  - mitre.t1553
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCodeIntegrityPolicyBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

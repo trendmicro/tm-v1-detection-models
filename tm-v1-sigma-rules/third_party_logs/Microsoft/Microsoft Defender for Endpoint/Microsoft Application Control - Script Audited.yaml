@@ -1,0 +1,17 @@
+title: Microsoft Application Control - Script Audited
+description: Microsoft Application Control detected the use of an untrusted script. This detection identifies attempts to run potentially malicious or unauthorized scripts that were allowed to proceed but logged for auditing purposes.
+tags:
+  - mitre.t1059
+  - mitre.t1562.001
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlScriptAudited'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

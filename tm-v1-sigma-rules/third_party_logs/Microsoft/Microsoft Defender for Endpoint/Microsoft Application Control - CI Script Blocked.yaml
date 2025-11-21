@@ -1,0 +1,16 @@
+title: Microsoft Application Control - CI Script Blocked
+description: Microsoft Application Control identified and prevented the execution of a script or MSI that violated code integrity policies, indicating an attempt to run unauthorized or potentially malicious code. This detection helps maintain system security by enforcing code integrity policies and blocking non-compliant scripts.
+tags:
+  - mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppControlCIScriptBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
