@@ -1,0 +1,17 @@
+title: SIP Bye Message Brute Force Attack
+description: Palo Alto Networks detection for SIP Bye Message Brute Force Attack. This event indicates a brute-force attack through multiple SIP Bye request messages. It may cause denial of service against the target service.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '40028'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

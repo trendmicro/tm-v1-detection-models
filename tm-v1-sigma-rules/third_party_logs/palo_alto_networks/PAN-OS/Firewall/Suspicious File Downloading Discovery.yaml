@@ -1,0 +1,17 @@
+title: Suspicious File Downloading Discovery
+description: Palo Alto Networks detection for Suspicious File Downloading Detection. This signature detects WGET and CURL command execution in HTTP request URL parameters, which could possibly be exploited by attackers to get a subsequent malicious payload.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '54469'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

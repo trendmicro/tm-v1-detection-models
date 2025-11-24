@@ -1,0 +1,17 @@
+title: SCADA DNP3 Miscellaneous Request to a PLC Attempt
+description: Palo Alto Networks detection for SCADA DNP3 Miscellaneous Request to a PLC Attempt. Supervisory Control and Data Acquisition, or SCADA, refers to an industrial control system that monitors and controls a process. This alert indicates that a DNP3 client issued a request, other than a read or write request, to a PLC or other field device.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31665'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

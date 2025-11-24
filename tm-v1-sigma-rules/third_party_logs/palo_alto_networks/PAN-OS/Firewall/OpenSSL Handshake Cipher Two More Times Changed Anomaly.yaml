@@ -1,0 +1,18 @@
+title: OpenSSL Handshake Cipher Two More Times Changed Anomaly
+description: Palo Alto Networks detection for OpenSSL Handshake Cipher Two More Times Changed Anomaly. Many software and hardware products use the OpenSSL library for SSL/TLS support. These include all Cisco products, Nortel/Alteon products, Juniper products, the Apache web server, and a very large number of other hardware and software products. A vulnerability exists in the OpenSSL library's handling of ChangeCipherSpec messages within the SSL protocol. This vulnerability may allow remote attackers to cause applications using OpenSSL to terminate.
+tags:
+- cve.2004.0079
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31120'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

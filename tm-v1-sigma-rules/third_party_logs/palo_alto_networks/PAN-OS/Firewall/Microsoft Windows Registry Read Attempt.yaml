@@ -1,0 +1,17 @@
+title: Microsoft Windows Registry Read Attempt
+description: Palo Alto Networks detection for Microsoft Windows Registry Read Attempt. This alert indicates an attempt to read a windows registry remotely has been detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '34940'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

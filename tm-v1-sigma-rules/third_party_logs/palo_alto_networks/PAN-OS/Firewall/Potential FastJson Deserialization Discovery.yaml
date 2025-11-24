@@ -1,0 +1,17 @@
+title: Potential FastJson Deserialization Discovery
+description: Palo Alto Networks detection for Potential FastJson Deserialization Detection. This signature detects potential Fastjson deserialization payloads in HTTP traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '92713'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

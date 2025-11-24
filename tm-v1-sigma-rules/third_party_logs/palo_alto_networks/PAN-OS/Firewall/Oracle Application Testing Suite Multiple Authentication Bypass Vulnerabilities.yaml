@@ -1,0 +1,21 @@
+title: Oracle Application Testing Suite Multiple Authentication Bypass Vulnerabilities
+description: Palo Alto Networks detection for Oracle Application Testing Suite Multiple Authentication Bypass Vulnerabilities. Oracle Application Testing Suite is prone to multiple authentication bypass vulnerabilities while parsing certain crafted HTTP requests. The vulnerabilities are due to the lack of proper checks on HTTP requests, leading to exploitable authentication bypass. An attacker could exploit these vulnerabilities by sending crafted HTTP requests. Successful exploitation could grant an attacker unauthorized access to protected resource.
+tags:
+- cve.2016.0491
+- cve.2016.0487
+- cve.2016.0489
+- cve.2016.0492
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '38923'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

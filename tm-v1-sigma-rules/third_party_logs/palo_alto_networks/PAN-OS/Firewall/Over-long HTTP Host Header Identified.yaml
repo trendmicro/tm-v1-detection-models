@@ -1,0 +1,18 @@
+title: Over-long HTTP Host Header Identified
+description: Palo Alto Networks detection for Over-long HTTP Host Header Detected. An HTTP request with an over-long host header has been found, which could cause a buffer overflow or denial-of-service of a vulnerable HTTP server.
+tags:
+- cve.2008.4562
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '32148'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

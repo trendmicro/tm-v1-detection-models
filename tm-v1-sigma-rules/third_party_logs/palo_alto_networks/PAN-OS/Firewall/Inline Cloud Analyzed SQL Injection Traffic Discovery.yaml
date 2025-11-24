@@ -1,0 +1,17 @@
+title: Inline Cloud Analyzed SQL Injection Traffic Discovery
+description: Palo Alto Networks detection for Inline Cloud Analyzed SQL Injection Traffic Detection. Detects a common hacking technique where an attacker inserts SQL queries into an applications' request
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '99950'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
