@@ -1,0 +1,16 @@
+title: Microsoft AppLocker - Script Blocked
+description: Microsoft AppLocker blocked the execution of an untrusted script. This detection identifies attempts to run potentially malicious or unauthorized scripts halted by application control policies.
+tags:
+  - mitre.t1059
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppLockerBlockScript'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
