@@ -1,0 +1,15 @@
+title: Router Id Conflict
+description: The Secure Firewall ASA attempted to assign a router ID that is in use by another process.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409120'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

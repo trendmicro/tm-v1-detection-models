@@ -1,0 +1,15 @@
+title: HOST Movement via Interface
+description: A host move was detected from one module interface to another. In a transparent Secure Firewall ASA, mapping between the host (MAC) and Secure Firewall ASA port is maintained in a Layer 2 forwarding table. The table dynamically binds packet source MAC addresses to a Secure Firewall ASA port. In this process, whenever movement of a host from one interface to another interface is detected, this message is generated.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '412001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

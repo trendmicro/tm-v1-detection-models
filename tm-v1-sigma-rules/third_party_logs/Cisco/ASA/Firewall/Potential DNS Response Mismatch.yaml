@@ -1,0 +1,15 @@
+title: Potential DNS Response Mismatch
+description: The ASA detects an excess number of DNS responses with a mismatched DNS identifier.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '410002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential OSPF Misconfiguration
+description: An invalid OSPF packet was received. Details are included in the error message. The cause might be a misconfigured OSPF or an internal error in the sender.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409101'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

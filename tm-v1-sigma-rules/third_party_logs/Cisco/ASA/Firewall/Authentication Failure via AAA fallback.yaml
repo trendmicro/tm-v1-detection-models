@@ -1,0 +1,15 @@
+title: Authentication Failure via AAA fallback
+description: An authentication or authorization attempt to an external server has failed and will be performed using the local user database.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409023'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

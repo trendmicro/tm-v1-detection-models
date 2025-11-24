@@ -1,0 +1,15 @@
+title: Potential OSPF Router Id Conflict via Hello Packet
+description: OSPF received a hello packet from a neighbor that has the same router ID as this routing process.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409109'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

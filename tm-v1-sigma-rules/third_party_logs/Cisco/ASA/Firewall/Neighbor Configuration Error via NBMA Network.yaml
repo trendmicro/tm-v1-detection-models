@@ -1,0 +1,15 @@
+title: Neighbor Configuration Error via NBMA Network
+description: The configured neighbor was found on a point-to-multipoint network and either the poll or priority option was configured.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409125'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Potential OSPF Packet Anomaly - TYPE 409 0
+description: The system received an OSPF packet with a length field of less than normal header size or inconsistent with the size of the IP packet in which it arrived. An error in the sender of the packet has occurred.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409104'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

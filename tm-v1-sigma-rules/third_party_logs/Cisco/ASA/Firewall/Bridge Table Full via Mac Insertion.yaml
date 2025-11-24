@@ -1,0 +1,15 @@
+title: Bridge Table Full via Mac Insertion
+description: The bridge table was full and an attempt was made to add one more entry. The Secure Firewall ASA maintains a separate Layer 2 forwarding table per context, and the message is generated whenever a context exceeds its size limit. The MAC address will be added, but it will replace the oldest existing dynamic entry (if available) in the table. This might be an attempted attack.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '412002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Interface State Change
+description: The configuration status of the interface has changed from down to up.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '411004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

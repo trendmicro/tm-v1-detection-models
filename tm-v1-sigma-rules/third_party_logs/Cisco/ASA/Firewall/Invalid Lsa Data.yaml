@@ -1,0 +1,15 @@
+title: Invalid Lsa Data
+description: The router received an LSA with invalid data. The LSA includes an invalid LSA type, incorrect checksum, or incorrect length, which is caused by either memory corruption or unexpected behavior on a router.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409105'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

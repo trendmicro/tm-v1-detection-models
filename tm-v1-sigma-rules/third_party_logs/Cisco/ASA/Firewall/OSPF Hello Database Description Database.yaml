@@ -1,0 +1,15 @@
+title: OSPF Hello Database Description Database
+description: An OSPF hello, database description, or database request packet was received, but the router could not identify the sender.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409103'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

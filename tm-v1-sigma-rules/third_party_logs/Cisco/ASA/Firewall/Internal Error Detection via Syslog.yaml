@@ -1,0 +1,15 @@
+title: Internal Error Detection via Syslog
+description: An internal error has occurred.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409114'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

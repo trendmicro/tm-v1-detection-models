@@ -1,0 +1,15 @@
+title: Potential Lsa Generation Error via Internal Software
+description: The router tried to generate the default LSA with the incorrect mask and possibly an incorrect metric because of an internal software error.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409106'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

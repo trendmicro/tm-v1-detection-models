@@ -1,0 +1,15 @@
+title: Line Protocol Status Change
+description: The status of the line protocol has changed from up to down. If interface_name is a logical interface name such as inside and outside, this message indicates that the logical interface line protocol has changed from up to down. In this case, the physical interface line protocol status is not affected. If interface_name is a physical interface name such as Ethernet0 and GigabitEthernet0/1, this message indicates that the physical interface line protocol has changed from up to down.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '411002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

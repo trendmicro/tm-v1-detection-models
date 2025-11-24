@@ -1,0 +1,15 @@
+title: Potential OSPF Area Mismatch
+description: An OSPF packet was received with an area ID in its header that does not match the area of this interface.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409102'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

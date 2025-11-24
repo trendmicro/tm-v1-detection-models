@@ -1,0 +1,15 @@
+title: Cisco ASA - Module Shutdown Failure Event
+description: The module identified by module_id was not able to comply with a request from the Secure Firewall ASA system module to shut down. It may be performing a task that cannot be interrupted, such as a software upgrade. The error number and message text describe the reason why the module cannot shut down, and the recommended corrective action.
+tags:
+- mitre.t1057
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

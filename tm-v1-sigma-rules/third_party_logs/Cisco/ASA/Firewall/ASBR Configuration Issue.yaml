@@ -1,0 +1,15 @@
+title: ASBR Configuration Issue
+description: An ASBR must be attached to an area that can carry AS External or NSSA LSAs.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '409121'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
