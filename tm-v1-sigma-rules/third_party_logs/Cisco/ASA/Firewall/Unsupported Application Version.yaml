@@ -1,5 +1,5 @@
 title: Unsupported Application Version
-description: The module installed in slot slot_num was running an unsupported application version or type.
+description: The module installed in slot was running an unsupported application version or type.
 tags:
 - mitre.t1016
 logsource:
