@@ -1,0 +1,15 @@
+title: HTTP MIME Type Mismatch
+description: The MIME type in an HTTP response was not in the accept field of the request.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415014'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

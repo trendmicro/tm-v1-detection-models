@@ -1,0 +1,15 @@
+title: TCP Packet Dropped via MSS Exceedance
+description: The length of the TCP packet exceeded the MSS advertised in the three-way handshake.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '419001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

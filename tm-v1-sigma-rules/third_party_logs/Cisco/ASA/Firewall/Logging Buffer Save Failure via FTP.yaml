@@ -1,0 +1,15 @@
+title: Logging Buffer Save Failure via FTP
+description: The logging module failed to save the logging buffer to an external FTP server.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '414001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

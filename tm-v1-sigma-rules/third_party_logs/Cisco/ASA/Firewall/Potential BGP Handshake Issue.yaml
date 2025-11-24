@@ -1,0 +1,15 @@
+title: Potential BGP Handshake Issue
+description: Indication of unsupported or malformed messages received during the BGP handshake, not necessarily only related to Graceful Restart specifically.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '418040'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

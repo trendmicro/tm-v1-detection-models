@@ -1,0 +1,15 @@
+title: Potential Route Attribute Modification
+description: A client tried to modify a route attribute that the client does not own.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '417004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

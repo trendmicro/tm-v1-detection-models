@@ -1,0 +1,15 @@
+title: TCP Connection Persistence via DCD
+description: A TCP connection was kept open by Dead Connection Detection (DCD) as a valid connection.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '419005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

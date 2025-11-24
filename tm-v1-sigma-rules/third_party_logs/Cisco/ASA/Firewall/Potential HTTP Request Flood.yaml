@@ -1,0 +1,15 @@
+title: Potential HTTP Request Flood
+description: The number of unanswered HTTP requests exceeded the internal number of requests allowed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415016'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

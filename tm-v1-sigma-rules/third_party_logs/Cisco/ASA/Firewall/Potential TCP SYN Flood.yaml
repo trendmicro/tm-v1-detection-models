@@ -1,0 +1,15 @@
+title: Potential TCP SYN Flood
+description: Cisco ASA Detection for Potential TCP SYN Flood.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '419002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

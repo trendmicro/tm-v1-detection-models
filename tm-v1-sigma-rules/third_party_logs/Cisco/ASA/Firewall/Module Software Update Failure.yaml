@@ -1,0 +1,15 @@
+title: Module Software Update Failure
+description: The module failed to accept a software version, and will be transitioned to an UNRESPONSIVE state.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

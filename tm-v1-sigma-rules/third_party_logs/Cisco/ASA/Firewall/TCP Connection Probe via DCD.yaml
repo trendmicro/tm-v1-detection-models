@@ -1,0 +1,15 @@
+title: TCP Connection Probe via DCD
+description: A TCP connection was probed by Dead Connection Detection (DCD) to determine if the connection was still valid.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '419004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Unexpected Event via Signal
+description: A process received a signal, but no handler was found for the event.
+tags:
+- mitre.t1057
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '417001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

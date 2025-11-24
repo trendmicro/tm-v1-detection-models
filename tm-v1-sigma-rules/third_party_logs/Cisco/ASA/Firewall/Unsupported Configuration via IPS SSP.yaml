@@ -1,0 +1,15 @@
+title: Unsupported Configuration via IPS SSP
+description: An unsupported Secure Firewall ASA and IPS configuration has been detected during IPS SSP setup for slot 1. The Secure Firewall ASA should continue to function normally with an unsupported configuration. MPC description — A description string for the ASA model, which can be one of the following. ASA5585-SSP-10, ASA5585-SSP-20, ASA5585-SSP-40, ASA5585-SSP-60, ASA5585-SSP-10-K7, ASA5585-SSP-20-K7, ASA5585-SSP-40-K7, ASA5585-SSP-60-K7.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

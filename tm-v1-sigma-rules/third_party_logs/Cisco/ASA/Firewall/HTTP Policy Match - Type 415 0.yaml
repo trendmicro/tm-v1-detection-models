@@ -1,0 +1,15 @@
+title: HTTP Policy Match - Type 415 0
+description: Cisco ASA Detection for HTTP Policy Match - Type 415 0.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415017'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
