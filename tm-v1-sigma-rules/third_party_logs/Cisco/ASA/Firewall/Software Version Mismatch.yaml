@@ -1,5 +1,5 @@
 title: Software Version Mismatch
-description: The version of software running on the module in slot slot was not the version required by another module.
+description: The version of software running on the module in slot was not the version required by another module.
 tags:
 - mitre.t1016
 logsource:
