@@ -1,0 +1,16 @@
+title: Microsoft AppLocker - Packaged App Installation Blocked
+description: Microsoft AppLocker blocked the installation of an untrusted packaged application. This detection identifies installation attempts that violate application control restrictions and may indicate malicious software deployment attempts.
+tags:
+  - mitre.t1218
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppLockerBlockPackagedAppInstallation'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

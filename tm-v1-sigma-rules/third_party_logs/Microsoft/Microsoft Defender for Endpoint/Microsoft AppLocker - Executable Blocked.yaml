@@ -1,0 +1,17 @@
+title: Microsoft AppLocker - Executable Blocked
+description: Microsoft AppLocker blocked an untrusted executable from running. This detection highlights attempts to launch potentially unsafe or unauthorized executable files that were stopped by AppLocker policies.
+tags:
+  - mitre.t1218
+  - mitre.t1055
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'AppLockerBlockExecutable'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
