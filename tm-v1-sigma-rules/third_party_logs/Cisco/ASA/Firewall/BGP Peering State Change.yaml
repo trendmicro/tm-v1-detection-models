@@ -1,0 +1,15 @@
+title: BGP Peering State Change
+description: The different states of BGP peering and notification of changes on the topology database as a result of the peering state transitions.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '418018'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

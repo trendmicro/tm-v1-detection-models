@@ -1,0 +1,15 @@
+title: Potential BGP Neighbor Hold Time Expiry
+description: Indication of hold time for a BGP neighbor has expired. IP Address—IPv4 or IPv6 address of the BGP neighbor. Hold time—The hold time in milliseconds.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '418044'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

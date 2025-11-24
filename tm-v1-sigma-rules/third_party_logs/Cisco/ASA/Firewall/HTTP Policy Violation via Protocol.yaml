@@ -1,0 +1,15 @@
+title: HTTP Policy Violation via Protocol
+description: The HTTP parser cannot detect a valid HTTP message in the first few bytes of an HTTP message.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415011'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

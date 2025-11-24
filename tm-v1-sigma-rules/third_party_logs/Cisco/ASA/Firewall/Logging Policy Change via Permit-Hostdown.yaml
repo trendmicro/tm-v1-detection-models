@@ -1,0 +1,15 @@
+title: Logging Policy Change via Permit-Hostdown
+description: An administrator changed the logging permit-hostdown policy by entering the logging permit-hostdown command at a time when new connections are being denied. Due to this change of policy, new connections will be allowed.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '414008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

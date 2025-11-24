@@ -1,0 +1,15 @@
+title: Potential HTTP Malformed Chunked Encoding
+description: A chunked encoding was malformed, and the HTTP message cannot be parsed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415013'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

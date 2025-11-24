@@ -1,0 +1,15 @@
+title: Packet Denial via Management Network
+description: A packet from the specified source to the destination was dropped because it is traversing the Secure Firewall ASA to and from the management-only network.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '418001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

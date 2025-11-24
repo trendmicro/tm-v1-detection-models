@@ -1,0 +1,15 @@
+title: Unsupported Configuration via ASA
+description: Only one power supply and one fan module are inserted when an ASA 10G SSP and IPS 10G SSP are present.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

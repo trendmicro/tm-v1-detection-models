@@ -1,0 +1,15 @@
+title: Potential HTTP URI Length Violation
+description: Cisco ASA Detection for Potential HTTP Uri Length Violation.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

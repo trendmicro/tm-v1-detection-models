@@ -1,0 +1,15 @@
+title: TCP Syslog Server Connection Restored
+description: The TCP syslog setup involves 4 channels connecting to the server. This message is generated only when one of the TCP syslog server channels becomes unreachable and the server is restored. This message is the first to reach the syslog server after a successful connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '414004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

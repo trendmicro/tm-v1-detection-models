@@ -1,0 +1,15 @@
+title: Software Version Mismatch
+description: The version of software running on the module in slot was not the version required by another module.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

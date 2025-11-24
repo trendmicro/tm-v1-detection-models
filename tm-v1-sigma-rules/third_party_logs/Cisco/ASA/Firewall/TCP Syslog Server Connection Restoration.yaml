@@ -1,0 +1,15 @@
+title: TCP Syslog Server Connection Restoration
+description: The TCP syslog server for remote host logging was successfully connected and new connections are permitted.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '414007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

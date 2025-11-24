@@ -1,0 +1,15 @@
+title: HTTP Header Field Count Exceeded
+description: Cisco ASA Detection for HTTP Header Field Count Exceeded.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '415001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

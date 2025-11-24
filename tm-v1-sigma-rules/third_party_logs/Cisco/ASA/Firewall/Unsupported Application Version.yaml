@@ -1,0 +1,15 @@
+title: Unsupported Application Version
+description: The module installed in slot was running an unsupported application version or type.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

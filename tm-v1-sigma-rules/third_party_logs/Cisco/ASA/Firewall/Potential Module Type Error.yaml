@@ -1,0 +1,15 @@
+title: Potential Module Type Error
+description: A module was detected that is not recognized as a valid module type.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '413003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
