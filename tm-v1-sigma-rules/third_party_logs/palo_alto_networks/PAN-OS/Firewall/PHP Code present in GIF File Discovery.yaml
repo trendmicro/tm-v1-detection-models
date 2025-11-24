@@ -1,0 +1,17 @@
+title: PHP Code present in GIF File Discovery
+description: Palo Alto Networks detection for PHP Code present in GIF File Detection. This signature detects malicious files masquerading as a benign GIF file. Malicious actors have been observed passing image files with embedded malicious code in an attempt to foil security solutions.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '81877'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

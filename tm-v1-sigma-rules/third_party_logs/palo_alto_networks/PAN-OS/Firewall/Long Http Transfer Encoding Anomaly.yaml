@@ -1,0 +1,18 @@
+title: Long Http Transfer Encoding Anomaly
+description: Palo Alto Networks detection for Long Http Transfer Encoding Anomaly. Some http servers are prone to a buffer overflow vulnerability while parsing certain crafted transfer encoding http header.The vulnerability is due to the lack of proper checks on transfer encoding header in the http request, leading to an exploitable buffer overflow.An attacker could exploit the vulnerability by sending a crafted transfer encoding request. A successful attack could lead to remote code execution with the privileges of the server.
+tags:
+- cve.2008.4008
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '32180'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

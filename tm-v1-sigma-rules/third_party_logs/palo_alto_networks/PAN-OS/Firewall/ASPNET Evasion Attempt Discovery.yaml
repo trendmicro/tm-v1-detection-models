@@ -1,0 +1,17 @@
+title: ASPNET Evasion Attempt Discovery
+description: Palo Alto Networks detection for ASPNET Evasion Attempt Detection. This signature detects the HTTP header X-UP-DEVCAP-POST-CHARSET in HTTP requests. This header is usually used with evasion attempts.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '93160'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

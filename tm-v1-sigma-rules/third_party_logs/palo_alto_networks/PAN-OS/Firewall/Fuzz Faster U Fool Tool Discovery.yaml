@@ -1,0 +1,17 @@
+title: Fuzz Faster U Fool Tool Discovery
+description: Palo Alto Networks detection for Fuzz Faster U Fool Tool Detection. This signature is detecting Fuzz Faster U Fool tool scanning.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '90304'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

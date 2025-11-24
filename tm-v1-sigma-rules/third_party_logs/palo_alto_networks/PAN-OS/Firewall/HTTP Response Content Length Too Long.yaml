@@ -1,0 +1,18 @@
+title: HTTP Response Content Length Too Long
+description: Palo Alto Networks detection for HTTP Response Content Length Too Long. This signature detects too long content length in the HTTP response and prevents buffer overflow.
+tags:
+- cve.2004.0492
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31370'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
