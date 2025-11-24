@@ -1,0 +1,17 @@
+title: HTTP User Authentication Brute Force Attempt
+description: Palo Alto Networks detection for HTTP User Authentication Brute Force Attempt. This event indicates that someone is using a brute force attack to get username and password trough http authentication request.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '40006'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

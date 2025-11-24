@@ -1,0 +1,17 @@
+title: Encoded Portable Executable Traffic Discovery
+description: Palo Alto Networks detection for Encoded Portable Executable Traffic Detection. This signature detects encoded portable executable (PE) files. This type of traffic is common in benign security content, such as passing around PE header signature definitions, where the encoding reduces disk space consumption and can evade IDS/IPS solutions. However, malware traffic is known to obfuscate their PE payloads in this manner as well.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '85253'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

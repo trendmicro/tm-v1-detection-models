@@ -1,0 +1,17 @@
+title: Suspicious RAR File Identified
+description: Palo Alto Networks detection for Suspicious RAR File Detected. This signature indicates that a suspicious RAR file is detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '54408'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

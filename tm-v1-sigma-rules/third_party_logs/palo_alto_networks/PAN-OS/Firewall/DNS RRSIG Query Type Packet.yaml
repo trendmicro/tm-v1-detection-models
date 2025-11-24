@@ -1,0 +1,19 @@
+title: DNS RRSIG Query Type Packet
+description: Palo Alto Networks detection for DNS RRSIG Query Type Packet. This alert is triggered when a DNS RRSIG query packet is seen. When Response Policy Zones (RPZ) RRset replacement is enabled, ISC BIND Server is prone to a denial of service vulnerability while parsing such packets. A successful attack could crash the service.
+tags:
+- cve.2011.1907
+- cve.2011.2465
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '34405'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

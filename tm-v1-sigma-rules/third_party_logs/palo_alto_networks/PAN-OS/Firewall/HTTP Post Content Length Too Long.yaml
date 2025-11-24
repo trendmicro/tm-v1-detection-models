@@ -1,0 +1,18 @@
+title: HTTP Post Content Length Too Long
+description: Palo Alto Networks detection for HTTP Post Content Length Too Long. This signature detects a very long Content Length in a HTTP POST request.
+tags:
+- cve.2005.3653
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31021'
+    act:
+    - drop
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

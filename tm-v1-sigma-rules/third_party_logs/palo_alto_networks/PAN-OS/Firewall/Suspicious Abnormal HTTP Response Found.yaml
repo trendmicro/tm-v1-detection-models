@@ -1,0 +1,20 @@
+title: Suspicious Abnormal HTTP Response Found
+description: Palo Alto Networks detection for Suspicious Abnormal HTTP Response Found. This signature indicates multiple Content-Length headers in HTTP response have been found.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '39910'
+    - '38920'
+    - '38476'
+    act:
+    - drop
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

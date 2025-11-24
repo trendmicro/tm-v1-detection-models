@@ -1,0 +1,17 @@
+title: Interactsh Tool out-of-band interactions HTTPS traffic Discovery
+description: Palo Alto Networks detection for Interactsh Tool out-of-band interactions HTTPS traffic Detection. This signature detects the traffic for Interactsh tool out-of-band interactions.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '86813'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
