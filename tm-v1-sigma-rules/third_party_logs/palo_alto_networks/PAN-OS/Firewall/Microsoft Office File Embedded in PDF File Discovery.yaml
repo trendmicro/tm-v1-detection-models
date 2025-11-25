@@ -1,5 +1,5 @@
 title: Microsoft Office File Embedded in PDF File Discovery
-description: Palo Alto Networks detection for Microsoft Office File Embedded in PDF File Detection. This siganture detects the Microsoft Office file embedded in a PDF file.
+description: Palo Alto Networks detection for Microsoft Office File Embedded in PDF File Detection. This signature detects the Microsoft Office file embedded in a PDF file.
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
