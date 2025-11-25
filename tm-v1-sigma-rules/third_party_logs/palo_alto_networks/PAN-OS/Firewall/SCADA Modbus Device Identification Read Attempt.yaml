@@ -1,0 +1,17 @@
+title: SCADA Modbus Device Identification Read Attempt
+description: Palo Alto Networks detection for SCADA Modbus Device Identification Read Attempt. SCADA is the abbreviation for Supervisory Control And Data Acquisition. It generally refers to an industrial control system a computer system monitoring and controlling a process.That alert indicates that an attacker learns the vendor, product, version number and other information about a PLC or other MODBUS server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31649'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

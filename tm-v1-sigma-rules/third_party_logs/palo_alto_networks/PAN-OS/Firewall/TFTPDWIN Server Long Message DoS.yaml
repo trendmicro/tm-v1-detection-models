@@ -1,0 +1,18 @@
+title: TFTPDWIN Server Long Message DoS
+description: Palo Alto Networks detection for TFTPDWIN Server Long Message DoS. TFTPDWIN server is prone to a denial of service vulnerability while handling certain crafted TFTP requests. The vulnerability is due to the lack of proper checks on malformed TFTP requests in a recv_from call. An attacker could exploit the vulnerability by sending a long request that could crash the server.
+tags:
+- cve.2007.1404
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31824'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

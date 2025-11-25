@@ -1,0 +1,17 @@
+title: Possible Suspicious.Gen Command And Control Traffic
+description: Palo Alto Networks detection for Possible Suspicious.Gen Command And Control Traffic. This signature detects Suspicious.Gen Command and Control Traffic.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '13784'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

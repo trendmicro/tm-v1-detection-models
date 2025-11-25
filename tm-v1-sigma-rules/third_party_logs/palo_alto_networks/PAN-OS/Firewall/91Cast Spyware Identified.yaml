@@ -1,0 +1,17 @@
+title: 91Cast Spyware Identified
+description: Palo Alto Networks detection for 91Cast. This signature detects the runtime behavior of the spyware 91Cast.91Cast is an unwanted application that sends information back to its controlling server without user consent.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '11633'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

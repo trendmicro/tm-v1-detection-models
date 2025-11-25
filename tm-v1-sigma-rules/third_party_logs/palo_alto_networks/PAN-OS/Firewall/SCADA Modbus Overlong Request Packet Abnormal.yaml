@@ -1,0 +1,17 @@
+title: SCADA Modbus Overlong Request Packet Abnormal
+description: Palo Alto Networks detection for SCADA Modbus Overlong Request Packet Abnormal. SCADA is the abbreviation for Supervisory Control And Data Acquisition. It generally refers to an industrial control system a computer system monitoring and controlling a process.That alert indicates that a overlong(>300) modbus request packet has been detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31652'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

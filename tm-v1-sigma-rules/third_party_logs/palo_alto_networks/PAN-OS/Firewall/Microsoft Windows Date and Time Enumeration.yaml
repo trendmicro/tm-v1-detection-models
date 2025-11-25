@@ -1,0 +1,17 @@
+title: Microsoft Windows Date and Time Enumeration
+description: Palo Alto Networks detection for Microsoft Windows Date and Time Enumeration. This alert indicates that a remote user is trying to query the date and time onthe remote server in order to get the information. A successfully query will allow remote user to gather information on the system. This alert may be triggered by network administrator's remote access to the client machine or scanning activity, or triggered by a remote attacker which is trying to gather information for future attacks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30841'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

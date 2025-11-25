@@ -1,0 +1,17 @@
+title: Brute Ratel C4 Command and Control Traffic Discovery
+description: Palo Alto Networks detection for Brute Ratel C4 Command and Control Traffic Detection. This signature detects the command and control traffic from the BruteRatel C4 tool.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: spyware
+    ruleId:
+    - '86697'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

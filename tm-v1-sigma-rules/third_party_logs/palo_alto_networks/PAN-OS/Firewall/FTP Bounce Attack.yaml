@@ -1,0 +1,17 @@
+title: FTP Bounce Attack
+description: Palo Alto Networks detection for FTP Bounce Attack. FTP bounce attack is an exploit of the FTP protocol whereby an attacker is able to use the PORT command to request access to ports indirectly through the use of the victim machine as a middle man for the request. This technique can be used to scan ports discreetly, and to access specific ports that the attacker cannot access through a direct connection.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '33439'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,17 @@
+title: Netbios Mailslot Interim Reply Request
+description: Palo Alto Networks detection for Netbios Mailslot Interim Reply Request. Try to get some information by sending a mailslot request SMB service.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30860'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

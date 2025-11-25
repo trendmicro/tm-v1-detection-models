@@ -1,0 +1,18 @@
+title: Adobe ColdFusion Multiple Directory Traversal Vulnerabilities
+description: Palo Alto Networks detection for Adobe ColdFusion Multiple Directory Traversal Vulnerabilities. Adobe ColdFusion is prone to multiple directory traversal vulnerabilities while parsing certain crafted HTTP requests. The vulnerabilities are due to the lack of proper checks in HTTP requests, leading to an exploitable directory traversal condition. An attacker could exploit the vulnerability by sending a crafted HTTP request. A successful attack could lead to remote code execution with the privileges of the server.
+tags:
+- cve.2010.2861
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '33452'
+    act:
+    - reset-server
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
