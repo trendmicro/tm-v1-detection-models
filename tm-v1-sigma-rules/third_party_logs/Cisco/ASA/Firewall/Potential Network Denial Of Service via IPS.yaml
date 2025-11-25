@@ -1,0 +1,15 @@
+title: Potential Network Denial Of Service via IPS
+description: IPS requested that the packet be dropped.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '420002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

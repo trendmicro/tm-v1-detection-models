@@ -1,0 +1,15 @@
+title: License Limit Violation via Host
+description: A host has been counted toward the license limit.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '421005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

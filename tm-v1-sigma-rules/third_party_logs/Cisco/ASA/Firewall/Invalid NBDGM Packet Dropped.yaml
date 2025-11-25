@@ -1,0 +1,15 @@
+title: Invalid NBDGM Packet Dropped
+description: The NBDGM packet format is incorrect.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '423003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

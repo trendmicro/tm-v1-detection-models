@@ -1,0 +1,15 @@
+title: Ipslamonitor Scheduling Failure
+description: One or more IPSLA monitor probes cannot be scheduled because the system clock was not set.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '422005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

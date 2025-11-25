@@ -1,0 +1,15 @@
+title: CXSC Redirect Override
+description: A flow matches both CXSC and Scansafe redirects. The message indicates that the CXSC redirect overrides the Scansafe redirect for the displayed flow.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '429007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

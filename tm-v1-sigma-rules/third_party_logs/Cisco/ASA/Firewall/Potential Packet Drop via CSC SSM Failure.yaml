@@ -1,0 +1,15 @@
+title: Potential Packet Drop via CSC SSM Failure
+description: A packet was dropped (Error Message 1) or skipped (Error Message 2) because the CSC SSM application failed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '421001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

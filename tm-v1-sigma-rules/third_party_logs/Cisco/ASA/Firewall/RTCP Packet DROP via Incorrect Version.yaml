@@ -1,0 +1,15 @@
+title: RTCP Packet DROP via Incorrect Version
+description: The RTCP packet was dropped. In_ifc refers to the input interface. Src_ip is the source IP address of the packet. Src_port is the source port of the packet. Out_ifc refers to the output interface. Dest_ip is the destination IP address of the packet. Dest_port is the destination port of the packet. Drop_reason is one of the following drop reasons. Incorrect version value, which means the version number from the packet is incorrect, or Invalid payload-type value, which means the payload type from the packet is incorrect.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '431002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

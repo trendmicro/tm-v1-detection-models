@@ -1,0 +1,15 @@
+title: Potential Packet Drop via IPS Module License Disabled
+description: Cisco ASA Detection for Potential Packet DROP via IPS Module License Disabled.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '420008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

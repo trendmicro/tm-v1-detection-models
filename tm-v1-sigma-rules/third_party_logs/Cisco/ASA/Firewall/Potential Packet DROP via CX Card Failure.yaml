@@ -1,0 +1,15 @@
+title: Potential Packet DROP via CX Card Failure
+description: Cisco ASA Detection for Potential Packet DROP via Cx CARD Failure.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '429001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

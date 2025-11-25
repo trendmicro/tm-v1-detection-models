@@ -1,0 +1,15 @@
+title: Authentication Proxy Cleanup
+description: The ASA successfully cleaned up to-the-box rules for authentication proxy with the CXSC action.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '429006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

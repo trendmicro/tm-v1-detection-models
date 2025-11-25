@@ -1,0 +1,15 @@
+title: VPN Query Failure
+description: The CX sent a VPN session query to the Secure Firewall ASA, but it did not respond either because of an invalid session ID or another reason.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '429008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

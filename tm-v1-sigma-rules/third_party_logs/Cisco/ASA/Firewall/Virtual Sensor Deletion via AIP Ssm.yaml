@@ -1,0 +1,15 @@
+title: Virtual Sensor Deletion via AIP Ssm
+description: A virtual sensor was deleted from the AIP SSM card.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '420005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
