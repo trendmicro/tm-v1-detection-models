@@ -1,0 +1,14 @@
+title: Possible Adding of Helper DLL for Netsh
+description: Detects the addition of helper DLLs to netsh.exe that may indicate manipulation of network settings in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFileName : 'netsh.exe'
+        objectCmd: '*add helper*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

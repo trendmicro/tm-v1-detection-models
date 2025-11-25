@@ -1,0 +1,20 @@
+title: Copying of New Technology Directory Services Directory Information Tree File
+description: Detects the copying of the NTDS.dit or SYSTEM registry hive files that may indicate credential theft activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processCmd|re: '.*copy.*\\Windows\\NTDS\\NTDS.dit.*'
+    string_condition_1:
+        processCmd|re: '.*copy.*\\Windows\\System32\\config\\SYSTEM .*'
+    string_condition_2:
+        processCmd: '*save HKLM\SYSTEM*'
+    string_condition_3:
+        objectFileName: 'ntdsutil.exe'
+        objectCmd: '*ac i ntdsdit*'
+    condition: string_condition_0 or string_condition_1 or string_condition_2 or string_condition_3
+level: info
+taxonomy: tm-v1
