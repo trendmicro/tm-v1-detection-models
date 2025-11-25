@@ -1,5 +1,5 @@
 title: Possible Execution of Remote MSI Files via MSIExec
-description: Detects the use of network packet capturing tools that may indicate network sniffing activity in CrowdStrike Telemetry
+description: Detects the execution of remote MSI files via msiexec.exe that may indicate malicious activity in CrowdStrike Telemetry
 tags: []
 logsource:
     category: THIRD_PARTY_LOG
@@ -11,4 +11,5 @@ detection:
         processCmd|re: '.*https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/\/=]*)'
     condition: string_condition_0
 level: info
+
 taxonomy: tm-v1
