@@ -1,4 +1,4 @@
-title: Opening of Port within Defender Firewall.
+title: Opening of Port within Defender Firewall
 description: Detects the use of Outlook macro files that may indicate persistence activity in CrowdStrike Telemetry
 tags: []
 logsource:
@@ -13,4 +13,5 @@ detection:
         objectCmd: '*localport=*'
     condition: string_condition_0
 level: info
+
 taxonomy: tm-v1
