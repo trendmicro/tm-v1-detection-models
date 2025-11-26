@@ -1,0 +1,15 @@
+title: Packet Denial via Redundant Interface
+description: A packet was dropped because it was traversing the Secure Firewall ASA to or from a redundant interface. Interface functionality is limited on low-end platforms.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '424001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

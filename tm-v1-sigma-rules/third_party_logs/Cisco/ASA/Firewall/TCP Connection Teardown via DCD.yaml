@@ -1,0 +1,15 @@
+title: TCP Connection Teardown via DCD
+description: A TCP connection was closed by Dead Connection Detection (DCD) as it is no longer required.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '419006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

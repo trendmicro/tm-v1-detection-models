@@ -1,0 +1,15 @@
+title: Potential Network Denial Of Service via Application Failure
+description: A flow was skipped because the service module application has failed.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '421007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

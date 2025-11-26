@@ -1,0 +1,15 @@
+title: Potential Network Denial via SFR
+description: A packet has been denied by the module. Your connection is not successful for a certain flow that has been redirected to the module.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '434002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

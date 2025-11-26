@@ -1,0 +1,15 @@
+title: Potential Application Bypass via Unsupported Protocol
+description: The connection bypassed service module security checking because the protocol that it is using cannot be scanned by the service module. For example, the CSC SSM is not capable of scanning Telnet traffic.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '421002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

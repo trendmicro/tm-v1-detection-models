@@ -1,0 +1,15 @@
+title: TCP Connection Reset via IPS
+description: IPS requested a reset of a TCP connection.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '420003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

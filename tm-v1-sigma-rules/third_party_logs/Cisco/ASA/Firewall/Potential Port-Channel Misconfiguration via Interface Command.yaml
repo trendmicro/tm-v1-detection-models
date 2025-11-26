@@ -1,0 +1,15 @@
+title: Potential Port-Channel Misconfiguration via Interface Command
+description: The interface port-channel num or the channel-group num mode command has been used on a nonexistent port channel.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '426001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

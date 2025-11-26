@@ -1,0 +1,15 @@
+title: Connection Denied via Backup Interface
+description: A connection was dropped because it is in a backup state. Interface functionality is limited on low-end platforms.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '424002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

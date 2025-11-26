@@ -1,0 +1,15 @@
+title: Application Usage Accounting
+description: The total number of users who have used an application for the past 24 hours have been identified.
+tags:
+- mitre.t1087
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '421006'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

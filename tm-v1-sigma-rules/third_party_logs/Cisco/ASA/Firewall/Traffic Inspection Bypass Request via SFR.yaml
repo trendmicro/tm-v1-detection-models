@@ -1,0 +1,15 @@
+title: Traffic Inspection Bypass Request via SFR
+description: SourceFire (SFR) has determined not to inspect more traffic of a flow and requests the Secure Firewall ASA to stop redirecting the flow of traffic to SFR.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '434004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

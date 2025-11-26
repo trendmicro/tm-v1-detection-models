@@ -1,0 +1,15 @@
+title: RTP Packet DROP via ASA
+description: The RTP packet was dropped. The input interface, source IP address of the packet, source port of the packet, output interface, destination IP address of the packet, destination port of the packet, and drop reason are provided. One of the following drop reasons may apply. Incorrect version value—the version number from the packet is incorrect. Invalid payload-type value—the payload type from the packet is invalid.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '431001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: TCP Connection Reset via Module
+description: A TCP flow has been reset by the ASA, as requested by the module. Your TCP connection is not successful for a certain flow because it was redirected to the module.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '434003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Inspection Services Bypassed via WAAS
+description: WAAS optimization was detected on a connection.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '428002'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
