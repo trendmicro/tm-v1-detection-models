@@ -1,0 +1,15 @@
+title: H245 Connection Initiation via Foreign IP
+description: An H.245 connection has been started from the foreign IP address to the local IP address.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

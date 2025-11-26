@@ -1,0 +1,15 @@
+title: H225 Call Signalling Connection Preallocation
+description: An H.225 secondary channel has been preallocated.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302012'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

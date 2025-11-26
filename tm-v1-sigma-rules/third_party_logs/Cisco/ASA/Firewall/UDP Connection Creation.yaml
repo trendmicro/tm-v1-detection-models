@@ -1,0 +1,15 @@
+title: UDP Connection Creation
+description: A UDP connection slot between two hosts was created. The following list describes the message values, number—A unique identifier; interface, real_address, real_port—The actual sockets; mapped_address and mapped_port—The mapped sockets; user—The AAA name of the user; idfw_user—The name of the identity firewall user. If inbound is specified, then the original control connection is initiated from the outside. For example, for UDP, all data transfer channels are inbound if the original control channel is inbound. If outbound is specified, then the original control connection is initiated from the inside.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302015'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: License Server Unreachable
+description: The shared license server has been unreachable for 24 hours, and all shared licenses that have been acquired by the ASA have been released.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444105'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

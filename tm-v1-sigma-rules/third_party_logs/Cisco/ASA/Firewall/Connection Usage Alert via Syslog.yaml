@@ -1,0 +1,15 @@
+title: Connection Usage Alert via Syslog
+description: Provides information on the number of connections that are in use and most used.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302010'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

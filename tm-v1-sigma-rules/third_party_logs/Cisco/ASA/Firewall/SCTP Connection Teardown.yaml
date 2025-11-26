@@ -1,0 +1,15 @@
+title: SCTP Connection Teardown
+description: Cisco ASA Detection for SCTP Connection Teardown.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302036'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

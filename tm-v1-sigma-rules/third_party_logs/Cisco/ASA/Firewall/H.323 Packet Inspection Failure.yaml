@@ -1,0 +1,15 @@
+title: H.323 Packet Inspection Failure
+description: The specified ASN library that the Secure Firewall ASA uses for decoding the H.323 messages failed to initialize; the Secure Firewall ASA cannot decode or inspect the arriving H.323 packet. The Secure Firewall ASA allows the H.323 packet to pass through without any modification.
+tags:
+- mitre.t1046
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302019'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
