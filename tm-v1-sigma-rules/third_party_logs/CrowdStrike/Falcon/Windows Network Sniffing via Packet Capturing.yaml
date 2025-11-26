@@ -1,0 +1,16 @@
+title: Windows Network Sniffing via Packet Capturing
+description: Detects the use of network packet capturing tools that may indicate network sniffing activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFileName : 'netsh.exe'
+        objectCmd: '*trace start*'
+    string_condition_1:
+        objectFileName : 'tshark.exe'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,17 @@
+title: Opening of Port within Defender Firewall
+description: Detects the use of Outlook macro files that may indicate persistence activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        objectFileName : 'netsh.exe'
+        objectCmd: '*add rule*'
+        objectCmd: '*dir=in*'
+        objectCmd: '*localport=*'
+    condition: string_condition_0
+level: info
+
+taxonomy: tm-v1

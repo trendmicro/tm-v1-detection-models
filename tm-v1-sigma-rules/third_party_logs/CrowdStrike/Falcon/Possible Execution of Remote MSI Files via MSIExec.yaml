@@ -1,0 +1,15 @@
+title: Possible Execution of Remote MSI Files via MSIExec
+description: Detects the execution of remote MSI files via msiexec.exe that may indicate malicious activity in CrowdStrike Telemetry
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: CrowdStrike
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        processFileName: 'msiexec.exe'
+        processCmd|re: '.*https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/\/=]*)'
+    condition: string_condition_0
+level: info
+
+taxonomy: tm-v1
