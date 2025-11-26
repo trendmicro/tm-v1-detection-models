@@ -1,0 +1,18 @@
+title: Microsoft Windows SMB ShareEnum Buffer Overflow
+description: Palo Alto Networks detection for Microsoft Windows SMB ShareEnum Buffer Overflow. There is a buffer overflow vulnerability in SMB (Server Message Block) protocol in MicrosoftWindows NT, Windows 2000, and Windows XP. This vulnerability allows attackers to cause a denial of service (crash) via a malformed MB_COM_TRANSACTION packet with arequest for the (1) NetShareEnum, (2) NetServerEnum2, or (3)NetServerEnum3.
+tags:
+- cve.2002.0724
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30664'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

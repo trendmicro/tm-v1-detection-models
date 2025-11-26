@@ -1,0 +1,17 @@
+title: SCADA ICCP Unauthorized COTP Connection Established
+description: Palo Alto Networks detection for SCADA ICCP Unauthorized COTP Connection Established. SCADA is the abbreviation for Supervisory Control And Data Acquisition. It generally refers to an industrial control system a computer system monitoring and controlling a process. This alert indicates that an ICCP client has successfully connected using OSI Connection Oriented Transport Protocol.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31671'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

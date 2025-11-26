@@ -1,0 +1,17 @@
+title: ISF S7-300 and S7-400 Scanning Attempt
+description: Palo Alto Networks detection for ISF S7-300 and S7-400 Scanning Attempt. This signature detects an ISF S7-300 and S7-400 scanning request.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '94895'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,19 @@
+title: Ysoserial Java Object Deserialization Payloads Discovery
+description: Palo Alto Networks detection for Ysoserial Java Object Deserialization Payloads Detection. Ysoserial is a proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '56815'
+    - '56609'
+    - '56635'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
