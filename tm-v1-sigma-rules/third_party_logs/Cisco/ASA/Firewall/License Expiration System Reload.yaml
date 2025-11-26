@@ -1,0 +1,15 @@
+title: License Expiration System Reload
+description: The specific license expired 30 days ago. The system will reload.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444009'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

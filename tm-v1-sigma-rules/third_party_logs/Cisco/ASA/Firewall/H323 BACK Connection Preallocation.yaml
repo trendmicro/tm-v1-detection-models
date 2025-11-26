@@ -1,0 +1,15 @@
+title: H323 BACK Connection Preallocation
+description: An H.323 UDP back connection has been preallocated to the foreign address (foreign_ip_address) from the local address (local_ip_address). The Secure Firewall ASA has detected the use of an Intel Internet Phone. The foreign port (foreign_port) only appears on connections from outside the Secure Firewall ASA.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302004'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

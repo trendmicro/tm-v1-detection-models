@@ -1,0 +1,15 @@
+title: Potential License Expiration
+description: The specific license has expired, which will cause the system to reload in x days. Apply a new activation key to enable the specific license and prevent automatic reload.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444008'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

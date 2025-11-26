@@ -1,0 +1,15 @@
+title: License Usage Over Capacity
+description: The shared license usage on the network is over 90 percent capacity.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444103'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

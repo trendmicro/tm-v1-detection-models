@@ -1,0 +1,15 @@
+title: License Availability Notification
+description: The shared license availability on the network appeared.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444104'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

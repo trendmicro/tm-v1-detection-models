@@ -1,0 +1,15 @@
+title: SRTP Crypto Session Denial
+description: For a K8 platform, the limit of 250 SRTP crypto sessions is enforced.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '448001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

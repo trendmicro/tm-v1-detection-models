@@ -1,0 +1,15 @@
+title: License Server Unresponsive
+description: The shared license service was inactive because the license server was not responding.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444102'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: GRE Connection Establishment via NAT
+description: A GRE connection slot between two hosts was created. The ID is a unique identifier. The interface, real_address, real_cid tuple identifies one of the two simplex PPTP GRE streams. The parenthetical translated_address, translated_cid tuple identifies the translated value with NAT. If inbound is indicated, then the connection can only be used inbound.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302017'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

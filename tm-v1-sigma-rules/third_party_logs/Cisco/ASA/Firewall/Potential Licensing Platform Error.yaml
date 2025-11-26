@@ -1,0 +1,15 @@
+title: Potential Licensing Platform Error
+description: Smart Licensing Agent has encountered a platform problem. This indicates that the platform team did not properly implement smart licensing on the device.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444302'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

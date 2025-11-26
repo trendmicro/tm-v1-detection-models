@@ -1,0 +1,15 @@
+title: Daily Job Timer Reset
+description: This message is only used for testing purposes and does not indicate an error.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444307'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

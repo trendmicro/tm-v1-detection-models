@@ -1,0 +1,15 @@
+title: License Overage Notification
+description: This is for information only. The customer is still in compliance and within the overage amount as specified in their contract.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444304'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

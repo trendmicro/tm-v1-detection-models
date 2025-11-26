@@ -1,0 +1,15 @@
+title: GRE Connection Teardown
+description: A GRE connection slot between two hosts was deleted. The interface, real address, and real port tuples identify the actual sockets.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302018'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

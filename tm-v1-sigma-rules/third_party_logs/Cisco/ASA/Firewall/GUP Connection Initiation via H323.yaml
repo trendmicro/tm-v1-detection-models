@@ -1,0 +1,15 @@
+title: GUP Connection Initiation via H323
+description: A GUP connection was started from the foreign address to the local address.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302033'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

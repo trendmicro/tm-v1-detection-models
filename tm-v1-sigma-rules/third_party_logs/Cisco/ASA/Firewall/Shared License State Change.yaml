@@ -1,0 +1,15 @@
+title: Shared License State Change
+description: Cisco ASA Detection for Shared License State Change.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444108'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

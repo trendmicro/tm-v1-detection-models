@@ -1,0 +1,15 @@
+title: Potential TLS Proxy Session Denial
+description: Cisco ASA Detection for Potential TLS Proxy Session Denial.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '446003'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: License Server Role Change
+description: The shared backup license server role has changed. The state of the license server. Valid values are active or inactive.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444109'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
