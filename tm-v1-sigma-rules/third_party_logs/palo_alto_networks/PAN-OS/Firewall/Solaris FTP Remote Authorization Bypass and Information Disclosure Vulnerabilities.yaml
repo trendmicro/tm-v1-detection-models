@@ -1,0 +1,17 @@
+title: Solaris FTP Remote Authorization Bypass and Information Disclosure Vulnerabilities
+description: Palo Alto Networks detection for Solaris FTP Remote Authorization Bypass and Information Disclosure Vulnerabilities. Solaris FTP is prone to remote authorization bypass and information disclosure vulnerabilities while parsing certain crafted FTP requests. The vulnerabilities are due to the lack of proper checks in FTP requests, leading to exploitable remote authorization bypass and information disclosure vulnerabilities. An attacker could exploit the vulnerabilities by sending crafted FTP requests. A successful attack could lead to remote authorization bypass and information disclosure with the privileges of the server.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '32789'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
