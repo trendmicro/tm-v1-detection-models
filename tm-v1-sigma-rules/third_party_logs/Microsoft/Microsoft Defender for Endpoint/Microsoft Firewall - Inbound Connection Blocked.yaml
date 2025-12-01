@@ -1,0 +1,17 @@
+title: Microsoft Firewall - Inbound Connection Blocked
+description: Microsoft telemetry detection that identifies when inbound connections are blocked by the Microsoft Defender Firewall, which may indicate attempts to access network services or systems that are being actively denied.
+tags:
+  - mitre.t1095
+  - mitre.t1021
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'FirewallInboundConnectionBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

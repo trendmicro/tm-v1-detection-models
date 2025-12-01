@@ -1,0 +1,17 @@
+title: Microsoft Firewall Outbound Connection Blocked
+description: Microsoft telemetry detection that identifies when outbound connections are blocked by the Microsoft Defender Firewall, which may indicate attempts to exfiltrate data or communicate with command and control servers.
+tags:
+  - mitre.t1071
+  - mitre.t1041
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'FirewallOutboundConnectionBlocked'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

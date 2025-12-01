@@ -1,0 +1,16 @@
+title: Firewall Service Stopped
+description: Microsoft telemetry detection that identifies when the Microsoft Defender Firewall service is stopped, which may indicate attempts to disable firewall protections as part of an attacker's effort to reduce system defenses.
+tags:
+  - mitre.t1562.004
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'FirewallServiceStopped'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

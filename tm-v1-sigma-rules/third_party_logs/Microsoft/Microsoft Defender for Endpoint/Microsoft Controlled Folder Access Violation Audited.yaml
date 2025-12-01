@@ -1,0 +1,16 @@
+title: Microsoft Controlled Folder Access Violation Audited
+description: Microsoft telemetry detection that identifies when Microsoft Defender Controlled Folder Access violations occur, where unauthorized processes attempt to modify protected folders, commonly associated with ransomware activity.
+tags:
+  - mitre.t1486
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'ControlledFolderAccessViolationAudited'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
