@@ -1,0 +1,16 @@
+title: File Timestamp Modification
+description: Microsoft telemetry detection that identifies when file timestamp modifications occur, which may indicate attempts to cover tracks or manipulate file metadata for evasion purposes.
+tags:
+  - mitre.t1070.006
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'FileTimestampModificationEvent'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

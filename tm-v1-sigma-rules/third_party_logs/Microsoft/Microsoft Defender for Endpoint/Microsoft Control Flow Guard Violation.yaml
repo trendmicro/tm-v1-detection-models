@@ -1,0 +1,17 @@
+title: Microsoft Control Flow Guard Violation
+description: Microsoft telemetry detection that identifies when a Control Flow Guard (CFG) violation occurs, which may indicate attempts to exploit memory corruption vulnerabilities or bypass security mechanisms in applications.
+tags:
+  - mitre.t1055
+  - mitre.t1211
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'ControlFlowGuardViolation'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1

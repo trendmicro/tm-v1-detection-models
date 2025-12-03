@@ -1,0 +1,16 @@
+title: Microsoft API Call - GetAsyncKeyState
+description: Microsoft telemetry detection that identifies when the GetAsyncKeyState API call is made, which may indicate attempts to monitor keyboard input for keylogging or other malicious activities.
+tags:
+  - mitre.t1056.001
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    eventCategory: 'DeviceEvents'
+  selection2:
+    actionName: 'GetAsyncKeyStateApiCall'
+  condition: selection1 and selection2
+level: info
+taxonomy: tm-v1
