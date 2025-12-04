@@ -1,0 +1,18 @@
+title: Mature Humor Content Access Blocked
+description: Detects and blocks user attempts to access websites containing mature humor content that may be inappropriate for workplace environments. This filter helps organizations maintain professional browsing standards and comply with acceptable use policies by preventing access to adult-oriented comedic material that could create hostile work environments or violate corporate guidelines.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Mature Humor
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

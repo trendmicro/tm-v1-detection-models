@@ -1,0 +1,18 @@
+title: Travel Website Access Blocked - Medium Risk
+description: Detects blocked access attempts to travel-related websites and services. This filter identifies when users attempt to access travel booking sites, vacation planning platforms, or travel-related content that has been blocked by security policies. Monitoring these events helps ensure compliance with organizational internet usage policies and identifies potential productivity concerns or policy violations.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Travel
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

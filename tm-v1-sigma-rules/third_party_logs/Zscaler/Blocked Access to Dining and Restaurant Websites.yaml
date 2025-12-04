@@ -1,0 +1,18 @@
+title: Blocked Access to Dining and Restaurant Websites
+description: Detects and blocks user attempts to access dining and restaurant websites that violate organizational internet usage policies. This filter helps maintain productivity during work hours and ensures compliance with acceptable use policies by preventing access to food service and restaurant content that may be considered non-business related browsing activity.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Dining/Restaurant
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

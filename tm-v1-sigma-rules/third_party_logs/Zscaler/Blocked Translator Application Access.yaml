@@ -1,0 +1,18 @@
+title: Blocked Translator Application Access
+description: Detects blocked access attempts to translation applications and services. This filter identifies when users attempt to access language translation tools that may pose data loss prevention risks or violate organizational policies regarding sensitive information handling through third-party services.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Translators
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

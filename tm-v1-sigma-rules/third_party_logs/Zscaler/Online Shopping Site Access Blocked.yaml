@@ -1,0 +1,18 @@
+title: Online Shopping Site Access Blocked
+description: Detects and blocks access to online shopping and e-commerce websites to prevent unauthorized purchases, reduce productivity loss, and maintain compliance with organizational internet usage policies during business hours
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Online Shopping
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

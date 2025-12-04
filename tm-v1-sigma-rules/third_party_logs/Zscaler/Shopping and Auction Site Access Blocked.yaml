@@ -1,0 +1,18 @@
+title: Shopping and Auction Site Access Blocked
+description: Detects blocked access attempts to shopping and auction websites including e-commerce platforms, online marketplaces, and bidding sites. This filter identifies when users attempt to access retail websites that may violate organizational internet usage policies or pose productivity concerns during business hours.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Other Shopping and Auctions
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

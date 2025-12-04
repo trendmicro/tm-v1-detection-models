@@ -1,0 +1,18 @@
+title: Portal Access Blocked - Medium Severity Security Event
+description: Detects blocked attempts to access portal websites or applications. This filter identifies potential security threats where users or automated systems have been prevented from accessing web portals, which may indicate malicious activity, policy violations, or unauthorized access attempts. Monitoring these events helps identify attack patterns and ensures compliance with organizational access policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Portals
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

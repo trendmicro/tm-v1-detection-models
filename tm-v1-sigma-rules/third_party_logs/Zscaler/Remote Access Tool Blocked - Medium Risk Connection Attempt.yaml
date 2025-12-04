@@ -1,0 +1,18 @@
+title: Remote Access Tool Blocked - Medium Risk Connection Attempt
+description: This filter detects and blocks connections to remote access tools and applications that pose moderate security risks to the organization. Remote access tools can be leveraged by threat actors for unauthorized system access, data exfiltration, or establishing persistent backdoors. Blocking these connections helps prevent potential security breaches and maintains network integrity by controlling remote administration capabilities.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Remote Access Tools
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Adult Content Access Blocked - Other Adult Material
+description: Detects and blocks access to adult content websites and materials that fall outside standard adult content categories. This filter helps maintain workplace productivity standards and ensures compliance with organizational acceptable use policies by preventing access to inappropriate adult-oriented content during business hours.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Other Adult Material
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
