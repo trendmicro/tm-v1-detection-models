@@ -1,0 +1,16 @@
+title: UAC Extensions User Access to UAC Tools Allowed
+description: Detects when users with UAC extensions are granted access to User Account Control tools and utilities. This filter monitors legitimate administrative access patterns but should be reviewed to ensure proper privilege management and prevent potential privilege escalation attempts through UAC bypass techniques.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - TES UAC Extensions Users to UAC Tools-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

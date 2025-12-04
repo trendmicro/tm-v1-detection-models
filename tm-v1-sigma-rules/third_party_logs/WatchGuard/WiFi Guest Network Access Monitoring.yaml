@@ -1,0 +1,16 @@
+title: WiFi Guest Network Access Monitoring
+description: Monitors and logs allowed network access attempts from WiFi guest users to track visitor network usage patterns and ensure guest traffic remains within authorized network segments. This filter helps maintain visibility into guest network activity for security auditing and potential abuse detection.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - WiFi Guest Users-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

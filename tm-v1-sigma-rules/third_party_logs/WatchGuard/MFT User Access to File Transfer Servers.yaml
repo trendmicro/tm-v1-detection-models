@@ -1,0 +1,16 @@
+title: MFT User Access to File Transfer Servers
+description: Monitors allowed connections from MFT users to managed file transfer servers. This filter tracks legitimate file transfer activities and helps establish baseline patterns for secure data exchange operations while identifying potential anomalies in file transfer access patterns.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - MFT Users to MFT Servers Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

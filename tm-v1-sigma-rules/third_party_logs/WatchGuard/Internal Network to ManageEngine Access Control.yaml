@@ -1,0 +1,16 @@
+title: Internal Network to ManageEngine Access Control
+description: Monitors and allows legitimate internal network traffic to ManageEngine management systems. This filter tracks authorized administrative access to network management infrastructure, ensuring proper connectivity while maintaining visibility into management plane activities for security oversight and compliance monitoring.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Manage Engine-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

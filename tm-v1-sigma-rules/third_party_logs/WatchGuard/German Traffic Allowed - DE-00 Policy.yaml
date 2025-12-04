@@ -1,0 +1,16 @@
+title: German Traffic Allowed - DE-00 Policy
+description: Monitors network traffic originating from Germany (DE-00) that is being permitted through the firewall. This filter tracks allowed connections from German IP addresses which may be relevant for compliance monitoring, geographic access analysis, or identifying legitimate international business communications.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Traffic from DE-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

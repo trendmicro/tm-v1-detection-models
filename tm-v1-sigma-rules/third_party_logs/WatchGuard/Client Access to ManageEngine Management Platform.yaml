@@ -1,0 +1,16 @@
+title: Client Access to ManageEngine Management Platform
+description: Detects allowed network traffic from client devices to ManageEngine management infrastructure. This filter monitors legitimate administrative connections to help establish baseline network behavior and identify potential unauthorized access attempts to critical management systems.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Clients to ManageEngine-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

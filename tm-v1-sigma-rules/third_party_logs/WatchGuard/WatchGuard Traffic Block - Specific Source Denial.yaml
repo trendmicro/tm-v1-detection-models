@@ -1,0 +1,16 @@
+title: WatchGuard Traffic Block - Specific Source Denial
+description: Detects denied network traffic from specific sources blocked by WatchGuard firewall policy. This rule identifies potentially malicious or unauthorized connection attempts that have been actively blocked, indicating possible security threats or policy violations that require investigation.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Block from Specific Any-00
+    act:
+    - '["Deny"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

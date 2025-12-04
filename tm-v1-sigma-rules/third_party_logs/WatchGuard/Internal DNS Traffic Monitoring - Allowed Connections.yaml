@@ -1,0 +1,16 @@
+title: Internal DNS Traffic Monitoring - Allowed Connections
+description: Monitors and logs internal network traffic directed to DNS servers that has been permitted through firewall policy Internal to DNS-00. This filter tracks legitimate DNS resolution requests from internal hosts to identify baseline network behavior and ensure proper DNS functionality while maintaining visibility into internal DNS query patterns for security analysis.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to DNS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

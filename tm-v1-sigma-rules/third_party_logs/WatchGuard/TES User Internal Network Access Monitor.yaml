@@ -1,0 +1,16 @@
+title: TES User Internal Network Access Monitor
+description: Monitors allowed network traffic from TES users to internal network resources. This filter tracks legitimate internal access patterns and helps establish baseline behavior for TES user accounts, enabling detection of anomalous access attempts or policy violations when correlated with denied traffic events.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - TES Users to Internal Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

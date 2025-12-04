@@ -1,0 +1,16 @@
+title: Internal Network Traffic to GR-00 Destination Allowed
+description: Monitors and logs permitted internal network communications directed to GR-00 destination endpoints. This filter tracks legitimate internal traffic flows to establish baseline network behavior patterns and ensure proper network segmentation compliance. Analyzing allowed internal traffic helps identify normal communication patterns and can assist in detecting anomalous behavior when compared against typical network flows.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to GR-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

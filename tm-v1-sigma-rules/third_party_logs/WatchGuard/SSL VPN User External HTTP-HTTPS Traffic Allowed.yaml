@@ -1,0 +1,16 @@
+title: SSL VPN User External HTTP-HTTPS Traffic Allowed
+description: Monitors SSL VPN authenticated users accessing external HTTP and HTTPS resources. This filter tracks legitimate outbound web traffic from VPN clients to ensure proper connectivity while maintaining visibility into remote user web browsing patterns for security monitoring and compliance purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - SSLVPN Users to Extenral HTTP_HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

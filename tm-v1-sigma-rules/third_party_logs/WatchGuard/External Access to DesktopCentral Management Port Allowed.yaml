@@ -1,0 +1,16 @@
+title: External Access to DesktopCentral Management Port Allowed
+description: Detects allowed external network traffic to DesktopCentral management service on port 8443. This filter monitors legitimate administrative access to the endpoint management platform from external sources. While these are permitted connections, monitoring external access to management interfaces is critical for identifying potential unauthorized administrative activity or credential compromise attempts against the DesktopCentral infrastructure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - External to DesktopCentral 8443-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

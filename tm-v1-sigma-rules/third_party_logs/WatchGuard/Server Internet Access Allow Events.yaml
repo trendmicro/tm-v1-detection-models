@@ -1,0 +1,16 @@
+title: Server Internet Access Allow Events
+description: Detects allowed outbound traffic from internal servers to external internet destinations. This filter monitors legitimate server-to-internet communications which may include software updates, external API calls, or data synchronization activities. Regular monitoring helps establish baseline patterns and identify potential unauthorized outbound connections or data exfiltration attempts.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Servers to Internet-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

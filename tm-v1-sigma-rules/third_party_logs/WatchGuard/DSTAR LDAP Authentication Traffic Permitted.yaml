@@ -1,0 +1,16 @@
+title: DSTAR LDAP Authentication Traffic Permitted
+description: Detects allowed LDAP authentication traffic from internal network segments to DSTAR directory services. This filter monitors legitimate directory service communications that have been explicitly permitted through firewall policy, indicating normal authentication and directory lookup operations between network zones.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Rnd to DSTAR LDAP-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

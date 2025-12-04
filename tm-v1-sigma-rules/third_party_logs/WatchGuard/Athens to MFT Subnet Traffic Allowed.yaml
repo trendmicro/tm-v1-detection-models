@@ -1,0 +1,16 @@
+title: Athens to MFT Subnet Traffic Allowed
+description: Detects allowed network traffic from Athens network segment to Managed File Transfer subnets. This filter monitors legitimate file transfer operations and data exchange between the Athens location and MFT infrastructure, which is critical for tracking authorized data movement and ensuring proper network segmentation compliance.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Athens to MFT Subnets Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

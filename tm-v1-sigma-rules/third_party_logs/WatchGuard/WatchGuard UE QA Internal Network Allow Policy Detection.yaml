@@ -1,0 +1,16 @@
+title: WatchGuard UE QA Internal Network Allow Policy Detection
+description: Monitors traffic allowed through WatchGuard firewall policy UE QA Internal Any-00 which permits internal QA environment communications. This filter tracks legitimate internal testing traffic flows and helps validate that QA network segmentation policies are functioning correctly while ensuring no unauthorized access patterns emerge from testing environments.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - UE QA Internal Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

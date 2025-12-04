@@ -1,0 +1,16 @@
+title: Server HTTP Internet Access Monitoring
+description: Monitors outbound HTTP traffic from internal servers to external internet destinations. This filter tracks server-initiated web communications which may indicate legitimate application behavior, software updates, or potential data exfiltration attempts. Regular monitoring helps identify unauthorized server communications and ensures compliance with network security policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Servers to Internet HTTP-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

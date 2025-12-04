@@ -1,0 +1,16 @@
+title: SSL VPN Access on Port 443 Allowed
+description: Monitors successful SSL VPN connections established on port 443. This filter tracks legitimate remote access sessions to help validate authorized VPN usage and maintain visibility into remote connectivity patterns for security auditing and compliance purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - SSL-VPN 443-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

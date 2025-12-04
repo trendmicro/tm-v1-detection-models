@@ -1,0 +1,16 @@
+title: WiFi User Internal Network Access Allow
+description: Monitors allowed network traffic from WiFi users accessing internal network resources. This filter tracks legitimate wireless device connectivity to internal systems and helps establish baseline patterns for wireless network usage and potential unauthorized access attempts.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - WiFi Users to Internal-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

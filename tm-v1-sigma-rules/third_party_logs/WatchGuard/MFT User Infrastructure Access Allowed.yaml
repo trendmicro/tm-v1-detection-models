@@ -1,0 +1,16 @@
+title: MFT User Infrastructure Access Allowed
+description: Detects allowed network traffic from MFT users to MFT infrastructure components. This filter monitors legitimate file transfer operations and helps establish baseline patterns for managed file transfer activities. Regular monitoring ensures proper access controls are functioning and can help identify unusual access patterns or potential misuse of MFT services.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - MFT Users to MFT Infra Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

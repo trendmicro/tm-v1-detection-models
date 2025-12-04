@@ -1,0 +1,16 @@
+title: Internal Jenkins HTTPS Traffic Monitoring
+description: Monitors allowed HTTPS connections from internal networks to Jenkins servers. This filter tracks legitimate internal access to Jenkins infrastructure which is critical for identifying baseline traffic patterns and detecting potential unauthorized access attempts or lateral movement activities targeting CI-CD pipeline systems.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Jenkins HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
