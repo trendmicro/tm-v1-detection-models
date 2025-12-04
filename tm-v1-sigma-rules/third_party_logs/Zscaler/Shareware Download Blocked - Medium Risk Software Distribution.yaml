@@ -1,0 +1,18 @@
+title: Shareware Download Blocked - Medium Risk Software Distribution
+description: Detects and blocks attempts to download shareware applications that may contain potentially unwanted programs, adware, or security vulnerabilities. This filter helps prevent installation of unvetted software that could compromise system security or introduce malicious components into the corporate environment.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Shareware Download
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

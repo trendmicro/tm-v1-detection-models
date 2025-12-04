@@ -1,0 +1,18 @@
+title: Cross-Site Scripting Attack Blocked
+description: Detects and blocks web requests containing cross-site scripting (XSS) attack patterns that attempt to inject malicious scripts into web applications. This filter prevents attackers from executing unauthorized JavaScript code in user browsers which could lead to session hijacking, credential theft, or malicious content injection.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Cross-site Scripting
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

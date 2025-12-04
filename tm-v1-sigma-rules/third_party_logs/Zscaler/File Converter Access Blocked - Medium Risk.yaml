@@ -1,0 +1,18 @@
+title: File Converter Access Blocked - Medium Risk
+description: Detects blocked access attempts to file conversion services and applications. File converters can pose security risks through malicious file processing, data exfiltration, or serving as vectors for malware distribution. This filter identifies when users attempt to access potentially risky file conversion tools that have been blocked by security policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - File Convertors
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Marijuana Content Access Blocked
+description: Detects and blocks access to websites containing marijuana-related content including dispensaries, cultivation guides, and cannabis products. This filter helps organizations maintain compliance with workplace policies and regulatory requirements by preventing access to drug-related content that may violate company standards or local regulations.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Marijuana
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

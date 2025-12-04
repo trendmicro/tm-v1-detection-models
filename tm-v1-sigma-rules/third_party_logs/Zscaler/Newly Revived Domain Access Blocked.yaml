@@ -1,0 +1,18 @@
+title: Newly Revived Domain Access Blocked
+description: Detects and blocks access attempts to newly revived domains that were previously dormant or expired. These domains are frequently leveraged by threat actors for malicious activities such as phishing campaigns, malware distribution, or command and control infrastructure due to their established trust reputation and existing backlink profiles. Blocking access to such domains helps prevent potential security incidents and protects against domain reputation abuse tactics commonly used in cyber attacks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Newly Revived Domains
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Online Chat Platform Access Blocked
+description: Detects and blocks access to online chat platforms and messaging services that may pose security risks including data exfiltration, malware distribution, or violation of acceptable use policies. This filter helps organizations maintain control over communication channels and prevent potential security incidents through unmonitored chat applications.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Online Chat
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

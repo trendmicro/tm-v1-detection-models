@@ -1,0 +1,18 @@
+title: Phishing Website Access Blocked
+description: Detects and blocks user attempts to access known phishing websites that impersonate legitimate services to steal credentials or sensitive information. This filter prevents users from inadvertently submitting personal data to malicious actors and protects against credential harvesting attacks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Phishing
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

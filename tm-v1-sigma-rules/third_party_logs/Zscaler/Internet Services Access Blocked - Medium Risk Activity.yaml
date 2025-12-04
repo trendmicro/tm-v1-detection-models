@@ -1,0 +1,18 @@
+title: Internet Services Access Blocked - Medium Risk Activity
+description: Detects blocked access attempts to internet services that pose medium-level security risks. This filter identifies when users attempt to access potentially harmful or policy-violating internet services that have been blocked by security controls. Monitoring these events helps identify potential security threats, policy violations, or users attempting to access unauthorized services that could compromise network security or organizational compliance requirements.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - Internet Services
+    severity:
+    - 3
+    act:
+    - Blocked
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
