@@ -1,0 +1,18 @@
+title: phpnuke Search Module Query variable SQL Injection
+description: Palo Alto Networks detection for phpnuke Search Module Query variable SQL Injection. phpNuke versions between 7.5 and 7.8 are prone to a SQL injection vulnerability in the search module.The vulnerability is due the lack of sanitization of user-supplied input to the query parameterof the search module. An attacker could exploit the vulnerability by crafting a HTTP request and injecting SQL commands,in order to retrieve or modify sensitive database information.
+tags:
+- cve.2005.3792
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30093'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
