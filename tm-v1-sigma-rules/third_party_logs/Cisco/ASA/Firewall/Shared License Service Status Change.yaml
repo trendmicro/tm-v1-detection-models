@@ -1,0 +1,15 @@
+title: Shared License Service Status Change
+description: The shared license service has been enabled or disabled on the specified interface. The interface name and the status of the license server are provided. Valid values are enabled or disabled.
+tags:
+- mitre.t1016
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444107'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

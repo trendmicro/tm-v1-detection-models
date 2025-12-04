@@ -1,0 +1,15 @@
+title: UDP Director Connection Creation
+description: A UDP director/backup/forwarder flow has been created.
+tags:
+- mitre.t1021
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '302024'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

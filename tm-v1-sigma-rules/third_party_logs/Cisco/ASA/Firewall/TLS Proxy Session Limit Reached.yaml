@@ -1,0 +1,15 @@
+title: TLS Proxy Session Limit Reached
+description: A configured maximum session limit for TLS proxy was reached.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '446001'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

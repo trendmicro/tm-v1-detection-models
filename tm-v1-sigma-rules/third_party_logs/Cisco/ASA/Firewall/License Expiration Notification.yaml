@@ -1,0 +1,15 @@
+title: License Expiration Notification
+description: Cisco ASA Detection for License Expiration Notification.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444007'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Shared License Request Failure
+description: A shared license client request was unsuccessfully sent or processed by the server.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444100'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

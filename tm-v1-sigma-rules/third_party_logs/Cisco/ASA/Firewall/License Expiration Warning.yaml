@@ -1,0 +1,15 @@
+title: License Expiration Warning
+description: This message is generated every 24 hours, indicating that the temporary license will expire in the number of days specified.
+tags:
+- mitre.t1078
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444005'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: Smart Licensing Registration Failure
+description: Smart Licensing registration failed. This may have been caused due to an invalid ID token used during the registration or network connection failure to cisco.com.
+tags:
+- mitre.t1498
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Cisco
+detection:
+  mappingtable:
+    vendorLogId:
+    - '444303'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
