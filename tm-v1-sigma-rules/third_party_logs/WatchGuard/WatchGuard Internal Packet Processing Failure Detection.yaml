@@ -1,0 +1,16 @@
+title: WatchGuard Internal Packet Processing Failure Detection
+description: Detects unhandled internal packets that are being denied by WatchGuard firewall rules, indicating potential network misconfigurations, routing issues, or security policy gaps that could impact internal network communications and system stability
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Unhandled Internal Packet-00
+    act:
+    - '["Deny"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: US Infrastructure Outbound Allow Traffic Monitor
+description: Monitors allowed outbound traffic from US infrastructure systems to any destination. This filter tracks legitimate network connections that may indicate normal business operations or potential data exfiltration attempts. Regular review helps ensure infrastructure systems maintain appropriate communication patterns and identifies unusual destination patterns that warrant investigation.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - US Infrastructure to ANY-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

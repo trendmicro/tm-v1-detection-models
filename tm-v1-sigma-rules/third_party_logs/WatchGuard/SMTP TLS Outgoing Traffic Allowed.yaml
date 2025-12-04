@@ -1,0 +1,16 @@
+title: SMTP TLS Outgoing Traffic Allowed
+description: Detects allowed outbound SMTP traffic using TLS encryption. This filter monitors legitimate encrypted email communications leaving the network, which is important for tracking secure email transmission patterns and ensuring proper email security protocols are being followed.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - SMTP_TLS_OUTGOING-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

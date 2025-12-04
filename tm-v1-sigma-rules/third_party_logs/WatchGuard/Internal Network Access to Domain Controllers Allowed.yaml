@@ -1,0 +1,16 @@
+title: Internal Network Access to Domain Controllers Allowed
+description: Monitors allowed network traffic from internal sources to domain controllers. This filter tracks legitimate internal communications with critical Active Directory infrastructure, helping establish baseline patterns for authentication services, group policy distribution, and other domain operations. Useful for identifying normal administrative access patterns and detecting potential anomalies in domain controller communication flows.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Domain Controllers-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: Customer Support RDP Access to License Server Allowed
+description: Detects allowed RDP connections from customer support systems to license servers. This filter monitors legitimate administrative access patterns and helps validate that support personnel are accessing licensing infrastructure through proper channels. Important for tracking privileged access to critical license management systems and ensuring compliance with access control policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Customer Support to License Server RDP-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

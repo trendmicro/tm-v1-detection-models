@@ -1,0 +1,16 @@
+title: Synology Backup Traffic Allowed - Verona to Siena Network
+description: Detects authorized backup traffic between Verona and Siena networks using Synology backup services. This filter identifies legitimate data synchronization activities that are explicitly permitted through firewall policy. Monitoring these allowed connections helps validate proper backup operations and ensures data protection workflows are functioning as expected between network segments.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Verona to Siena Synology Backup-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

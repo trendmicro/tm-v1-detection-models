@@ -1,0 +1,16 @@
+title: Default VLAN Unrestricted Access Policy
+description: Detects network traffic allowed from the default VLAN to any destination through WatchGuard firewall policy NMK Default VLAN to Any-00. This filter monitors potentially overpermissive network access from default network segments which may indicate inadequate network segmentation or baseline connectivity validation. Default VLAN traffic should typically be restricted to prevent unauthorized lateral movement and maintain proper network isolation.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - NMK Default VLAN to Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

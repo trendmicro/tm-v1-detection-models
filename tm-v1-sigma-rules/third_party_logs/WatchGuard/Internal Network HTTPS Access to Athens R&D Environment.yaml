@@ -1,0 +1,16 @@
+title: Internal Network HTTPS Access to Athens R&D Environment
+description: Monitors allowed HTTPS traffic from internal networks to the Athens Research and Development environment. This filter tracks legitimate encrypted communications to R&D resources and helps establish baseline traffic patterns for detecting potential unauthorized access attempts or data exfiltration activities targeting sensitive development systems.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to RnD Athens HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

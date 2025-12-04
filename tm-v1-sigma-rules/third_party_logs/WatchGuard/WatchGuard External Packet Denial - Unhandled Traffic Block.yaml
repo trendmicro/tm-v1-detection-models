@@ -1,0 +1,16 @@
+title: WatchGuard External Packet Denial - Unhandled Traffic Block
+description: Detects when WatchGuard firewall denies external network packets that do not match any configured policy rules. This indicates potential unauthorized access attempts, misconfigured network traffic, or reconnaissance activities targeting the network perimeter. Monitoring these events helps identify security threats and ensures proper firewall rule coverage for legitimate traffic flows.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Unhandled External Packet-00
+    act:
+    - '["Deny"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

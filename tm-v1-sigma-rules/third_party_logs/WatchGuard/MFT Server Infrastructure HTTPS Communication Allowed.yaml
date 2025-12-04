@@ -1,0 +1,16 @@
+title: MFT Server Infrastructure HTTPS Communication Allowed
+description: Detects allowed HTTPS traffic between Managed File Transfer servers and supporting infrastructure components. This filter identifies legitimate encrypted file transfer operations and administrative communications within the MFT environment, helping distinguish normal business operations from potential security incidents.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - MFT Servers to MFT Infra HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

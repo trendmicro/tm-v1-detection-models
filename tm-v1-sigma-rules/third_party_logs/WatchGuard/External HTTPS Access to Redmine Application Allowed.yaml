@@ -1,0 +1,16 @@
+title: External HTTPS Access to Redmine Application Allowed
+description: Detects allowed HTTPS connections from external sources to Redmine project management application. This filter monitors legitimate external access to the Redmine web interface, which may indicate normal user activity or potential reconnaissance attempts against the project management system. Regular monitoring helps establish baseline access patterns and identify unusual connection behaviors.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - External to Redmine HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

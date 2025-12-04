@@ -1,0 +1,16 @@
+title: Internal SMTP Traffic to Internet Allowed
+description: Monitors outbound SMTP email traffic from internal networks to external internet destinations. This filter tracks legitimate email communications while helping identify potential data exfiltration attempts, unauthorized mail relay usage, or compromised internal systems attempting to send spam or malicious content to external recipients.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Internet SMTP-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

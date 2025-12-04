@@ -1,0 +1,16 @@
+title: MFT User HTTPS Access to Infrastructure Allowed
+description: Monitors allowed HTTPS connections from MFT users to MFT infrastructure components. This filter tracks legitimate secure file transfer communications to ensure proper access patterns and identify potential baseline deviations in managed file transfer operations.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - MFT Users to MFT Infra HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: GR Infrastructure to US Infrastructure Traffic Monitoring
+description: Monitors allowed network traffic flows from Greece infrastructure to United States infrastructure. This filter tracks cross-regional infrastructure communications to ensure proper network segmentation, detect unusual traffic patterns, and maintain visibility into international data flows for compliance and security analysis.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - GR Infra to  US Infra Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

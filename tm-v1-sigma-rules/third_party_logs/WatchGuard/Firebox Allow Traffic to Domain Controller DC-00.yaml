@@ -1,0 +1,16 @@
+title: Firebox Allow Traffic to Domain Controller DC-00
+description: Monitors allowed network traffic from WatchGuard Firebox firewall to domain controller DC-00. This filter captures legitimate communications between the firewall and domain controller which may include authentication requests, policy updates, and administrative traffic. Useful for baseline monitoring and ensuring proper connectivity to critical infrastructure components.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Firebox to DC-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

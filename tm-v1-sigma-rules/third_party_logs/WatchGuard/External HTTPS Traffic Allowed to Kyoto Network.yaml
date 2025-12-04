@@ -1,0 +1,16 @@
+title: External HTTPS Traffic Allowed to Kyoto Network
+description: Detects external HTTPS connections permitted to the Kyoto network segment. This filter monitors inbound encrypted web traffic that has been explicitly allowed through firewall policies, enabling security teams to track legitimate external access patterns and identify potential suspicious activity even within approved traffic flows.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - External to Kyoto HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

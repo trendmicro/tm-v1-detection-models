@@ -1,0 +1,16 @@
+title: Network Administrator Unrestricted Access Policy
+description: Detects when network administrators are granted broad allow permissions to any destination or resource. This policy monitors administrative access patterns that could indicate overprivileged accounts or potential lateral movement if administrator credentials are compromised. Regular review of these permissions helps ensure principle of least privilege compliance and reduces attack surface exposure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Network Admins to Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
