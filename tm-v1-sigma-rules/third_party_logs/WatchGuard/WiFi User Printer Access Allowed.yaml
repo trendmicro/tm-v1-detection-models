@@ -1,0 +1,16 @@
+title: WiFi User Printer Access Allowed
+description: Detects when WiFi users are granted access to printer resources through WatchGuard firewall policy. This filter monitors wireless network users attempting to connect to printing devices, which may indicate legitimate printing activities or potential lateral movement attempts. Regular monitoring helps ensure printer access aligns with organizational security policies and user access requirements.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - WiFi Users to Printer Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

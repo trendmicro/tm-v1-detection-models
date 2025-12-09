@@ -1,0 +1,16 @@
+title: US Traffic Allow Policy Monitor
+description: Monitors allowed network traffic originating from United States IP addresses under the Traffic from US Any-00 policy. This filter tracks permitted connections to identify baseline traffic patterns and ensure appropriate access controls are functioning as intended for US-based network communications.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Traffic from US Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

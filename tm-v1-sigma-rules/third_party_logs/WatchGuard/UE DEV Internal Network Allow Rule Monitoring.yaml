@@ -1,0 +1,16 @@
+title: UE DEV Internal Network Allow Rule Monitoring
+description: Monitors allow actions from the UE DEV Internal Any-00 policy which permits internal development network traffic. This filter tracks permitted connections within the development environment to ensure proper network segmentation and identify potential lateral movement or unauthorized access patterns in development infrastructure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - UE DEV Internal Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: Internal Network HTTP-HTTPS Access to Redmine Server Allowed
+description: Monitors allowed HTTP and HTTPS traffic from internal network segments to Redmine project management servers. This filter tracks legitimate web-based access to Redmine applications for project collaboration and issue tracking. Regular monitoring helps establish baseline traffic patterns and identify potential policy violations or unauthorized access attempts to project management resources.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Redmine HTTP_HTTPS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: STBGR41 Outbound Internet Access Allow Filter
+description: Monitors and logs allowed outbound network traffic from STBGR41 systems to internet destinations. This filter tracks legitimate internet access patterns and helps establish baseline network behavior for security analysis and potential anomaly detection.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - STBGR41 to Internet Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

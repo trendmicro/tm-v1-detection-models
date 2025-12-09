@@ -1,0 +1,16 @@
+title: External Access to DesktopCentral Management Port 8031
+description: Detects allowed external network traffic targeting DesktopCentral management interface on port 8031. This activity may indicate legitimate remote administration or potential unauthorized access attempts to the endpoint management system. Monitor for unusual source locations or excessive connection patterns that could suggest reconnaissance or compromise attempts against the DesktopCentral infrastructure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - External to DesktopCentral 8031-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

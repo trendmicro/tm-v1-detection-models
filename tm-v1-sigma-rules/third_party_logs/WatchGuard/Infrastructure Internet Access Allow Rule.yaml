@@ -1,0 +1,16 @@
+title: Infrastructure Internet Access Allow Rule
+description: Detects when infrastructure systems are granted unrestricted internet access through firewall allow policies. This filter monitors broad internet access permissions for infrastructure components which may indicate overly permissive network policies or potential security risks requiring review of access controls and network segmentation practices.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow Infra to Internet Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

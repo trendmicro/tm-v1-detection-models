@@ -1,0 +1,16 @@
+title: DNS Traffic Allow Rule Monitoring
+description: Monitors allowed DNS traffic events from WatchGuard firewall policy Allow Traffic to DNS-00. This filter tracks legitimate DNS resolution requests that have been permitted through the firewall, providing visibility into authorized domain name system communications for network security baseline establishment and potential DNS tunneling detection.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow Traffic to DNS-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

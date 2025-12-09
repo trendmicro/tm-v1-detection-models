@@ -1,0 +1,16 @@
+title: BOVPN Inbound Traffic Allowed
+description: Detects when inbound traffic is permitted through the Branch Office VPN (BOVPN) tunnel. This filter monitors successful VPN connections and data flow from remote branch offices to the main network, which is important for tracking legitimate remote access patterns and ensuring VPN connectivity is functioning properly for authorized users and systems.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - BOVPN-Allow.in-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

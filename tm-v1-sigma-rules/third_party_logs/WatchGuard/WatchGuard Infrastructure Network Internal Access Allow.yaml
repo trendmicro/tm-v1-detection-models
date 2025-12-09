@@ -1,0 +1,16 @@
+title: WatchGuard Infrastructure Network Internal Access Allow
+description: Monitors allowed traffic from infrastructure network segments to internal network resources. This filter tracks legitimate infrastructure-to-internal communications which should be reviewed to ensure proper network segmentation and that only authorized infrastructure services are accessing internal systems.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - GR Infrastructure Network to Internal Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

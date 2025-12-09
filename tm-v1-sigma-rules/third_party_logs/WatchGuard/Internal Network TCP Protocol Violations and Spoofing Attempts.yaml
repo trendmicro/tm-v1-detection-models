@@ -1,0 +1,23 @@
+title: Internal Network TCP Protocol Violations and Spoofing Attempts
+description: Detects malicious network activity including TCP SYN flood attacks where unexpected ACK, FIN, or RST packets are received instead of proper SYN packets for new connections, IP spoofing attempts from known malicious sites, and connections to blocked ports. These events indicate potential network reconnaissance, denial of service attacks, or attempts to bypass security controls targeting internal network resources.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal Policy
+    act:
+    - '["Deny"]'
+    description:
+    - tcp syn checking failed (expecting SYN packet for new TCP connection, but received ACK, FIN, or RST instead).
+    - ip spoofing sites
+    - blocked ports
+    - port scan
+    - tcp invalid connection state
+    - Unhandled Hotspot Packet-00
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

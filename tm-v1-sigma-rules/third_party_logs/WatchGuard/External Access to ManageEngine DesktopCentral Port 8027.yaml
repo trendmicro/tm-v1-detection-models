@@ -1,0 +1,16 @@
+title: External Access to ManageEngine DesktopCentral Port 8027
+description: Detects allowed external network connections to ManageEngine DesktopCentral service on port 8027. This filter monitors legitimate access to the desktop management platform while providing visibility into external administrative connections that could indicate authorized remote management activities or potential security concerns if unexpected
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - External to DesktopCentral 8027-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

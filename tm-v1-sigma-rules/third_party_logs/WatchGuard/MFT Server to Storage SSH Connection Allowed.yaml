@@ -1,0 +1,16 @@
+title: MFT Server to Storage SSH Connection Allowed
+description: Monitors allowed SSH connections from Managed File Transfer servers to designated MFT storage systems. This filter tracks legitimate file transfer operations and helps establish baseline network behavior for MFT infrastructure components. Useful for compliance auditing and ensuring proper MFT server connectivity to authorized storage resources.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow MFT Servers to MFT Storage SSH-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

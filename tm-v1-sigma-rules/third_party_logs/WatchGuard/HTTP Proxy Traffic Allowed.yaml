@@ -1,0 +1,16 @@
+title: HTTP Proxy Traffic Allowed
+description: Detects allowed HTTP proxy connections through the network perimeter. This filter identifies legitimate web traffic that has been permitted by security policies, providing visibility into approved proxy communications for network monitoring and compliance verification purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - HTTP-proxy-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

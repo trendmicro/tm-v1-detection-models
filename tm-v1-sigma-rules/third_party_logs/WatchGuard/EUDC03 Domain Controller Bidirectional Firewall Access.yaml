@@ -1,0 +1,16 @@
+title: EUDC03 Domain Controller Bidirectional Firewall Access
+description: Monitors bidirectional network traffic between EUDC03 domain controller and WatchGuard Firebox with allow actions. This filter tracks legitimate administrative and authentication communications that could indicate normal domain operations or potential lateral movement if compromised credentials are involved.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - EUDC03 to Firebox Bi Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
