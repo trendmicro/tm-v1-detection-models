@@ -1,0 +1,15 @@
+title: TLS Cipher Suite Enumeration Activity
+description: Identifies TLS cipher suite enumeration activity detected by Check Point SmartDefense, which may indicate reconnaissance efforts or security assessment activities targeting SSL/TLS configurations.
+tags:
+  - mitre.t1595
+  - mitre.t1046
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'TLS Servers Cipher Suites Scanning Tools'
+  condition: selection1
+level: info
+taxonomy: tm-v1
