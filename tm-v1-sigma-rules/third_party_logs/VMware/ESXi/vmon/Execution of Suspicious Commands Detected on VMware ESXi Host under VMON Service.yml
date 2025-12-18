@@ -1,0 +1,20 @@
+title: Execution of Suspicious Commands Detected on VMware ESXi Host under VMON Service
+description: Detects when a suspicious command is executed on a VMware ESXi host under the VMON service.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: 'vrl.syslog.vmware.esxi.vmon'
+    string_condition_0:
+        processCmd: 
+            - '*wget*'
+            - '*curl*'
+            - '*ftp*'
+            - '*.sh*'
+            - '*tar*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1

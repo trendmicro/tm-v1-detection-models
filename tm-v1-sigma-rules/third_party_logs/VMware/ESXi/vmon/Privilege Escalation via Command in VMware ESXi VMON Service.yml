@@ -1,0 +1,20 @@
+title: Privilege Escalation via Command in VMware ESXi VMON Service
+description: Detects when a suspicious command is executed on a VMware ESXi host under the VMON service.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: 'vrl.syslog.vmware.esxi.vmon'
+    string_condition_0:
+        processCmd: 
+            - '*sudo*'
+            - '*su*'
+            - '*chmod 777*'
+            - '*chown*'
+            - '*mount -o remount,rw*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1
