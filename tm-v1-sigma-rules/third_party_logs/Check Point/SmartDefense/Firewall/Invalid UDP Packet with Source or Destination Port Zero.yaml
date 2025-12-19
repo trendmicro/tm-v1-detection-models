@@ -1,0 +1,15 @@
+title: Invalid UDP Packet with Source or Destination Port Zero
+description: Identifies UDP packets with source or destination port zero in Check Point SmartDefense environments, which indicates malformed network traffic that violates protocol standards.
+tags:
+  - mitre.t1499
+  - mitre.t1090
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'Invalid UDP packet - source / destination port 0'
+  condition: selection1
+level: info
+taxonomy: tm-v1

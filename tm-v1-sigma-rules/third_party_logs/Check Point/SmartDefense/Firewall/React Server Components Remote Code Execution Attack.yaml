@@ -1,0 +1,15 @@
+title: React Server Components Remote Code Execution Attack
+description: Detects React Server Components remote code execution attempts blocked by Check Point SmartDefense, specifically targeting CVE-2025-55182 vulnerabilities through POST requests to potentially compromised web servers
+tags:
+  - mitre.t1190
+  - mitre.t1203
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'React Server Components Remote Code Execution (CVE-2025-55182)'
+  condition: selection1
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,15 @@
+title: SSL Version 3.0 Enforcement Violation
+description: Detects SSL version 3.0 enforcement violations in Check Point SmartDefense environments, indicating attempts to use deprecated SSL protocols that may expose communications to security vulnerabilities
+tags:
+  - mitre.t1040
+  - mitre.t1557
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'Secure Socket Layer (SSL) Version 3.0'
+  condition: selection1
+level: info
+taxonomy: tm-v1

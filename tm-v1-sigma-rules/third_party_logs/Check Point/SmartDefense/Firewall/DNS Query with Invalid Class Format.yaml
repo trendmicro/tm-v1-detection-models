@@ -1,0 +1,15 @@
+title: DNS Query with Invalid Class Format
+description: Identifies DNS queries with invalid class formats in Check Point SmartDefense environments, which may indicate malformed requests or potential DNS protocol manipulation attempts
+tags:
+  - mitre.t1071.004
+  - mitre.t1568.002
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'Bad query format, class is not IN'
+  condition: selection1
+level: info
+taxonomy: tm-v1

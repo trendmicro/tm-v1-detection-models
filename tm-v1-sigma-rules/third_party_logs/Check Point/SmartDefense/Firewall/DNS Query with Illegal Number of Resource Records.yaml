@@ -1,0 +1,15 @@
+title: DNS Query with Illegal Number of Resource Records
+description: Detects DNS queries containing an illegal number of resource records in Check Point SmartDefense environments, which may indicate malformed DNS traffic or potential DNS protocol abuse attempts.
+tags:
+  - mitre.t1071
+  - mitre.t1568
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'Illegal number of Resource Records'
+  condition: selection1
+level: info
+taxonomy: tm-v1

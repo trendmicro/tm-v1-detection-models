@@ -1,0 +1,15 @@
+title: HTTP Request with Conflicting Content Length and Transfer Encoding Headers
+description: Identifies HTTP requests containing both Content-Length and Transfer-Encoding headers in Check Point SmartDefense environments, which violates HTTP protocol standards and may indicate request smuggling attempts or protocol manipulation.
+tags:
+  - mitre.t1071
+  - mitre.t1190
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    ruleName: 'found both content-length and transfer-encoding headers in request'
+  condition: selection1
+level: info
+taxonomy: tm-v1
