@@ -1,0 +1,18 @@
+title: Downloading of Shell Script from Remote URL via Wget
+description: Detected a cron job that downloads a script from a remote URL using wget and then pipes it directly to sh for execution. This is a common technique used to download and run malicious scripts.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/usr/bin\/wget*'
+        objectCmd: '*http:\/\/*.sh*'
+        objectCmd: '*-O - *'
+        objectCmd: '*\/bin\/sh*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1
