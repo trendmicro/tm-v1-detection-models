@@ -1,0 +1,18 @@
+title: HP Web Jetadmin Printer Firmware Update Script Arbitrary File Upload Weakness
+description: Palo Alto Networks detection for HP Web Jetadmin Printer Firmware Update Script Arbitrary File Upload Weakness. There are multiple vulnerabilities within HP Web JetAdmin, a web based software program developed by Hewlett Packard. By using multiple vulnerabilities the attacker could execute arbitrary code on the remote server running HP Web JetAdmin in a ROOT level context.
+tags:
+- cve.2004.1856
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '31630'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
