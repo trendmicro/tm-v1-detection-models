@@ -1,0 +1,16 @@
+title: Daringstar DNS Allow Policy - Internal Network Access
+description: Monitors DNS traffic allowed by the Daringstar DNS policy for all internal network destinations. This filter tracks legitimate DNS resolution requests that have been permitted through the firewall, providing visibility into authorized DNS communications across the internal network infrastructure. Important for baseline network behavior analysis and ensuring DNS traffic flows are functioning as expected within security policy parameters.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Daringstar DNS to All Internal-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: Server Outbound Internet Access - Unrestricted Allow Policy
+description: Detects when servers are granted unrestricted outbound internet access through an allow-all policy. This activity may indicate overly permissive network configurations that could enable data exfiltration, unauthorized communications, or compromise propagation if servers become infected with malware. Review to ensure server internet access aligns with business requirements and security policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Servers to Internet Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

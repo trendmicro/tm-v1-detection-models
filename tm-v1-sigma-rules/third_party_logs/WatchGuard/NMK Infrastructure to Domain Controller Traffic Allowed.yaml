@@ -1,0 +1,16 @@
+title: NMK Infrastructure to Domain Controller Traffic Allowed
+description: Monitors allowed network traffic from NMK infrastructure components to domain controller infrastructure. This filter tracks legitimate administrative and service communications between network management systems and domain controllers, which is critical for identifying baseline network patterns and ensuring proper segmentation between infrastructure tiers.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - NMK Infra to DC Infra Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

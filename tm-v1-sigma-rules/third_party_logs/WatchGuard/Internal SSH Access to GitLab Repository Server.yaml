@@ -1,0 +1,16 @@
+title: Internal SSH Access to GitLab Repository Server
+description: Monitors and allows legitimate SSH connections from internal network segments to GitLab repository servers. This filter tracks authorized developer access for code repository operations including git push, pull, and administrative tasks. Proper monitoring ensures only authenticated users access source code repositories while maintaining visibility into development workflow activities.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Gitlab SSH-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

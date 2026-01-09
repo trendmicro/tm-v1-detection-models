@@ -1,0 +1,16 @@
+title: B2B MFT Server to GitLab Allowed Connection
+description: Detects allowed network traffic from B2B Managed File Transfer server to GitLab infrastructure. This filter monitors legitimate file transfer operations between business-to-business systems and code repository platforms, which may indicate automated deployment processes or code synchronization activities that require security oversight.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - B2B MFT Server to Gitlab Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

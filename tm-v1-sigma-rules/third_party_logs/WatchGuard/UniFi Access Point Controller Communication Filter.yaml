@@ -1,0 +1,16 @@
+title: UniFi Access Point Controller Communication Filter
+description: Monitors and allows network traffic between wireless access points and their designated UniFi controller management system. This filter ensures legitimate device management communications are permitted while maintaining visibility into infrastructure control plane activities for network security monitoring and troubleshooting purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - APs to UniFi Controller Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

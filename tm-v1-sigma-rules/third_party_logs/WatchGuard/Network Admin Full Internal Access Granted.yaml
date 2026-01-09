@@ -1,0 +1,16 @@
+title: Network Admin Full Internal Access Granted
+description: Detects when network administrators are granted unrestricted access to all internal network resources. This rule monitors administrative privilege escalation and ensures proper oversight of high-level network access permissions that could potentially be exploited if administrator accounts are compromised or misused.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow Network Admins to All Internal-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

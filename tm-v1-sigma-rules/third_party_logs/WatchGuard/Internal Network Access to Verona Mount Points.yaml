@@ -1,0 +1,16 @@
+title: Internal Network Access to Verona Mount Points
+description: Monitors allowed internal network traffic attempting to access Verona mount points or shared resources. This filter tracks legitimate internal file system access patterns and can help establish baseline behavior for detecting potential lateral movement or unauthorized access to shared storage resources.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to Verona Mounts-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

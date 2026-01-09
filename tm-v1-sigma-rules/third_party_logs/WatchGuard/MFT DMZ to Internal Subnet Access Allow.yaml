@@ -1,0 +1,16 @@
+title: MFT DMZ to Internal Subnet Access Allow
+description: Monitors allowed network traffic from the Managed File Transfer DMZ segment to internal MFT subnets. This filter tracks legitimate file transfer operations between the DMZ and internal networks, helping validate proper MFT workflow routing and identifying potential policy violations or unauthorized access attempts to sensitive file transfer infrastructure.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - MFT DMZ to MFT Subnets-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

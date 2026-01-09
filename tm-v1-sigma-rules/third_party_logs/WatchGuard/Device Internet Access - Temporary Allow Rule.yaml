@@ -1,0 +1,16 @@
+title: Device Internet Access - Temporary Allow Rule
+description: Detects network traffic allowed through a temporary firewall policy permitting devices to access internet resources. This rule indicates potential use of a broad temporary access policy that may bypass standard security controls and should be monitored for compliance and security review purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Devices to Internet Any Temp-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,16 @@
+title: WiFi Portal Access Granted
+description: Detects when wireless users are successfully granted access through the captive portal authentication system. This filter monitors legitimate WiFi onboarding events and helps track user authentication patterns for network access management and potential troubleshooting of portal connectivity issues.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow WiFi Users to Portal-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

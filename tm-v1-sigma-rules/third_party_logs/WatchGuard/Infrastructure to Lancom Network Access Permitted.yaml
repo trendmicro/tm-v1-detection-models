@@ -1,0 +1,16 @@
+title: Infrastructure to Lancom Network Access Permitted
+description: Detects when network traffic from infrastructure systems to Lancom devices is explicitly allowed by firewall policy. This filter monitors legitimate infrastructure communications that may indicate normal network operations, maintenance activities, or potential lateral movement if the infrastructure systems are compromised. Regular review ensures these access patterns align with authorized network architecture and security policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Allow Infra to Lancom Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

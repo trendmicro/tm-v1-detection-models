@@ -1,0 +1,16 @@
+title: Internal Network Traffic to DE-00 Destination Allowed
+description: Detects allowed network traffic from internal sources to DE-00 designated endpoints. This filter monitors legitimate internal communications that have been permitted by firewall policy, providing visibility into approved data flows within the network infrastructure for compliance and traffic analysis purposes.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Internal to DE-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

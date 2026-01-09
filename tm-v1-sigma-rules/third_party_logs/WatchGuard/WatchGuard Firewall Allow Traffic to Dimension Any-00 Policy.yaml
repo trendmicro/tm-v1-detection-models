@@ -1,0 +1,16 @@
+title: WatchGuard Firewall Allow Traffic to Dimension Any-00 Policy
+description: Monitors allowed network traffic flowing through WatchGuard firewalls under the Fireboxes to Dimension Any-00 policy ruleset. This filter tracks permitted connections and data flows to ensure authorized network access patterns and identify potential policy misconfigurations or unexpected traffic approvals that could indicate security gaps or policy drift.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: WatchGuard
+detection:
+  mappingtable:
+    policyName:
+    - Fireboxes to Dimension Any-00
+    act:
+    - '["Allow"]'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
