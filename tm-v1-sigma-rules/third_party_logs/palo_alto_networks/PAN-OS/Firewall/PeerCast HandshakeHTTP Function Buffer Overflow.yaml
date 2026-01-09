@@ -1,0 +1,18 @@
+title: PeerCast HandshakeHTTP Function Buffer Overflow
+description: Palo Alto Networks detection for PeerCast HandshakeHTTP Function Buffer Overflow. PeerCast 0.1217 and earlier, and SVN 344 and earlier, is prone to a remote code execution vulnerability while handling certain crafted HTTP requests. The vulnerability is due to the lack of proper boundary checks while parsing long SOURCE requests, leading to an exploitable heap overflow. An attacker could exploit the vulnerability by sending a long crafted request to the server. A successful attack could lead to remote code execution with the privileges of the server.
+tags:
+- cve.2007.6454
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30879'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

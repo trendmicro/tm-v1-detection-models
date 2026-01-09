@@ -1,0 +1,18 @@
+title: Internet Explorer WMF Malformed Header Memory Corruption
+description: Palo Alto Networks detection for Internet Explorer WMF Malformed Header Memory Corruption. Microsot Internet Explorer is prone to a memory corruption vulnerability when parsing Windows Meta File (WMF) files. The vulnerability is due to the lack of boundary checks on the FileSize field of the WMF header, which is later used in a memory copy operation. This could result in overwriting heap structures, which could be exploited by an attacker to inject malicious code. An attacker could craft a WMF file and host it on a website, which when downloaded could facilitate remote code execution. The vulnerability affects IE version 5.01, and has been fixed in IE 6 SP1 and above.
+tags:
+- cve.2006.0020
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30048'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

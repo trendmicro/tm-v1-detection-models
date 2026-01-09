@@ -1,0 +1,17 @@
+title: Microsoft Windows WinReg Access Attempt
+description: Palo Alto Networks detection for Microsoft Windows WinReg Access Attempt. This alert indicates an attempt to access winreg service has been detected.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '33865'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

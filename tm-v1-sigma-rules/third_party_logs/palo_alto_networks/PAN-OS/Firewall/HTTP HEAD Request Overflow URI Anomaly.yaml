@@ -1,0 +1,18 @@
+title: HTTP HEAD Request Overflow URI Anomaly
+description: Palo Alto Networks detection for HTTP HEAD Request Overflow URI Anomaly. Some web servers are prone to a buffer overflow vulnerability while parsing certain crafted HTTP requests. The vulnerability is due to the lack of proper checks on the HEAD request in the HTTP protocol request, leading to an exploitable buffer overflow. An attacker could exploit the vulnerability by sending a crafted HTTP protocol request. A successful attack could lead to remote code execution with the privileges of the server.
+tags:
+- cve.2006.5850
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Palo Alto Networks
+detection:
+  mappingtable:
+    eventSubName: vulnerability
+    ruleId:
+    - '30855'
+    act:
+    - alert
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
