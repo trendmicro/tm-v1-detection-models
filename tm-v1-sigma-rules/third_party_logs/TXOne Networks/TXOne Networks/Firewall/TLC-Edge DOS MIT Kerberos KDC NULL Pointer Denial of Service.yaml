@@ -1,0 +1,14 @@
+title: TLC-Edge DOS MIT Kerberos KDC NULL Pointer Denial of Service
+description: A denial of service vulnerability exists in MIT's Kerberos implementation. The vulnerability is due to a NULL pointer dereference when the Key Distribution Center (KDC) handles malformed requests. Remote un-authenticated attackers could exploit this vulnerability by sending a crafted request to the target server.
+tags:
+- mitre.t1550.003
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: TXOne Networks
+detection:
+  mappingtable:
+    ruleId: 1054492
+  condition: selection and mappingtable
+level: info
+taxonomy: tm-v1
