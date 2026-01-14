@@ -1,0 +1,17 @@
+title: VMware rhttpproxy Reject Detected
+description: Detects when the rhttpproxy service on a VMware ESXi host logs a Reject action.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: 'vrl.syslog.vmware.esxi.rhttpproxy'
+    procName:
+        processName: 'rhttpproxy'
+    string_condition_0:
+         act: '*Reject*'
+    condition: (parser or procName) and string_condition_0
+level: info
+taxonomy: tm-v1
