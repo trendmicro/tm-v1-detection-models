@@ -1,0 +1,24 @@
+title: User added or removed from Domain Admins
+id: 135c950d-b91a-5b3f-8844-477785affde9
+description: Detection in Deep Security Agent about users being added or removed from Domain Admins
+references:
+    - https://attack.mitre.org/techniques/T1078/002
+    - https://attack.mitre.org/techniques/T1098/007
+tags:
+    - ATTACK.T1098.007
+    - ATTACK.T1078.002
+logsource:
+    category: DETECTION
+    definition: LOG_INSPECTION_EVENT
+detection:
+    string_condition_0:
+        winEventId: 4729
+    string_condition_1:
+        remarks: '*Domain Admins*'
+    string_condition_2:
+        winEventId: 4728
+    string_condition_3:
+        remarks: '*Domain Admins*'
+    condition: (string_condition_0 and string_condition_1) or (string_condition_2 and string_condition_3)
+level: high
+taxonomy: tm-v1
