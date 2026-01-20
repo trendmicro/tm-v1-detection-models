@@ -1,0 +1,17 @@
+title: Information Severity Outbound Spam detection with Reject Action
+description: Sophos Detection for detecting Information Severity Outbound Spam emails with Reject Action
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: SOPHOS
+detection:
+  filter0:
+    vendorParsed.severity: 'Information'
+  filter1:
+    vendorParsed.spamaction: 'Reject'
+  filter2:
+    vendorParsed.log_subtype: 'Outbound Spam'
+  condition: filter0 and filter1 and filter2
+level: info
+taxonomy: tm-v1
