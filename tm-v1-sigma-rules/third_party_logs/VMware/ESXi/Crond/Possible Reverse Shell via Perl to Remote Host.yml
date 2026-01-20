@@ -1,0 +1,18 @@
+title: Possible Reverse Shell via Perl to Remote Host
+description: Detected a cron job that downloads a Perl script from a remote URL using perl and executes it. This technique is often used by attackers to run malicious code on a compromised system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/usr\/bin\/perl*'
+        objectCmd: '*Use Socket*'
+        objectCmd: '*getprotobyname*'
+        objectCmd: '*exec*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1

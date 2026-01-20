@@ -1,0 +1,23 @@
+title: Possible Reverse Shell via Python3 to Remote Host
+description: Detected a cron job that uses socat to establish a reverse shell connection to a remote host. This technique is often used by attackers to gain remote access to a compromised system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/usr\/bin\/python3*'
+        objectCmd: '*import*' 
+        objectCmd: '*socket*'
+        objectCmd: '*subprocess*'
+        objectCmd: '*os*'
+        objectCmd: '*connect*'
+        objectCmd: '*\/bin\/sh*'
+        objectCmd: '*dup2*'
+        objectCmd: '*-i*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1

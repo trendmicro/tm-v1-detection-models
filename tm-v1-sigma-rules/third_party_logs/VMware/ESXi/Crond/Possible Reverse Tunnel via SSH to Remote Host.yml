@@ -1,0 +1,17 @@
+title: Possible Reverse Tunnel via SSH to Remote Host
+description: Detected a cron job that uses SSH to create a reverse tunnel to a remote host. This technique is often used by attackers to maintain access to a compromised system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/usr\/bin\/ssh*'
+        objectCmd: '*localhost*'
+        objectCmd: '*-R*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1

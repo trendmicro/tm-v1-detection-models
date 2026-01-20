@@ -1,0 +1,17 @@
+title: Possible Reverse Shell via Bash to Remote Host
+description: Detected a cron job that attempts to establish a reverse shell connection to a remote host using bash. This technique is often used by attackers to gain remote access to a compromised system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/bin\/bash -i >&*'
+        objectCmd: '*\/dev\/tcp\/*'
+        objectCmd: '*0>&1*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1

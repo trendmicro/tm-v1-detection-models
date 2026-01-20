@@ -1,0 +1,23 @@
+title: Possible Reverse Shell via Socat to Remote Host
+description: Detected a cron job that uses socat to establish a reverse shell connection to a remote host. This technique is often used by attackers to gain remote access to a compromised system.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: VMware
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    parser:
+        actualParserId: vrl.syslog.vmware.esxi.crond
+    string_condition_0:
+        objectCmd: '*\/usr\/bin\/socat*'
+        objectCmd: '*EXEC:*'
+        objectCmd: '*\/bin\/sh*'
+        objectCmd: '*TCP:*'
+        objectCmd: '*pty*'
+        objectCmd: '*stderr*'
+        objectCmd: '*setsid*'
+        objectCmd: '*sigint*'
+        objectCmd: '*sane*'
+    condition: parser and string_condition_0
+level: info
+taxonomy: tm-v1
