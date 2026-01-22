@@ -8,11 +8,11 @@ logsource:
 detection:
   mappingtable:
     category:
-    - Web検索 (特定)
+    - 'Web検索 (特定)'
     severity:
-    - 3
+    - '3'
     act:
-    - Blocked
+    - '*Blocked*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1
