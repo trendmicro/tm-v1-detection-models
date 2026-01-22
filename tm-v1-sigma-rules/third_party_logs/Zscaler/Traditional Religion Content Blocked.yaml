@@ -1,0 +1,18 @@
+title: Traditional Religion Content Blocked
+description: Detects and blocks access to traditional religious content and websites. This filter helps organizations maintain compliance with content policies by preventing access to religious materials that may not align with workplace guidelines or secular environments. Blocking traditional religious content reduces potential workplace conflicts and ensures adherence to established internet usage policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Traditional Religion'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

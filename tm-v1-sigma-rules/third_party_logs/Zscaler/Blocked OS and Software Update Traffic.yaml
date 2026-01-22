@@ -1,0 +1,18 @@
+title: Blocked OS and Software Update Traffic
+description: Detects blocked network traffic related to operating system and software update processes. This filter identifies when legitimate update mechanisms are being prevented from reaching their destinations, which could indicate overly restrictive policies, potential security misconfigurations, or attempts to prevent systems from receiving critical security patches. Blocked update traffic may leave systems vulnerable to known exploits and should be reviewed to ensure proper patch management capabilities.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Operating System and Software Updates'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

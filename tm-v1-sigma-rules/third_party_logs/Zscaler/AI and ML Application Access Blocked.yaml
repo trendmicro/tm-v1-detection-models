@@ -1,0 +1,18 @@
+title: AI and ML Application Access Blocked
+description: Detects blocked access attempts to artificial intelligence and machine learning applications and services. This filter identifies when users attempt to access AI/ML platforms, tools, or services that have been restricted by organizational policy. Monitoring these blocks helps ensure compliance with data governance policies and prevents unauthorized use of AI services that may pose security or privacy risks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'General AI and ML Applications'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

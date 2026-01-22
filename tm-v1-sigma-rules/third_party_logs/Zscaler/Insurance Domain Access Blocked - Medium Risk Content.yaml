@@ -1,0 +1,18 @@
+title: Insurance Domain Access Blocked - Medium Risk Content
+description: Detects blocked access attempts to insurance-related websites and applications. This filter identifies potential security risks when users attempt to access insurance domains that may contain malicious content, unauthorized insurance platforms, or violate organizational policies regarding insurance-related browsing activities.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Insurance'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

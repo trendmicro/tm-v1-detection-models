@@ -1,0 +1,18 @@
+title: Vehicle-Related Content Access Blocked
+description: Detects and blocks user attempts to access vehicle-related websites, applications, or content that may violate organizational internet usage policies. This filter helps maintain productivity standards and prevents potential security risks from automotive-focused platforms that could contain malicious content or unauthorized software downloads.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Vehicles'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

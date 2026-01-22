@@ -1,0 +1,18 @@
+title: Blocked Web Search Activity Detection
+description: Detects blocked web search requests that may indicate attempts to access restricted content or bypass security policies. This filter identifies medium-severity incidents where users attempted to perform web searches that were subsequently blocked by security controls, potentially revealing unauthorized research activities or policy violations.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Web検索 (特定)'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

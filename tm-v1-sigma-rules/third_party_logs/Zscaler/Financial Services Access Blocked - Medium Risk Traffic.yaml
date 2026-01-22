@@ -1,0 +1,18 @@
+title: Financial Services Access Blocked - Medium Risk Traffic
+description: Detects blocked access attempts to financial services and banking websites. This filter identifies potential unauthorized attempts to access financial platforms, which could indicate credential theft, financial fraud, or policy violations. Monitoring blocked financial traffic helps prevent data breaches and ensures compliance with financial security regulations.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Finance'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

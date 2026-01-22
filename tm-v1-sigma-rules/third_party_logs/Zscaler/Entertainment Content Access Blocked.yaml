@@ -1,0 +1,18 @@
+title: Entertainment Content Access Blocked
+description: Detects blocked attempts to access entertainment websites and streaming services. This filter helps enforce acceptable use policies by preventing access to non-business related entertainment content during work hours, ensuring productivity and compliance with organizational internet usage guidelines.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Entertainment'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

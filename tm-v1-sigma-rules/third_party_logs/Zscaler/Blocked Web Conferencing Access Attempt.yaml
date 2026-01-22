@@ -1,0 +1,18 @@
+title: Blocked Web Conferencing Access Attempt
+description: Detects blocked access attempts to web conferencing platforms and services. This filter identifies when users attempt to access video conferencing, online meeting, or collaboration tools that have been restricted by organizational security policies. Monitoring these blocked attempts helps ensure compliance with data protection requirements and prevents unauthorized use of external communication platforms that may pose security or data leakage risks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Web Conferencing'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

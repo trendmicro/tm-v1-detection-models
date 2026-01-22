@@ -1,0 +1,18 @@
+title: Music and Audio Streaming Service Access Blocked
+description: Detects and blocks access to music and audio streaming platforms including Spotify, Apple Music, Pandora, and similar services. This policy prevents potential bandwidth consumption during business hours and ensures compliance with organizational internet usage policies while maintaining network performance for business-critical applications.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Music and Audio Streaming'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

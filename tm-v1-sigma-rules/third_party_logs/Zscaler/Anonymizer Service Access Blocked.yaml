@@ -1,0 +1,18 @@
+title: Anonymizer Service Access Blocked
+description: Detects blocked attempts to access anonymizing services, proxy networks, or privacy tools that could be used to circumvent security controls and hide malicious activity. These services pose security risks by enabling users to mask their identity and bypass content filtering policies.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Anonymizer'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

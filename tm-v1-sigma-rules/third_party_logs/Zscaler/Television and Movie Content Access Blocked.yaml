@@ -1,0 +1,18 @@
+title: Television and Movie Content Access Blocked
+description: Detects and blocks access to television and movie streaming websites, entertainment platforms, and related media content. This filter helps enforce acceptable use policies by preventing access to non-business entertainment content during work hours, reducing bandwidth consumption and maintaining productivity standards.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Television/Movies'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

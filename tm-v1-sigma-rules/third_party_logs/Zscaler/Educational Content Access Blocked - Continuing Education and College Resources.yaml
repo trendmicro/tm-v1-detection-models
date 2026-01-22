@@ -1,0 +1,18 @@
+title: Educational Content Access Blocked - Continuing Education and College Resources
+description: Detects blocked access attempts to continuing education and college-related websites or resources. This filter identifies when users are prevented from accessing educational content, which may indicate overly restrictive web policies affecting legitimate learning activities or potential policy violations requiring review for educational access requirements.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Continuing Education/Colleges'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

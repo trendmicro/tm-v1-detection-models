@@ -1,0 +1,18 @@
+title: News and Media Content Access Blocked
+description: Detects and blocks access to news and media websites that may contain inappropriate content, consume excessive bandwidth, or violate organizational acceptable use policies. This filter helps maintain productivity and ensures compliance with corporate internet usage guidelines by preventing access to non-business related news and entertainment sites during work hours.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'News and Media'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

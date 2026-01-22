@@ -1,0 +1,18 @@
+title: Discussion Forum Access Blocked - Medium Risk Content
+description: Detects and blocks access to discussion forums and community platforms that may contain inappropriate content, security risks, or productivity concerns. This filter helps prevent exposure to potentially harmful discussions, malware distribution through forum links, and maintains organizational security posture by controlling access to unmoderated community content.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Discussion Forums'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

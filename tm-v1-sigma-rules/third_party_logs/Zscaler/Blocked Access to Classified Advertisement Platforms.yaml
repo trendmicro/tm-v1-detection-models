@@ -1,0 +1,18 @@
+title: Blocked Access to Classified Advertisement Platforms
+description: Detects and blocks user attempts to access classified advertisement websites and platforms. This policy helps prevent potential security risks associated with unvetted third-party marketplaces, including exposure to malicious links, fraudulent schemes, and inappropriate content that could compromise organizational security or productivity standards.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Classifieds'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

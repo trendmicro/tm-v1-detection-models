@@ -1,0 +1,18 @@
+title: Society and Lifestyle Content Access Blocked
+description: Detects and blocks access to general society and lifestyle websites that may contain non-business related content including social topics, cultural discussions, and personal interest materials. This filter helps maintain workplace productivity by preventing access to potentially distracting social content while allowing business-critical web resources.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Other Society and Lifestyle'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

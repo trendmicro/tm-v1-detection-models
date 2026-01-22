@@ -1,0 +1,18 @@
+title: IT Resource Access Blocked - Medium Risk Activity
+description: Detects blocked access attempts to information technology resources and systems. This filter identifies potential unauthorized access attempts, policy violations, or suspicious activity targeting IT infrastructure that has been successfully prevented by security controls. Monitoring these events helps maintain visibility into attack patterns and ensures security policies are effectively enforcing access restrictions.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Other Information Technology'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

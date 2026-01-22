@@ -1,0 +1,18 @@
+title: Online Gaming and Entertainment Content Blocked
+description: Detects and blocks access to online gaming platforms, browser-based games, and entertainment gaming websites. This policy helps maintain workplace productivity by preventing access to potentially distracting gaming content and reduces bandwidth consumption from non-business related activities.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Online and Other Games'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Adult Social Networking Content Blocked
+description: Detects and blocks access to adult-oriented social networking platforms and content that violates organizational acceptable use policies. This filter prevents exposure to inappropriate material and maintains workplace productivity standards while reducing legal and compliance risks associated with adult content access.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Social Networking Adult'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1

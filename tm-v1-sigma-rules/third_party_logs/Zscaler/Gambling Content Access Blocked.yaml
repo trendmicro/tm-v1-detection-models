@@ -1,0 +1,18 @@
+title: Gambling Content Access Blocked
+description: Detects and blocks user attempts to access gambling websites and online betting platforms. This filter helps organizations maintain compliance with corporate policies, prevent productivity loss, and mitigate potential legal risks associated with gambling activities on company networks.
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: Zscaler
+detection:
+  mappingtable:
+    category:
+    - 'Gambling'
+    severity:
+    - '3'
+    act:
+    - '*Blocked*'
+  condition: mappingtable
+level: info
+taxonomy: tm-v1
