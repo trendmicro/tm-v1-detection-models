@@ -8,11 +8,11 @@ logsource:
 detection:
   mappingtable:
     category:
-    - Traditional Religion
+    - 'Traditional Religion'
     severity:
-    - 3
+    - '3'
     act:
-    - Blocked
+    - '*Blocked*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

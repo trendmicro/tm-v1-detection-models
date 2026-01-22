@@ -8,11 +8,11 @@ logsource:
 detection:
   mappingtable:
     category:
-    - Music and Audio Streaming
+    - 'Music and Audio Streaming'
     severity:
-    - 3
+    - '3'
     act:
-    - Blocked
+    - '*Blocked*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1
