@@ -1,0 +1,13 @@
+title: Windows Security Auditing - Failed Logon Due To Invalid Domain Username
+description: Detects failed logon due to invalid domain username recorded in Windows Security Auditing logs.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: McAfee
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*Failed Logon Due To Invalid Domain Username*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
