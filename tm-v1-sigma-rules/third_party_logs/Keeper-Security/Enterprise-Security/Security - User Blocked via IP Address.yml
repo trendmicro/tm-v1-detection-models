@@ -1,0 +1,17 @@
+title: Security - User Blocked from IP Address
+description: Detects when Keeper Security User is blocked from IP Address.
+references: 
+    - https://docs.keeper.io/en/enterprise-guide/event-reporting/event-descriptions
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: keeper-security
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    cat: 
+        category: '*security*'
+    string_condition_0:
+        eventName: '*login_failed_ip_whitelist*'
+    condition: cat and string_condition_0
+level: info
+taxonomy: tm-v1

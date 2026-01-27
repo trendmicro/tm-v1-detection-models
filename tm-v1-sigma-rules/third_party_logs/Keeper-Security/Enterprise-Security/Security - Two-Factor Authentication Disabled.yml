@@ -1,0 +1,17 @@
+title: Security - Two-Factor Authentication Disabled
+description: Detects when Keeper Security Two-Factor Authentication is disabled.
+references: 
+    - https://docs.keeper.io/en/enterprise-guide/event-reporting/event-descriptions
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: keeper-security
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    cat: 
+        category: '*security*'
+    string_condition_0:
+        eventName: '*set_two_factor_off*'
+    condition: cat and string_condition_0
+level: info
+taxonomy: tm-v1
