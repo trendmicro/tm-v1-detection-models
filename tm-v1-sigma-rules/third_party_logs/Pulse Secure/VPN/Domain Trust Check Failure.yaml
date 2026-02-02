@@ -1,0 +1,13 @@
+title: Domain Trust Check Failure
+description: Identifies domain trust check failures in Pulse Secure VPN environments, which may indicate domain connectivity issues or potential security concerns requiring administrative attention.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Pulse Secure
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    description: '*Domain trust check failed*'
+  condition: selection1
+level: info
+taxonomy: tm-v1
