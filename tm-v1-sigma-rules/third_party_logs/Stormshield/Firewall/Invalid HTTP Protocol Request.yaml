@@ -1,0 +1,13 @@
+title: Invalid HTTP Protocol Request
+description: Identifies invalid HTTP protocol requests in Stormshield Firewall environments, which may indicate malformed client requests or potential protocol manipulation attempts.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '53'
+  condition: selection1
+level: info
+taxonomy: tm-v1
