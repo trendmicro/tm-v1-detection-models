@@ -1,0 +1,13 @@
+title: SSL Invalid Length Error
+description: Identifies SSL invalid length errors in Stormshield Firewall environments, which may indicate protocol violations or potential SSL/TLS communication issues.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '736'
+  condition: selection1
+level: info
+taxonomy: tm-v1

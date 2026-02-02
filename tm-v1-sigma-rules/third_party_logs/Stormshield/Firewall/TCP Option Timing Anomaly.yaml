@@ -1,0 +1,13 @@
+title: TCP Option Timing Anomaly
+description: Identifies TCP option timing anomalies in Stormshield Firewall environments where TCP options are received at inappropriate times during connection establishment.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '58'
+  condition: selection1
+level: info
+taxonomy: tm-v1

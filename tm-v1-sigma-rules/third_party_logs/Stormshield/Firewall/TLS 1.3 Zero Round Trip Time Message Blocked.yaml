@@ -1,0 +1,13 @@
+title: TLS 1.3 Zero Round Trip Time Message Blocked
+description: Identifies blocked TLS 1.3 Zero Round Trip Time messages in Stormshield Firewall environments, which may indicate attempts to use early data transmission features that could bypass security controls.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '734'
+  condition: selection1
+level: info
+taxonomy: tm-v1
