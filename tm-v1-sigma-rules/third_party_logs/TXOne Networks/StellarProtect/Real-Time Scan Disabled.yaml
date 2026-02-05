@@ -1,0 +1,15 @@
+title: Real-Time Scan Disabled
+description: TxOne Networks Detection for Disabling Real-Time Scan Protection
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '8706'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1

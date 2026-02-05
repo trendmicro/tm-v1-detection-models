@@ -1,0 +1,15 @@
+title: Suspicious Program Execution Blocked
+description: TxOne Networks Detection for blocked execution of a suspicious program.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '4613'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1
