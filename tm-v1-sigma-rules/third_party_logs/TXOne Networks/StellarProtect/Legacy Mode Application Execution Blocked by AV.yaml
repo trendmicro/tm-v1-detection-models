@@ -1,0 +1,15 @@
+title: Legacy Mode Application Execution Blocked by AV
+description: TxOne Networks warning for Application Execution blocked by AV. 
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '8011'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1

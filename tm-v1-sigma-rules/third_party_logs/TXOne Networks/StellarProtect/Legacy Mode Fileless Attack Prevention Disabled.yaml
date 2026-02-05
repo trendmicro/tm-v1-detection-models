@@ -1,0 +1,15 @@
+title: Legacy Mode Fileless Attack Prevention Disabled
+description: TxOne Networks Alert for Disabling of Fileless Attack Prevention
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '1112'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1
