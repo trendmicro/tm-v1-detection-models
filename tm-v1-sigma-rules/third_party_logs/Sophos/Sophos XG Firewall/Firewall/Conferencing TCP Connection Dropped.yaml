@@ -1,0 +1,18 @@
+title: Conferencing TCP Connection Dropped
+description: Sophos Firewall detection for dropped conferencing TCP connection indicating potential unauthorized video conferencing or communication attempts
+tags:
+  - mitre.t1071
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Conferencing'
+  protocol:
+    proto: 'TCP'
+  status:
+    act: '*Drop*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1
