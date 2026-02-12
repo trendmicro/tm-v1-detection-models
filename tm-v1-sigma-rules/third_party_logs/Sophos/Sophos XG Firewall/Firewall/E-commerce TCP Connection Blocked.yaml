@@ -1,0 +1,18 @@
+title: E-commerce TCP Connection Blocked
+description: Sophos Firewall detection for denied e-commerce TCP connection indicating potential unauthorized shopping or financial transaction attempts
+tags:
+  - mitre.t1567
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'E-commerce'
+  protocol:
+    proto: 'TCP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

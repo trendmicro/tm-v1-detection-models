@@ -1,0 +1,18 @@
+title: Gaming UDP Connection Blocked
+description: Sophos Firewall detection for denied gaming UDP connection indicating potential policy violation or bandwidth management
+tags:
+  - mitre.t1071
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Gaming'
+  protocol:
+    proto: 'UDP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

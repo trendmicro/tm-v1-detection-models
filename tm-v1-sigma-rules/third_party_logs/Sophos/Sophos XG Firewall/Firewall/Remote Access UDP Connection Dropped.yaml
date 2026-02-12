@@ -1,0 +1,18 @@
+title: Remote Access UDP Connection Dropped
+description: Sophos Firewall detection for dropped remote access UDP connection indicating potential unauthorized remote access attempts
+tags:
+  - mitre.t1021
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Remote Access'
+  protocol:
+    proto: 'UDP'
+  status:
+    act: '*Drop*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1
