@@ -1,0 +1,15 @@
+title: LDAP TLS or Local Error
+description: SonicWall Detection - LDAP TLS or local error occurred
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '756'
+  condition: logId
+level: info
+taxonomy: tm-v1
