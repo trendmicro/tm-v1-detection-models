@@ -1,0 +1,15 @@
+title: Access Control List - Table Profile Modified
+description: Dell detection for ACL table profile is modified to increase or decrease the size that is allocated to a particular application.
+references:
+    - https://dl.dell.com/content/manual23434279-dell-smartfabric-os10-system-log-message-reference.pdf?language=en-us
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Dell
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*ACL_TABLE_PROFILE_MODIFIED*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
