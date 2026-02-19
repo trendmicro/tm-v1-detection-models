@@ -1,5 +1,5 @@
 title: Group-port Link Down
-description: SonicWall Detection - Interface %s down
+description: SonicWall Detection - Group-port interface link is down
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

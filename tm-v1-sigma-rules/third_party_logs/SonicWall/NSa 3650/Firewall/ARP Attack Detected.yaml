@@ -1,5 +1,5 @@
 title: ARP Attack Detected
-description: SonicWall Detection - Possible ARP attack from MAC address %s
+description: SonicWall Detection - Possible ARP attack detected
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
-title: Anti-Spyware Detection Alert
-description: SonicWall Detection - Anti-Spyware detection alert
+title: RST FLOODING
+description: SonicWall Detection - Possible RST flood
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
@@ -7,7 +7,7 @@ logsource:
   product: SONICWALL
 detection:
   logId:
-    vendorLogId: '795'
+    vendorLogId: '904'
   condition: logId
 level: info
 taxonomy: tm-v1

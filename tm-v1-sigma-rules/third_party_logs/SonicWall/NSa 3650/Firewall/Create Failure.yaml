@@ -1,5 +1,5 @@
 title: Create Failure
-description: SonicWall Detection - WXA Create Failure - %s
+description: SonicWall Detection - WXA create failure
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: Maximum Events Rate Exceeded
-description: SonicWall Detection - Maximum events per second threshold exceeded:%s
+description: SonicWall Detection - Maximum events per second threshold exceeded
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

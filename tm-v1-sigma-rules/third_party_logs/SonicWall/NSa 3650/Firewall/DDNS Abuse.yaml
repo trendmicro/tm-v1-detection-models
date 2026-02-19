@@ -1,5 +1,5 @@
 title: DDNS Abuse
-description: SonicWall Detection - DDNS Failure:Provider %s
+description: SonicWall Detection - DDNS failure from provider
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

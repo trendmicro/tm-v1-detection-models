@@ -1,5 +1,5 @@
 title: IPS Prevention Alert
-description: SonicWall Detection - IPS Prevention Alert:%s
+description: SonicWall Detection - IPS prevention alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

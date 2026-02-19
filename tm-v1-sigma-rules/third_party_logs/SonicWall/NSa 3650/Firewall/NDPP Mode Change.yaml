@@ -1,5 +1,5 @@
 title: NDPP Mode Change
-description: SonicWall Detection - NDPP mode is changed to %s
+description: SonicWall Detection - NDPP mode changed
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

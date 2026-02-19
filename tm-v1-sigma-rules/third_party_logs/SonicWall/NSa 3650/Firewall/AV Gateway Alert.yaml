@@ -1,5 +1,5 @@
 title: AV Gateway Alert
-description: SonicWall Detection - Gateway Anti-Virus Alert:%s
+description: SonicWall Detection - Gateway Anti-Virus alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

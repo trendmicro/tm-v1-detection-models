@@ -1,5 +1,5 @@
 title: DHCP Server Sanity Check Failed
-description: SonicWall Detection - DHCP Server sanity check failed %s
+description: SonicWall Detection - DHCP server sanity check failed
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

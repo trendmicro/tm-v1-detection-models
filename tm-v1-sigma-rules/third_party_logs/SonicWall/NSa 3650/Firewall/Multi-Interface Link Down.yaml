@@ -1,5 +1,5 @@
 title: Multi-Interface Link Down
-description: SonicWall Detection - Interface %s Link Is Down
+description: SonicWall Detection - Interface link is down
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

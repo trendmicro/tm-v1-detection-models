@@ -1,5 +1,5 @@
 title: DOS Protection on WAN Stopped
-description: SonicWall Detection - DOS protection on WAN %s
+description: SonicWall Detection - DoS protection on WAN interface stopped
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

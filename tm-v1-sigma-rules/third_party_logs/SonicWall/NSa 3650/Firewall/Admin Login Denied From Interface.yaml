@@ -1,5 +1,5 @@
 title: Admin Login Denied From Interface
-description: SonicWall Detection - Administrator login denied from %s; logins disabled from this interface
+description: SonicWall Detection - Administrator login denied from interface
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

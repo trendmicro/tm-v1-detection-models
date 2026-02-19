@@ -1,5 +1,5 @@
 title: Firewall Limit Reached
-description: SonicWall Detection - Product maximum entries reached - %s
+description: SonicWall Detection - Product maximum entries reached
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
