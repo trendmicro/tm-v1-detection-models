@@ -1,0 +1,15 @@
+title: Bidirectional Forwarding Detection - State Change
+description: Dell detection for BFD session state has changed.
+references:
+    - https://dl.dell.com/content/manual23434279-dell-smartfabric-os10-system-log-message-reference.pdf?language=en-us
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Dell
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*BFD_STATE_CHANGE*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
