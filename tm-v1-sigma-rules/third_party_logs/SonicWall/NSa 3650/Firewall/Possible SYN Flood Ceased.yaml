@@ -1,5 +1,5 @@
 title: Possible SYN Flood Ceased
-description: SonicWall Detection - Possible SYN Flood on IF %s has ceased
+description: SonicWall Detection - Possible SYN flood has ceased
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

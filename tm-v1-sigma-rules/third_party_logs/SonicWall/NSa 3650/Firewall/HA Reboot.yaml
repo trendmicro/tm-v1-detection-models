@@ -1,5 +1,5 @@
 title: HA Reboot
-description: SonicWall Detection - Reboot occured (Reason :%s)
+description: SonicWall Detection - High Availability reboot occurred
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

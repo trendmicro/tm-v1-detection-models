@@ -1,5 +1,5 @@
 title: DPI-SSH Connection Check
-description: SonicWall Detection - DPI-SSH Connection:%s
+description: SonicWall Detection - DPI-SSH connection check
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

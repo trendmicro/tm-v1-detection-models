@@ -1,5 +1,5 @@
 title: Extended Switch Unreachable
-description: SonicWall Detection - %s
+description: SonicWall Detection - Extended switch is unreachable
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

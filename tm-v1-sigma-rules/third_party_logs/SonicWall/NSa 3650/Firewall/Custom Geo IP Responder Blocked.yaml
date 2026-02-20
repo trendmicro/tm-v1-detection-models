@@ -1,5 +1,5 @@
 title: Custom Geo IP Responder Blocked
-description: SonicWall Detection - Responder from country blocked:%s, Source:Custom List
+description: SonicWall Detection - Responder from country blocked by custom Geo-IP list
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

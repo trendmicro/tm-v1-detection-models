@@ -1,5 +1,5 @@
 title: Management platform encryption type unknown
-description: SonicWall Detection - The SonicWall firewall management platform wants to use an encryption method which this firewall does not support:%s
+description: SonicWall Detection - Management platform encryption type not supported by firewall
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

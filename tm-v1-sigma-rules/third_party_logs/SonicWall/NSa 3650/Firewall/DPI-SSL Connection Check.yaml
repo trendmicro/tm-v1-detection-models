@@ -1,5 +1,5 @@
 title: DPI-SSL Connection Check
-description: SonicWall Detection - DPI-SSL Connection:%s
+description: SonicWall Detection - DPI-SSL connection check
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

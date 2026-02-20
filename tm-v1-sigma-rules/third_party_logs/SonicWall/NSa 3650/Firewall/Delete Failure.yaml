@@ -1,5 +1,5 @@
 title: Delete Failure
-description: SonicWall Detection - WXA Delete Failure - %s
+description: SonicWall Detection - WXA delete failure
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

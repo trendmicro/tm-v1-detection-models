@@ -1,5 +1,5 @@
 title: Host Down
-description: SonicWall Detection - Network Monitor:Host %s is offline
+description: SonicWall Detection - Network Monitor host is offline
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

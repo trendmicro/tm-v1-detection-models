@@ -1,5 +1,5 @@
 title: Possible FIN Flood
-description: SonicWall Detection - Possible FIN Flood on IF %s
+description: SonicWall Detection - Possible FIN flood detected
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

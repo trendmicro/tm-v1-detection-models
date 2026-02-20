@@ -1,5 +1,5 @@
 title: NSM encryption type unknown
-description: SonicWall Detection - NSM wants to use an encryption method which this firewall does not support:%s
+description: SonicWall Detection - NSM encryption type not supported by firewall
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

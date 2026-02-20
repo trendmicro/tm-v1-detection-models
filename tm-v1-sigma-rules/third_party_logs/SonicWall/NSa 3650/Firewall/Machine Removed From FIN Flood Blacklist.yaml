@@ -1,5 +1,5 @@
 title: Machine Removed From FIN Flood Blacklist
-description: SonicWall Detection - Machine %s removed from FIN flood blacklist
+description: SonicWall Detection - Machine removed from FIN flood blacklist
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

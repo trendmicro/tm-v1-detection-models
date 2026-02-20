@@ -1,5 +1,5 @@
 title: HA Alert
-description: SonicWall Detection - %s
+description: SonicWall Detection - High Availability alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

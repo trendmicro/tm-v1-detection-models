@@ -1,5 +1,5 @@
 title: TCP-Flooding Machine Blacklisted
-description: SonicWall Detection - TCP-Flooding machine %s blacklisted
+description: SonicWall Detection - Machine blacklisted for TCP flooding
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

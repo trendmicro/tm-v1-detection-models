@@ -1,5 +1,5 @@
 title: Host Up
-description: SonicWall Detection - Network Monitor:Host %s is online
+description: SonicWall Detection - Network Monitor host is online
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

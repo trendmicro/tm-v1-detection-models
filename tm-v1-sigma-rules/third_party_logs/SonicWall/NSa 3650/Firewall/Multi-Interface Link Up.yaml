@@ -1,5 +1,5 @@
 title: Multi-Interface Link Up
-description: SonicWall Detection - Interface %s Link Is Up
+description: SonicWall Detection - Interface link is up
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
