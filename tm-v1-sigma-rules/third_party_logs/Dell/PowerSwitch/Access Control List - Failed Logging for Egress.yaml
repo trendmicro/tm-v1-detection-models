@@ -1,0 +1,15 @@
+title: Access Control List - Failed Logging for Egress
+description: Dell detection for ACL logging cannot be done in the egress ACL when the log action is enabled on a user created access list that is applied to an interface in the egress direction.
+references:
+    - https://dl.dell.com/content/manual23434279-dell-smartfabric-os10-system-log-message-reference.pdf?language=en-us
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Dell
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*ACL_LOGGING_FOR_EGRESS_ACL*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
