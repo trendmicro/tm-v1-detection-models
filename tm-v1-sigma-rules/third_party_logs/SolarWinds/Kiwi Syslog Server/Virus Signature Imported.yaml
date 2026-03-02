@@ -1,0 +1,14 @@
+title: Virus Signature Imported
+description: SolarWinds detection for virus signature imported. Detects when a Pulse Secure Host imported a virus signature.
+references: []
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: SolarWinds
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*virus_signature_imported*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
