@@ -4,13 +4,15 @@ tags:
     - mitre.t1190
 logsource:
     category: THIRD_PARTY_LOG
-    product: Meraki
+    product: Cisco
     definition: THIRDPARTY_THIRDPARTY
 detection:
     string_condition_0:
         vendorParsed.direction: '*egress*'
     string_condition_1:
         vendorParsed.signature|exists: true
-    condition: string_condition_0 and string_condition_1
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0 and string_condition_1
 level: info
 taxonomy: tm-v1
