@@ -1,0 +1,16 @@
+title: L3 Firewall Rule Matched
+description: Cisco Meraki detection for L3 firewall rule matched. Detects Meraki MX Layer 3 firewall rule match events (allow/deny).
+tags:
+    - mitre.t1071
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.pattern: '*allow*'
+    string_condition_1:
+        vendorParsed.pattern: '*deny*'
+    condition: string_condition_0 or string_condition_1
+level: info
+taxonomy: tm-v1

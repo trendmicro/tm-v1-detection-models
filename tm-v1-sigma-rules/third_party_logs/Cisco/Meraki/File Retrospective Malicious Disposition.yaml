@@ -1,0 +1,16 @@
+title: File Retrospective Malicious Disposition
+description: Cisco Meraki detection for File retrospective malicious disposition. Detects retrospective AMP disposition updates where a previously allowed file is later determined to be malicious.
+tags:
+    - mitre.t1204
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.disposition: '*malicious*'
+    string_condition_1:
+        vendorParsed.action: '*allow*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

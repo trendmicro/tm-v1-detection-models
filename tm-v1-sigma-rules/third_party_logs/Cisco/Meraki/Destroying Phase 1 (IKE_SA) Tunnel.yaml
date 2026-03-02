@@ -1,0 +1,16 @@
+title: Destroying Phase 1 (IKE_SA) Tunnel
+description: Cisco Meraki detection for Destroying Phase 1 (IKE_SA) tunnel. Detects Meraki MX VPN logs indicating Phase 1 (IKE_SA) tunnel teardown.
+tags:
+    - mitre.t1572
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*deleting*'
+    string_condition_1:
+        vendorParsed.msg: '*IKE_SA*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

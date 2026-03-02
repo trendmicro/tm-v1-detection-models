@@ -1,0 +1,16 @@
+title: Wireless Packet Flood Detected
+description: Cisco Meraki detection for Wireless packet flood detected. Detects Meraki wireless events consistent with packet flood/DoS activity.
+tags:
+    - mitre.t1498
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*device_packet_flood*'
+    string_condition_1:
+        vendorParsed.state: '*start*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

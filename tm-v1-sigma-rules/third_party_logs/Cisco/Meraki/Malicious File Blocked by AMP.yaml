@@ -1,0 +1,16 @@
+title: Malicious File Blocked by AMP
+description: Cisco Meraki detection for Malicious file blocked by AMP. Detects Meraki AMP events where a file is classified as malicious and blocked.
+tags:
+    - mitre.t1204
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.disposition: '*malicious*'
+    string_condition_1:
+        vendorParsed.action: '*block*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

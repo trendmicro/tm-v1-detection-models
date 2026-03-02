@@ -1,0 +1,14 @@
+title: Rogue SSID Detected
+description: Cisco Meraki detection for Rogue SSID detected. Detects Meraki wireless events indicating an unauthorized/rogue SSID has been detected.
+tags:
+    - mitre.t1557
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*rogue_ssid_detected*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

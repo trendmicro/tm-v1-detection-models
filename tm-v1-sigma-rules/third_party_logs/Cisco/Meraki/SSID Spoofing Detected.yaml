@@ -1,0 +1,14 @@
+title: SSID Spoofing Detected
+description: Cisco Meraki detection for SSID spoofing detected. Detects Meraki wireless events where a device is broadcasting an organization SSID name without authorization.
+tags:
+    - mitre.t1557
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*ssid_spoofing_detected*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

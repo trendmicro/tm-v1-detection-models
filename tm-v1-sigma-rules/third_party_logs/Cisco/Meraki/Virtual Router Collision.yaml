@@ -1,0 +1,16 @@
+title: Virtual Router Collision
+description: Cisco Meraki detection for Virtual router collision. Detects Meraki events indicating VRRP packets with incompatible or conflicting configuration (virtual router collision).
+tags:
+    - mitre.t1557
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*VRRP*'
+    string_condition_1:
+        vendorParsed.msg: '*incompatible configuration*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

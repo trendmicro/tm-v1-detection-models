@@ -1,0 +1,16 @@
+title: IDS Signature Matched (Egress)
+description: Cisco Meraki detection for IDS signature matched (egress). Detects IDS/IPS signature matches on egress traffic on Meraki MX.
+tags:
+    - mitre.t1190
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.direction: '*egress*'
+    string_condition_1:
+        vendorParsed.signature|exists: true
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

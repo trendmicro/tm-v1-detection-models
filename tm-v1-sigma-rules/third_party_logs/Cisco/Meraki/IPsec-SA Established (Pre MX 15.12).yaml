@@ -1,0 +1,16 @@
+title: IPsec-SA Established (Pre MX 15.12)
+description: Cisco Meraki detection for IPsec-SA established (pre MX 15.12). Detects legacy IKEv1 Phase 2 (IPsec-SA) establishment events on Meraki MX firmware prior to 15.12.
+tags:
+    - mitre.t1572
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*IPsec-SA*'
+    string_condition_1:
+        vendorParsed.msg: '*established*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

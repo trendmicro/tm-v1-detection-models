@@ -1,0 +1,14 @@
+title: 802.1X Failed Authentication Attempt
+description: Cisco Meraki detection for 802.1X failed authentication attempt. Detects Meraki wireless events where a client fails 802.1X/EAP authentication.
+tags:
+    - mitre.t1110
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*8021x_eap_failure*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,14 @@
+title: Blocked DHCP Server Response
+description: Cisco Meraki detection for Blocked DHCP server response. Detects Meraki events where a DHCP server response is identified as rogue and blocked.
+tags:
+    - mitre.t1557
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Meraki
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*Blocked DHCP server response*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1
