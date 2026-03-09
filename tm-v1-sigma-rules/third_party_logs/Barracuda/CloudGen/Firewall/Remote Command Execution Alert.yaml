@@ -1,0 +1,15 @@
+title: Remote Command Execution Alert
+description: Barracuda CloudGen Firewall Detection - Remote command execution of event log type `alert` has been triggered.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '4126'
+  condition: logId
+level: info
+taxonomy: tm-v1

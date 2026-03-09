@@ -1,0 +1,15 @@
+title: VPN Client Connected
+description: Barracuda CloudGen Firewall Detection - A user establishes a client-to-site VPN tunnel.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '3005'
+  condition: logId
+level: info
+taxonomy: tm-v1
