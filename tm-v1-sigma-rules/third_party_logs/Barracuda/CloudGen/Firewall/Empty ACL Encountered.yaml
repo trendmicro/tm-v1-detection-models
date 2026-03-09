@@ -1,5 +1,5 @@
 title: Empty ACL Encountered
-description: Barracuda CloudGen Firewall Detection - Access Control List (ACL) contains empty values.
+description: Barracuda CloudGen Firewall Detection - Access Control List contains empty values.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

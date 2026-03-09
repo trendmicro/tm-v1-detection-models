@@ -1,5 +1,5 @@
 title: CRL Collection Failed
-description: Barracuda CloudGen Firewall Detection - The collection of the C ertificate R evocation L ist (CRL) has failed.
+description: Barracuda CloudGen Firewall Detection - The collection of the C ertificate R evocation L ist has failed.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

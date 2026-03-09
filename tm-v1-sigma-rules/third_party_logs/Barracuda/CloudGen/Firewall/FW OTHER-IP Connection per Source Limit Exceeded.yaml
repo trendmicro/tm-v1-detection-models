@@ -1,5 +1,5 @@
 title: FW OTHER-IP Connection per Source Limit Exceeded
-description: Barracuda CloudGen Firewall Detection - The maximum number of concurrent OTHER-IP connections (all IP protocols except TCP, UDP, and ICMP) allowed per source has been exceeded.
+description: Barracuda CloudGen Firewall Detection - The maximum number of concurrent OTHER-IP connections allowed per source has been exceeded.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

@@ -1,5 +1,5 @@
 title: FW Global Connection Limit Exceeded
-description: Barracuda CloudGen Firewall Detection - The number of total sessions allowed for a request has been exceeded (see: General Firewall Configuration ).
+description: Barracuda CloudGen Firewall Detection - The number of total sessions allowed for a request has been exceeded.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

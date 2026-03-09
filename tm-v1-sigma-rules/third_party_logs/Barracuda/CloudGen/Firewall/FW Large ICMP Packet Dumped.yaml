@@ -1,5 +1,5 @@
 title: FW Large ICMP Packet Dumped
-description: Barracuda CloudGen Firewall Detection - An ICMP-ECHO packet larger than the configured maximum ping size (see: Service Objects ) has been dropped by the firewall.
+description: Barracuda CloudGen Firewall Detection - An ICMP-ECHO packet larger than the configured maximum ping size has been dropped by the firewall.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

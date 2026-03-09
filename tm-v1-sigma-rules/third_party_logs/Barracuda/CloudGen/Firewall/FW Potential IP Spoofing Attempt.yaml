@@ -1,5 +1,5 @@
 title: FW Potential IP Spoofing Attempt
-description: Barracuda CloudGen Firewall Detection - A SYN flooding attack has been identified (see: Best Practice - Protect Against TCP SYN Flooding Attacks with TCP Accept Policies ).
+description: Barracuda CloudGen Firewall Detection - A SYN flooding attack has been identified.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
