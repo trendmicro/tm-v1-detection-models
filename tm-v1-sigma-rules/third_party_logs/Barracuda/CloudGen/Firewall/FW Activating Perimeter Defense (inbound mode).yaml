@@ -1,0 +1,15 @@
+title: FW Activating Perimeter Defense (inbound mode)
+description: Barracuda CloudGen Firewall Detection - The inbound mode threshold (%) value specified in the local firewall settings (see: General Firewall Configuration ) has been exceeded.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '4004'
+  condition: logId
+level: info
+taxonomy: tm-v1

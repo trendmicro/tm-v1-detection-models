@@ -1,0 +1,15 @@
+title: Attempted Illegal Assignment
+description: Barracuda CloudGen Firewall Detection - While processing data provided by dhcpd , a potentially malign assignment ${KEY} = -->${VAL}.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '4600'
+  condition: logId
+level: info
+taxonomy: tm-v1
