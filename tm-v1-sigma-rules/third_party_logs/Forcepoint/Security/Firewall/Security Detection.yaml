@@ -1,0 +1,15 @@
+title: Security Detection
+description: Forcepoint Security Detection
+tags: []
+references:
+  - https://help.forcepoint.com/websec/en-us/on-prem/85/siem/33913AF7-C5DF-44CD-A2A0-D24E6242C6B0.html
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: FORCEPOINT
+detection:
+  logId:
+    vendorLogId: '126'
+  condition: logId
+level: info
+taxonomy: tm-v1
