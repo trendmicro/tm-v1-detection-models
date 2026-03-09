@@ -1,5 +1,5 @@
 title: User Unknown
-description: Barracuda CloudGen Firewall Detection - A system login has been attempted with an unknown login ID ( CONFIGURATION > Configuration Tree > Box > Advanced Configuration > Access Notification , see: How to Configure Access Notifications ).
+description: Barracuda CloudGen Firewall Detection - A system login has been attempted with an unknown login ID.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

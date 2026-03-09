@@ -1,5 +1,5 @@
 title: Remote Command Execution Notice
-description: Barracuda CloudGen Firewall Detection - Remote command execution has been triggered remotely by the Barracuda Firewall Control Center (in CC CONTROL > Remote Execution ) or by an authorized user.
+description: Barracuda CloudGen Firewall Detection - Remote command execution has been triggered remotely by the Barracuda Firewall Control Center or by an authorized user.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

@@ -1,5 +1,5 @@
 title: Mail Operation Changed
-description: Barracuda CloudGen Firewall Detection - An email has been allowed or blocked manually ( Processes Tab, Allow Mail Reception/Block Mail Reception ).
+description: Barracuda CloudGen Firewall Detection - An email has been allowed or blocked manually.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

@@ -1,5 +1,5 @@
 title: Release Inconsistencies Detected
-description: Barracuda CloudGen Firewall Detection - Incorrect RPM packages have been installed (for example: hotfixes intended for another Barracuda CloudGen Firewall release version) or Barracuda Networks files have been modified (for example: by manually editing a Barracuda Networks script).
+description: Barracuda CloudGen Firewall Detection - Incorrect RPM packages have been installed or Barracuda Networks files have been modified.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events

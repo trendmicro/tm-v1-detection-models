@@ -1,5 +1,5 @@
 title: Overlong ACL Encountered
-description: Barracuda CloudGen Firewall Detection - Access Control List (ACL) contains too many values.
+description: Barracuda CloudGen Firewall Detection - Access Control List contains too many values.
 tags: []
 references:
   - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
