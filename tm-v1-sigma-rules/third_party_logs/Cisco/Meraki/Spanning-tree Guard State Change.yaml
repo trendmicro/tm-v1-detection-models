@@ -1,0 +1,18 @@
+title: Spanning-tree Guard State Change
+description: Cisco Meraki detection for Spanning-tree guard state change. Detects Meraki switch events where an unexpected STP BPDU triggers a guard state change/port block.
+tags:
+    - mitre.t1498
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*STP BPDU*'
+    string_condition_1:
+        vendorParsed.msg: '*blocked*'
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

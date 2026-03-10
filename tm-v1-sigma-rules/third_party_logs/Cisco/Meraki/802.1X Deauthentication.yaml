@@ -1,0 +1,16 @@
+title: 802.1X Deauthentication
+description: Cisco Meraki detection for 802.1X deauthentication. Detects Meraki switch events where a device is deauthenticated from an 802.1X protected port.
+tags:
+    - mitre.t1110
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*8021x_deauth*'
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0
+level: info
+taxonomy: tm-v1

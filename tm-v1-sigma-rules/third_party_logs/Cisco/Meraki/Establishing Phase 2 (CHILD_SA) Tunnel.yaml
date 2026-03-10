@@ -1,0 +1,18 @@
+title: Establishing Phase 2 (CHILD_SA) Tunnel
+description: Cisco Meraki detection for Establishing Phase 2 (CHILD_SA) tunnel. Detects Meraki MX VPN logs indicating Phase 2 (CHILD_SA) data tunnel establishment.
+tags:
+    - mitre.t1572
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*CHILD_SA*'
+    string_condition_1:
+        vendorParsed.msg: '*established*'
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1

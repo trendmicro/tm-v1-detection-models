@@ -1,0 +1,18 @@
+title: IDS Signature Matched (Blocked)
+description: Cisco Meraki detection for IDS signature matched (blocked). Detects events from Meraki MX where an IDS/IPS signature is present and the traffic was blocked.
+tags:
+    - mitre.t1190
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.decision: '*blocked*'
+    string_condition_1:
+        vendorParsed.signature|exists: true
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
