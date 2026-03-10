@@ -1,0 +1,15 @@
+title: FW ICMP-ECHO Connection per Source Limit Exceeded
+description: Barracuda CloudGen Firewall Detection - The maximum number of concurrent ICMP-ECHO connections allowed per source has been exceeded.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '4026'
+  condition: logId
+level: info
+taxonomy: tm-v1
