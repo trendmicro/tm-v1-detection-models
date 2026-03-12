@@ -1,0 +1,14 @@
+title: Infoblox High Risk Event Severity
+description: Infoblox detection for high risk events. This detection is based on the presence of the "InfobloxB1FeedName" field with the value "Infoblox_High_Risk" in the vendorParsed data. This indicates that the event has been flagged as high risk by Infoblox's threat intelligence feed.
+references: 
+    - https://docs.infoblox.com/space/BloxOneDDI/209453743/DNS+Security+Policy+Hit+and+RPZ+Hit+Log+Message+Mappingtags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Infoblox
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed: "*\"severity\":\"8\"*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
