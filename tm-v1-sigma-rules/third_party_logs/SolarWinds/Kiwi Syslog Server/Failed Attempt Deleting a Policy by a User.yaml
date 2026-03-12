@@ -1,0 +1,14 @@
+title: Failed Attempt Deleting a Policy by a User
+description: SolarWinds detection for failed attempt deleting a policy by a user. Detects when a user attempts to delete a Pulse Secure policy but fails.
+references: []
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: SolarWinds
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*user_deleted_policy_fail*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

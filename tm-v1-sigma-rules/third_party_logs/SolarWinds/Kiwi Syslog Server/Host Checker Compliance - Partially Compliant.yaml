@@ -1,0 +1,16 @@
+title: Host Checker Compliance - Partially Compliant
+description: SolarWinds detection for Host Checker Compliance - Partially Compliant. Detects when a Pulse Secure host is partially compliant.
+references: []
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: SolarWinds
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*host_checker_compliance*'
+    string_condition_1:
+        actResult: '*Partially Compliant*'
+    condition: string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
