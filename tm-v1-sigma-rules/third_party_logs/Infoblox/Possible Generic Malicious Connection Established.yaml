@@ -1,0 +1,15 @@
+title: Possible Generic Malicious Connection Established 
+description: Infoblox detection for possible malicious connections. Detects connections that may be indicative of malicious activity based on the presence of the "InfobloxThreatProperty" field with the value "Malicious_Connection" in the vendorParsed data. This indicates that the domain has been flagged by Infoblox's threat intelligence feed.
+references: 
+    - https://docs.infoblox.com/space/BloxOneDDI/209453743/DNS+Security+Policy+Hit+and+RPZ+Hit+Log+Message+Mapping
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Infoblox
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed: "*\"InfobloxThreatProperty\":\"Malicious_Generic\"*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
