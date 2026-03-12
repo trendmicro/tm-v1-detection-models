@@ -1,5 +1,5 @@
 title: Machine Removed From RST Flood Blacklist
-description: SonicWall Detection - Machine %s removed from RST flood blacklist
+description: SonicWall Detection - Machine removed from RST flood blacklist
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

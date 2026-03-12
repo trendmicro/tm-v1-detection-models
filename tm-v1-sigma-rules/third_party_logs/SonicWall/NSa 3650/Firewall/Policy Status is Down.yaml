@@ -1,5 +1,5 @@
 title: Policy Status is Down
-description: SonicWall Detection - Network Monitor:Policy %s status is DOWN
+description: SonicWall Detection - Network Monitor policy status is down
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

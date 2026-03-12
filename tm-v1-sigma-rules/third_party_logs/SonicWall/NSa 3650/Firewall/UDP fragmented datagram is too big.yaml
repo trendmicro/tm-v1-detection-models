@@ -1,0 +1,15 @@
+title: UDP fragmented datagram is too big
+description: SonicWall Detection - UDP fragmented datagram exceeds maximum size
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1375'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,5 +1,5 @@
 title: HA Sync Error
-description: SonicWall Detection - Error synchronizing HA peer firewall (%s)
+description: SonicWall Detection - Error synchronizing HA peer firewall
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

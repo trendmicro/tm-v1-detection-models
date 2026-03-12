@@ -1,5 +1,5 @@
 title: FIN-Flooding Machine Blacklisted
-description: SonicWall Detection - FIN-Flooding machine %s blacklisted
+description: SonicWall Detection - Machine blacklisted for FIN flooding
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: Botnet Initiator Blocked
-description: SonicWall Detection - Suspected Botnet initiator blocked %s, Source Dynamic List
+description: SonicWall Detection - Suspected botnet initiator blocked
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

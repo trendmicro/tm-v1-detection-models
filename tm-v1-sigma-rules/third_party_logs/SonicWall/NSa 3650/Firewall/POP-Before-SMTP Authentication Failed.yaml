@@ -1,0 +1,15 @@
+title: POP-Before-SMTP Authentication Failed
+description: SonicWall Detection - POP-before-SMTP authentication failed
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '656'
+  condition: logId
+level: info
+taxonomy: tm-v1

@@ -1,5 +1,5 @@
 title: Connection Cache Full
-description: SonicWall Detection - The cache is full; %s open connections; some will be dropped
+description: SonicWall Detection - Connection cache is full, some connections will be dropped
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: Custom Botnet Response Blocked
-description: SonicWall Detection - Suspected Botnet responder blocked %s, Source Custom List
+description: SonicWall Detection - Suspected botnet responder blocked from custom list
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

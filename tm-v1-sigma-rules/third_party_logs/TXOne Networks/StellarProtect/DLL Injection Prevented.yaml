@@ -1,0 +1,15 @@
+title: DLL Injection Prevented
+description: TxOne Networks Detection for DLL Injection Prevention Blocked.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '4881'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1

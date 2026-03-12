@@ -1,5 +1,5 @@
 title: Possible RST Flood Ceased
-description: SonicWall Detection - Possible RST Flood on IF %s has ceased
+description: SonicWall Detection - Possible RST flood has ceased
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

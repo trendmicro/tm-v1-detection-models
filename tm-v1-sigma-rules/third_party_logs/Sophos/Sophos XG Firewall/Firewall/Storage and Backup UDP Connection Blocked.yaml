@@ -1,0 +1,18 @@
+title: Storage and Backup UDP Connection Blocked
+description: Sophos Firewall detection for denied storage and backup UDP connection indicating potential data exfiltration attempts
+tags:
+  - mitre.t1567
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Storage and Backup'
+  protocol:
+    proto: 'UDP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

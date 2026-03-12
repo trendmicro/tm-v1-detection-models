@@ -1,0 +1,13 @@
+title: Data Loss Prevention - FortiWebAttack - Red interna
+description: Detects FortiWebAttack - Red interna events recorded in Data Loss Prevention logs.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: McAfee
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*FortiWebAttack - Red interna*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

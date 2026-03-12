@@ -1,0 +1,18 @@
+title: General Internet ICMP Connection Blocked
+description: Sophos Firewall detection for denied TCP traffic indicating potential network reconnaissance or DoS attempts
+tags:
+  - mitre.t1018
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'General Internet'
+  protocol:
+    proto: 'ICMP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

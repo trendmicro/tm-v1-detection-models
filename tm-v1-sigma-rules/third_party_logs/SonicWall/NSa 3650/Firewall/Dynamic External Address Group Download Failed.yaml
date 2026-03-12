@@ -1,5 +1,5 @@
 title: Dynamic External Address Group Download Failed
-description: SonicWall Detection - Download Dynamic External Address Group %s failed
+description: SonicWall Detection - Dynamic external address group download failed
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

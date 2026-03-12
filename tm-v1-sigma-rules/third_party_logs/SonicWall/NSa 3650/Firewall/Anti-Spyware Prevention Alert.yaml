@@ -1,5 +1,5 @@
 title: Anti-Spyware Prevention Alert
-description: SonicWall Detection - Anti-Spyware Prevention Alert:%s
+description: SonicWall Detection - Anti-Spyware prevention alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

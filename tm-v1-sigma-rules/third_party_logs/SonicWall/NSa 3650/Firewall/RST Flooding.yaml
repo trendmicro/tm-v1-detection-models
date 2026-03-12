@@ -1,0 +1,13 @@
+title: RST FLOODING
+description: SonicWall Detection - Possible RST flood
+tags: []
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '904'
+  condition: logId
+level: info
+taxonomy: tm-v1

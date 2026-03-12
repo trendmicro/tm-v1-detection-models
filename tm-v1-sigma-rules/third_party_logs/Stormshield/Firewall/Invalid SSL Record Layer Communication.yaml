@@ -1,0 +1,13 @@
+title: Invalid SSL Record Layer Communication
+description: Identifies invalid SSL Record Layer communications in Stormshield Firewall environments, which may indicate protocol violations or potential security issues with encrypted connections.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '119'
+  condition: selection1
+level: info
+taxonomy: tm-v1

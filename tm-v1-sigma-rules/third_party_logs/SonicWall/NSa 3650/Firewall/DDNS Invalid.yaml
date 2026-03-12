@@ -1,5 +1,5 @@
 title: DDNS Invalid
-description: SonicWall Detection - DDNS Failure:Provider %s
+description: SonicWall Detection - DDNS invalid response from provider
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

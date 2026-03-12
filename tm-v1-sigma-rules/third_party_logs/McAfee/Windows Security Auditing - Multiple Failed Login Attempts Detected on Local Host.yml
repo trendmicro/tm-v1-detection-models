@@ -1,0 +1,13 @@
+title: Windows Security Auditing - Multiple Failed Login Attempts Detected on Local Host
+description: Detects multiple failed login attempts on a local host recorded in Windows Security Auditing logs.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: McAfee
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*Login - Multiple Failed Login Attempts on Local Host*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

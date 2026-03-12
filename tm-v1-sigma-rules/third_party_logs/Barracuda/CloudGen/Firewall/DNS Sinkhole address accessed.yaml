@@ -1,0 +1,15 @@
+title: DNS Sinkhole address accessed
+description: Barracuda CloudGen Firewall Detection - A client has accessed the DNS sinkhole address.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '5004'
+  condition: logId
+level: info
+taxonomy: tm-v1

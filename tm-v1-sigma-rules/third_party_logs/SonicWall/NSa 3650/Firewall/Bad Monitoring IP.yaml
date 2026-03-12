@@ -1,5 +1,5 @@
 title: Bad Monitoring IP
-description: SonicWall Detection - The High Availability monitoring IP configuration of Interface %s is incorrect.
+description: SonicWall Detection - High Availability monitoring IP configuration is incorrect
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

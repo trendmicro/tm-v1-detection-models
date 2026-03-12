@@ -1,5 +1,5 @@
 title: Possible TCP Flood Ceased
-description: SonicWall Detection - Possible TCP Flood on IF %s has ceased
+description: SonicWall Detection - Possible TCP flood has ceased
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

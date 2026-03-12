@@ -1,0 +1,13 @@
+title: DNS ID Spoofing Attack
+description: Identifies DNS ID spoofing events detected by Stormshield Firewall systems, which may indicate network manipulation attempts or protocol anomalies.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '38'
+  condition: selection1
+level: info
+taxonomy: tm-v1

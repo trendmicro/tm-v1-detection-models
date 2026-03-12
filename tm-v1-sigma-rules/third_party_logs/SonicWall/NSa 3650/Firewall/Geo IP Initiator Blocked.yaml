@@ -1,5 +1,5 @@
 title: Geo IP Initiator Blocked
-description: SonicWall Detection - Initiator from country blocked:%s
+description: SonicWall Detection - Initiator from country blocked by Geo-IP filter
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

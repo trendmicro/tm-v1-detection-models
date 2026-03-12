@@ -1,5 +1,5 @@
 title: Policy Status is Unknown
-description: SonicWall Detection - Network Monitor:Policy %s status is UNKNOWN
+description: SonicWall Detection - Network Monitor policy status is unknown
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: Host Status is Unknown
-description: SonicWall Detection - Network Monitor:Host %s status is UNKNOWN
+description: SonicWall Detection - Network Monitor host status is unknown
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

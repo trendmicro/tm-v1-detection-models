@@ -1,0 +1,15 @@
+title: Next-Gen AV Access Without Agent
+description: SonicWall Detection - Endpoint accessed network without Next-Gen AV agent
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1559'
+  condition: logId
+level: info
+taxonomy: tm-v1

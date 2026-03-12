@@ -1,0 +1,18 @@
+title: Social Networking TCP Connection Dropped
+description: Sophos Firewall detection for dropped social networking TCP connection indicating potential policy violation or security concern
+tags:
+  - mitre.t1566
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Social Networking'
+  protocol:
+    proto: 'TCP'
+  status:
+    act: '*Drop*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

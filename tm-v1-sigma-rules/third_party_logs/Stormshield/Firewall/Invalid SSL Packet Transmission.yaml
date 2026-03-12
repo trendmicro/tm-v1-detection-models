@@ -1,0 +1,13 @@
+title: Invalid SSL Packet Transmission
+description: Identifies invalid SSL packet transmissions detected by Stormshield Firewall, which may indicate protocol violations, malformed traffic, or potential network security issues.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '118'
+  condition: selection1
+level: info
+taxonomy: tm-v1

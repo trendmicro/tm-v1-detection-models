@@ -1,0 +1,13 @@
+title: Windows Security Auditing - Domain User Logon After Multiple Failed Attempts
+description: Detects domain user logon after multiple failed attempts recorded in Windows Security Auditing logs.
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: McAfee
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*Domain User Logon After Multiple Failed Attempts*'
+    condition: string_condition_0
+level: info
+taxonomy: tm-v1

@@ -1,0 +1,18 @@
+title: Proxy and Tunnel TCP Connection Blocked
+description: Sophos Firewall detection for denied proxy and tunnel TCP connection indicating potential unauthorized network tunneling attempts
+tags:
+  - mitre.t1090
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Proxy and Tunnel'
+  protocol:
+    proto: 'TCP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

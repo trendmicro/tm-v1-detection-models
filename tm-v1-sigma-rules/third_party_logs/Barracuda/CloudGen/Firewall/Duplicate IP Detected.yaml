@@ -1,0 +1,15 @@
+title: Duplicate IP Detected
+description: Barracuda CloudGen Firewall Detection - An IP address living on the system has additionally been detected in the network.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '53'
+  condition: logId
+level: info
+taxonomy: tm-v1

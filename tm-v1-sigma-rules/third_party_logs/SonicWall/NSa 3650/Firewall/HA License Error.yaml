@@ -1,5 +1,5 @@
 title: HA License Error
-description: SonicWall Detection - License of HA pair doesn't match:%s
+description: SonicWall Detection - High Availability pair license mismatch
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

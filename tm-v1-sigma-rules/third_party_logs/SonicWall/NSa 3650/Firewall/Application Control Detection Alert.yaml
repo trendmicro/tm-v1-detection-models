@@ -1,5 +1,5 @@
 title: Application Control Detection Alert
-description: SonicWall Detection - Application Control Detection Alert:%s
+description: SonicWall Detection - Application Control detection alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

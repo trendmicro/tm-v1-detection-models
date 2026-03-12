@@ -1,5 +1,5 @@
 title: Application Firewall Alert
-description: SonicWall Detection - Application Firewall Alert:%s
+description: SonicWall Detection - Application Firewall alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

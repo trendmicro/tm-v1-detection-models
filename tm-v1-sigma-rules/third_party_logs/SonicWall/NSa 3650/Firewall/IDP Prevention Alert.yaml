@@ -1,5 +1,5 @@
 title: IDP Prevention Alert
-description: SonicWall Detection - IDP Prevention Alert:%s
+description: SonicWall Detection - IDP prevention alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

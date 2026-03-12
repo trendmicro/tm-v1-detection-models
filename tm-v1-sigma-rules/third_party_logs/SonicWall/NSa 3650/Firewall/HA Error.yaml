@@ -1,5 +1,5 @@
 title: HA Error
-description: SonicWall Detection - %s
+description: SonicWall Detection - High Availability error
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

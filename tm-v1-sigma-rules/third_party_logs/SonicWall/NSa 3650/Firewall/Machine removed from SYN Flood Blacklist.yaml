@@ -1,5 +1,5 @@
 title: Machine removed from SYN Flood Blacklist
-description: SonicWall Detection - Machine %s removed from SYN flood blacklist
+description: SonicWall Detection - Machine removed from SYN flood blacklist
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

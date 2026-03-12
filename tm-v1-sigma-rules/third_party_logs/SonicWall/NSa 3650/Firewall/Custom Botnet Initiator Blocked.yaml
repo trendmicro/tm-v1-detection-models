@@ -1,5 +1,5 @@
 title: Custom Botnet Initiator Blocked
-description: SonicWall Detection - Suspected Botnet initiator blocked %s, Source Custom List
+description: SonicWall Detection - Suspected botnet initiator blocked from custom list
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: TCP Flood Blacklist Continues
-description: SonicWall Detection - TCP Flood Blacklist on IF %s continues
+description: SonicWall Detection - TCP flood blacklist continues
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

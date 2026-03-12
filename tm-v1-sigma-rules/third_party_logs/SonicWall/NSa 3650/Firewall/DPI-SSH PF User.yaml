@@ -1,5 +1,5 @@
 title: DPI-SSH PF User
-description: SonicWall Detection - DPI SSH Port Forward Alert:%s
+description: SonicWall Detection - DPI-SSH port forward alert
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

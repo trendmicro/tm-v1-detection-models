@@ -1,5 +1,5 @@
 title: Data Usage Watermark Reached
-description: SonicWall Detection - WWAN:%s.
+description: SonicWall Detection - WWAN data usage watermark reached
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

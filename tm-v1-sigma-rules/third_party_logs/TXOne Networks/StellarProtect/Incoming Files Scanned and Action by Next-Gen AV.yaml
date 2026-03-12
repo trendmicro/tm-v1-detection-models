@@ -1,0 +1,15 @@
+title: Incoming Files Scanned and Action by Next-Gen AV
+description: TxOne Networks Detection for Incoming files that were scanned by next-generation antivirus. Action was taken according to settings.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '4610'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1

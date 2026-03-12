@@ -1,0 +1,15 @@
+title: FW Flood Ping Protection Activated
+description: Barracuda CloudGen Firewall Detection - The minimum delay time for pinging defined in a firewall service object has been under-run and the connection has therefore been blocked by the FW.
+tags: []
+references:
+  - https://documentation.campus.barracuda.com/wiki/spaces/CGFv90/pages/9571082/Security+Events
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: BARRACUDA
+detection:
+  logId:
+    vendorLogId: '4002'
+  condition: logId
+level: info
+taxonomy: tm-v1

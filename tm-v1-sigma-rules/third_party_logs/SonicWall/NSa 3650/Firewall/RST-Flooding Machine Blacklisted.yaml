@@ -1,5 +1,5 @@
 title: RST-Flooding Machine Blacklisted
-description: SonicWall Detection - RST-Flooding machine %s blacklisted
+description: SonicWall Detection - Machine blacklisted for RST flooding
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

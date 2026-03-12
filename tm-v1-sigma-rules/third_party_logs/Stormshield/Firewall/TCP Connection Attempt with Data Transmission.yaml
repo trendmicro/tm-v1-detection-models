@@ -1,0 +1,13 @@
+title: TCP Connection Attempt with Data Transmission
+description: Identifies TCP connection attempts with data transmission in Stormshield Firewall environments, which may indicate normal application traffic or potential unauthorized network communications.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '167'
+  condition: selection1
+level: info
+taxonomy: tm-v1

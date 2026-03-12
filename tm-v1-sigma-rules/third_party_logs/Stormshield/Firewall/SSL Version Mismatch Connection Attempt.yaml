@@ -1,0 +1,13 @@
+title: SSL Version Mismatch Connection Attempt
+description: Identifies SSL version mismatch connection attempts in Stormshield Firewall environments, which may indicate client compatibility issues or potential protocol downgrade attempts.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '117'
+  condition: selection1
+level: info
+taxonomy: tm-v1

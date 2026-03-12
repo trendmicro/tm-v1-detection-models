@@ -1,0 +1,18 @@
+title: Generative AI TCP Connection Blocked
+description: Sophos Firewall detection for denied generative AI TCP connection indicating potential unauthorized AI service usage
+tags:
+  - mitre.t1567
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Sophos
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  application:
+    application: 'Generative AI'
+  protocol:
+    proto: 'TCP'
+  status:
+    act: '*Denied*'
+  condition: application and protocol and status
+level: info
+taxonomy: tm-v1

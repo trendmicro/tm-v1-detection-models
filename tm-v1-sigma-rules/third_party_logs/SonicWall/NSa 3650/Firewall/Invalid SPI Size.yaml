@@ -1,0 +1,15 @@
+title: Invalid SPI Size
+description: SonicWall Detection - Invalid SPI size in VPN IKEv2 packet
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '966'
+  condition: logId
+level: info
+taxonomy: tm-v1

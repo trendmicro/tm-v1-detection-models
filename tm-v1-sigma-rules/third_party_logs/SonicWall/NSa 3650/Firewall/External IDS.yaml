@@ -1,5 +1,5 @@
 title: External IDS
-description: SonicWall Detection - External IDS %s
+description: SonicWall Detection - External IDS event received
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

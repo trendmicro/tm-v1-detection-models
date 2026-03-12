@@ -1,5 +1,5 @@
 title: Possible TCP Flood
-description: SonicWall Detection - Possible TCP Flood on IF %s
+description: SonicWall Detection - Possible TCP flood detected
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

@@ -1,5 +1,5 @@
 title: Remote Backup Failed
-description: SonicWall Detection - Failed to send file to remote backup server, Error:%s
+description: SonicWall Detection - Failed to send file to remote backup server
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

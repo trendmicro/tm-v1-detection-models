@@ -1,0 +1,15 @@
+title: VPN Policy Modified
+description: SonicWall Detection - VPN policy modified
+tags: []
+references:
+  - https://www.sonicwall.com/support/technical-documentation/docs/nsm-system_events/Content/nsm-system-events.htm
+logsource:
+  definition: THIRDPARTY_THIRDPARTY
+  category: THIRD_PARTY_LOG
+  product: SONICWALL
+detection:
+  logId:
+    vendorLogId: '1052'
+  condition: logId
+level: info
+taxonomy: tm-v1

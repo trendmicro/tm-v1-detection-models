@@ -1,5 +1,5 @@
 title: Geo IP Responder Blocked
-description: SonicWall Detection - Responder from country blocked:%s
+description: SonicWall Detection - Responder from country blocked by Geo-IP filter
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

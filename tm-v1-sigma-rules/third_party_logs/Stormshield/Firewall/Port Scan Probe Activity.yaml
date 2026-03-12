@@ -1,0 +1,13 @@
+title: Port Scan Probe Activity
+description: Identifies port scanning probe activity detected by Stormshield Firewall systems, which may indicate network reconnaissance or legitimate network troubleshooting.
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Stormshield
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection1:
+    vendorLogId: '63'
+  condition: selection1
+level: info
+taxonomy: tm-v1

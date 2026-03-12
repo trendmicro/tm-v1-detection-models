@@ -1,5 +1,5 @@
 title: Probe Failed
-description: SonicWall Detection - Probing failure on %s
+description: SonicWall Detection - Probing failure
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY

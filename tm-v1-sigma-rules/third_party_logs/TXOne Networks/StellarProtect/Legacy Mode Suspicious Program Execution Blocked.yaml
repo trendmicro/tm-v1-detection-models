@@ -1,0 +1,15 @@
+title: Legacy Mode Suspicious Program Execution Blocked
+description: TxOne Networks warning for Suspicious Program Execution Blocked
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  definition: THIRDPARTY_THIRDPARTY
+  product: TXOne Networks
+detection:
+  selection:
+    vendorParsed.deviceEventClassId: '8016'
+    vendorParsed.deviceEventName: 'Agent Event'
+    pname: 'StellarProtect'
+  condition: selection
+level: info
+taxonomy: tm-v1

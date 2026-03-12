@@ -1,5 +1,5 @@
 title: Data Usage Limit Reached
-description: SonicWall Detection - WWAN:data usage limit reached for the '%s' billing cycle. Disconnecting the session.
+description: SonicWall Detection - WWAN data usage limit reached, disconnecting session
 tags: []
 logsource:
   definition: THIRDPARTY_THIRDPARTY
