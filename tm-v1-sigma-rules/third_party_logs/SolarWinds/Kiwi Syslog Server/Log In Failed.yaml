@@ -1,0 +1,14 @@
+title: Log In Failed
+description: SolarWinds detection for log in failed. Detects when a Pulse Secure log in attempt failed
+references: []
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: SolarWinds
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*log_in_failed*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

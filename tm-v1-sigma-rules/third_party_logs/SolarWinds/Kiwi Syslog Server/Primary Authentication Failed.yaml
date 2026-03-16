@@ -1,0 +1,14 @@
+title: Primary Authentication Failed
+description: SolarWinds detection for primary authentication failed. Detects when a Pulse Secure user fails primary authentication.
+references: []
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: SolarWinds
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: '*primary_auth_failed*'
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
