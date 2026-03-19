@@ -1,0 +1,17 @@
+title: Login Failed
+description: Detects when Keeper Security Login fails
+references: 
+    - https://docs.keeper.io/en/enterprise-guide/event-reporting/event-descriptions
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: keeper-security
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    cat: 
+        category: '*login*'
+    string_condition_0:
+        eventName: '*login_failure*'
+    condition: cat and string_condition_0
+level: info
+taxonomy: tm-v1
