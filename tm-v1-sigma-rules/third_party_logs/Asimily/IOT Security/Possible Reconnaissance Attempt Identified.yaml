@@ -1,0 +1,13 @@
+title: Possible Reconnaissance Attempt Identified
+description: Asimily detection for possible reconnaissance attempts. Detects when a potential reconnaissance attempt is identified by Asimily's threat intelligence.
+references: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Asimily
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        category: "*Reconnaissance Attempt*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
