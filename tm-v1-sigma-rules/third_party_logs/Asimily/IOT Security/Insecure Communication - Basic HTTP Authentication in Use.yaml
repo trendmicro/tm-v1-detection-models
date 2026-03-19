@@ -1,0 +1,14 @@
+title: Insecure Communication - Basic HTTP Authentication in Use
+description: Asimily detection for devices using basic HTTP authentication. Detects when a device attempts to use basic HTTP authentication, which is considered insecure.
+references: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Asimily
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        category: "*Insecure Communication*"
+        eventName: "*Basic HTTP Authentication in Use*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
