@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - TES Users to Internal Any-00
+    - 'TES Users to Internal Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

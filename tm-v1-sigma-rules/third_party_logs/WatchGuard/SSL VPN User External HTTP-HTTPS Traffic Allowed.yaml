@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - SSLVPN Users to Extenral HTTP_HTTPS-00
+    - 'SSLVPN Users to Extenral HTTP_HTTPS-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

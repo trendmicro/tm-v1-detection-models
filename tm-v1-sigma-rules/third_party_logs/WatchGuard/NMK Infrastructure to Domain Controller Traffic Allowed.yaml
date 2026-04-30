@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - NMK Infra to DC Infra Any-00
+    - 'NMK Infra to DC Infra Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

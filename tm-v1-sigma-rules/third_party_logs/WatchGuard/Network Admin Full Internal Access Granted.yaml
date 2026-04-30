@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Allow Network Admins to All Internal-00
+    - 'Allow Network Admins to All Internal-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

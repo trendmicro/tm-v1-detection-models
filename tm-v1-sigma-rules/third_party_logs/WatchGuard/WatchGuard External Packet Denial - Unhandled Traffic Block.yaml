@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Unhandled External Packet-00
+    - 'Unhandled External Packet-00'
     act:
-    - '["Deny"]'
+    - '*["Deny"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

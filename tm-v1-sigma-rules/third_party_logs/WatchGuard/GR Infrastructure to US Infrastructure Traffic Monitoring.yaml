@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - GR Infra to  US Infra Any-00
+    - 'GR Infra to  US Infra Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

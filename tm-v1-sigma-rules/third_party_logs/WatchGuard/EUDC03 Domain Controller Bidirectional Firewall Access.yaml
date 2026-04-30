@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - EUDC03 to Firebox Bi Any-00
+    - 'EUDC03 to Firebox Bi Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

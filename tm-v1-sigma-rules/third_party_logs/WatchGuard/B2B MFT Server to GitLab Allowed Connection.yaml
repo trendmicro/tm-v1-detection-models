@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - B2B MFT Server to Gitlab Any-00
+    - 'B2B MFT Server to Gitlab Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

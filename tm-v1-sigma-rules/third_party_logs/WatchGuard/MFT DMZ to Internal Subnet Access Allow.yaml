@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - MFT DMZ to MFT Subnets-00
+    - 'MFT DMZ to MFT Subnets-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - WiFi Users to External Any-00
+    - 'WiFi Users to External Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

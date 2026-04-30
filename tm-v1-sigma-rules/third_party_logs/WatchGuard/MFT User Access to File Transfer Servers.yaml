@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - MFT Users to MFT Servers Any-00
+    - 'MFT Users to MFT Servers Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1
