@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - GR Infrastructure Network to Internal Any-00
+    - 'GR Infrastructure Network to Internal Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

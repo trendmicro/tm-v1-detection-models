@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - External to Redmine HTTPS-00
+    - 'External to Redmine HTTPS-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

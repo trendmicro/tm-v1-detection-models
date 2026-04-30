@@ -8,16 +8,16 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Internal Policy
+    - 'Internal Policy'
     act:
-    - '["Deny"]'
+    - '*["Deny"]*'
     description:
-    - tcp syn checking failed (expecting SYN packet for new TCP connection, but received ACK, FIN, or RST instead).
-    - ip spoofing sites
-    - blocked ports
-    - port scan
-    - tcp invalid connection state
-    - Unhandled Hotspot Packet-00
+    - 'tcp syn checking failed (expecting SYN packet for new TCP connection, but received ACK, FIN, or RST instead).'
+    - 'ip spoofing sites'
+    - 'blocked ports'
+    - 'port scan'
+    - 'tcp invalid connection state'
+    - 'Unhandled Hotspot Packet-00'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

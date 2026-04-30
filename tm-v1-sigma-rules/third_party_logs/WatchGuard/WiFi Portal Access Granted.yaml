@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Allow WiFi Users to Portal-00
+    - 'Allow WiFi Users to Portal-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

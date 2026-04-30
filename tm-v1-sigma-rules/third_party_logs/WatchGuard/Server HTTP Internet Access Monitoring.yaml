@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Servers to Internet HTTP-00
+    - 'Servers to Internet HTTP-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

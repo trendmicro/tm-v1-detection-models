@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - Internal to Verona Mounts-00
+    - 'Internal to Verona Mounts-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1

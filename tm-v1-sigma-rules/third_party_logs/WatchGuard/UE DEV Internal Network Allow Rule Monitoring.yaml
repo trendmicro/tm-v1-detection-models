@@ -8,9 +8,9 @@ logsource:
 detection:
   mappingtable:
     policyName:
-    - UE DEV Internal Any-00
+    - 'UE DEV Internal Any-00'
     act:
-    - '["Allow"]'
+    - '*["Allow"]*'
   condition: mappingtable
 level: info
 taxonomy: tm-v1
