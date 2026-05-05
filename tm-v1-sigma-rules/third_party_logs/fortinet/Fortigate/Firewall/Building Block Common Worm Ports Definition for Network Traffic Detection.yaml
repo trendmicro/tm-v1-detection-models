@@ -1,0 +1,52 @@
+title: Network Traffic to Common Worm Propagation Ports
+description: |-
+  Detects network traffic destined to ports historically associated with worm propagation and lateral movement. These include NetBIOS/RPC ports (135-139), SMB ports (444-445), MyDoom worm variant ports (3127-3149), RDP port (3389), and other worm-associated ports (995-999, 8998).
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Fortinet
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    dpt:
+    - '135'
+    - '136'
+    - '137'
+    - '138'
+    - '139'
+    - '444'
+    - '445'
+    - '995'
+    - '996'
+    - '997'
+    - '998'
+    - '999'
+    - '3127'
+    - '3128'
+    - '3129'
+    - '3130'
+    - '3131'
+    - '3132'
+    - '3133'
+    - '3134'
+    - '3135'
+    - '3136'
+    - '3137'
+    - '3138'
+    - '3139'
+    - '3140'
+    - '3141'
+    - '3142'
+    - '3143'
+    - '3144'
+    - '3145'
+    - '3146'
+    - '3147'
+    - '3148'
+    - '3149'
+    - '3389'
+    - '8998'
+  condition: selection
+level: info
+taxonomy: tm-v1
