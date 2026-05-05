@@ -1,0 +1,29 @@
+title: Multiple Login Failures for Same Username - Brute Force Detection
+description: |-
+  Detects potential brute force or credential stuffing attacks by identifying multiple authentication failure events associated with the same username. The original QRadar rule triggers when at least 10 authentication failure events are observed for the same Username within a 5-minute window, indicating automated password guessing attempts.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Ibm
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_action:
+    actResult:
+    - '*failed*'
+    - '*failure*'
+  selection_event:
+    act:
+    - '*deny*'
+    - '*denied*'
+    - '*fail*'
+    - '*rejected*'
+    - '*block*'
+  selection_category:
+    eventSubName:
+    - '*Authentication*'
+    - '*Login*'
+    - '*Logon*'
+  condition: selection_category and (selection_action or selection_event)
+level: info
+taxonomy: tm-v1
