@@ -1,0 +1,19 @@
+title: Repeat Non-Windows Login Failures - Brute Force Detection
+description: |-
+  Detects brute force authentication attacks targeting non-Windows systems by identifying authentication failure events from a single source IP. This filter maps the QRadar rule that triggers when a source IP causes authentication failure events against a destination, indicating credential stuffing, password spraying, or targeted brute force attacks.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Ibm
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    actResult: '*failed*'
+  exclusion_windows:
+    eventSubName: '*Windows Security Event Log*'
+  exclusion_reauthentication:
+    description: '*this is a reauthentication for session*'
+  condition: selection and not exclusion_windows and not exclusion_reauthentication
+level: info
+taxonomy: tm-v1

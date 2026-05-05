@@ -1,0 +1,19 @@
+title: Brute Force Authentication Attack - Repeated Failed Logins
+description: |-
+  Detects potential brute force attacks by identifying multiple authentication failure events associated with the same user account. The original QRadar rule triggers when at least 8 authentication failure events (invalid password at login, invalid password during Kerberos pre-authentication, or general authentication failure category) are observed for the same username within a 2-minute window.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_event_ids:
+    winEventId:
+    - '4625'
+    - '4771'
+  selection_failure:
+    actResult: '*failed*'
+  condition: selection_event_ids and selection_failure
+level: info
+taxonomy: tm-v1

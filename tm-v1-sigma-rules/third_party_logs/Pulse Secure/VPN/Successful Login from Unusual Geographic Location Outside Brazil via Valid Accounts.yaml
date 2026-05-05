@@ -1,0 +1,16 @@
+title: Successful Login from Unusual Geographic Location Outside Brazil
+description: |-
+  Detects successful user authentication events originating from remote source IP addresses located outside of Brazil. This rule monitors for remote-to-local login events where valid credentials are used from geographically unexpected locations, which may indicate compromised credentials being used by an unauthorized party operating from a foreign country.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Pulse Secure
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    actResult: '*success*'
+    direction: 'Inbound'
+  condition: selection
+level: info
+taxonomy: tm-v1
