@@ -1,0 +1,21 @@
+title: Privileged Account Tracking - Admin Logon and Security Group Changes
+description: |-
+  Detects privileged account activity by monitoring Windows Security Event Log entries for successful logons with administrative or special privileges (Event ID 4672) and additions of members to security-enabled groups including global groups (Event ID 4728), local groups (Event ID 4732), and universal groups (Event ID 4756). This rule maps from a QRadar custom event rule that tracked QIDs 5000858, 5000899, 5000903, and 5000926 under event categories Authentication.Privilege Escalation Succeeded and Authentication.Group Member Added.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_eventids:
+    winEventId:
+    - '4672'
+    - '4728'
+    - '4732'
+    - '4756'
+  selection_audit:
+    eventSubName: '*Success Audit*'
+  condition: selection_eventids and selection_audit
+level: info
+taxonomy: tm-v1

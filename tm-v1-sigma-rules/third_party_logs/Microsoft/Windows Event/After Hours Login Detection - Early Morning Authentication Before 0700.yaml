@@ -1,0 +1,17 @@
+title: After Hours Login Detection - Early Morning Authentication Before 07:00
+description: |-
+  Detects successful user authentication events occurring before 07:00 AM, indicating potential after-hours login activity. This rule maps the QRadar building block "BB: Authentication - After Hours Login - Morning" which identifies Authentication.User Login Success events (QRadar category 3115) with a time-based condition of before 07:00.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_success:
+    actResult: '*success*'
+  selection_login_event:
+    eventSubName: '*login*'
+  condition: selection_success and selection_login_event
+level: info
+taxonomy: tm-v1

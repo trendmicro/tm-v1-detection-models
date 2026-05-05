@@ -1,0 +1,18 @@
+title: Privileged Group Member Removal Detection - Windows Security Events
+description: |-
+  Detects when a member is removed from a security-enabled group (global, local, or universal) in Active Directory. This corresponds to Windows Event IDs 4729 (member removed from security-enabled global group), 4733 (member removed from security-enabled local group), and 4764 (security-enabled universal group was deleted).
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    winEventId:
+    - '4729'
+    - '4733'
+    - '4764'
+  condition: selection
+level: info
+taxonomy: tm-v1

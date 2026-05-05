@@ -1,0 +1,23 @@
+title: Multiple Failed Login Attempts Followed by Successful Authentication
+description: |-
+  Detects brute force or password spraying attacks against Windows systems by identifying authentication failure events from Microsoft Windows Security Event Log sources. This filter targets Windows Security Event IDs associated with failed logon attempts (4625) while excluding noisy event IDs (4776, 4648, 4634, 4627, 5140) that correspond to NTLM credential validation, explicit credential logon, account logoff, group membership information, and network share object access respectively.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    vendor: 'Microsoft'
+    winEventId: '4625'
+  filter_noisy_events:
+    winEventId:
+    - '4776'
+    - '4648'
+    - '4634'
+    - '4627'
+    - '5140'
+  condition: selection and not filter_noisy_events
+level: info
+taxonomy: tm-v1

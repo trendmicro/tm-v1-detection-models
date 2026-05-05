@@ -1,0 +1,17 @@
+title: Multiple Failed Logins Outside Configured Hours via Event 4625 0xC000006F
+description: |-
+  Detects multiple failed Windows logon attempts (Event ID 4625) with NTSTATUS error code 0xC000006F, which indicates an account logon time restriction violation. This error occurs when a user attempts to authenticate outside of the permitted logon hours configured in Active Directory.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_event:
+    winEventId: '4625'
+  selection_error:
+    errorCode: '0xC000006F'
+  condition: selection_event and selection_error
+level: info
+taxonomy: tm-v1

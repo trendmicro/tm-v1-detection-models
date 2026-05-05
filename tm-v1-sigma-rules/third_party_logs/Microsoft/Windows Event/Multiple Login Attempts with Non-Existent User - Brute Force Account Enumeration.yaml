@@ -1,0 +1,17 @@
+title: Multiple Login Attempts with Non-Existent User - Brute Force Enumeration
+description: |-
+  Detects brute-force login attempts or account enumeration activity by identifying repeated failed authentication events (Windows Event ID 4625) where the targeted username does not exist in the directory (SubStatus code 0xC0000064). The original QRadar rule triggers when five or more such events originate from the same source IP within a five-minute window.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Microsoft
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_eventid:
+    winEventId: '4625'
+  selection_substatus:
+    errorCode: '0xC0000064'
+  condition: selection_eventid and selection_substatus
+level: info
+taxonomy: tm-v1
