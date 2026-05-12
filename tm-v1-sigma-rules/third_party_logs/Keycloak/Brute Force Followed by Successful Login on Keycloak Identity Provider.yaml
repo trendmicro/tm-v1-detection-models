@@ -1,6 +1,5 @@
-title: Brute Force Followed by Successful Login on Keycloak IdP
-description: |-
-  Detects a successful authentication event on Keycloak Identity and Access Management that may indicate a credential compromise following brute force activity. This filter identifies successful login events from Keycloak by matching on the event action result of 'success' combined with Keycloak-specific event indicators.
+title: Invalid User Password Entered
+description: Detects a failed authentication event on Keycloak Identity and Access Management where invalid password is entered. 
 references: []
 tags: []
 logsource:
@@ -8,10 +7,8 @@ logsource:
   product: Keycloak
   definition: THIRDPARTY_THIRDPARTY
 detection:
-  selection_success:
-    actResult: '*success*'
   selection_event:
-    eventSubName: '*LOGIN*'
-  condition: selection_success and selection_event
+    errorCode: '*invalid_user_credentials_password*'
+  condition: selection_event
 level: info
 taxonomy: tm-v1
