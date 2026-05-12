@@ -1,0 +1,20 @@
+title: Authentication Failure
+description: Detects failed authentication in Keycloak Identity and Access Management platform.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Keycloak
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_event:
+    eventName:
+    - '*LOGIN_ERROR*'
+    - '*LOGIN_FAILURE*'
+    - '*LOGIN_FAILED*'
+    - '*login_error*'
+    - '*login_failure*'
+    - '*authentication_failure*'
+  condition: selection_event
+level: info
+taxonomy: tm-v1

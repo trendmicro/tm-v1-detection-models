@@ -1,0 +1,14 @@
+title: User Temporarily Disabled
+description: Detects Temporarily Disabled User in Keycloak Identity and Access Management platform.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Keycloak
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection:
+    errorCode: '*user_temporarily_disabled*'
+  condition: selection
+level: info
+taxonomy: tm-v1
