@@ -1,6 +1,5 @@
 title: External IP Communication to Internal Network via Check Point Firewall
-description: |-
-  Detects permitted network connections originating from external IP addresses targeting internal network assets as observed through Check Point firewall logs. The rule identifies firewall Accept or Permit actions on inbound traffic where the destination is an internal network.
+description: Detects permitted network connections originating from external IP addresses targeting internal network assets as observed through Check Point firewall logs. The rule identifies firewall Accept or Permit actions on inbound traffic where the destination is an internal network.
 references: []
 tags: []
 logsource:
@@ -13,16 +12,7 @@ detection:
     - '*Accept*'
     - '*Permit*'
   selection_direction:
-    direction:
-    - 'Inbound'
-    - 'Incoming'
-    - 'inbound'
-    - 'incoming'
-  selection_event:
-    eventSubName:
-    - 'accept'
-    - 'Allow'
-    - 'permit'
-  condition: selection_action and (selection_direction or selection_event)
+    direction: 0 
+  condition: selection_action and selection_direction
 level: info
 taxonomy: tm-v1
