@@ -12,7 +12,7 @@ detection:
     - '*Accept*'
     - '*Permit*'
   selection_direction:
-    direction: 0 
+    direction: '0' 
   internal_ip:
     src: 
       - '*192.168.*'
