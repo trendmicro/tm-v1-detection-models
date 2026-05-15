@@ -1,0 +1,26 @@
+title: Brute Force Detection via Check Point Logs
+description: Detects brute force by Check Point firewalls.
+references: []
+tags: []
+logsource:
+  category: THIRD_PARTY_LOG
+  product: Check Point
+  definition: THIRDPARTY_THIRDPARTY
+detection:
+  selection_action:
+    act:
+    - '*deny*'
+    - '*Deny*'
+    - '*Drop*'
+    - '*drop*'
+    - '*failed*'
+    - '*Failed*'
+    - '*reject*'
+    - '*Reject*'
+  selection_vpn:
+    eventSubName: '*brute_force*'
+  selection_has_src:
+    src: '*'
+  condition: selection_action and selection_vpn and selection_has_src
+level: info
+taxonomy: tm-v1
