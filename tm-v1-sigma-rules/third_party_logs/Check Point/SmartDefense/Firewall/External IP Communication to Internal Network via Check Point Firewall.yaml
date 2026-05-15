@@ -13,6 +13,11 @@ detection:
     - '*Permit*'
   selection_direction:
     direction: 0 
-  condition: selection_action and selection_direction
+  internal_ip:
+    src: 
+      - '*192.168.*'
+      - '*10.*'
+      - '*172.16.*'
+  condition: selection_action and selection_direction and not internal_ip
 level: info
 taxonomy: tm-v1
