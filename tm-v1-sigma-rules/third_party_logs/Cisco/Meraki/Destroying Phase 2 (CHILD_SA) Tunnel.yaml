@@ -1,0 +1,18 @@
+title: Destroying Phase 2 (CHILD_SA) Tunnel
+description: Cisco Meraki detection for Destroying Phase 2 (CHILD_SA) tunnel. Detects Meraki MX VPN logs indicating Phase 2 (CHILD_SA) data tunnel teardown.
+tags:
+    - mitre.t1572
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.msg: '*closing*'
+    string_condition_1:
+        vendorParsed.msg: '*CHILD_SA*'
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0 and string_condition_1
+level: info
+taxonomy: tm-v1
