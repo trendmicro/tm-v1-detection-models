@@ -1,0 +1,14 @@
+title: Possible Generic Phishing Website Visited 
+description: Infoblox detection for possible generic phishing website visits. Detects visits to websites that may be hosting or distributing phishing content based on the presence of the "InfobloxThreatProperty" field with the value "Phishing_Generic" in the vendorParsed data. This indicates that the domain has been flagged by Infoblox's threat intelligence feed.
+references: 
+    - https://docs.infoblox.com/space/BloxOneDDI/209453743/DNS+Security+Policy+Hit+and+RPZ+Hit+Log+Message+Mappingtags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Infoblox
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed: "*\"InfobloxThreatProperty\":\"Phishing_Generic\"*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

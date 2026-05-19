@@ -1,0 +1,15 @@
+title: Suspicious Emergent Domain
+description: Infoblox detection for suspicious emergent domains. This detection is based on the presence of the "InfobloxB1FeedName" field with the value "Infoblox_Med_Risk" in the vendorParsed data. This indicates that the domain has been flagged as medium risk by Infoblox's threat intelligence feed.
+references: 
+    - https://docs.infoblox.com/space/BloxOneDDI/209453743/DNS+Security+Policy+Hit+and+RPZ+Hit+Log+Message+Mapping
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Infoblox
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed: "*\"InfobloxThreatProperty\":\"Suspicious_EmergentDomain\"*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
