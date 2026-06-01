@@ -1,0 +1,16 @@
+title: VPN Connectivity Change
+description: Cisco Meraki detection for VPN connectivity change. Detects Meraki MX events indicating a site-to-site VPN connectivity status change.
+tags:
+    - mitre.t1572
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Cisco
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed.type: '*vpn_connectivity_change*'
+    productName:
+        pname: 'Meraki'
+    condition: productName and string_condition_0
+level: info
+taxonomy: tm-v1
