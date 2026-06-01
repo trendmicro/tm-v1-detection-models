@@ -9,6 +9,6 @@ logsource:
 detection:
   mappingtable:
     ruleId: 1054898
-  condition: mappingtable
+  condition: selection and mappingtable
 level: info
 taxonomy: tm-v1
