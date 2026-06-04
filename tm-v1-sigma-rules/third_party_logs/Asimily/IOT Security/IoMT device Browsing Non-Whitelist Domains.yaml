@@ -1,0 +1,13 @@
+title: IoMT device Browsing Non-Whitelist Domains
+description: Asimily detection for IoMT devices browsing non-whitelisted domains. Detects when an IoMT device attempts to access a domain that is not on the approved list.
+references: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Asimily
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: "*IoMT device Browsing Non-Whitelist Domains*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
