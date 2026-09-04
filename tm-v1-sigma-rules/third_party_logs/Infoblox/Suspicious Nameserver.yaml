@@ -1,0 +1,15 @@
+title: Suspicious Nameserver
+description: Infoblox detection for suspicious nameservers.
+references: 
+    - https://docs.infoblox.com/space/BloxOneDDI/209453743/DNS+Security+Policy+Hit+and+RPZ+Hit+Log+Message+Mapping
+tags: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Infoblox
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        vendorParsed: "*\"InfobloxThreatProperty\":\"Suspicious_Nameserver\"*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
