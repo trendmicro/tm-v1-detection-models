@@ -1,0 +1,13 @@
+title: HTTP Connection to Malicious IP
+description: Asimily detection for HTTP connections to malicious IPs. Detects when an HTTP connection is made to an IP address that has been flagged as malicious by Asimily's threat intelligence.
+references: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Asimily
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        eventName: "*HTTP Connection to Malicious IP*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1

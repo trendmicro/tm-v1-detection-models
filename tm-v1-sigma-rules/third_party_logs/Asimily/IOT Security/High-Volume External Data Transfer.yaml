@@ -1,0 +1,13 @@
+title: High-Volume External Data Transfer
+description: Asimily detection for high-volume external data transfers. Detects when a device transfers a large volume of data to an external IP address.
+references: []
+logsource:
+    category: THIRD_PARTY_LOG
+    product: Asimily
+    definition: THIRDPARTY_THIRDPARTY
+detection:
+    string_condition_0:
+        ruleName: "*High-Volume External Data Transfer*"
+    condition: string_condition_0 
+level: info
+taxonomy: tm-v1
