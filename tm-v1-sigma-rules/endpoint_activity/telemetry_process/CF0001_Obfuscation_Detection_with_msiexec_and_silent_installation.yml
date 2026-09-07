@@ -1,0 +1,52 @@
+title: Obfuscation Detection with msiexec and silent installation
+id: d92b9ead-05b6-56f9-999d-e23bb9c37ee8
+description: 'Detects direct and obfuscated msiexec execution with /q /i flags and remote URLs, including cmd.exe variable substitution obfuscation'
+references: 
+    - https://attack.mitre.org/techniques/T1140/
+    - https://attack.mitre.org/techniques/T1027/010/
+    - https://attack.mitre.org/techniques/T1218/007/
+author: Bruno Campos
+date: 2026/05/19
+tags:
+    - ATTACK.T1140
+    - ATTACK.T1027.010
+    - ATTACK.T1218.007
+logsource:
+    category: ENDPOINT_ACTIVITY
+    definition: TELEMETRY_PROCESS
+detection:
+    string_condition_0:
+        eventSubId: TELEMETRY_PROCESS_CREATE
+    string_condition_1:
+        processCmd: cmd.exe*%*:~*
+    string_condition_2:
+        processCmd: msiexec
+    string_condition_3:
+        processCmd: msiexec*
+    string_condition_4:
+        processCmd: /q
+    string_condition_5:
+        processCmd: /quiet
+    string_condition_6:
+        processCmd: http://
+    string_condition_7:
+        processCmd: https://
+    string_condition_8:
+        processCmd: cmd.exe*
+    string_condition_9:
+        processCmd: 'set '
+    string_condition_10:
+        processCmd: 'for '
+    string_condition_11:
+        processCmd: '%*:~*'
+    string_condition_12:
+        objectCmd: msiexec /q /i http*
+    string_condition_13:
+        objectCmd: msiexec /i /q http*
+    string_condition_14:
+        processCmd: msiexec /q /i http*
+    string_condition_15:
+        processCmd: msiexec /i /q http*
+    condition: string_condition_0 and ((string_condition_1 and string_condition_2) or (string_condition_3 and (string_condition_4 or string_condition_5) and (string_condition_6 or string_condition_7)) or (string_condition_8 and (string_condition_9 or string_condition_10) and string_condition_11) or string_condition_12 or string_condition_13 or string_condition_14 or string_condition_15)
+level: medium
+taxonomy: tm-v1
